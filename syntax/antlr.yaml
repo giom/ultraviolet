@@ -1,0 +1,128 @@
+--- 
+name: ANTLR
+fileTypes: 
+- g
+scopeName: source.antlr
+repository: 
+  nested-curly: 
+    patterns: 
+    - captures: 
+        "0": 
+          name: punctuation.section.group.antlr
+      begin: \{
+      end: \}
+      patterns: 
+      - include: "#nested-curly"
+    - name: string.quoted.double.java-or-c
+      endCaptures: 
+        "0": 
+          name: punctuation.definition.string.end.java-or-c
+      begin: "\""
+      beginCaptures: 
+        "0": 
+          name: punctuation.definition.string.begin.java-or-c
+      end: "\""
+      patterns: 
+      - name: constant.character.escape.antlr
+        match: \\.
+    - name: string.quoted.single.java-or-c
+      endCaptures: 
+        "0": 
+          name: punctuation.definition.string.end.java-or-c
+      begin: "'"
+      beginCaptures: 
+        "0": 
+          name: punctuation.definition.string.begin.java-or-c
+      end: "'"
+      patterns: 
+      - name: constant.character.escape.antlr
+        match: \\.
+    - name: support.constant.eof-char.antlr
+      match: \bEOF_CHAR\b
+  comments: 
+    patterns: 
+    - name: comment.block.antlr
+      captures: 
+        "0": 
+          name: punctuation.definition.comment.antlr
+      begin: /\*
+      end: \*/
+    - name: comment.line.double-slash.antlr
+      captures: 
+        "1": 
+          name: punctuation.definition.comment.antlr
+      match: (//).*$\n?
+  strings: 
+    patterns: 
+    - name: string.quoted.double.antlr
+      endCaptures: 
+        "0": 
+          name: punctuation.definition.string.end.antlr
+      begin: "\""
+      beginCaptures: 
+        "0": 
+          name: punctuation.definition.string.begin.antlr
+      end: "\""
+      patterns: 
+      - name: constant.character.escape.antlr
+        match: \\(u\h{4}|.)
+    - name: string.quoted.single.antlr
+      endCaptures: 
+        "0": 
+          name: punctuation.definition.string.end.antlr
+      begin: "'"
+      beginCaptures: 
+        "0": 
+          name: punctuation.definition.string.begin.antlr
+      end: "'"
+      patterns: 
+      - name: constant.character.escape.antlr
+        match: \\(u\h{4}|.)
+uuid: ACABDECD-4F22-47D9-A5F4-DBA957A2A1CC
+patterns: 
+- include: "#strings"
+- include: "#comments"
+- name: meta.options.antlr
+  begin: \boptions\b
+  beginCaptures: 
+    "0": 
+      name: keyword.other.options.antlr
+  end: (?<=\})
+  patterns: 
+  - name: meta.options-block.antlr
+    captures: 
+      "0": 
+        name: punctuation.section.options.antlr
+    begin: \{
+    end: \}
+    patterns: 
+    - include: "#strings"
+    - include: "#comments"
+    - name: constant.numeric.antlr
+      match: \b\d+\b
+    - name: variable.other.option.antlr
+      match: \b(k|charVocabulary|filter|greedy|paraphrase|exportVocab|buildAST|defaultErrorHandler|language|namespace|namespaceStd|namespaceAntlr|genHashLines)\b
+    - name: constant.language.boolean.antlr
+      match: \b(true|false)\b
+- name: keyword.control.label.antlr
+  match: ^\w+\s*(:|\s*$)
+- name: constant.other.token.antlr
+  match: \b[[:upper:]_][[:upper:][:digit:]_]*\b
+- name: source.embedded.java-or-c.antlr
+  endCaptures: 
+    "0": 
+      name: punctuation.section.embedded.end.antlr
+  begin: \{
+  beginCaptures: 
+    "0": 
+      name: punctuation.section.embedded.begin.antlr
+  end: \}
+  patterns: 
+  - include: "#nested-curly"
+- name: storage.type.class.antlr
+  match: \bclass\b
+- name: storage.modifier.extends.antlr
+  match: \bextends\b
+- name: support.class.antlr
+  match: \b(Parser|Lexer|TreeWalker)\b
+keyEquivalent: ^~A

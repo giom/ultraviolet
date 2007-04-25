@@ -1,0 +1,66 @@
+--- 
+name: IDLE
+tags: 
+- begin: <span class="comment">
+  end: </span>
+  selector: comment
+- begin: <span class="string">
+  end: </span>
+  selector: string
+- begin: <span class="number">
+  end: </span>
+  selector: constant.numeric
+- begin: <span class="builtin_constant">
+  end: </span>
+  selector: constant.language
+- begin: <span class="userdefined_constant">
+  end: </span>
+  selector: constant.character, constant.other
+- begin: <span class="variable">
+  end: </span>
+  selector: variable.language, variable.other
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword
+- begin: <span class="storage">
+  end: </span>
+  selector: storage
+- begin: <span class="type_name">
+  end: </span>
+  selector: entity.name.type
+- begin: <span class="inherited_class">
+  end: </span>
+  selector: entity.other.inherited-class
+- begin: <span class="function_name">
+  end: </span>
+  selector: entity.name.function
+- begin: <span class="function_argument">
+  end: </span>
+  selector: variable.parameter
+- begin: <span class="tag_name">
+  end: </span>
+  selector: entity.name.tag
+- begin: <span class="tag_attribute">
+  end: </span>
+  selector: entity.other.attribute-name
+- begin: <span class="library_function">
+  end: </span>
+  selector: support.function
+- begin: <span class="library_constant">
+  end: </span>
+  selector: support.constant
+- begin: <span class="library_classtype">
+  end: </span>
+  selector: support.type, support.class
+- begin: <span class="library_variable">
+  end: </span>
+  selector: support.variable
+- begin: <span class="invalid">
+  end: </span>
+  selector: invalid
+- begin: <span class="string_interpolation">
+  end: </span>
+  selector: constant.other.placeholder.py
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

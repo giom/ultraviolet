@@ -1,0 +1,109 @@
+pre.espresso_libre .markup_name_of_tag {
+   font-weight: bold;
+}
+pre.espresso_libre .markup_dtd {
+   font-style: italic;
+}
+pre.espresso_libre .library_constant {
+   font-weight: bold;
+   color: #00AF0E;
+}
+pre.espresso_libre .preprocessor_line {
+   color: #1A921C;
+}
+pre.espresso_libre .js_operator {
+   color: #687687;
+}
+pre.espresso_libre .userdefined_constant {
+   font-weight: bold;
+   color: #C5656B;
+}
+pre.espresso_libre .number {
+   color: #44AA43;
+}
+pre.espresso_libre {
+   background-color: #2A211C;
+   color: #BDAE9D;
+}
+pre.espresso_libre .embedded_source {
+   background-color: #503A2D;
+}
+pre.espresso_libre .invalid {
+   background-color: #990000;
+   color: #FFFFFF;
+}
+pre.espresso_libre .type_name {
+   text-decoration: underline;
+}
+pre.espresso_libre .line-numbers {
+   background-color: #C3DCFF;
+   color: #BDAE9D;
+}
+pre.espresso_libre .invalid_trailing_whitespace {
+   background-color: #FFD0D0;
+}
+pre.espresso_libre .library_function {
+   font-weight: bold;
+   color: #7290D9;
+}
+pre.espresso_libre .variable {
+   color: #318495;
+}
+pre.espresso_libre .builtin_constant {
+   font-weight: bold;
+   color: #585CF6;
+}
+pre.espresso_libre .function_name {
+   font-weight: bold;
+   color: #FF9358;
+}
+pre.espresso_libre .string_interpolation {
+   color: #2FE420;
+}
+pre.espresso_libre .section {
+   font-style: italic;
+}
+pre.espresso_libre .function_parameter {
+   font-style: italic;
+}
+pre.espresso_libre .markup_tag {
+   color: #43A8ED;
+}
+pre.espresso_libre .library_object {
+   font-weight: bold;
+   color: #6D79DE;
+}
+pre.espresso_libre .preprocessor_directive {
+   font-weight: bold;
+   color: #9AFF87;
+}
+pre.espresso_libre .markup_tag_attribute {
+   font-style: italic;
+}
+pre.espresso_libre .library_variable {
+   font-weight: bold;
+   color: #2F5FE0;
+}
+pre.espresso_libre .function_argument_and_result_types {
+   color: #8B8E9C;
+}
+pre.espresso_libre .markup_doctype {
+   color: #888888;
+}
+pre.espresso_libre .markup_xml_declaration {
+   color: #8F7E65;
+}
+pre.espresso_libre .inherited_class_name {
+   font-style: italic;
+}
+pre.espresso_libre .string {
+   color: #049B0A;
+}
+pre.espresso_libre .keyword {
+   font-weight: bold;
+   color: #43A8ED;
+}
+pre.espresso_libre .comment {
+   color: #0066FF;
+   font-style: italic;
+}

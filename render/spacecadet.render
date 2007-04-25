@@ -1,0 +1,54 @@
+--- 
+name: SpaceCadet
+tags: 
+- begin: <span class="comment">
+  end: </span>
+  selector: comment
+- begin: <span class="string">
+  end: </span>
+  selector: string
+- begin: <span class="constant">
+  end: </span>
+  selector: constant
+- begin: <span class="variable">
+  end: </span>
+  selector: variable.parameter, variable.other
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword - keyword.operator, keyword.operator.logical
+- begin: <span class="storage">
+  end: </span>
+  selector: storage
+- begin: <span class="entity">
+  end: </span>
+  selector: entity
+- begin: <span class="inherited_class">
+  end: </span>
+  selector: entity.other.inherited-class
+- begin: <span class="support">
+  end: </span>
+  selector: support
+- begin: <span class="exception">
+  end: </span>
+  selector: support.type.exception
+- begin: <span class="tag_name">
+  end: </span>
+  selector: entity.name.tag
+- begin: <span class="tag_attribute">
+  end: </span>
+  selector: entity.other.attribute-name
+- begin: <span class="library_constant">
+  end: </span>
+  selector: support.constant
+- begin: <span class="library_classtype">
+  end: </span>
+  selector: support.type, support.class
+- begin: <span class="library_variable">
+  end: </span>
+  selector: support.other.variable
+- begin: <span class="invalid">
+  end: </span>
+  selector: invalid
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

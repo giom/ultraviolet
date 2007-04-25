@@ -1,0 +1,123 @@
+pre.mac_classic .markup_name_of_tag {
+   font-weight: bold;
+}
+pre.mac_classic .markup_dtd {
+   font-style: italic;
+}
+pre.mac_classic .library_constant {
+   font-weight: bold;
+   color: #06960E;
+}
+pre.mac_classic .preprocessor_line {
+   color: #1A921C;
+}
+pre.mac_classic .js_operator {
+   color: #687687;
+}
+pre.mac_classic .userdefined_constant {
+   font-weight: bold;
+   color: #C5060B;
+}
+pre.mac_classic .number {
+   color: #0000CD;
+}
+pre.mac_classic {
+   background-color: #FFFFFF;
+   color: #000000;
+}
+pre.mac_classic .embedded_source {
+   background-color: #F2F2F2;
+}
+pre.mac_classic .invalid {
+   background-color: #990000;
+   color: #FFFFFF;
+}
+pre.mac_classic .type_name {
+   text-decoration: underline;
+}
+pre.mac_classic .line-numbers {
+   background-color: #C4DCFF;
+   color: #000000;
+}
+pre.mac_classic .markup_heading {
+   font-weight: bold;
+   color: #0C07FF;
+}
+pre.mac_classic .invalid_trailing_whitespace {
+   background-color: #FFD0D0;
+}
+pre.mac_classic .library_function {
+   font-weight: bold;
+   color: #3C4C72;
+}
+pre.mac_classic .variable {
+   color: #318495;
+}
+pre.mac_classic .builtin_constant {
+   font-weight: bold;
+   color: #585CF6;
+}
+pre.mac_classic .function_name {
+   font-weight: bold;
+   color: #0000A2;
+}
+pre.mac_classic .string_interpolation {
+   color: #26B31A;
+}
+pre.mac_classic .section {
+   font-style: italic;
+}
+pre.mac_classic .function_parameter {
+   font-style: italic;
+}
+pre.mac_classic .markup_tag {
+   color: #1C02FF;
+}
+pre.mac_classic .library_object {
+   font-weight: bold;
+   color: #6D79DE;
+}
+pre.mac_classic .preprocessor_directive {
+   font-weight: bold;
+   color: #0C450D;
+}
+pre.mac_classic .markup_list {
+   color: #B90690;
+}
+pre.mac_classic .markup_tag_attribute {
+   font-style: italic;
+}
+pre.mac_classic .library_variable {
+   font-weight: bold;
+   color: #21439C;
+}
+pre.mac_classic .markup_quote {
+   color: #000000;
+   font-style: italic;
+}
+pre.mac_classic .function_argument_and_result_types {
+   color: #70727E;
+}
+pre.mac_classic .markup_doctype {
+   color: #888888;
+}
+pre.mac_classic .markup_xml_declaration {
+   color: #68685B;
+}
+pre.mac_classic .embedded_embedded_source {
+   background-color: #F0F0F0;
+}
+pre.mac_classic .inherited_class_name {
+   font-style: italic;
+}
+pre.mac_classic .string {
+   color: #036A07;
+}
+pre.mac_classic .keyword {
+   font-weight: bold;
+   color: #0000FF;
+}
+pre.mac_classic .comment {
+   color: #0066FF;
+   font-style: italic;
+}

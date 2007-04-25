@@ -1,0 +1,85 @@
+pre.slush_poppies .library_classtype {
+}
+pre.slush_poppies .library_constant {
+}
+pre.slush_poppies .operators {
+   color: #2060A0;
+}
+pre.slush_poppies .userdefined_constant {
+}
+pre.slush_poppies .number {
+   color: #0080A0;
+}
+pre.slush_poppies .invalid {
+}
+pre.slush_poppies .type_name {
+   color: #800080;
+}
+pre.slush_poppies .line-numbers {
+   background-color: #B0B0FF;
+   color: #000000;
+}
+pre.slush_poppies .library_function {
+}
+pre.slush_poppies .variable {
+}
+pre.slush_poppies .builtin_constant {
+}
+pre.slush_poppies .function_argument {
+}
+pre.slush_poppies .function_name {
+   color: #800000;
+}
+pre.slush_poppies .character_constants {
+   color: #800000;
+}
+pre.slush_poppies .inherited_class {
+}
+pre.slush_poppies .linenumber_directives {
+}
+pre.slush_poppies .storage {
+   color: #008080;
+}
+pre.slush_poppies .library_variable {
+}
+pre.slush_poppies .directives {
+   font-weight: bold;
+}
+pre.slush_poppies .storage_types {
+   color: #A08000;
+}
+pre.slush_poppies .ocaml_floatingpoint_constants {
+   text-decoration: underline;
+}
+pre.slush_poppies .tag_name {
+}
+pre.slush_poppies .module_keyword {
+   color: #0080FF;
+}
+pre.slush_poppies .tag_attribute {
+}
+pre.slush_poppies .class_type_name {
+   color: #8000C0;
+}
+pre.slush_poppies .keyword {
+   color: #2060A0;
+}
+pre.slush_poppies .string {
+   color: #C03030;
+}
+pre.slush_poppies {
+   background-color: #F1F1F1;
+   color: #000000;
+}
+pre.slush_poppies .variant_types {
+   color: #C08060;
+}
+pre.slush_poppies .ocaml_infix_fp_operators {
+   text-decoration: underline;
+}
+pre.slush_poppies .ocaml_prefix_fp_operators {
+   text-decoration: underline;
+}
+pre.slush_poppies .comment {
+   color: #406040;
+}

@@ -1,0 +1,80 @@
+pre.iplastic .trailing_whitespace {
+   background-color: #EEEEEB;
+}
+pre.iplastic .exception {
+   color: #990000;
+}
+pre.iplastic .number {
+   color: #0066FF;
+}
+pre.iplastic .frame_title {
+   font-weight: bold;
+   color: #000000;
+}
+pre.iplastic .embedded_source {
+   background-color: #F9F9F9;
+   color: #000000;
+}
+pre.iplastic .invalid {
+   background-color: #EBAEA9;
+   color: #FF0000;
+}
+pre.iplastic .type_name {
+   font-weight: bold;
+}
+pre.iplastic .regular_expression {
+   color: #FF0080;
+}
+pre.iplastic .line-numbers {
+   background-color: #BAD6FD;
+   color: #000000;
+}
+pre.iplastic {
+   background-color: #EEEEED;
+   color: #000000;
+}
+pre.iplastic .function_name {
+   color: #FF8000;
+}
+pre.iplastic .support {
+   font-weight: bold;
+   color: #3333FF;
+}
+pre.iplastic .tag {
+   color: #0033CC;
+}
+pre.iplastic .identifier {
+   color: #9700CC;
+}
+pre.iplastic .storage {
+   font-weight: bold;
+}
+pre.iplastic .constant {
+   color: #6782D3;
+}
+pre.iplastic .tag_name {
+   font-weight: bold;
+}
+pre.iplastic .xml_declaration {
+   color: #333333;
+}
+pre.iplastic .section_name {
+   font-weight: bold;
+}
+pre.iplastic .arguments {
+   font-style: italic;
+}
+pre.iplastic .tag_attribute {
+   color: #3366CC;
+   font-style: italic;
+}
+pre.iplastic .keyword {
+   color: #0000FF;
+}
+pre.iplastic .string {
+   color: #009933;
+}
+pre.iplastic .comment {
+   color: #0066FF;
+   font-style: italic;
+}

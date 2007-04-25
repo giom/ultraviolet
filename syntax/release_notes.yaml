@@ -1,0 +1,37 @@
+--- 
+name: Release Notes
+fileTypes: 
+- tmReleaseNotes
+scopeName: text.plain.release-notes
+uuid: 8926CAFE-1CF3-4CF9-A056-4FF90F596E9A
+patterns: 
+- name: meta.separator.release-notes
+  captures: 
+    "1": 
+      name: punctuation.definition.separator.release-notes
+    "2": 
+      name: meta.toc-list.release-notes
+    "3": 
+      name: punctuation.definition.separator.release-notes
+  match: "^(\\[)(?:[\\d-]+: )?(REVISION (\\d+|v[\\d.b]+))(\\])$\\n"
+- begin: ^([ \t]*)(?=\S)
+  contentName: meta.paragraph.text
+  end: ^(?!\1(?=\S))
+  patterns: 
+  - name: markup.underline.link
+    match: (https?|ftp|mailto):\S+?(?=[)>,.':;"]*(\s|$)|$)
+  - name: keyword.other.release-notes
+    captures: 
+      "1": 
+        name: punctuation.definition.keyword.release-notes
+    match: (\[)(NEW|FIXED|CHANGED|REMOVED|INFO)(\])
+  - name: meta.ticket.release-notes
+    captures: 
+      "1": 
+        name: storage.type.ticket.release-notes
+      "2": 
+        name: constant.numeric.ticket.release-notes
+    match: ([Tt]icket) ([0-9A-F]{8})\b
+  - name: meta.word.camel-case
+    match: \b[A-Z]*[a-z]+[A-Z]\w*\b
+    comment: "I do not want spell checking for CamelCase words. Since this is generally when quoting various API\xE2\x80\x99s, I have deliberately used A-Z and a-z (ASCII) -- Allan"

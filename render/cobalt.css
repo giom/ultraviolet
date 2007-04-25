@@ -1,0 +1,149 @@
+pre.cobalt .diffinserted {
+   background-color: #154F00;
+   color: #F8F8F8;
+}
+pre.cobalt .diffheader {
+   background-color: #000E1A;
+   color: #F8F8F8;
+}
+pre.cobalt .list {
+   background-color: #130D26;
+}
+pre.cobalt .diffchanged {
+   background-color: #806F00;
+   color: #F8F8F8;
+}
+pre.cobalt .cc_preprocessor_line {
+   color: #8996A8;
+}
+pre.cobalt .exception {
+   color: #FF1E00;
+}
+pre.cobalt .stringregexp {
+   color: #80FFC2;
+}
+pre.cobalt .function_call {
+   color: #FFEE80;
+}
+pre.cobalt .punctuation {
+   color: #E1EFFF;
+}
+pre.cobalt .bold_markup {
+   font-weight: bold;
+   color: #C1AFFF;
+}
+pre.cobalt .css_constructorargument {
+   color: #EB939A;
+}
+pre.cobalt .doctypexml_processing {
+   color: #73817D;
+}
+pre.cobalt .embedded_source {
+   background-color: #223545;
+   color: #FFFFFF;
+}
+pre.cobalt .invalid {
+   background-color: #800F00;
+   color: #F8F8F8;
+}
+pre.cobalt .line-numbers {
+   background-color: #85533A;
+   color: #FFFFFF;
+}
+pre.cobalt .cssclass {
+   color: #5FE461;
+}
+pre.cobalt .supportfunction {
+   color: #FFB054;
+}
+pre.cobalt .variable {
+   color: #CCCCCC;
+}
+pre.cobalt .string_constant {
+   color: #80FF82;
+}
+pre.cobalt .cssid {
+   color: #FFB454;
+}
+pre.cobalt .cc_preprocessor_directive {
+   color: #AFC4DB;
+}
+pre.cobalt .entity_inheritedclass {
+   color: #80FCFF;
+   font-style: italic;
+}
+pre.cobalt .support {
+   color: #80FFBB;
+}
+pre.cobalt .block_quote {
+   background-color: #004480;
+}
+pre.cobalt .raw_markup {
+   background-color: #1A4562;
+}
+pre.cobalt .storage {
+   color: #FFEE80;
+}
+pre.cobalt .css_atrule {
+   color: #F6AA11;
+}
+pre.cobalt .css_propertyvalue {
+   color: #F6F080;
+}
+pre.cobalt .constant {
+   color: #FF628C;
+}
+pre.cobalt .heading_markup {
+   font-weight: bold;
+   background-color: #001221;
+   color: #C8E4FD;
+}
+pre.cobalt .css_additionalconstants {
+   color: #EDF080;
+}
+pre.cobalt .metataga {
+   color: #9EFFFF;
+}
+pre.cobalt {
+   background-color: #002240;
+   color: #FFFFFF;
+}
+pre.cobalt .italic_markup {
+   color: #B8FFD9;
+   font-style: italic;
+}
+pre.cobalt .css_tagname {
+   color: #9EFFFF;
+}
+pre.cobalt .supportconstant {
+   color: #EB939A;
+}
+pre.cobalt .string_embeddedsource {
+   color: #9EFF80;
+}
+pre.cobalt .lang_variable {
+   color: #FF80E1;
+}
+pre.cobalt .string {
+   color: #3AD900;
+}
+pre.cobalt .keyword {
+   color: #FF9D00;
+}
+pre.cobalt .diffdeleted {
+   background-color: #4C0900;
+   color: #F8F8F8;
+}
+pre.cobalt .css_propertyname {
+   color: #9DF39F;
+}
+pre.cobalt .string_variable {
+   color: #EDEF7D;
+}
+pre.cobalt .comment {
+   color: #0088FF;
+   font-style: italic;
+}
+pre.cobalt .entity {
+   color: #FFDD00;
+}

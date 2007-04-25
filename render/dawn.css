@@ -1,0 +1,121 @@
+pre.dawn .metaseparator {
+   font-weight: bold;
+   background-color: #DCDCDC;
+   color: #19356D;
+}
+pre.dawn .markupraw {
+   background-color: #EAEAEA;
+   color: #234A97;
+}
+pre.dawn .markupunderline {
+   text-decoration: underline;
+   color: #080808;
+}
+pre.dawn .invalid_illegal {
+   background-color: #B52A1D;
+   color: #F8F8F8;
+   font-style: italic;
+}
+pre.dawn .markupheading {
+   font-weight: bold;
+   color: #19356D;
+}
+pre.dawn .stringregexp {
+   color: #CF5628;
+}
+pre.dawn .markuplist {
+   color: #693A17;
+}
+pre.dawn .embedded_source {
+   background-color: #E1E5EC;
+}
+pre.dawn .invalid_deprecated {
+   font-weight: bold;
+   color: #B52A1D;
+}
+pre.dawn .line-numbers {
+   background-color: #CED8E9;
+   color: #080808;
+}
+pre.dawn .supportfunction {
+   color: #693A17;
+}
+pre.dawn .punctuationseparator {
+   color: #794938;
+}
+pre.dawn .variable {
+   color: #234A97;
+}
+pre.dawn .stringregexp_constantcharacterescape {
+   font-weight: bold;
+   color: #811F24;
+}
+pre.dawn .string_constant {
+   font-weight: bold;
+   color: #696969;
+}
+pre.dawn .support {
+   color: #691C97;
+}
+pre.dawn .markupitalic {
+   color: #080808;
+   font-style: italic;
+}
+pre.dawn .markupquote {
+   background-color: #EAEAEA;
+   color: #0B6125;
+   font-style: italic;
+}
+pre.dawn .stringregexpspecial {
+   font-weight: bold;
+   color: #CF5628;
+}
+pre.dawn .storage {
+   color: #A71D5D;
+   font-style: italic;
+}
+pre.dawn .markupdeleted {
+   color: #B52A1D;
+}
+pre.dawn .supportvariable {
+   color: #234A97;
+}
+pre.dawn .constant {
+   font-weight: bold;
+   color: #811F24;
+}
+pre.dawn .markuplink {
+   color: #234A97;
+   font-style: italic;
+}
+pre.dawn .markupbold {
+   font-weight: bold;
+   color: #080808;
+}
+pre.dawn .supportconstant {
+   color: #B4371F;
+}
+pre.dawn .string_embeddedsource {
+   background-color: #E1E5EC;
+   color: #080808;
+}
+pre.dawn .string {
+   color: #0B6125;
+}
+pre.dawn .keyword {
+   color: #794938;
+}
+pre.dawn {
+   background-color: #F5F5F5;
+   color: #080808;
+}
+pre.dawn .string_variable {
+   color: #234A97;
+}
+pre.dawn .entity {
+   color: #BF4F24;
+}
+pre.dawn .comment {
+   color: #5A525F;
+   font-style: italic;
+}

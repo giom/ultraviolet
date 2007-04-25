@@ -1,0 +1,69 @@
+--- 
+name: All Hallow's Eve
+tags: 
+- begin: <span class="text_base">
+  end: </span>
+  selector: text
+- begin: <span class="source_base">
+  end: </span>
+  selector: source
+- begin: <span class="comment">
+  end: </span>
+  selector: comment
+- begin: <span class="constant">
+  end: </span>
+  selector: constant
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword
+- begin: <span class="preprocessor_line">
+  end: </span>
+  selector: meta.preprocessor.c
+- begin: <span class="preprocessor_directive">
+  end: </span>
+  selector: keyword.control.import
+- begin: <span class="function_name">
+  end: </span>
+  selector: entity.name.function
+- begin: <span class="function_argument">
+  end: </span>
+  selector: variable.parameter
+- begin: <span class="block_comment">
+  end: </span>
+  selector: source comment.block
+- begin: <span class="string">
+  end: </span>
+  selector: string
+- begin: <span class="string_escapes">
+  end: </span>
+  selector: string constant.character.escape
+- begin: <span class="string_executed">
+  end: </span>
+  selector: string.interpolated
+- begin: <span class="regular_expression">
+  end: </span>
+  selector: string.regexp
+- begin: <span class="string_literal">
+  end: </span>
+  selector: string.literal
+- begin: <span class="string_escapes_executed">
+  end: </span>
+  selector: string.interpolated constant.character.escape
+- begin: <span class="type_name">
+  end: </span>
+  selector: entity.name.type
+- begin: <span class="class_inheritance">
+  end: </span>
+  selector: entity.other.inherited-class
+- begin: <span class="tag_name">
+  end: </span>
+  selector: entity.name.tag
+- begin: <span class="tag_attribute">
+  end: </span>
+  selector: entity.other.attribute-name
+- begin: <span class="support_function">
+  end: </span>
+  selector: support.function
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

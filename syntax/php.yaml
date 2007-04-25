@@ -1,0 +1,678 @@
+--- 
+name: PHP
+firstLineMatch: ^#!.*php[0-9]{0,1}\b
+scopeName: source.php
+repository: 
+  language_constant: 
+    name: constant.language.php
+    match: (?i)\b(TRUE|FALSE|NULL|__(FILE|FUNCTION|CLASS|METHOD|LINE)__|ON|OFF|YES|NO|NL|BR|TAB)\b
+  string-double-quoted: 
+    name: string.quoted.double.php
+    endCaptures: 
+      "0": 
+        name: punctuation.definition.string.end.php
+    begin: "\""
+    beginCaptures: 
+      "0": 
+        name: punctuation.definition.string.begin.php
+    end: "\""
+    patterns: 
+    - name: constant.character.escape.php
+      match: \\.
+    - include: "#var_complex_string_heredoc"
+  language: 
+    patterns: 
+    - name: meta.scope.heredoc
+      endCaptures: 
+        "1": 
+          name: keyword.operator.heredoc.php
+        "2": 
+          name: punctuation.definition.string.php
+      begin: (<<<)(HTML)
+      contentName: text.html.basic.embedded
+      beginCaptures: 
+        "1": 
+          name: punctuation.definition.string.php
+        "2": 
+          name: keyword.operator.heredoc.php
+      end: ^(HTML)(;?)$
+      patterns: 
+      - include: text.html.basic
+      - include: "#var_global"
+      - include: "#var_global_safer"
+      - include: "#var_basic"
+      - include: "#var_complex_string_heredoc"
+    - name: meta.scope.heredoc
+      endCaptures: 
+        "1": 
+          name: keyword.operator.heredoc.php
+        "2": 
+          name: punctuation.definition.string.php
+      begin: ((<<<)XML)
+      contentName: text.xml.embedded
+      beginCaptures: 
+        "1": 
+          name: punctuation.definition.string.php
+        "2": 
+          name: keyword.operator.heredoc.php
+      end: ^(XML)(;?)$
+      patterns: 
+      - include: text.xml
+      - include: "#var_global"
+      - include: "#var_global_safer"
+      - include: "#var_basic"
+      - include: "#var_complex_string_heredoc"
+    - name: meta.scope.heredoc
+      endCaptures: 
+        "1": 
+          name: keyword.operator.heredoc.php
+        "2": 
+          name: punctuation.definition.string.php
+      begin: ((<<<)SQL)
+      contentName: source.sql.embedded
+      beginCaptures: 
+        "1": 
+          name: punctuation.definition.string.php
+        "2": 
+          name: keyword.operator.heredoc.php
+      end: ^(SQL)(;?)$
+      patterns: 
+      - include: source.sql
+      - include: "#var_global"
+      - include: "#var_global_safer"
+      - include: "#var_basic"
+      - include: "#var_complex_string_heredoc"
+    - name: comment.block.documentation.phpdoc.php
+      captures: 
+        "0": 
+          name: punctuation.definition.comment.php
+      begin: /\*\*\s*$
+      end: \*/
+      patterns: 
+      - include: "#php_doc"
+      comment: This now only highlights a docblock if the first line contains only /** - this is to stop highlighting everything as invalid when people do comment banners with /******** ...
+    - name: comment.block.php
+      captures: 
+        "0": 
+          name: punctuation.definition.comment.php
+      begin: /\*
+      end: \*/
+    - name: comment.line.double-slash.php
+      captures: 
+        "1": 
+          name: punctuation.definition.comment.php
+      match: (//).*$\n?
+    - name: comment.line.number-sign.php
+      captures: 
+        "1": 
+          name: punctuation.definition.comment.php
+      match: (#).*$\n?
+    - name: meta.interface.php
+      begin: ^\s*(interface)\s+([a-zA-Z0-9_]+)\s*(extends)?\s*
+      beginCaptures: 
+        "1": 
+          name: storage.type.interface.php
+        "2": 
+          name: entity.name.type.interface.php
+        "3": 
+          name: storage.modifier.extends.php
+      end: $
+      patterns: 
+      - name: entity.other.inherited-class.php
+        match: "[a-zA-Z0-9_]+"
+    - name: meta.class.php
+      begin: ^\s*(abstract)?\s*(class)\s+([a-zA-Z0-9_]+)\s*
+      beginCaptures: 
+        "1": 
+          name: storage.modifier.abstract.php
+        "2": 
+          name: storage.type.class.php
+        "3": 
+          name: entity.name.type.class.php
+      end: $
+      patterns: 
+      - captures: 
+          "1": 
+            name: storage.modifier.extends.php
+          "2": 
+            name: entity.other.inherited-class.php
+        match: (extends)\s+([a-zA-Z0-9_]+)\s*
+      - begin: (implements)\s+([a-zA-Z0-9_]+)\s*
+        beginCaptures: 
+          "1": 
+            name: storage.modifier.implements.php
+          "2": 
+            name: support.class.implements.php
+        end: (?=\s*\bextends)|$
+        patterns: 
+        - captures: 
+            "1": 
+              name: support.class.implements.php
+          match: ,\s*([a-zA-Z0-9_]+)\s*
+    - name: keyword.control.php
+      match: \b(break|c(ase|ontinue)|d(e(clare|fault)|ie|o)|e(lse(if)?|nd(declare|for(each)?|if|switch|while)|xit)|for(each)?|if|return|switch|use|while)\b
+    - name: meta.include.php
+      captures: 
+        "1": 
+          name: keyword.control.import.include.php
+      begin: \b((require|include)(_once)?)\b
+      end: ;
+      patterns: 
+      - include: "#language"
+    - name: keyword.control.exception.php
+      match: \b(catch|try|throw|exception)|([a-zA-Z_]*Exception)\b
+    - name: meta.function.php
+      endCaptures: 
+        "1": 
+          name: punctuation.definition.parameters.end.php
+      begin: (?:^\s*)((?:(?:final|abstract|public|private|protected|static)\s+)*)(function)(?:\s+|(\s*&\s*))([a-zA-Z0-9_]+)\s*(\()
+      beginCaptures: 
+        "1": 
+          name: storage.modifier.php
+        "2": 
+          name: storage.type.function.php
+        "3": 
+          name: storage.modifier.reference.php
+        "4": 
+          name: entity.name.function.php
+        "5": 
+          name: punctuation.definition.parameters.begin.php
+      end: \)
+      patterns: 
+      - include: "#string-double-quoted"
+      - include: "#string-single-quoted"
+      - include: "#string-backtick"
+      - include: "#var_global"
+      - include: "#var_global_safer"
+      - include: "#var_basic"
+      - include: "#language_constant"
+    - name: meta.class.php
+      captures: 
+        "1": 
+          name: storage.modifier.abstract.php
+        "2": 
+          name: storage.modifier.class-or-interface.php
+        "3": 
+          name: entity.name.type.class.php
+        "4": 
+          name: entity.other.inherited-class.php
+      match: (?:^\s*)(abstract)?\s*(class|interface)\s+([a-zA-Z0-9_]+)\s*(extends\s+([a-zA-Z0-9_]+))?
+    - name: storage.type.php
+      match: \b(real|double|float|int(eger)?|bool(ean)?|string|class|clone|var|function|interface|new|parent|self|__(autoload|c(all|lone|onstruct)|destruct|get|set|sleep|toString|wakeup))\b
+    - name: storage.modifier.php
+      match: \b(global|abstract|const|extends|implements|final|p(r(ivate|otected)|ublic)|static)\b
+    - name: keyword.operator.php
+      match: "::|->"
+    - name: support.function.builtin_functions.php
+      match: (?i)\b(eval|s(tr(nc(asecmp|mp)|c(asecmp|mp)|len)|et_e(rror_handler|xception_handler))|c(lass_exists|reate_function)|trigger_error|i(s_(subclass_of|a)|nterface_exists)|zend_version|de(fine(d)?|bug_(print_backtrace|backtrace))|property_exists|e(ach|rror_reporting|xtension_loaded)|func(tion_exists|_(num_args|get_arg(s)?))|leak|restore_e(rror_handler|xception_handler)|get_(class(_(vars|methods))?|included_files|object_vars|de(clared_(classes|interfaces)|fined_(constants|vars|functions))|parent_class|extension_funcs|loaded_extensions|resource_type)|method_exists)\b
+    - name: support.function.bcmath.php
+      match: (?i)\bbc(s(cale|ub|qrt)|comp|div|pow(mod)?|add|m(od|ul))\b
+    - name: support.function.bz2.php
+      match: (?i)\bbz(compress|open|decompress|err(str|no|or)|read)\b
+    - name: support.function.cal_unix.php
+      match: (?i)\b(unixtojd|jdtounix)\b
+    - name: support.function.calendar.php
+      match: (?i)\b(cal_(to_jd|info|days_in_month|from_jd)|j(d(to(j(ulian|ewish)|french|gregorian)|dayofweek|monthname)|uliantojd|ewishtojd)|frenchtojd|gregoriantojd)\b
+    - name: support.function.easter.php
+      match: (?i)\beaster_da(ys|te)\b
+    - name: support.function.com_com.php
+      match: (?i)\bcom_(create_guid|print_typeinfo|event_sink|load_typelib|get_active_object|message_pump)\b
+    - name: support.function.com_variant.php
+      match: (?i)\bvariant_(s(ub|et(_type)?)|n(ot|eg)|c(a(st|t)|mp)|i(nt|div|mp)|or|d(iv|ate_(to_timestamp|from_timestamp))|pow|eqv|fix|a(nd|dd|bs)|round|get_type|xor|m(od|ul))\b
+    - name: support.function.ctype.php
+      match: (?i)\bctype_(space|cntrl|digit|upper|p(unct|rint)|lower|al(num|pha)|graph|xdigit)\b
+    - name: support.function.interface.php
+      match: (?i)\bcurl_(setopt(_array)?|c(opy_handle|lose)|init|e(rr(no|or)|xec)|version|getinfo)\b
+    - name: support.function.multi.php
+      match: (?i)\bcurl_multi_(select|close|in(it|fo_read)|exec|add_handle|remove_handle|getcontent)\b
+    - name: support.function.php_date.php
+      match: (?i)\b(str(totime|ftime)|checkdate|time(zone_(name_(from_abbr|get)|transitions_get|identifiers_list|o(pen|ffset_get)|abbreviations_list))?|idate|date(_(sun(set|_info|rise)|create|time(zone_(set|get)|_set)|isodate_set|offset_get|d(efault_timezone_(set|get)|ate_set)|parse|format|modify))?|localtime|g(etdate|m(strftime|date|mktime))|mktime)\b
+    - name: support.function.dba.php
+      match: (?i)\bdba_(sync|handlers|nextkey|close|insert|op(timize|en)|delete|popen|exists|key_split|f(irstkey|etch)|list|replace)\b
+    - name: support.function.dbase.php
+      match: (?i)\bdbase_(num(fields|records)|c(lose|reate)|open|delete_record|pack|add_record|replace_record|get_(header_info|record(_with_names)?))\b
+    - name: support.function.attr.php
+      match: (?i)\bdom_attr_is_id\b
+    - name: support.function.characterdata.php
+      match: (?i)\bdom_characterdata_(substring_data|insert_data|delete_data|append_data|replace_data)\b
+    - name: support.function.document.php
+      match: (?i)\bdom_document_(s(chema_validate(_file)?|ave(_html(_file)?|xml)?)|normalize_document|create_(c(omment|datasection)|text_node|document_fragment|processing_instruction|e(ntity_reference|lement(_ns)?)|attribute(_ns)?)|import_node|validate|load(_html(_file)?|xml)?|adopt_node|re(name_node|laxNG_validate_(file|xml))|get_element(s_by_tag_name(_ns)?|_by_id)|xinclude)\b
+    - name: support.function.domconfiguration.php
+      match: (?i)\bdom_domconfiguration_(set_parameter|can_set_parameter|get_parameter)\b
+    - name: support.function.domerrorhandler.php
+      match: (?i)\bdom_domerrorhandler_handle_error\b
+    - name: support.function.domimplementation.php
+      match: (?i)\bdom_domimplementation_(has_feature|create_document(_type)?|get_feature)\b
+    - name: support.function.domimplementationlist.php
+      match: (?i)\bdom_domimplementationlist_item\b
+    - name: support.function.domimplementationsource.php
+      match: (?i)\bdom_domimplementationsource_get_domimplementation(s)?\b
+    - name: support.function.domstringlist.php
+      match: (?i)\bdom_domstringlist_item\b
+    - name: support.function.element.php
+      match: (?i)\bdom_element_(set_(id_attribute(_n(s|ode))?|attribute(_n(s|ode(_ns)?))?)|has_attribute(_ns)?|remove_attribute(_n(s|ode))?|get_(elements_by_tag_name(_ns)?|attribute(_n(s|ode(_ns)?))?))\b
+    - name: support.function.namednodemap.php
+      match: (?i)\bdom_namednodemap_(set_named_item(_ns)?|item|remove_named_item(_ns)?|get_named_item(_ns)?)\b
+    - name: support.function.namelist.php
+      match: (?i)\bdom_namelist_get_name(space_uri)?\b
+    - name: support.function.node.php
+      match: (?i)\bdom_node_(set_user_data|has_(child_nodes|attributes)|normalize|c(ompare_document_position|lone_node)|i(s_(s(upported|ame_node)|default_namespace|equal_node)|nsert_before)|lookup_(namespace_uri|prefix)|append_child|re(place_child|move_child)|get_(user_data|feature))\b
+    - name: support.function.nodelist.php
+      match: (?i)\bdom_nodelist_item\b
+    - name: support.function.php_dom.php
+      match: (?i)\bdom_import_simplexml\b
+    - name: support.function.string_extend.php
+      match: (?i)\bdom_string_extend_find_offset(16|32)\b
+    - name: support.function.text.php
+      match: (?i)\bdom_text_(split_text|is_whitespace_in_element_content|replace_whole_text)\b
+    - name: support.function.userdatahandler.php
+      match: (?i)\bdom_userdatahandler_handle\b
+    - name: support.function.xpath.php
+      match: (?i)\bdom_xpath_(evaluate|query|register_ns)\b
+    - name: support.function.exif.php
+      match: (?i)\bexif_(t(humbnail|agname)|imagetype|read_data)\b
+    - name: support.function.php_fbsql.php
+      match: (?i)\bfbsql_(s(t(op_db|art_db)|e(t_(characterset|transaction|password|lob_mode)|lect_db))|hostname|n(um_(fields|rows)|ext_result)|c(hange_user|o(nnect|mmit)|lo(se|b_size)|reate_(clob|db|blob))|table_name|insert_id|d(ata(_seek|base(_password)?)|rop_db|b_(status|query))|username|p(connect|assword)|err(no|or)|query|f(ield_(seek|name|t(ype|able)|flags|len)|etch_(object|field|lengths|a(ssoc|rray)|row)|ree_result)|warnings|list_(tables|dbs|fields)|a(utocommit|ffected_rows)|r(o(ws_fetched|llback)|e(sult|ad_(clob|blob)))|get_autostart_info|blob_size)\b
+    - name: support.function.fdf.php
+      match: (?i)\bfdf_(s(et_(s(tatus|ubmit_form_action)|target_frame|o(n_import_javascript|pt)|javascript_action|encoding|v(ersion|alue)|f(ile|lags)|ap)|ave(_string)?)|header|next_field_name|c(lose|reate)|open(_string)?|e(num_values|rr(no|or))|add_(template|doc_javascript)|remove_item|get_(status|opt|encoding|v(ersion|alue)|f(ile|lags)|a(ttachment|p)))\b
+    - name: support.function.filter.php
+      match: (?i)\bfilter_(has_var|i(nput(_array)?|d)|var(_array)?|list)\b
+    - name: support.function.php_ftp.php
+      match: (?i)\bftp_(s(sl_connect|ystype|i(te|ze)|et_option)|n(list|b_(continue|put|f(put|get)|get))|c(h(dir|mod)|onnect|dup|lose)|delete|p(ut|wd|asv)|exec|f(put|get)|login|alloc|r(ename|aw(list)?|mdir)|get(_option)?|m(dtm|kdir))\b
+    - name: support.function.gd.php
+      match: (?i)\b(image(s(y|tring(up)?|et(style|t(hickness|ile)|pixel|brush)|avealpha|x)|c(har(up)?|o(nvolution|py(res(ized|ampled)|merge(gray)?)?|lor(s(total|et|forindex)|closest(hwb|alpha)?|transparent|deallocate|exact(alpha)?|a(t|llocate(alpha)?)|resolve(alpha)?|match))|reate(truecolor|from(string|jpeg|png|wbmp|g(if|d(2(part)?)?)|x(pm|bm)))?)|t(ypes|tf(text|bbox)|ruecolortopalette)|i(struecolor|nterlace)|2wbmp|d(estroy|ashedline)|jpeg|p(s(slantfont|copyfont|text|e(ncodefont|xtendfont)|freefont|loadfont|bbox)|ng|olygon|alettecopy)|ellipse|f(t(text|bbox)|il(ter|l(toborder|ed(polygon|ellipse|arc|rectangle))?)|ont(height|width))|wbmp|l(ine|oadfont|ayereffect)|a(ntialias|lphablending|rc)|r(otate|ectangle)|g(if|d(2)?|ammacorrect)|xbm)|jpeg2wbmp|png2wbmp|gd_info)\b
+    - name: support.function.gettext.php
+      match: (?i)\b(ngettext|textdomain|d(ngettext|c(ngettext|gettext)|gettext)|gettext|bind(textdomain|_textdomain_codeset))\b
+    - name: support.function.gmp.php
+      match: (?i)\bgmp_(s(can(1|0)|trval|ign|ub|etbit|qrt(rem)?)|hamdist|ne(g|xtprime)|c(om|lrbit|mp)|in(tval|it|vert)|or|div(_(q(r)?|r)|exact)|jacobi|p(o(pcount|w(m)?)|erfect_square|rob_prime)|fact|legendre|a(nd|dd|bs)|random|gcd(ext)?|xor|m(od|ul))\b
+    - name: support.function.hash.php
+      match: (?i)\bhash(_(hmac(_file)?|init|update(_(stream|file))?|fi(nal|le)|algos))?\b
+    - name: support.function.hash_md.php
+      match: (?i)\bmd5(_file)?\b
+    - name: support.function.hash_sha.php
+      match: (?i)\bsha1(_file)?\b
+    - name: support.function.iconv.php
+      match: (?i)\b(iconv(_(s(tr(pos|len|rpos)|ubstr|et_encoding)|get_encoding|mime_(decode(_headers)?|encode)))?|ob_iconv_handler)\b
+    - name: support.function.php_imap.php
+      match: (?i)\bimap_(s(can|tatus|ort|ubscribe|e(t(_quota|flag_full|acl)|arch)|avebody)|header(s|info)|num_(recent|msg)|c(heck|l(ose|earflag_full)|reatemailbox)|t(hread|imeout)|open|delete(mailbox)?|8bit|u(n(subscribe|delete)|tf(7_(decode|encode)|8)|id)|ping|e(rrors|xpunge)|qprint|fetch(structure|header|_overview|body)|l(sub|ist|ast_error)|a(ppend|lerts)|r(e(namemailbox|open)|fc822_(parse_(headers|adrlist)|write_address))|get(subscribed|_quota(root)?|acl|mailboxes)|m(sgno|ime_header_decode|ail(_(co(py|mpose)|move)|boxmsginfo)?)|b(inary|ody(struct)?|ase64))\b
+    - name: support.function.ibase_blobs.php
+      match: (?i)\bibase_blob_(c(lose|ancel|reate)|i(nfo|mport)|open|echo|add|get)\b
+    - name: support.function.ibase_events.php
+      match: (?i)\bibase_(set_event_handler|free_event_handler|wait_event)\b
+    - name: support.function.ibase_query.php
+      match: (?i)\bibase_(n(um_(params|fields|rows)|ame_result)|p(aram_info|repare)|execute|query|f(ield_info|etch_(object|assoc|row)|ree_(query|result))|affected_rows)\b
+    - name: support.function.ibase_service.php
+      match: (?i)\bibase_(serv(ice_(detach|attach)|er_info)|d(elete_user|b_info)|add_user|restore|m(odify_user|aintain_db)|backup)\b
+    - name: support.function.interbase.php
+      match: (?i)\bibase_(c(o(nnect|mmit(_ret)?)|lose)|trans|drop_db|pconnect|err(code|msg)|rollback(_ret)?|gen_id)\b
+    - name: support.function.ldap.php
+      match: (?i)\bldap_(s(tart_tls|ort|e(t_(option|rebind_proc)|arch)|asl_bind)|next_(entry|attribute|reference)|co(nnect|unt_entries|mpare)|t61_to_8859|d(n2ufn|elete)|8859_to_t61|unbind|parse_re(sult|ference)|e(rr(no|2str|or)|xplode_dn)|f(irst_(entry|attribute|reference)|ree_result)|list|add|re(name|ad)|get_(option|dn|entries|values(_len)?|attributes)|mod_(del|add|replace)|bind)\b
+    - name: support.function.libxml.php
+      match: (?i)\blibxml_(set_streams_context|clear_errors|use_internal_errors|get_(errors|last_error))\b
+    - name: support.function.mbstring.php
+      match: (?i)\bmb_(s(tr(str|cut|to(upper|lower)|i(str|pos|mwidth)|pos|width|len|r(chr|i(chr|pos)|pos))|ubst(itute_character|r(_count)?)|end_mail)|http_(input|output)|c(heck_encoding|onvert_(case|encoding|variables|kana))|internal_encoding|output_handler|de(code_(numericentity|mimeheader)|tect_(order|encoding))|p(arse_str|referred_mime_name)|encode_(numericentity|mimeheader)|l(ist_(encodings(_alias_names)?|mime_names)|anguage)|get_info)\b
+    - name: support.function.php_mbregex.php
+      match: (?i)\bmb_(split|ereg(i(_replace)?|_(search(_(setpos|init|pos|regs|get(pos|regs)))?|replace|match))?|regex_(set_options|encoding))\b
+    - name: support.function.mcrypt.php
+      match: (?i)\bm(crypt_(c(fb|reate_iv|bc)|ofb|decrypt|e(nc(_(self_test|is_block_(algorithm(_mode)?|mode)|get_(supported_key_sizes|iv_size|key_size|algorithms_name|modes_name|block_size))|rypt)|cb)|list_(algorithms|modes)|ge(neric(_(init|deinit))?|t_(cipher_name|iv_size|key_size|block_size))|module_(self_test|close|is_block_(algorithm(_mode)?|mode)|open|get_(supported_key_sizes|algo_(key_size|block_size))))|decrypt_generic)\b
+    - name: support.function.mhash.php
+      match: (?i)\bmhash(_(count|keygen_s2k|get_(hash_name|block_size)))?\b
+    - name: support.function.mime_magic.php
+      match: (?i)\bmime_content_type\b
+    - name: support.function.ming.php
+      match: (?i)\b(swf(prebuiltclip_init|videostream_init)|ming_(set(scale|cubicthreshold)|use(swfversion|constants)|keypress))\b
+    - name: support.function.php_msql.php
+      match: (?i)\bmsql_(select_db|num_(fields|rows)|c(onnect|lose|reate_db)|d(ata_seek|rop_db|b_query)|pconnect|error|query|f(ield_(seek|name|t(ype|able)|flags|len)|etch_(object|field|array|row)|ree_result)|list_(tables|dbs|fields)|affected_rows|result)\b
+    - name: support.function.php_mssql.php
+      match: (?i)\bmssql_(select_db|n(um_(fields|rows)|ext_result)|c(onnect|lose)|init|data_seek|pconnect|execute|query|f(ield_(seek|name|type|length)|etch_(object|field|a(ssoc|rray)|row|batch)|ree_(statement|result))|r(ows_affected|esult)|g(uid_string|et_last_message)|min_(error_severity|message_severity)|bind)\b
+    - name: support.function.php_mysql.php
+      match: (?i)\bmysql_(s(tat|elect_db)|num_(fields|rows)|c(onnect|l(ient_encoding|ose)|reate_db)|thread_id|in(sert_id|fo)|d(ata_seek|rop_db|b_query)|unbuffered_query|p(connect|ing)|e(scape_string|rr(no|or))|query|f(ield_(seek|name|t(ype|able)|flags|len)|etch_(object|field|lengths|a(ssoc|rray)|row)|ree_result)|list_(tables|dbs|processes|fields)|affected_rows|re(sult|al_escape_string)|get_(server_info|host_info|client_info|proto_info))\b
+    - name: support.function.mysqli_api.php
+      match: (?i)\bmysqli_(s(sl_set|t(ore_result|at|mt_(s(tore_result|end_long_data|qlstate)|num_rows|close|in(sert_id|it)|data_seek|p(aram_count|repare)|e(rr(no|or)|xecute)|f(ield_count|etch|ree_result)|a(ttr_(set|get)|ffected_rows)|res(ult_metadata|et)|bind_(param|result)))|e(t_local_infile_(handler|default)|lect_db)|qlstate)|n(um_(fields|rows)|ext_result)|c(ha(nge_user|racter_set_name)|ommit|lose)|thread_(safe|id)|in(sert_id|it|fo)|options|d(ump_debug_info|ebug|ata_seek)|use_result|p(ing|repare)|err(no|or)|kill|f(ield_(seek|count|tell)|etch_(field(s|_direct)?|lengths|row)|ree_result)|warning_count|a(utocommit|ffected_rows)|r(ollback|eal_(connect|escape_string|query))|get_(server_(info|version)|host_info|client_(info|version)|proto_info)|more_results)\b
+    - name: support.function.mysqli_embedded.php
+      match: (?i)\bmysqli_embedded_server_(start|end)\b
+    - name: support.function.mysqli_nonapi.php
+      match: (?i)\bmysqli_(s(tmt_get_warnings|et_charset)|connect(_err(no|or))?|query|fetch_(object|a(ssoc|rray))|get_(charset|warnings)|multi_query)\b
+    - name: support.function.mysqli_repl.php
+      match: (?i)\bmysqli_(s(end_query|lave_query)|disable_r(pl_parse|eads_from_master)|enable_r(pl_parse|eads_from_master)|rpl_(p(arse_enabled|robe)|query_type)|master_query)\b
+    - name: support.function.mysqli_report.php
+      match: (?i)\bmysqli_report\b
+    - name: support.function.ncurses_functions.php
+      match: (?i)\bncurses_(s(how_panel|cr(_(set|init|dump|restore)|l)|ta(nd(out|end)|rt_color)|lk_(set|noutrefresh|c(olor|lear)|touch|init|attr(set|o(n|ff))?|re(store|fresh))|avetty)|h(ide_panel|line|a(s_(colors|i(c|l)|key)|lfdelay))|n(o(nl|cbreak|echo|qiflush|raw)|ew(_panel|pad|win)|l|apms)|c(olor_(set|content)|urs_set|l(ear|rto(eol|bot))|an_change_color|break)|t(ypeahead|imeout|op_panel|erm(name|attrs))|i(sendwin|n(s(str|ch|tr|delln|ertln)|ch|it(_(color|pair))?))|d(oupdate|e(f(ine_key|_(shell_mode|prog_mode))|l(ch|_panel|eteln|win|ay_output)))|u(se_(default_colors|e(nv|xtended_names))|nget(ch|mouse)|pdate_panels)|p(noutrefresh|utp|a(nel_(window|above|below)|ir_content)|refresh)|e(nd|cho(char)?|rase(char)?)|v(idattr|line)|k(illchar|ey(ok|pad))|qiflush|f(ilter|l(ushinp|ash))|w(stand(out|end)|hline|noutrefresh|c(olor_set|lear)|erase|vline|a(ttr(set|o(n|ff))|dd(str|ch))|refresh|getch|mo(use_trafo|ve)|border)|longname|a(ssume_default_colors|ttr(set|o(n|ff))|dd(str|nstr|ch(str|nstr)?))|r(e(set(ty|_(shell_mode|prog_mode))|place_panel|fresh)|aw)|get(yx|ch|m(ouse|axyx))|m(o(use(interval|_trafo|mask)|ve(_panel)?)|eta|v(hline|cur|inch|delch|vline|waddstr|add(str|nstr|ch(str|nstr)?)|getch))|b(o(ttom_panel|rder)|eep|kgd(set)?|audrate))\b
+    - name: support.function.oci8_interface.php
+      match: (?i)\boci(setbufferinglob|_(s(tatement_type|e(t_prefetch|rver_version))|n(um_(fields|rows)|ew_(c(o(nnect|llection)|ursor)|descriptor))|c(o(nnect|llection_(size|trim|element_(assign|get)|a(ssign|ppend)|max)|mmit)|lose|ancel)|internal_debug|define_by_name|p(connect|a(ssword_change|rse))|e(rror|xecute)|f(ield_(s(cale|ize)|name|type(_raw)?|is_null|precision)|etch(_(object|a(ssoc|ll|rray)|row))?|ree_(statement|collection|descriptor))|lob_(s(ize|eek|ave)|c(opy|lose)|t(ell|runcate)|i(s_equal|mport)|e(of|rase|xport)|flush|write(_temporary)?|load|append|re(wind|ad))|r(ollback|esult)|bind_(array_by_name|by_name))|fetchinto|getbufferinglob)\b
+    - name: support.function.birdstep.php
+      match: (?i)\bbirdstep_(c(o(nnect|mmit)|lose)|off_autocommit|exec|f(ieldn(um|ame)|etch|reeresult)|autocommit|r(ollback|esult))\b
+    - name: support.function.php_odbc.php
+      match: (?i)\b(solid_fetch_prev|odbc_(s(tatistics|pecialcolumns|etoption)|n(um_(fields|rows)|ext_result)|c(o(nnect|lumn(s|privileges)|mmit)|ursor|lose(_all)?)|table(s|privileges)|data_source|p(connect|r(imarykeys|ocedure(s|columns)|epare))|e(rror(msg)?|xec(ute)?)|f(ield_(scale|n(um|ame)|type|len)|oreignkeys|etch_(into|object|array|row)|ree_result)|longreadlen|autocommit|r(ollback|esult(_all)?)|gettypeinfo|binmode))\b
+    - name: support.function.openssl.php
+      match: (?i)\bopenssl_(s(ign|eal)|csr_(sign|new|export(_to_file)?|get_(subject|public_key))|open|p(ublic_(decrypt|encrypt)|k(cs7_(sign|decrypt|encrypt|verify)|ey_(new|export(_to_file)?|free|get_(details|p(ublic|rivate))))|rivate_(decrypt|encrypt))|error_string|verify|x509_(check(_private_key|purpose)|parse|export(_to_file)?|free|read))\b
+    - name: support.function.pcntl.php
+      match: (?i)\bpcntl_(s(ignal|etpriority)|exec|fork|w(stopsig|termsig|if(s(topped|ignaled)|exited)|exitstatus|ait(pid)?)|alarm|getpriority)\b
+    - name: support.function.php_pcre.php
+      match: (?i)\bpreg_(split|quote|last_error|replace(_callback)?|grep|match(_all)?)\b
+    - name: support.function.pdo.php
+      match: (?i)\bpdo_drivers\b
+    - name: support.function.pdo_dbh.php
+      match: (?i)\bpdo_drivers\b
+    - name: support.function.pgsql.php
+      match: (?i)\bpg_(se(nd_(prepare|execute|query(_params)?)|t_(client_encoding|error_verbosity)|lect)|host|num_(fields|rows)|c(o(n(nect(ion_(status|reset|busy))?|vert)|py_(to|from))|l(ient_encoding|ose)|ancel_query)|t(ty|ra(nsaction_status|ce))|insert|options|d(elete|bname)|u(n(trace|escape_bytea)|pdate)|p(connect|ing|ort|ut_line|arameter_status|repare)|e(scape_(string|bytea)|nd_copy|xecute)|version|query(_params)?|f(ield_(size|n(um|ame)|t(ype(_oid)?|able)|is_null|prtlen)|etch_(object|a(ssoc|ll(_columns)?|rray)|r(ow|esult))|ree_result)|l(o_(seek|c(lose|reate)|tell|import|open|unlink|export|write|read(_all)?)|ast_(notice|oid|error))|affected_rows|result_(s(tatus|eek)|error(_field)?)|get_(notify|pid|result)|meta_data)\b
+    - name: support.function.posix.php
+      match: (?i)\bposix_(s(trerror|et(sid|uid|pgid|e(uid|gid)|gid))|ctermid|t(tyname|imes)|i(satty|nitgroups)|uname|kill|access|get(sid|cwd|uid|_last_error|p(id|pid|w(nam|uid)|g(id|rp))|e(uid|gid)|login|rlimit|g(id|r(nam|oups|gid)))|mk(nod|fifo))\b
+    - name: support.function.pspell.php
+      match: (?i)\bpspell_(s(tore_replacement|uggest|ave_wordlist)|new(_(config|personal))?|c(heck|onfig_(save_repl|create|ignore|d(ict_dir|ata_dir)|personal|r(untogether|epl)|mode)|lear_session)|add_to_(session|personal))\b
+    - name: support.function.readline.php
+      match: (?i)\breadline(_(c(ompletion_function|lear_history|allback_(handler_(install|remove)|read_char))|info|on_new_line|write_history|list_history|add_history|re(display|ad_history)))?\b
+    - name: support.function.recode.php
+      match: (?i)\brecode_(string|file)\b
+    - name: support.function.session.php
+      match: (?i)\bsession_(s(tart|et_(save_handler|cookie_params)|ave_path)|name|cache_(expire|limiter)|i(s_registered|d)|de(stroy|code)|un(set|register)|encode|write_close|reg(ister|enerate_id)|get_cookie_params|module_name)\b
+    - name: support.function.shmop.php
+      match: (?i)\bshmop_(size|close|open|delete|write|read)\b
+    - name: support.function.simplexml.php
+      match: (?i)\bsimplexml_(import_dom|load_(string|file))\b
+    - name: support.function.skeleton.php
+      match: (?i)\bconfirm_extname_compiled\b
+    - name: support.function.snmp.php
+      match: (?i)\b(snmp(set|2_(set|walk|real_walk|get(next)?)|_(set_(oid_output_format|enum_print|valueretrieval|quick_print)|read_mib|get_(valueretrieval|quick_print))|3_(set|walk|real_walk|get(next)?)|walk|realwalk|get(next)?)|php_snmpv3)\b
+    - name: support.function.sockets.php
+      match: (?i)\bsocket_(s(hutdown|trerror|e(nd(to)?|t_(nonblock|option|block)|lect))|c(onnect|l(ose|ear_error)|reate(_(pair|listen))?)|write|l(isten|ast_error)|accept|re(cv(from)?|ad)|get(sockname|_option|peername)|bind)\b
+    - name: support.function.php_spl.php
+      match: (?i)\b(spl_(classes|object_hash|autoload(_(call|unregister|extensions|functions|register))?)|class_(implements|parents))\b
+    - name: support.function.spl_iterators.php
+      match: (?i)\biterator_(count|to_array|apply)\b
+    - name: support.function.sqlite.php
+      match: (?i)\bsqlite_(s(ingle_query|eek)|has_prev|n(um_(fields|rows)|ext)|c(hanges|olumn|urrent|lose|reate_(function|aggregate))|open|u(nbuffered_query|df_(decode_binary|encode_binary))|p(open|rev)|e(scape_string|rror_string|xec)|valid|key|query|f(ield_name|etch_(single|column_types|object|a(ll|rray))|actory)|l(ib(encoding|version)|ast_(insert_rowid|error))|array_query|rewind|busy_timeout)\b
+    - name: support.function.array.php
+      match: (?i)(=>)|\b(list|array|s(huffle|ort)|n(ext|at(sort|casesort))|c(o(unt|mpact)|urrent)|in_array|u(sort|ksort|asort)|prev|e(nd|xtract)|k(sort|ey|rsort)|a(sort|r(sort|ray_(s(hift|um|plice|earch|lice)|c(h(unk|ange_key_case)|o(unt_values|mbine))|intersect(_(u(key|assoc)|key|assoc))?|diff(_(u(key|assoc)|key|assoc))?|u(n(shift|ique)|intersect(_(uassoc|assoc))?|diff(_(uassoc|assoc))?)|p(op|ush|ad|roduct)|values|key(s|_exists)|f(il(ter|l(_keys)?)|lip)|walk(_recursive)?|r(e(duce|verse)|and)|m(ultisort|erge(_recursive)?|ap))))|r(sort|eset|ange)|m(in|ax))\b
+    - name: support.function.assert.php
+      match: (?i)\bassert(_options)?\b
+    - name: support.function.base64.php
+      match: (?i)\bbase64_(decode|encode)\b
+    - name: support.function.basic_functions.php
+      match: (?i)\b(s(ys_getloadavg|et_(include_path|magic_quotes_runtime)|leep)|highlight_(string|file)|c(on(stant|nection_(status|aborted))|all_user_(func(_array)?|method(_array)?))|time_(sleep_until|nanosleep)|i(s_uploaded_file|n(i_(set|restore|get(_all)?)|et_(ntop|pton))|p2long|gnore_user_abort|mport_request_variables)|u(sleep|nregister_tick_function)|p(hp_strip_whitespace|utenv|arse_ini_file|rint_r)|error_(log|get_last)|flush|long2ip|re(store_include_path|gister_(shutdown_function|tick_function))|get(servby(name|port)|opt|_(c(urrent_user|fg_var)|include_path|magic_quotes_(runtime|gpc))|protobyn(umber|ame)|env)|move_uploaded_file)\b
+    - name: support.function.browscap.php
+      match: (?i)\bget_browser\b
+    - name: support.function.crc32.php
+      match: (?i)\bcrc32\b
+    - name: support.function.crypt.php
+      match: (?i)\bcrypt\b
+    - name: support.function.cyr_convert.php
+      match: (?i)\bconvert_cyr_string\b
+    - name: support.function.datetime.php
+      match: (?i)\bstrptime\b
+    - name: support.function.dir.php
+      match: (?i)\b(scandir|c(h(dir|root)|losedir)|opendir|dir|re(winddir|addir)|g(etcwd|lob))\b
+    - name: support.function.dl.php
+      match: (?i)\bdl\b
+    - name: support.function.dns.php
+      match: (?i)\b(dns_(check_record|get_(record|mx))|gethostby(name(l)?|addr))\b
+    - name: support.function.exec.php
+      match: (?i)\b(s(hell_exec|ystem)|p(assthru|roc_nice)|e(scapeshell(cmd|arg)|xec))\b
+    - name: support.function.file.php
+      match: (?i)\b(sys_get_temp_dir|copy|t(empnam|mpfile)|u(nlink|mask)|p(close|open)|f(s(canf|tat|eek)|nmatch|close|t(ell|runcate)|ile(_(put_contents|get_contents))?|open|p(utcsv|assthru)|eof|flush|write|lock|read|get(s(s)?|c(sv)?))|r(e(name|wind|a(dfile|lpath))|mdir)|get_meta_tags|mkdir)\b
+    - name: support.function.filestat.php
+      match: (?i)\b(stat|c(h(own|grp|mod)|learstatcache)|touch|is_(dir|executable|file|writable|link|readable)|disk_(total_space|free_space)|file(size|ctime|type|inode|owner|_exists|perms|atime|group|mtime)|l(stat|chgrp))\b
+    - name: support.function.formatted_print.php
+      match: (?i)\b(sprintf|printf|v(sprintf|printf|fprintf)|fprintf)\b
+    - name: support.function.fsock.php
+      match: (?i)\b(pfsockopen|fsockopen)\b
+    - name: support.function.ftok.php
+      match: (?i)\bftok\b
+    - name: support.function.head.php
+      match: (?i)\b(set(cookie|rawcookie)|header(s_(sent|list))?)\b
+    - name: support.function.html.php
+      match: (?i)\b(html(specialchars(_decode)?|_entity_decode|entities)|get_html_translation_table)\b
+    - name: support.function.http.php
+      match: (?i)\bhttp_build_query\b
+    - name: support.function.image.php
+      match: (?i)\b(image_type_to_(extension|mime_type)|getimagesize)\b
+    - name: support.function.info.php
+      match: (?i)\b(zend_logo_guid|php(credits|info|_(sapi_name|ini_scanned_files|uname|egg_logo_guid|logo_guid|real_logo_guid)|version))\b
+    - name: support.function.iptc.php
+      match: (?i)\biptc(parse|embed)\b
+    - name: support.function.lcg.php
+      match: (?i)\blcg_value\b
+    - name: support.function.levenshtein.php
+      match: (?i)\blevenshtein\b
+    - name: support.function.link.php
+      match: (?i)\b(symlink|link(info)?|readlink)\b
+    - name: support.function.mail.php
+      match: (?i)\b(ezmlm_hash|mail)\b
+    - name: support.function.math.php
+      match: (?i)\b(s(in(h)?|qrt)|h(ypot|exdec)|number_format|c(os(h)?|eil)|tan(h)?|is_(nan|infinite|finite)|octdec|de(c(hex|oct|bin)|g2rad)|p(i|ow)|exp(m1)?|f(loor|mod)|log(1(p|0))?|a(sin(h)?|cos(h)?|tan(h|2)?|bs)|r(ound|ad2deg)|b(indec|ase_convert))\b
+    - name: support.function.md5.php
+      match: (?i)\bmd5(_file)?\b
+    - name: support.function.metaphone.php
+      match: (?i)\bmetaphone\b
+    - name: support.function.microtime.php
+      match: (?i)\b(get(timeofday|rusage)|microtime)\b
+    - name: support.function.pack.php
+      match: (?i)\b(unpack|pack)\b
+    - name: support.function.pageinfo.php
+      match: (?i)\bget(lastmod|my(inode|uid|pid|gid))\b
+    - name: support.function.proc_open.php
+      match: (?i)\bproc_(close|terminate|open|get_status)\b
+    - name: support.function.quot_print.php
+      match: (?i)\bquoted_printable_decode\b
+    - name: support.function.rand.php
+      match: (?i)\b(srand|rand|getrandmax|mt_(srand|rand|getrandmax))\b
+    - name: support.function.reg.php
+      match: (?i)\b(s(plit(i)?|ql_regcase)|ereg(i(_replace)?|_replace)?)\b
+    - name: support.function.sha1.php
+      match: (?i)\bsha1(_file)?\b
+    - name: support.function.soundex.php
+      match: (?i)\bsoundex\b
+    - name: support.function.streamsfuncs.php
+      match: (?i)\bstream_(s(ocket_(s(hutdown|e(ndto|rver))|client|pair|enable_crypto|accept|recvfrom|get_name)|e(t_(timeout|write_buffer|blocking)|lect))|co(ntext_(set_(option|params)|create|get_(options|default))|py_to_stream)|filter_(prepend|append|remove)|get_(contents|transports|wrappers|line|meta_data))\b
+    - name: support.function.string.php
+      match: (?i)\b(echo|print|s(scanf|tr(s(tr|pn)|natc(asecmp|mp)|c(spn|hr|oll)|t(o(upper|k|lower)|r)|i(str|p(slashes|cslashes|os|_tags))|_(s(huffle|plit)|ireplace|pad|word_count|r(ot13|ep(eat|lace)))|p(os|brk)|r(chr|ipos|pos|ev))|imilar_text|ubstr(_(co(unt|mpare)|replace))?|etlocale)|hebrev(c)?|nl(2br|_langinfo)|c(h(unk_split|r)|ount_chars)|trim|implode|ord|dirname|uc(first|words)|join|pa(thinfo|rse_str)|explode|quotemeta|wordwrap|l(trim|ocaleconv)|add(slashes|cslashes)|rtrim|money_format|b(in2hex|asename))\b
+    - name: support.function.syslog.php
+      match: (?i)\b(syslog|closelog|openlog|define_syslog_variables)\b
+    - name: support.function.type.php
+      match: (?i)\b(s(trval|ettype)|i(s_(s(calar|tring)|nu(ll|meric)|callable|object|float|long|array|resource|bool)|ntval)|floatval|gettype)\b
+    - name: support.function.uniqid.php
+      match: (?i)\buniqid\b
+    - name: support.function.url.php
+      match: (?i)\b(url(decode|encode)|parse_url|rawurl(decode|encode)|get_headers)\b
+    - name: support.function.user_filters.php
+      match: (?i)\bstream_(filter_register|get_filters|bucket_(new|prepend|append|make_writeable))\b
+    - name: support.function.uuencode.php
+      match: (?i)\bconvert_uu(decode|encode)\b
+    - name: support.function.var.php
+      match: (?i)\b((un|is)set|empty|serialize|debug_zval_dump|unserialize|var_(dump|export)|memory_get_(usage|peak_usage))\b
+    - name: support.function.versioning.php
+      match: (?i)\bversion_compare\b
+    - name: support.function.php_sybase_db.php
+      match: (?i)\bsybase_(select_db|num_(fields|rows)|c(onnect|lose)|data_seek|pconnect|query|f(ield_seek|etch_(object|field|array|row)|ree_result)|affected_rows|result|get_last_message|min_(error_severity|message_severity))\b
+    - name: support.function.php_sybase_ct.php
+      match: (?i)\bsybase_(se(t_message_handler|lect_db)|num_(fields|rows)|c(onnect|lose)|d(eadlock_retry_count|ata_seek)|unbuffered_query|pconnect|query|f(ield_seek|etch_(object|field|a(ssoc|rray)|row)|ree_result)|affected_rows|result|get_last_message|min_(server_severity|client_severity))\b
+    - name: support.function.sysvmsg.php
+      match: (?i)\bmsg_(s(tat_queue|e(nd|t_queue))|re(ceive|move_queue)|get_queue)\b
+    - name: support.function.sysvsem.php
+      match: (?i)\bsem_(acquire|re(lease|move)|get)\b
+    - name: support.function.sysvshm.php
+      match: (?i)\bshm_(detach|put_var|attach|remove(_var)?|get_var)\b
+    - name: support.function.tidy.php
+      match: (?i)\btidy_(c(onfig_count|lean_repair)|is_x(html|ml)|diagnose|parse_(string|file)|error_count|warning_count|access_count|repair_(string|file)|get(opt|_(status|h(tml(_ver)?|ead)|config|o(utput|pt_doc)|error_buffer|r(oot|elease)|body)))\b
+    - name: support.function.tokenizer.php
+      match: (?i)\btoken_(name|get_all)\b
+    - name: support.function.wddx.php
+      match: (?i)\bwddx_(serialize_va(lue|rs)|deserialize|packet_(start|end)|add_vars)\b
+    - name: support.function.xml.php
+      match: (?i)\b(utf8_(decode|encode)|xml_(set_(start_namespace_decl_handler|notation_decl_handler|character_data_handler|object|default_handler|unparsed_entity_decl_handler|processing_instruction_handler|e(nd_namespace_decl_handler|lement_handler|xternal_entity_ref_handler))|parse(_into_struct|r_(set_option|create(_ns)?|free|get_option))?|error_string|get_(current_(column_number|line_number|byte_index)|error_code)))\b
+    - name: support.function.xmlrpc-epi-php.php
+      match: (?i)\bxmlrpc_(se(t_type|rver_(c(all_method|reate)|destroy|add_introspection_data|register_(introspection_callback|method)))|is_fault|decode(_request)?|parse_method_descriptions|encode(_request)?|get_type)\b
+    - name: support.function.php_xmlwriter.php
+      match: (?i)\bxmlwriter_(s(tart_(c(omment|data)|d(td(_(e(ntity|lement)|attlist))?|ocument)|pi|element(_ns)?|attribute(_ns)?)|et_indent(_string)?)|text|o(utput_memory|pen_(uri|memory))|end_(c(omment|data)|d(td(_(e(ntity|lement)|attlist))?|ocument)|pi|element|attribute)|f(ull_end_element|lush)|write_(c(omment|data)|dtd(_(e(ntity|lement)|attlist))?|pi|element(_ns)?|attribute(_ns)?|raw))\b
+    - name: support.function.xsltprocessor.php
+      match: (?i)\bxsl_xsltprocessor_(set_parameter|has_exslt_support|transform_to_(doc|uri|xml)|import_stylesheet|re(gister_php_functions|move_parameter)|get_parameter)\b
+    - name: support.function.php_zip.php
+      match: (?i)\b(s(tat(Name|Index)|et(Comment(Name|Index)|ArchiveComment))|c(lose|reateEmptyDir)|zip_(close|open|entry_(name|c(ompress(ionmethod|edsize)|lose)|open|filesize|read)|read)|open|delete(Name|Index)|unchange(Name|Index|All)|locateName|addF(ile|romString)|rename(Name|Index)|get(Stream|NameIndex|Comment(Name|Index)|From(Name|Index)|ArchiveComment))\b
+    - name: support.function.zlib.php
+      match: (?i)\b(zlib_get_coding_type|ob_gzhandler|readgzfile|gz(compress|inflate|open|deflate|uncompress|encode|file))\b
+    - name: support.function.main.php
+      match: (?i)\bset_time_limit\b
+    - name: support.function.output.php
+      match: (?i)\bo(utput_(add_rewrite_var|reset_rewrite_vars)|b_(start|clean|implicit_flush|end_(clean|flush)|flush|list_handlers|get_(status|c(ontents|lean)|flush|le(ngth|vel))))\b
+    - name: support.function.userspace.php
+      match: (?i)\bstream_wrapper_(unregister|re(store|gister))\b
+    - name: support.function.php_apache.php
+      match: (?i)\b(virtual|apache_(setenv|note|child_terminate|lookup_uri|re(s(ponse_headers|et_timeout)|quest_headers)|get_(version|modules))|getallheaders)\b
+    - name: support.function.php_functions.php
+      match: (?i)\b(virtual|apache_(setenv|note|response_headers|get(_(version|modules)|env))|getallheaders)\b
+    - name: support.function.php_functions.php
+      match: (?i)\b(virtual|apache_(setenv|note|response_headers|get(_(version|modules)|env))|getallheaders)\b
+    - name: support.function.php_apache.php
+      match: (?i)\b(virtual|apache_(setenv|note|child_terminate|lookup_uri|get_(version|modules)|re(sponse_headers|quest_(s(ome_auth_required|ub_req_(lookup_(uri|file)|method_uri)|e(t_(etag|last_modified)|rver_port)|atisfies)|headers(_(in|out))?|is_initial_req|discard_request_body|update_mtime|err_headers_out|log_error|auth_(name|type)|r(un|emote_host)|meets_conditions|basic_auth_pw)))|getallheaders)\b
+    - name: support.function.php_milter.php
+      match: (?i)\bsmfi_(set(timeout|flags|reply)|chgheader|delrcpt|add(header|rcpt)|replacebody|getsymval)\b
+    - name: support.function.nsapi.php
+      match: (?i)\bnsapi_(virtual|re(sponse_headers|quest_headers))\b
+    - name: support.class.builtin
+      match: (?i)\b(Re(cursive(RegexIterator|CachingIterator|IteratorIterator|DirectoryIterator|FilterIterator|ArrayIterator)|flection(Method|Class|Object|Extension|P(arameter|roperty)|Function)?|gexIterator)|swf(s(hape|ound|prite)|text(field)?|displayitem|f(ill|ont(cha(r)?)?)|action|gradient|mo(vie|rph)|b(itmap|utton))|XMLReader|tidyNode|S(impleXML(Iterator|Element)|oap(Header|Server|Client|Param|Var|Fault)|pl(TempFileObject|ObjectStorage|File(Info|Object)))|NoRewindIterator|C(OMPersistHelper|achingIterator)|I(nfiniteIterator|teratorIterator)|D(irectoryIterator|OM(XPath|Node|C(omment|dataSection)|Text|Document(Fragment)?|ProcessingInstruction|E(ntityReference|lement)|Attr)|ateTime(Zone)?)|P(DO(Statement)?|arentIterator)|E(rrorException|mptyIterator|xception)|FilterIterator|LimitIterator|A(p(pendIterator|acheRequest)|rray(Iterator|Object)))\b
+    - name: string.unquoted.heredoc.php
+      endCaptures: 
+        "1": 
+          name: keyword.operator.heredoc.php
+        "2": 
+          name: punctuation.definition.string.php
+      begin: (<<<)([a-zA-Z_]+[a-zA-Z0-9_]*)
+      beginCaptures: 
+        "1": 
+          name: punctuation.definition.string.php
+        "2": 
+          name: keyword.operator.heredoc.php
+      end: ^(\2)(;?)$
+      patterns: 
+      - include: "#var_complex_string_heredoc"
+    - name: keyword.operator.comparison.php
+      match: (===|==|!==|!=|<=|>=|<>|<|>)
+    - name: keyword.operator.error-control.php
+      match: (@)
+    - name: keyword.operator.increment-decrement.php
+      match: (\-\-|\+\+)
+    - name: keyword.operator.arithmetic.php
+      match: (\-|\+|\*|\/|%)
+    - name: keyword.operator.logical.php
+      match: (!|&&|\|\|)|\b(and|or|xor|as)\b
+    - name: keyword.operator.string.php
+      match: (\.=|\.)
+    - name: keyword.operator.type.php
+      match: \b(instanceof)\b
+    - name: constant.numeric.php
+      match: \b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b
+    - include: "#string-double-quoted"
+    - include: "#string-single-quoted"
+    - include: "#string-backtick"
+    - include: "#var_global"
+    - include: "#var_global_safer"
+    - include: "#var_basic"
+    - captures: 
+        "1": 
+          name: keyword.operator.php
+        "2": 
+          name: variable.other.property.php
+      match: (?<=[a-zA-Z0-9_\x{7f}-\x{ff}])(->)([a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*?)\b
+    - include: "#language_constant"
+    - name: support.constant.core.php
+      match: \b(DEFAULT_INCLUDE_PATH|E_(ALL|COMPILE_(ERROR|WARNING)|CORE_(ERROR|WARNING)|(RECOVERABLE_)?ERROR|NOTICE|PARSE|STRICT|USER_(ERROR|NOTICE|WARNING)|WARNING)|PEAR_(EXTENSION_DIR|INSTALL_DIR)|PHP_(BINDIR|CONFIG_FILE_PATH|DATADIR|E(OL|XTENSION_DIR)|L(IBDIR|OCALSTATEDIR)|O(S|UTPUT_HANDLER_CONT|UTPUT_HANDLER_END|UTPUT_HANDLER_START)|SYSCONFDIR|VERSION))\b
+    - name: support.constant.std.php
+      match: \b(A(B(DAY_([1-7])|MON_([0-9]{1,2}))|LT_DIGITS|M_STR|SSERT_(ACTIVE|BAIL|CALLBACK|QUIET_EVAL|WARNING))|C(ASE_(LOWER|UPPER)|HAR_MAX|O(DESET|NNECTION_(ABORTED|NORMAL|TIMEOUT)|UNT_(NORMAL|RECURSIVE))|REDITS_(ALL|DOCS|FULLPAGE|GENERAL|GROUP|MODULES|QA|SAPI)|RNCYSTR|RYPT_(BLOWFISH|EXT_DES|MD5|SALT_LENGTH|STD_DES)|URRENCY_SYMBOL)|D(AY_([1-7])|ECIMAL_POINT|IRECTORY_SEPARATOR|_(FMT|T_FMT))|E(NT_(COMPAT|NOQUOTES|QUOTES)|RA(|_D_FMT|_D_T_FMT|_T_FMT|_YEAR)|XTR_(IF_EXISTS|OVERWRITE|PREFIX_(ALL|IF_EXISTS|INVALID|SAME)|SKIP))|FRAC_DIGITS|GROUPING|HTML_(ENTITIES|SPECIALCHARS)|IN(FO_(ALL|CONFIGURATION|CREDITS|ENVIRONMENT|GENERAL|LICENSE|MODULES|VARIABLES)|I_(ALL|PERDIR|SYSTEM|USER)|T_(CURR_SYMBOL|FRAC_DIGITS))|L(C_(ALL|COLLATE|CTYPE|MESSAGES|MONETARY|NUMERIC|TIME)|O(CK_(EX|NB|SH|UN)|G_(ALERT|AUTH(|PRIV)|CONS|CRIT|CRON|DAEMON|DEBUG|EMERG|ERR|INFO|KERN|LOCAL([0-7])|LPR|MAIL|NDELAY|NEWS|NOTICE|NOWAIT|ODELAY|PERROR|PID|SYSLOG|USER|UUCP|WARNING)))|M(ON_([0-9]{1,2}|DECIMAL_POINT|GROUPING|THOUSANDS_SEP)|YSQL_(ASSOC|BOTH|NUM)|_(1_PI|2_(PI|SQRTPI)|E|L(N10|N2|OG(10E|2E))|PI(|_2|_4)|SQRT1_2|SQRT2))|N(EGATIVE_SIGN|O(EXPR|STR)|_(CS_PRECEDES|SEP_BY_SPACE|SIGN_POSN))|P(ATH(INFO_(BASENAME|DIRNAME|EXTENSION)|_SEPARATOR)|M_STR|OSITIVE_SIGN|_(CS_PRECEDES|SEP_BY_SPACE|SIGN_POSN))|RADIXCHAR|S(EEK_(CUR|END|SET)|ORT_(ASC|DESC|NUMERIC|REGULAR|STRING)|TR_PAD_(BOTH|LEFT|RIGHT))|T(HOUS(ANDS_SEP|EP)|_(FMT(|_AMPM)))|YES(EXPR|STR))\b
+  var_basic: 
+    name: variable.other.php
+    captures: 
+      "1": 
+        name: punctuation.definition.variable.php
+    match: (\$+)[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*?\b
+  string-backtick: 
+    name: string.interpolated.php
+    endCaptures: 
+      "0": 
+        name: punctuation.definition.string.end.php
+    begin: `
+    beginCaptures: 
+      "0": 
+        name: punctuation.definition.string.begin.php
+    end: `
+    patterns: 
+    - name: constant.character.escape.php
+      match: \\.
+    - include: "#var_complex_string_heredoc"
+  var_global_safer: 
+    name: variable.other.global.safer.php
+    captures: 
+      "2": 
+        name: punctuation.definition.variable.php
+    match: ((\$)(GLOBALS|_(ENV|SERVER|SESSION)))|\b(global)\b
+  var_complex_string_heredoc: 
+    name: variable.other.php
+    match: (?<regex>(?#simple syntax)\$(?<name>[a-zA-Z_\x{7f}-\x{ff}][a-zA-Z0-9_\x{7f}-\x{ff}]*)(?:\[(?<index>[a-zA-Z0-9_\x{7f}-\x{ff}]+|\$\g<name>)\]|->\g<name>)?|(?#simple syntax with braces)\$\{(?:\g<name>(?<indices>\[(?:\g<index>|'(?:\\.|[^'\\])*'|"(?:\g<regex>|\\.|[^"\\])*")\])?|\g<complex>|\$\{\g<complex>\})\}|(?#complex syntax)\{(?<complex>\$(?<segment>\g<name>\g<indices>*)(?:->\g<segment>)*|\$\g<complex>|\$\{\g<complex>\})\})
+  string-single-quoted: 
+    name: string.quoted.single.php
+    endCaptures: 
+      "0": 
+        name: punctuation.definition.string.end.php
+    begin: "'"
+    beginCaptures: 
+      "0": 
+        name: punctuation.definition.string.begin.php
+    end: "'"
+    patterns: 
+    - name: constant.character.escape.php
+      match: \\.
+  var_global: 
+    name: variable.other.global.php
+    captures: 
+      "1": 
+        name: punctuation.definition.variable.php
+    match: (\$)(_(COOKIE|FILES|GET|POST|REQUEST))\b
+  php_doc: 
+    patterns: 
+    - name: invalid.illegal.missing-asterisk.phpdoc.php
+      match: ^(?!\s*\*).*$\n?
+      comment: PHPDocumentor only recognises lines with an asterisk as the first non-whitespaces character
+    - captures: 
+        "1": 
+          name: keyword.other.phpdoc.php
+        "3": 
+          name: storage.modifier.php
+        "4": 
+          name: invalid.illegal.wrong-access-type.phpdoc.php
+      match: ^\s*\*\s*(@access)\s+((public|private|protected)|(.+))\s*$
+    - name: markup.underline.link
+      match: ((https?|s?ftp|ftps|file|smb|afp|nfs|(x-)?man|gopher|txmt)://|mailto:)[-:@a-zA-Z0-9_.~%+/?=&#]+(?<![.?:])
+    - captures: 
+        "1": 
+          name: keyword.other.phpdoc.php
+        "2": 
+          name: markup.underline.link
+      match: (@xlink)\s+(.+)\s*$
+    - name: keyword.other.phpdoc.php
+      match: \@(a(bstract|uthor)|c(ategory|opyright)|global|li(cense|nk)|pa(ckage|ram)|return|s(ee|ince|tatic|ubpackage)|t(hrows|odo)|v(ar|ersion)|uses|deprecated|final)\b
+    - name: meta.tag.inline.phpdoc.php
+      captures: 
+        "1": 
+          name: keyword.other.phpdoc.php
+      match: \{(@(link)).+?\}
+uuid: 22986475-8CA5-11D9-AEDD-000D93C8BE28
+foldingStartMarker: (/\*|\{\s*$|<<<HTML)
+patterns: 
+- captures: 
+    "0": 
+      name: punctuation.section.embedded.php
+  begin: <\?(?i:php|=)?
+  end: \?>
+  patterns: 
+  - name: comment.line.number-sign.php
+    captures: 
+      "1": 
+        name: punctuation.definition.comment.php
+    match: (#).*?(?=\?>)
+  - name: comment.line.double-slash.php
+    captures: 
+      "1": 
+        name: punctuation.definition.comment.php
+    match: (//).*?(?=\?>)
+  - include: "#language"
+foldingStopMarker: (\*/|^\s*\}|^HTML;)

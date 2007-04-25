@@ -1,0 +1,104 @@
+pre.magicwb_amiga .markup_list_item {
+   color: #4D4E60;
+}
+pre.magicwb_amiga .library_classtype {
+   color: #FFA995;
+}
+pre.magicwb_amiga .library_constant {
+   color: #FFFFFF;
+}
+pre.magicwb_amiga .constant_builtin {
+   font-weight: bold;
+   color: #FFA995;
+}
+pre.magicwb_amiga .number {
+   color: #FFFFFF;
+}
+pre.magicwb_amiga .embedded_source {
+   background-color: #8A9ECB;
+}
+pre.magicwb_amiga .invalid {
+   background-color: #797979;
+   color: #FFFFFF;
+}
+pre.magicwb_amiga .type_name {
+   text-decoration: underline;
+}
+pre.magicwb_amiga .line-numbers {
+   background-color: #B1B1B1;
+   color: #000000;
+}
+pre.magicwb_amiga .objectivec_method_call {
+   color: #000000;
+}
+pre.magicwb_amiga .library_function {
+   color: #E5B3FF;
+}
+pre.magicwb_amiga .entity_name {
+   font-weight: bold;
+   color: #0000FF;
+}
+pre.magicwb_amiga .variable {
+   color: #FFA995;
+}
+pre.magicwb_amiga .function_argument {
+   font-style: italic;
+}
+pre.magicwb_amiga .function_name {
+   color: #FFA995;
+}
+pre.magicwb_amiga .include_user {
+   background-color: #969696;
+   color: #FFA995;
+}
+pre.magicwb_amiga .inherited_class {
+   font-style: italic;
+}
+pre.magicwb_amiga .storage {
+   font-weight: bold;
+   color: #3A68A3;
+}
+pre.magicwb_amiga .constant_userdefined {
+   background-color: #7878AA;
+   color: #FFA995;
+}
+pre.magicwb_amiga .library_variable {
+   color: #3A68A3;
+}
+pre.magicwb_amiga .markup_quote_double_email {
+   color: #4C457E;
+}
+pre.magicwb_amiga .markup_quote_email {
+   color: #00F0C9;
+}
+pre.magicwb_amiga .markup_raw {
+   background-color: #0000FF;
+   color: #FFFFFF;
+}
+pre.magicwb_amiga .include_system {
+   background-color: #969696;
+   color: #FFA995;
+   font-style: italic;
+}
+pre.magicwb_amiga .tag_attribute {
+   color: #3A68A3;
+   font-style: italic;
+}
+pre.magicwb_amiga .keyword {
+   font-weight: bold;
+}
+pre.magicwb_amiga .string {
+   background-color: #AA7878;
+   color: #FFFFFF;
+}
+pre.magicwb_amiga {
+   background-color: #969696;
+   color: #000000;
+}
+pre.magicwb_amiga .objectivec_method_call_ {
+   font-style: italic;
+}
+pre.magicwb_amiga .comment {
+   color: #8D2E75;
+   font-style: italic;
+}

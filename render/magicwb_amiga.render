@@ -1,0 +1,90 @@
+--- 
+name: MagicWB (Amiga)
+tags: 
+- begin: <span class="comment">
+  end: </span>
+  selector: comment
+- begin: <span class="string">
+  end: </span>
+  selector: string
+- begin: <span class="number">
+  end: </span>
+  selector: constant.numeric
+- begin: <span class="constant_builtin">
+  end: </span>
+  selector: constant.language
+- begin: <span class="constant_userdefined">
+  end: </span>
+  selector: constant.character, constant.other
+- begin: <span class="variable">
+  end: </span>
+  selector: variable.language, variable.other
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword
+- begin: <span class="storage">
+  end: </span>
+  selector: storage
+- begin: <span class="type_name">
+  end: </span>
+  selector: entity.name.type
+- begin: <span class="inherited_class">
+  end: </span>
+  selector: entity.other.inherited-class
+- begin: <span class="function_name">
+  end: </span>
+  selector: entity.name.function
+- begin: <span class="function_argument">
+  end: </span>
+  selector: variable.parameter
+- begin: <span class="entity_name">
+  end: </span>
+  selector: entity.name
+- begin: <span class="tag_attribute">
+  end: </span>
+  selector: entity.other.attribute-name
+- begin: <span class="library_function">
+  end: </span>
+  selector: support.function
+- begin: <span class="objectivec_method_call">
+  end: </span>
+  selector: support.function.any-method
+- begin: <span class="objectivec_method_call_">
+  end: </span>
+  selector: support.function.any-method - punctuation
+- begin: <span class="library_constant">
+  end: </span>
+  selector: support.constant
+- begin: <span class="library_classtype">
+  end: </span>
+  selector: support.type, support.class
+- begin: <span class="library_variable">
+  end: </span>
+  selector: support.variable
+- begin: <span class="invalid">
+  end: </span>
+  selector: invalid
+- begin: <span class="include_system">
+  end: </span>
+  selector: string.quoted.other.lt-gt.include
+- begin: <span class="include_user">
+  end: </span>
+  selector: string.quoted.double.include
+- begin: <span class="markup_list_item">
+  end: </span>
+  selector: markup.list
+- begin: <span class="markup_raw">
+  end: </span>
+  selector: markup.raw
+- begin: <span class="markup_quote_email">
+  end: </span>
+  selector: markup.quote
+- begin: <span class="markup_quote_double_email">
+  end: </span>
+  selector: markup.quote markup.quote
+- begin: <span class="embedded_source">
+  end: </span>
+  selector: text.html source
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

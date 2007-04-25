@@ -1,0 +1,105 @@
+--- 
+name: Eiffel
+tags: 
+- begin: <span class="comment">
+  end: </span>
+  selector: comment
+- begin: <span class="variable">
+  end: </span>
+  selector: variable
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword
+- begin: <span class="number">
+  end: </span>
+  selector: constant.numeric
+- begin: <span class="userdefined_constant">
+  end: </span>
+  selector: constant
+- begin: <span class="builtin_constant">
+  end: </span>
+  selector: constant.language
+- begin: <span class="string">
+  end: </span>
+  selector: string
+- begin: <span class="string_interpolation">
+  end: </span>
+  selector: constant.character.escape, string source
+- begin: <span class="preprocessor_line">
+  end: </span>
+  selector: meta.preprocessor
+- begin: <span class="preprocessor_directive">
+  end: </span>
+  selector: keyword.control.import
+- begin: <span class="function_name">
+  end: </span>
+  selector: entity.name.function, keyword.other.name-of-parameter.objc
+- begin: <span class="type_name">
+  end: </span>
+  selector: entity.name.type
+- begin: <span class="inherited_class_name">
+  end: </span>
+  selector: entity.other.inherited-class
+- begin: <span class="function_parameter">
+  end: </span>
+  selector: variable.parameter
+- begin: <span class="function_argument_and_result_types">
+  end: </span>
+  selector: storage.type.method
+- begin: <span class="section">
+  end: </span>
+  selector: meta.section entity.name.section, declaration.section entity.name.section
+- begin: <span class="library_function">
+  end: </span>
+  selector: support.function
+- begin: <span class="library_object">
+  end: </span>
+  selector: support.class, support.type
+- begin: <span class="library_constant">
+  end: </span>
+  selector: support.constant
+- begin: <span class="library_variable">
+  end: </span>
+  selector: support.variable
+- begin: <span class="js_operator">
+  end: </span>
+  selector: keyword.operator.js
+- begin: <span class="invalid">
+  end: </span>
+  selector: invalid
+- begin: <span class="invalid_trailing_whitespace">
+  end: </span>
+  selector: invalid.deprecated.trailing-whitespace
+- begin: <span class="embedded_source">
+  end: </span>
+  selector: text source, string.unquoted
+- begin: <span class="markup_xml_declaration">
+  end: </span>
+  selector: meta.xml-processing, declaration.xml-processing
+- begin: <span class="markup_doctype">
+  end: </span>
+  selector: meta.doctype, declaration.doctype
+- begin: <span class="markup_dtd">
+  end: </span>
+  selector: meta.doctype.DTD, declaration.doctype.DTD
+- begin: <span class="markup_tag">
+  end: </span>
+  selector: meta.tag, declaration.tag
+- begin: <span class="markup_name_of_tag">
+  end: </span>
+  selector: entity.name.tag
+- begin: <span class="markup_tag_attribute">
+  end: </span>
+  selector: entity.other.attribute-name
+- begin: <span class="markup_heading">
+  end: </span>
+  selector: markup.heading
+- begin: <span class="markup_quote">
+  end: </span>
+  selector: markup.quote
+- begin: <span class="markup_list">
+  end: </span>
+  selector: markup.list
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

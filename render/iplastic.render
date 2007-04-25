@@ -1,0 +1,72 @@
+--- 
+name: iPlastic
+tags: 
+- begin: <span class="string">
+  end: </span>
+  selector: string
+- begin: <span class="number">
+  end: </span>
+  selector: constant.numeric
+- begin: <span class="regular_expression">
+  end: </span>
+  selector: string.regexp
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword
+- begin: <span class="identifier">
+  end: </span>
+  selector: constant.language
+- begin: <span class="exception">
+  end: </span>
+  selector: support.class.exception
+- begin: <span class="function_name">
+  end: </span>
+  selector: entity.name.function
+- begin: <span class="type_name">
+  end: </span>
+  selector: entity.name.type
+- begin: <span class="arguments">
+  end: </span>
+  selector: variable.parameter
+- begin: <span class="comment">
+  end: </span>
+  selector: comment
+- begin: <span class="invalid">
+  end: </span>
+  selector: invalid
+- begin: <span class="trailing_whitespace">
+  end: </span>
+  selector: invalid.deprecated.trailing-whitespace
+- begin: <span class="embedded_source">
+  end: </span>
+  selector: text source
+- begin: <span class="tag">
+  end: </span>
+  selector: meta.tag, declaration.tag
+- begin: <span class="constant">
+  end: </span>
+  selector: constant, support.constant
+- begin: <span class="support">
+  end: </span>
+  selector: support
+- begin: <span class="storage">
+  end: </span>
+  selector: storage
+- begin: <span class="section_name">
+  end: </span>
+  selector: entity.name.section
+- begin: <span class="frame_title">
+  end: </span>
+  selector: entity.name.function.frame
+- begin: <span class="xml_declaration">
+  end: </span>
+  selector: meta.tag.preprocessor.xml
+- begin: <span class="tag_attribute">
+  end: </span>
+  selector: entity.other.attribute-name
+- begin: <span class="tag_name">
+  end: </span>
+  selector: entity.name.tag
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

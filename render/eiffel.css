@@ -1,0 +1,121 @@
+pre.eiffel .markup_name_of_tag {
+   font-weight: bold;
+}
+pre.eiffel .markup_dtd {
+   font-style: italic;
+}
+pre.eiffel .library_constant {
+   font-weight: bold;
+   color: #06960E;
+}
+pre.eiffel .preprocessor_line {
+   color: #1A921C;
+}
+pre.eiffel .js_operator {
+   color: #687687;
+}
+pre.eiffel .userdefined_constant {
+   color: #C5060B;
+   font-style: italic;
+}
+pre.eiffel .number {
+   color: #CD0000;
+   font-style: italic;
+}
+pre.eiffel .embedded_source {
+   background-color: #DBE7FD;
+}
+pre.eiffel .invalid {
+   background-color: #990000;
+   color: #FFFFFF;
+}
+pre.eiffel .type_name {
+   font-style: italic;
+}
+pre.eiffel .line-numbers {
+   background-color: #C3DCFF;
+   color: #000000;
+}
+pre.eiffel .markup_heading {
+   font-weight: bold;
+   color: #0C07FF;
+}
+pre.eiffel .invalid_trailing_whitespace {
+   background-color: #FFD0D0;
+}
+pre.eiffel .library_function {
+   font-weight: bold;
+   color: #3C4C72;
+}
+pre.eiffel .builtin_constant {
+   color: #585CF6;
+   font-style: italic;
+}
+pre.eiffel .variable {
+   color: #0206FF;
+   font-style: italic;
+}
+pre.eiffel .function_name {
+   font-weight: bold;
+   color: #0000A2;
+}
+pre.eiffel .string_interpolation {
+   color: #26B31A;
+}
+pre.eiffel {
+   background-color: #FFFFFF;
+   color: #000000;
+}
+pre.eiffel .section {
+   font-style: italic;
+}
+pre.eiffel .function_parameter {
+   font-style: italic;
+}
+pre.eiffel .markup_tag {
+   color: #1C02FF;
+}
+pre.eiffel .library_object {
+   font-weight: bold;
+   color: #6D79DE;
+}
+pre.eiffel .preprocessor_directive {
+   font-weight: bold;
+   color: #0C450D;
+}
+pre.eiffel .markup_list {
+   color: #B90690;
+}
+pre.eiffel .markup_tag_attribute {
+   font-style: italic;
+}
+pre.eiffel .library_variable {
+   font-weight: bold;
+   color: #21439C;
+}
+pre.eiffel .markup_quote {
+   color: #000000;
+   font-style: italic;
+}
+pre.eiffel .function_argument_and_result_types {
+   color: #70727E;
+}
+pre.eiffel .markup_doctype {
+   color: #888888;
+}
+pre.eiffel .markup_xml_declaration {
+   color: #68685B;
+}
+pre.eiffel .inherited_class_name {
+   font-style: italic;
+}
+pre.eiffel .string {
+   color: #D80800;
+}
+pre.eiffel .keyword {
+   font-weight: bold;
+   color: #0100B6;
+}
+pre.eiffel .comment {
+   color: #00B418;
+}

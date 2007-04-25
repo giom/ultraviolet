@@ -1,0 +1,135 @@
+--- 
+name: Cobalt
+tags: 
+- begin: <span class="punctuation">
+  end: </span>
+  selector: punctuation - (punctuation.definition.string || punctuation.definition.comment)
+- begin: <span class="constant">
+  end: </span>
+  selector: constant
+- begin: <span class="entity">
+  end: </span>
+  selector: entity
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword
+- begin: <span class="storage">
+  end: </span>
+  selector: storage
+- begin: <span class="string">
+  end: </span>
+  selector: string -string.unquoted.old-plist -string.unquoted.heredoc, string.unquoted.heredoc string
+- begin: <span class="comment">
+  end: </span>
+  selector: comment
+- begin: <span class="support">
+  end: </span>
+  selector: support
+- begin: <span class="variable">
+  end: </span>
+  selector: variable
+- begin: <span class="lang_variable">
+  end: </span>
+  selector: variable.language
+- begin: <span class="function_call">
+  end: </span>
+  selector: meta.function-call
+- begin: <span class="invalid">
+  end: </span>
+  selector: invalid
+- begin: <span class="embedded_source">
+  end: </span>
+  selector: text source, string.unquoted.heredoc, source source
+- begin: <span class="entity_inheritedclass">
+  end: </span>
+  selector: entity.other.inherited-class
+- begin: <span class="string_embeddedsource">
+  end: </span>
+  selector: string.quoted source
+- begin: <span class="string_constant">
+  end: </span>
+  selector: string constant
+- begin: <span class="stringregexp">
+  end: </span>
+  selector: string.regexp
+- begin: <span class="string_variable">
+  end: </span>
+  selector: string variable
+- begin: <span class="supportfunction">
+  end: </span>
+  selector: support.function
+- begin: <span class="supportconstant">
+  end: </span>
+  selector: support.constant
+- begin: <span class="exception">
+  end: </span>
+  selector: support.class.exception
+- begin: <span class="cc_preprocessor_line">
+  end: </span>
+  selector: meta.preprocessor.c
+- begin: <span class="cc_preprocessor_directive">
+  end: </span>
+  selector: meta.preprocessor.c keyword
+- begin: <span class="doctypexml_processing">
+  end: </span>
+  selector: meta.sgml.html meta.doctype, meta.sgml.html meta.doctype entity, meta.sgml.html meta.doctype string, meta.xml-processing, meta.xml-processing entity, meta.xml-processing string
+- begin: <span class="metataga">
+  end: </span>
+  selector: meta.tag, meta.tag entity
+- begin: <span class="css_tagname">
+  end: </span>
+  selector: meta.selector.css entity.name.tag
+- begin: <span class="cssid">
+  end: </span>
+  selector: meta.selector.css entity.other.attribute-name.id
+- begin: <span class="cssclass">
+  end: </span>
+  selector: meta.selector.css entity.other.attribute-name.class
+- begin: <span class="css_propertyname">
+  end: </span>
+  selector: support.type.property-name.css
+- begin: <span class="css_propertyvalue">
+  end: </span>
+  selector: meta.property-group support.constant.property-value.css, meta.property-value support.constant.property-value.css
+- begin: <span class="css_atrule">
+  end: </span>
+  selector: meta.preprocessor.at-rule keyword.control.at-rule
+- begin: <span class="css_additionalconstants">
+  end: </span>
+  selector: meta.property-value support.constant.named-color.css, meta.property-value constant
+- begin: <span class="css_constructorargument">
+  end: </span>
+  selector: meta.constructor.argument.css
+- begin: <span class="diffheader">
+  end: </span>
+  selector: meta.diff, meta.diff.header
+- begin: <span class="diffdeleted">
+  end: </span>
+  selector: markup.deleted
+- begin: <span class="diffchanged">
+  end: </span>
+  selector: markup.changed
+- begin: <span class="diffinserted">
+  end: </span>
+  selector: markup.inserted
+- begin: <span class="raw_markup">
+  end: </span>
+  selector: markup.raw
+- begin: <span class="block_quote">
+  end: </span>
+  selector: markup.quote
+- begin: <span class="list">
+  end: </span>
+  selector: markup.list
+- begin: <span class="bold_markup">
+  end: </span>
+  selector: markup.bold
+- begin: <span class="italic_markup">
+  end: </span>
+  selector: markup.italic
+- begin: <span class="heading_markup">
+  end: </span>
+  selector: markup.heading
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

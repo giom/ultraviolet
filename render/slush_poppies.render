@@ -1,0 +1,96 @@
+--- 
+name: Slush & Poppies
+tags: 
+- begin: <span class="comment">
+  end: </span>
+  selector: comment
+- begin: <span class="string">
+  end: </span>
+  selector: string
+- begin: <span class="number">
+  end: </span>
+  selector: constant.numeric
+- begin: <span class="ocaml_floatingpoint_constants">
+  end: </span>
+  selector: source.ocaml constant.numeric.floating-point
+- begin: <span class="character_constants">
+  end: </span>
+  selector: constant.character
+- begin: <span class="builtin_constant">
+  end: </span>
+  selector: constant.language
+- begin: <span class="userdefined_constant">
+  end: </span>
+  selector: constant.character, constant.other
+- begin: <span class="variable">
+  end: </span>
+  selector: variable.parameter, variable.other
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword
+- begin: <span class="operators">
+  end: </span>
+  selector: keyword.operator
+- begin: <span class="ocaml_prefix_fp_operators">
+  end: </span>
+  selector: source.ocaml keyword.operator.symbol.prefix.floating-point
+- begin: <span class="ocaml_infix_fp_operators">
+  end: </span>
+  selector: source.ocaml keyword.operator.symbol.infix.floating-point
+- begin: <span class="module_keyword">
+  end: </span>
+  selector: entity.name.module,  support.other.module
+- begin: <span class="storage_types">
+  end: </span>
+  selector: storage.type
+- begin: <span class="storage">
+  end: </span>
+  selector: storage
+- begin: <span class="variant_types">
+  end: </span>
+  selector: entity.name.class.variant
+- begin: <span class="directives">
+  end: </span>
+  selector: keyword.other.directive
+- begin: <span class="linenumber_directives">
+  end: </span>
+  selector: source.ocaml keyword.other.directive.line-number
+- begin: <span class="inherited_class">
+  end: </span>
+  selector: entity.other.inherited-class
+- begin: <span class="function_name">
+  end: </span>
+  selector: entity.name.function
+- begin: <span class="type_name">
+  end: </span>
+  selector: storage.type.user-defined
+- begin: <span class="class_type_name">
+  end: </span>
+  selector: entity.name.type.class.type
+- begin: <span class="function_argument">
+  end: </span>
+  selector: variable.parameter
+- begin: <span class="tag_name">
+  end: </span>
+  selector: entity.name.tag
+- begin: <span class="tag_attribute">
+  end: </span>
+  selector: entity.other.attribute-name
+- begin: <span class="library_function">
+  end: </span>
+  selector: support.function
+- begin: <span class="library_constant">
+  end: </span>
+  selector: support.constant
+- begin: <span class="library_classtype">
+  end: </span>
+  selector: support.type, support.class
+- begin: <span class="library_variable">
+  end: </span>
+  selector: support.variable
+- begin: <span class="invalid">
+  end: </span>
+  selector: invalid
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

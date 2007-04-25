@@ -1,0 +1,137 @@
+pre.twilight ._metataginline {
+   color: #E0C589;
+}
+pre.twilight ._metatagall {
+   color: #AC885B;
+}
+pre.twilight ._stringregexp {
+   color: #E9C062;
+}
+pre.twilight .invalid_illegal {
+   background-color: #452645;
+   color: #F8F8F8;
+}
+pre.twilight ._string_constant {
+   color: #DDF2A4;
+}
+pre.twilight ._cssid {
+   color: #8B98AB;
+}
+pre.twilight ._css_tagname {
+   color: #CDA869;
+}
+pre.twilight ._string_embeddedsource {
+   color: #DAEFA3;
+}
+pre.twilight ._embedded_source {
+   background-color: #202020;
+}
+pre.twilight .invalid_deprecated {
+   color: #D2A8A1;
+   font-style: italic;
+}
+pre.twilight .line-numbers {
+   background-color: #3C3F42;
+   color: #F8F8F8;
+}
+pre.twilight .markup_heading {
+   color: #CF6A4C;
+}
+pre.twilight ._diffinserted {
+   background-color: #253B22;
+   color: #F8F8F8;
+}
+pre.twilight ._diffdeleted {
+   background-color: #420E09;
+   color: #F8F8F8;
+}
+pre.twilight ._diffheader {
+   background-color: #0E2231;
+   color: #F8F8F8;
+   font-style: italic;
+}
+pre.twilight ._string_variable {
+   color: #8A9A95;
+}
+pre.twilight ._stringregexpspecial {
+   color: #CF7D34;
+}
+pre.twilight .variable {
+   color: #7587A6;
+}
+pre.twilight ._css_propertyvalue {
+   color: #F9EE98;
+}
+pre.twilight .c_cc_preprocessor_line {
+   color: #8996A8;
+}
+pre.twilight ._supportfunction {
+   color: #DAD085;
+}
+pre.twilight ._css_additionalconstants {
+   color: #CA7840;
+}
+pre.twilight .support {
+   color: #9B859D;
+}
+pre.twilight ._css_propertyname {
+   color: #C5AF75;
+}
+pre.twilight ._doctypexml_processing {
+   color: #494949;
+}
+pre.twilight ._supportconstant {
+   color: #CF6A4C;
+}
+pre.twilight .storage {
+   color: #F9EE98;
+}
+pre.twilight .markup_list {
+   color: #F9EE98;
+}
+pre.twilight .constant {
+   color: #CF6A4C;
+}
+pre.twilight ._diffchanged {
+   background-color: #4A410D;
+   color: #F8F8F8;
+}
+pre.twilight ._csspseudoclass {
+   color: #8F9D6A;
+}
+pre.twilight ._embedded_source_bright {
+   background-color: #282829;
+}
+pre.twilight .c_cc_preprocessor_directive {
+   color: #AFC4DB;
+}
+pre.twilight ._entity_inheritedclass {
+   color: #9B5C2E;
+   font-style: italic;
+}
+pre.twilight .string {
+   color: #8F9D6A;
+}
+pre.twilight .keyword {
+   color: #CDA869;
+}
+pre.twilight {
+   background-color: #141414;
+   color: #F8F8F8;
+}
+pre.twilight ._css_constructorargument {
+   color: #8F9D6A;
+}
+pre.twilight ._css_atrule {
+   color: #8693A5;
+}
+pre.twilight ._cssclass {
+   color: #9B703F;
+}
+pre.twilight .entity {
+   color: #9B703F;
+}
+pre.twilight .comment {
+   color: #5F5A60;
+   font-style: italic;
+}

@@ -1,0 +1,99 @@
+--- 
+name: Dawn
+tags: 
+- begin: <span class="comment">
+  end: </span>
+  selector: comment
+- begin: <span class="constant">
+  end: </span>
+  selector: constant
+- begin: <span class="entity">
+  end: </span>
+  selector: entity
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword
+- begin: <span class="storage">
+  end: </span>
+  selector: storage
+- begin: <span class="string">
+  end: </span>
+  selector: string | punctuation.definition.string
+- begin: <span class="support">
+  end: </span>
+  selector: support
+- begin: <span class="variable">
+  end: </span>
+  selector: variable
+- begin: <span class="punctuationseparator">
+  end: </span>
+  selector: punctuation.separator
+- begin: <span class="invalid_deprecated">
+  end: </span>
+  selector: invalid.deprecated
+- begin: <span class="invalid_illegal">
+  end: </span>
+  selector: invalid.illegal
+- begin: <span class="string_embeddedsource">
+  end: </span>
+  selector: string source
+- begin: <span class="string_constant">
+  end: </span>
+  selector: string constant
+- begin: <span class="string_variable">
+  end: </span>
+  selector: string variable
+- begin: <span class="stringregexp">
+  end: </span>
+  selector: string.regexp
+- begin: <span class="stringregexpspecial">
+  end: </span>
+  selector: string.regexp.character-class, string.regexp constant.character.escaped, string.regexp source.ruby.embedded, string.regexp string.regexp.arbitrary-repitition
+- begin: <span class="stringregexp_constantcharacterescape">
+  end: </span>
+  selector: string.regexp constant.character.escape
+- begin: <span class="embedded_source">
+  end: </span>
+  selector: text source
+- begin: <span class="supportfunction">
+  end: </span>
+  selector: support.function
+- begin: <span class="supportconstant">
+  end: </span>
+  selector: support.constant
+- begin: <span class="supportvariable">
+  end: </span>
+  selector: support.variable
+- begin: <span class="markuplist">
+  end: </span>
+  selector: markup.list
+- begin: <span class="markupheading">
+  end: </span>
+  selector: markup.heading | markup.heading entity.name
+- begin: <span class="markupquote">
+  end: </span>
+  selector: markup.quote
+- begin: <span class="markupitalic">
+  end: </span>
+  selector: markup.italic
+- begin: <span class="markupbold">
+  end: </span>
+  selector: markup.bold
+- begin: <span class="markupunderline">
+  end: </span>
+  selector: markup.underline
+- begin: <span class="markuplink">
+  end: </span>
+  selector: markup.link
+- begin: <span class="markupraw">
+  end: </span>
+  selector: markup.raw
+- begin: <span class="markupdeleted">
+  end: </span>
+  selector: markup.deleted
+- begin: <span class="metaseparator">
+  end: </span>
+  selector: meta.separator
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

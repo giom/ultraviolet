@@ -1,0 +1,62 @@
+#! /usr/bin/env ruby
+require 'yaml'
+
+theme = YAML.load( File.open( ARGV[0] ) )
+render = {"name" => theme["name"]}
+css = {}
+
+file_basename = File.basename(ARGV[0], ".yaml")
+code_name = "pre.#{file_basename.gsub("\s", "_").gsub(":", "_").downcase}"
+
+render["tags"] = []
+theme["settings"].each do |t|
+   if t["scope"]
+      tag = {}
+      tag["selector"] = t["scope"]
+      class_name = t["name"].gsub("\s", "_").gsub(":", "_").downcase
+      tag["begin"] = "<span class=\"#{class_name}\">"
+      tag["end"] = "</span>"
+      render["tags"] << tag
+      
+      
+      if s = t["settings"]
+         style = {}
+         style["color"] = s["foreground"]
+         style["background-color"] = s["background"]
+         case s["fontStyle"]
+            when /bold/ then style["font-weight"] = "bold"
+            when /italic/ then style["font-style"] = "italic"
+            when /underline/ then style["text-decoration"] = "underline"
+         else
+            puts s["fontStyle"]
+         end
+         css[".#{class_name}"] = style
+      end
+   elsif ! t["name"]
+      if s = t["settings"]
+         style = {}
+         style["color"] = s["foreground"]
+         style["background-color"] = s["background"]
+         css[code_name] = style
+         @style = style
+         puts @style
+      end
+   end
+end
+
+File.open( "#{file_basename}.render", "w" ) {|f| YAML.dump( render, f ) }
+
+File.open( "#{file_basename}.css", "w" ) do |f|
+   css.each do |key, values|
+      if key == code_name
+         f.puts "#{code_name} {"
+         #puts @style
+      else
+         f.puts "#{code_name} #{key} {"
+      end
+      values.each do |style, value|
+         f.puts "   #{style}: #{value};" if value
+      end
+      f.puts "}"
+   end
+end

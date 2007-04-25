@@ -1,0 +1,62 @@
+pre.idle .library_classtype {
+   color: #A535AE;
+}
+pre.idle .library_constant {
+   color: #A535AE;
+}
+pre.idle .userdefined_constant {
+}
+pre.idle .number {
+}
+pre.idle .invalid {
+   background-color: #990000;
+   color: #FFFFFF;
+}
+pre.idle .type_name {
+   color: #21439C;
+}
+pre.idle .line-numbers {
+   background-color: #BAD6FD;
+   color: #000000;
+}
+pre.idle {
+   background-color: #FFFFFF;
+   color: #000000;
+}
+pre.idle .library_function {
+   color: #A535AE;
+}
+pre.idle .variable {
+}
+pre.idle .builtin_constant {
+   color: #A535AE;
+}
+pre.idle .string_interpolation {
+   color: #990000;
+}
+pre.idle .function_argument {
+}
+pre.idle .function_name {
+   color: #21439C;
+}
+pre.idle .inherited_class {
+}
+pre.idle .storage {
+   color: #FF5600;
+}
+pre.idle .library_variable {
+   color: #A535AE;
+}
+pre.idle .tag_name {
+}
+pre.idle .tag_attribute {
+}
+pre.idle .keyword {
+   color: #FF5600;
+}
+pre.idle .string {
+   color: #00A33F;
+}
+pre.idle .comment {
+   color: #919191;
+}

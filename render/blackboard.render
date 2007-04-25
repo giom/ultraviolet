@@ -1,0 +1,84 @@
+--- 
+name: Blackboard
+tags: 
+- begin: <span class="comment">
+  end: </span>
+  selector: comment
+- begin: <span class="constant">
+  end: </span>
+  selector: constant
+- begin: <span class="entity">
+  end: </span>
+  selector: entity
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword
+- begin: <span class="storage">
+  end: </span>
+  selector: storage
+- begin: <span class="string">
+  end: </span>
+  selector: string, meta.verbatim
+- begin: <span class="support">
+  end: </span>
+  selector: support
+- begin: <span class="variable">
+  end: </span>
+  selector: variable
+- begin: <span class="invalid_deprecated">
+  end: </span>
+  selector: invalid.deprecated
+- begin: <span class="invalid_illegal">
+  end: </span>
+  selector: invalid.illegal
+- begin: <span class="superclass">
+  end: </span>
+  selector: entity.other.inherited-class
+- begin: <span class="string_interpolation">
+  end: </span>
+  selector: string constant.other.placeholder
+- begin: <span class="metafunctioncallpy">
+  end: </span>
+  selector: meta.function-call.py
+- begin: <span class="metatag">
+  end: </span>
+  selector: meta.tag, meta.tag entity
+- begin: <span class="entitynamesection">
+  end: </span>
+  selector: entity.name.section
+- begin: <span class="ocaml_variant">
+  end: </span>
+  selector: keyword.type.variant
+- begin: <span class="ocaml_operator">
+  end: </span>
+  selector: source.ocaml keyword.operator.symbol
+- begin: <span class="ocaml_infix_operator">
+  end: </span>
+  selector: source.ocaml keyword.operator.symbol.infix
+- begin: <span class="ocaml_prefix_operator">
+  end: </span>
+  selector: source.ocaml keyword.operator.symbol.prefix
+- begin: <span class="ocaml_fp_infix_operator">
+  end: </span>
+  selector: source.ocaml keyword.operator.symbol.infix.floating-point
+- begin: <span class="ocaml_fp_prefix_operator">
+  end: </span>
+  selector: source.ocaml keyword.operator.symbol.prefix.floating-point
+- begin: <span class="ocaml_fp_constant">
+  end: </span>
+  selector: source.ocaml constant.numeric.floating-point
+- begin: <span class="latex_environment">
+  end: </span>
+  selector: text.tex.latex meta.function.environment
+- begin: <span class="latex_environment_nested">
+  end: </span>
+  selector: text.tex.latex meta.function.environment meta.function.environment
+- begin: <span class="latex_support">
+  end: </span>
+  selector: text.tex.latex support.function
+- begin: <span class="plist_unquoted_string">
+  end: </span>
+  selector: source.plist string.unquoted, source.plist keyword.operator
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

@@ -1,0 +1,144 @@
+pre.amy .camlp4_code {
+   background-color: #2A03F;
+}
+pre.amy .invalid_illegal {
+   font-weight: bold;
+   background-color: #FFFF00;
+   color: #400080;
+}
+pre.amy .library_classtype {
+}
+pre.amy .library_constant {
+   background-color: #200020;
+}
+pre.amy .class_name {
+   color: #70E080;
+}
+pre.amy .module_type_definitions {
+   text-decoration: underline;
+   color: #B000B0;
+}
+pre.amy .floatingpoint_infix_operator {
+   text-decoration: underline;
+}
+pre.amy .floatingpoint_constant {
+   text-decoration: underline;
+}
+pre.amy .punctuation {
+   color: #805080;
+}
+pre.amy .nonterminal_definition_ocamlyacc {
+   color: #90E0E0;
+}
+pre.amy .token_reference_ocamlyacc {
+   color: #3CB0D0;
+}
+pre.amy .keyword_decorator {
+   color: #D0D0FF;
+}
+pre.amy .keyword_operator {
+   color: #A0A0FF;
+}
+pre.amy .userdefined_constant {
+}
+pre.amy .support_modules {
+   color: #A00050;
+}
+pre.amy .line-numbers {
+   background-color: #50010;
+   color: #D0D0FF;
+}
+pre.amy .floatingpoint_prefix_operator {
+   text-decoration: underline;
+}
+pre.amy .variable {
+   color: #008080;
+}
+pre.amy .nativeint_constant {
+   font-weight: bold;
+}
+pre.amy .builtin_constant {
+}
+pre.amy .function_argument {
+   color: #80B0B0;
+}
+pre.amy .function_name {
+   color: #50A0A0;
+}
+pre.amy .compiler_directives {
+   color: #C080C0;
+}
+pre.amy .inherited_class {
+}
+pre.amy .polymorphic_variants {
+   color: #60B0FF;
+   font-style: italic;
+}
+pre.amy .integer {
+   color: #7090B0;
+}
+pre.amy .storage {
+   color: #B0FFF0;
+}
+pre.amy .linenumber_directives {
+   text-decoration: underline;
+   color: #C080C0;
+}
+pre.amy {
+   background-color: #200020;
+   color: #D0D0FF;
+}
+pre.amy .library_variable {
+}
+pre.amy .control_keyword {
+   color: #80A0FF;
+}
+pre.amy .int32_constant {
+   font-weight: bold;
+}
+pre.amy .camlp4_temp_parser {
+}
+pre.amy .tag_name {
+   color: #009090;
+}
+pre.amy .class_type {
+   color: #70E0A0;
+}
+pre.amy .character_constant {
+   color: #666666;
+}
+pre.amy .int64_constant {
+   font-style: italic;
+}
+pre.amy .invalid_depricated {
+   background-color: #CC66FF;
+   color: #200020;
+}
+pre.amy .tag_attribute {
+}
+pre.amy .module_definitions {
+   color: #B000B0;
+}
+pre.amy .keyword {
+   color: #A080FF;
+}
+pre.amy .boolean_constant {
+   color: #8080A0;
+}
+pre.amy .string {
+   color: #999999;
+}
+pre.amy .nonterminal_reference_ocamlyacc {
+   color: #C0F0F0;
+}
+pre.amy .token_definition_ocamlyacc {
+   color: #3080A0;
+}
+pre.amy .variants {
+   color: #60B0FF;
+}
+pre.amy .comment {
+   background-color: #200020;
+   color: #404080;
+   font-style: italic;
+}

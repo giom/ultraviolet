@@ -1,0 +1,72 @@
+pre.all_hallows_eve .support_function {
+   color: #C83730;
+}
+pre.all_hallows_eve .string_escapes {
+   color: #AAAAAA;
+}
+pre.all_hallows_eve .preprocessor_line {
+   color: #D0D0FF;
+}
+pre.all_hallows_eve {
+   background-color: #000000;
+   color: #FFFFFF;
+}
+pre.all_hallows_eve .type_name {
+   text-decoration: underline;
+}
+pre.all_hallows_eve .regular_expression {
+   color: #CCCC33;
+}
+pre.all_hallows_eve .block_comment {
+   background-color: #9B9B9B;
+   color: #FFFFFF;
+}
+pre.all_hallows_eve .line-numbers {
+   background-color: #644D6E;
+   color: #FFFFFF;
+}
+pre.all_hallows_eve .class_inheritance {
+   font-style: italic;
+}
+pre.all_hallows_eve .text_base {
+   background-color: #434242;
+   color: #FFFFFF;
+}
+pre.all_hallows_eve .string_executed {
+   background-color: #CCCC33;
+   color: #000000;
+}
+pre.all_hallows_eve .function_argument {
+   font-style: italic;
+}
+pre.all_hallows_eve .function_name {
+}
+pre.all_hallows_eve .string_escapes_executed {
+   color: #555555;
+}
+pre.all_hallows_eve .preprocessor_directive {
+}
+pre.all_hallows_eve .constant {
+   color: #3387CC;
+}
+pre.all_hallows_eve .source_base {
+   background-color: #000000;
+   color: #FFFFFF;
+}
+pre.all_hallows_eve .tag_name {
+   text-decoration: underline;
+}
+pre.all_hallows_eve .string_literal {
+   color: #CCCC33;
+}
+pre.all_hallows_eve .tag_attribute {
+}
+pre.all_hallows_eve .string {
+   color: #66CC33;
+}
+pre.all_hallows_eve .keyword {
+   color: #CC7833;
+}
+pre.all_hallows_eve .comment {
+   color: #9933CC;
+}

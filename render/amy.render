@@ -1,0 +1,144 @@
+--- 
+name: Amy
+tags: 
+- begin: <span class="comment">
+  end: </span>
+  selector: comment.block
+- begin: <span class="string">
+  end: </span>
+  selector: string
+- begin: <span class="builtin_constant">
+  end: </span>
+  selector: constant.language
+- begin: <span class="integer">
+  end: </span>
+  selector: constant.numeric
+- begin: <span class="int32_constant">
+  end: </span>
+  selector: constant.numeric.integer.int32
+- begin: <span class="int64_constant">
+  end: </span>
+  selector: constant.numeric.integer.int64
+- begin: <span class="nativeint_constant">
+  end: </span>
+  selector: constant.numeric.integer.nativeint
+- begin: <span class="floatingpoint_constant">
+  end: </span>
+  selector: constant.numeric.floating-point.ocaml
+- begin: <span class="character_constant">
+  end: </span>
+  selector: constant.character
+- begin: <span class="boolean_constant">
+  end: </span>
+  selector: constant.language.boolean
+- begin: <span class="builtin_constant">
+  end: </span>
+  selector: constant.language
+- begin: <span class="userdefined_constant">
+  end: </span>
+  selector: constant.other
+- begin: <span class="variable">
+  end: </span>
+  selector: variable.language, variable.other
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword
+- begin: <span class="keyword_operator">
+  end: </span>
+  selector: keyword.operator
+- begin: <span class="keyword_decorator">
+  end: </span>
+  selector: keyword.other.decorator
+- begin: <span class="floatingpoint_infix_operator">
+  end: </span>
+  selector: keyword.operator.infix.floating-point.ocaml
+- begin: <span class="floatingpoint_prefix_operator">
+  end: </span>
+  selector: keyword.operator.prefix.floating-point.ocaml
+- begin: <span class="compiler_directives">
+  end: </span>
+  selector: keyword.other.directive
+- begin: <span class="linenumber_directives">
+  end: </span>
+  selector: keyword.other.directive.line-number
+- begin: <span class="control_keyword">
+  end: </span>
+  selector: keyword.control
+- begin: <span class="storage">
+  end: </span>
+  selector: storage
+- begin: <span class="variants">
+  end: </span>
+  selector: entity.name.type.variant
+- begin: <span class="polymorphic_variants">
+  end: </span>
+  selector: storage.type.variant.polymorphic, entity.name.type.variant.polymorphic
+- begin: <span class="module_definitions">
+  end: </span>
+  selector: entity.name.type.module
+- begin: <span class="module_type_definitions">
+  end: </span>
+  selector: entity.name.type.module-type.ocaml
+- begin: <span class="support_modules">
+  end: </span>
+  selector: support.other
+- begin: <span class="class_name">
+  end: </span>
+  selector: entity.name.type.class
+- begin: <span class="class_type">
+  end: </span>
+  selector: entity.name.type.class-type
+- begin: <span class="inherited_class">
+  end: </span>
+  selector: entity.other.inherited-class
+- begin: <span class="function_name">
+  end: </span>
+  selector: entity.name.function
+- begin: <span class="function_argument">
+  end: </span>
+  selector: variable.parameter
+- begin: <span class="token_definition_ocamlyacc">
+  end: </span>
+  selector: entity.name.type.token
+- begin: <span class="token_reference_ocamlyacc">
+  end: </span>
+  selector: entity.name.type.token.reference
+- begin: <span class="nonterminal_definition_ocamlyacc">
+  end: </span>
+  selector: entity.name.function.non-terminal
+- begin: <span class="nonterminal_reference_ocamlyacc">
+  end: </span>
+  selector: entity.name.function.non-terminal.reference
+- begin: <span class="tag_name">
+  end: </span>
+  selector: entity.name.tag
+- begin: <span class="tag_attribute">
+  end: </span>
+  selector: entity.other.attribute-name
+- begin: <span class="library_constant">
+  end: </span>
+  selector: support.constant
+- begin: <span class="library_classtype">
+  end: </span>
+  selector: support.type, support.class
+- begin: <span class="library_variable">
+  end: </span>
+  selector: support.other.variable
+- begin: <span class="invalid_illegal">
+  end: </span>
+  selector: invalid.illegal
+- begin: <span class="invalid_depricated">
+  end: </span>
+  selector: invalid.deprecated
+- begin: <span class="camlp4_code">
+  end: </span>
+  selector: source.camlp4.embedded
+- begin: <span class="camlp4_temp_parser">
+  end: </span>
+  selector: source.camlp4.embedded.parser.ocaml
+- begin: <span class="punctuation">
+  end: </span>
+  selector: punctuation
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

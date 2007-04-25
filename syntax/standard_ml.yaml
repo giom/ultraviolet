@@ -1,0 +1,45 @@
+--- 
+name: Standard ML
+fileTypes: 
+- sml
+scopeName: source.ml
+uuid: 9B148AEA-F723-4EDE-8B7F-2F4FD730BC3A
+foldingStartMarker: \(\*|\b(struct|sig)\b
+patterns: 
+- name: comment.block.ml
+  captures: 
+    "0": 
+      name: punctuation.definition.comment.ml
+  begin: \(\*
+  end: \*\)
+- name: keyword.other.ml
+  match: \b(val|type|datatype|structure|struct|signature|sig|functor|end|as|if|then|else|andalso|orelse|let|in|abstype|local|where|case|of|fn|raise|exception|handle)\b
+- captures: 
+    "1": 
+      name: keyword.other.ml
+    "2": 
+      name: entity.name.function.ml
+  match: \b(fun|and)\s+([\w']+)\b
+- name: string.quoted.double.ml
+  endCaptures: 
+    "0": 
+      name: punctuation.definition.string.end.ml
+  begin: "\""
+  beginCaptures: 
+    "0": 
+      name: punctuation.definition.string.begin.ml
+  end: "\""
+  patterns: 
+  - name: constant.character.escape.ml
+    match: \\.
+- name: constant.character.ml
+  captures: 
+    "1": 
+      name: punctuation.definition.constant.ml
+    "3": 
+      name: punctuation.definition.constant.ml
+  match: (#")(\\)?.(")
+- name: constant.numeric.ml
+  match: \b\d*\.?\d+\b
+foldingStopMarker: \*\)|\bend\b
+keyEquivalent: ^~S

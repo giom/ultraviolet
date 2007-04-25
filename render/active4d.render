@@ -1,0 +1,105 @@
+--- 
+name: Active4D
+tags: 
+- begin: <span class="embedded_source">
+  end: </span>
+  selector: text.html source.active4d
+- begin: <span class="plain_xml_text">
+  end: </span>
+  selector: text.xml
+- begin: <span class="line_comment">
+  end: </span>
+  selector: comment.line
+- begin: <span class="block_comment">
+  end: </span>
+  selector: comment.block
+- begin: <span class="string">
+  end: </span>
+  selector: string
+- begin: <span class="interpolated_entity">
+  end: </span>
+  selector: string.interpolated variable
+- begin: <span class="number">
+  end: </span>
+  selector: constant.numeric
+- begin: <span class="userdefined_constant">
+  end: </span>
+  selector: constant.character, constant.other
+- begin: <span class="datetime_literal">
+  end: </span>
+  selector: constant.other.date, constant.other.time
+- begin: <span class="builtin_constant">
+  end: </span>
+  selector: constant.language
+- begin: <span class="local_variable">
+  end: </span>
+  selector: variable.other.local
+- begin: <span class="variable">
+  end: </span>
+  selector: variable
+- begin: <span class="tablefield">
+  end: </span>
+  selector: variable.other.table-field
+- begin: <span class="keyword">
+  end: </span>
+  selector: keyword
+- begin: <span class="operator">
+  end: </span>
+  selector: keyword.operator
+- begin: <span class="storage">
+  end: </span>
+  selector: storage
+- begin: <span class="type_name">
+  end: </span>
+  selector: entity.name.type
+- begin: <span class="inherited_class">
+  end: </span>
+  selector: entity.other.inherited-class
+- begin: <span class="function_name">
+  end: </span>
+  selector: entity.name.function
+- begin: <span class="function_argument">
+  end: </span>
+  selector: variable.parameter
+- begin: <span class="tag_container">
+  end: </span>
+  selector: meta.tag
+- begin: <span class="tag_name">
+  end: </span>
+  selector: entity.name.tag
+- begin: <span class="tag_attribute">
+  end: </span>
+  selector: entity.other.attribute-name
+- begin: <span class="commandmethod">
+  end: </span>
+  selector: support.function
+- begin: <span class="named_constant">
+  end: </span>
+  selector: support.constant
+- begin: <span class="library_classtype">
+  end: </span>
+  selector: support.type, support.class
+- begin: <span class="library_variable">
+  end: </span>
+  selector: support.variable
+- begin: <span class="invalid">
+  end: </span>
+  selector: invalid
+- begin: <span class="diff_header">
+  end: </span>
+  selector: meta.diff
+- begin: <span class="diff_line_range">
+  end: </span>
+  selector: meta.diff.range
+- begin: <span class="diff_deleted_line">
+  end: </span>
+  selector: markup.deleted.diff
+- begin: <span class="diff_inserted_line">
+  end: </span>
+  selector: markup.inserted.diff
+- begin: <span class="diff_unchanged_line">
+  end: </span>
+  selector: source.diff
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>
