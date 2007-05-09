@@ -4,21 +4,26 @@ require 'uv/html_processor.rb'
 
 module Uv
 
+   def Uv.path
+      result = []
+      result << File.join(File.dirname(__FILE__), ".." )   
+   end
+
    def Uv.init_syntaxes
       @syntaxes = {}
-      Dir.glob( File.join(File.dirname(__FILE__), '..', 'syntax', '*.yaml') ).each do |f| 
-         @syntaxes[File.basename(f, '.yaml')] = Textpow::SyntaxNode.load( f )
+      Dir.glob( File.join(File.dirname(__FILE__), '..', 'syntax', '*.syntax') ).each do |f| 
+         @syntaxes[File.basename(f, '.syntax')] = Textpow::SyntaxNode.load( f )
       end
    end
    
    def Uv.syntaxes
-      Dir.glob( File.join(File.dirname(__FILE__), '..', 'syntax', '*.yaml') ).collect do |f| 
-         File.basename(f, '.yaml')
+      Dir.glob( File.join(File.dirname(__FILE__), '..', 'syntax', '*.syntax') ).collect do |f| 
+         File.basename(f, '.syntax')
       end
    end
    
    def Uv.themes
-      Dir.glob( File.join(File.dirname(__FILE__), '..', 'render', '*.css') ).collect do |f| 
+      Dir.glob( File.join(File.dirname(__FILE__), '..', 'render', 'xhtml', 'files', 'css', '*.css') ).collect do |f| 
          File.basename(f, '.css')
       end
    end
@@ -50,22 +55,25 @@ module Uv
       result
    end
    
-   def Uv.parse text, syntax_name = nil, line_numbers = false, render_style = "classic"
+   def Uv.parse text, output = "xhtml", syntax_name = nil, line_numbers = false, render_style = "classic"
       init_syntaxes unless @syntaxes
-      renderer = File.join( File.dirname(__FILE__), '..',"render","#{render_style}.render")
+      renderer = File.join( File.dirname(__FILE__), '..',"render", output,"#{render_style}.render")
       css_class = render_style
       render_options = YAML.load( File.open(  renderer ) )
-      render_processor = HtmlProcessor.new( render_options, line_numbers )
-
-      @syntaxes[syntax_name].parse( text,  render_processor )
-      "<pre class =\"#{css_class}\">\n#{render_processor.string}\n</pre>"
+      if output == "xhtml"
+         render_processor = HtmlProcessor.new( render_options, line_numbers )
+         @syntaxes[syntax_name].parse( text,  render_processor )
+         "<pre class =\"#{css_class}\">#{render_processor.string}</pre>"
+      else
+         raise( ArgumentError, "Output for #{output} is not yet implemented" )
+      end
    end
 
    def Uv.debug text, syntax_name
       unless @syntaxes
          @syntaxes = {}
-         Dir.glob( File.join(File.dirname(__FILE__), '..', 'syntax', '*.yaml') ).each do |f| 
-            @syntaxes[File.basename(f, '.yaml')] = Textpow::SyntaxNode.load( f )
+         Dir.glob( File.join(File.dirname(__FILE__), '..', 'syntax', '*.syntax') ).each do |f| 
+            @syntaxes[File.basename(f, '.syntax')] = Textpow::SyntaxNode.load( f )
          end
       end
       processor = Textpow::DebugProcessor.new

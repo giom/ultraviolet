@@ -142,7 +142,7 @@ puts <<END
 <body>
 END
 
-puts Uv.parse( o.text, o.syntax, ! o.lines, o.theme )
+puts Uv.parse( o.text, "xhtml",  o.syntax, ! o.lines, o.theme )
 
 puts <<END
   <p>
