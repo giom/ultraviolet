@@ -1,93 +1,87 @@
-pre.magicwb_amiga .markup_list_item {
-   color: #4D4E60;
+pre.magicwb_amiga .MarkupQuoteEmail {
+   color: #00F0C9;
 }
-pre.magicwb_amiga .library_classtype {
-   color: #FFA995;
-}
-pre.magicwb_amiga .library_constant {
-   color: #FFFFFF;
-}
-pre.magicwb_amiga .constant_builtin {
-   font-weight: bold;
-   color: #FFA995;
-}
-pre.magicwb_amiga .number {
-   color: #FFFFFF;
-}
-pre.magicwb_amiga .embedded_source {
+pre.magicwb_amiga .EmbeddedSource {
    background-color: #8A9ECB;
 }
-pre.magicwb_amiga .invalid {
-   background-color: #797979;
+pre.magicwb_amiga .InheritedClass {
+   font-style: italic;
+}
+pre.magicwb_amiga .TypeName {
+   text-decoration: underline;
+}
+pre.magicwb_amiga .Number {
    color: #FFFFFF;
 }
-pre.magicwb_amiga .type_name {
-   text-decoration: underline;
+pre.magicwb_amiga .LibraryVariable {
+   color: #3A68A3;
+}
+pre.magicwb_amiga .Storage {
+   font-weight: bold;
+   color: #3A68A3;
 }
 pre.magicwb_amiga .line-numbers {
    background-color: #B1B1B1;
    color: #000000;
 }
-pre.magicwb_amiga .objectivec_method_call {
-   color: #000000;
-}
-pre.magicwb_amiga .library_function {
-   color: #E5B3FF;
-}
-pre.magicwb_amiga .entity_name {
-   font-weight: bold;
-   color: #0000FF;
-}
-pre.magicwb_amiga .variable {
-   color: #FFA995;
-}
-pre.magicwb_amiga .function_argument {
-   font-style: italic;
-}
-pre.magicwb_amiga .function_name {
-   color: #FFA995;
-}
-pre.magicwb_amiga .include_user {
+pre.magicwb_amiga .IncludeUser {
    background-color: #969696;
    color: #FFA995;
 }
-pre.magicwb_amiga .inherited_class {
+pre.magicwb_amiga .ObjectiveCMethodCall {
    font-style: italic;
 }
-pre.magicwb_amiga .storage {
-   font-weight: bold;
-   color: #3A68A3;
-}
-pre.magicwb_amiga .constant_userdefined {
+pre.magicwb_amiga .ConstantUserDefined {
    background-color: #7878AA;
    color: #FFA995;
 }
-pre.magicwb_amiga .library_variable {
-   color: #3A68A3;
+pre.magicwb_amiga .LibraryConstant {
+   color: #FFFFFF;
 }
-pre.magicwb_amiga .markup_quote_double_email {
-   color: #4C457E;
+pre.magicwb_amiga .EntityName {
+   font-weight: bold;
+   color: #0000FF;
 }
-pre.magicwb_amiga .markup_quote_email {
-   color: #00F0C9;
+pre.magicwb_amiga .ConstantBuiltIn {
+   font-weight: bold;
+   color: #FFA995;
 }
-pre.magicwb_amiga .markup_raw {
+pre.magicwb_amiga .MarkupRaw {
    background-color: #0000FF;
    color: #FFFFFF;
 }
-pre.magicwb_amiga .include_system {
+pre.magicwb_amiga .MarkupListItem {
+   color: #4D4E60;
+}
+pre.magicwb_amiga .FunctionArgument {
+   font-style: italic;
+}
+pre.magicwb_amiga .MarkupQuoteDoubleEmail {
+   color: #4C457E;
+}
+pre.magicwb_amiga .IncludeSystem {
    background-color: #969696;
    color: #FFA995;
    font-style: italic;
 }
-pre.magicwb_amiga .tag_attribute {
+pre.magicwb_amiga .Invalid {
+   background-color: #797979;
+   color: #FFFFFF;
+}
+pre.magicwb_amiga .LibraryClassType {
+   color: #FFA995;
+}
+pre.magicwb_amiga .LibraryFunction {
+   color: #E5B3FF;
+}
+pre.magicwb_amiga .TagAttribute {
    color: #3A68A3;
    font-style: italic;
 }
-pre.magicwb_amiga .keyword {
+pre.magicwb_amiga .Keyword {
    font-weight: bold;
 }
-pre.magicwb_amiga .string {
+pre.magicwb_amiga .String {
    background-color: #AA7878;
    color: #FFFFFF;
 }
@@ -95,10 +89,13 @@ pre.magicwb_amiga {
    background-color: #969696;
    color: #000000;
 }
-pre.magicwb_amiga .objectivec_method_call_ {
-   font-style: italic;
+pre.magicwb_amiga .FunctionName {
+   color: #FFA995;
 }
-pre.magicwb_amiga .comment {
+pre.magicwb_amiga .Variable {
+   color: #FFA995;
+}
+pre.magicwb_amiga .Comment {
    color: #8D2E75;
    font-style: italic;
 }

@@ -1,137 +1,137 @@
-pre.twilight ._metataginline {
-   color: #E0C589;
-}
-pre.twilight ._metatagall {
-   color: #AC885B;
-}
-pre.twilight ._stringregexp {
-   color: #E9C062;
-}
-pre.twilight .invalid_illegal {
-   background-color: #452645;
+pre.twilight .DiffInserted {
+   background-color: #253B22;
    color: #F8F8F8;
 }
-pre.twilight ._string_constant {
-   color: #DDF2A4;
+pre.twilight .DiffHeader {
+   background-color: #0E2231;
+   color: #F8F8F8;
+   font-style: italic;
 }
-pre.twilight ._cssid {
-   color: #8B98AB;
+pre.twilight .CssPropertyValue {
+   color: #F9EE98;
 }
-pre.twilight ._css_tagname {
-   color: #CDA869;
+pre.twilight .CCCPreprocessorDirective {
+   color: #AFC4DB;
 }
-pre.twilight ._string_embeddedsource {
-   color: #DAEFA3;
+pre.twilight .Constant {
+   color: #CF6A4C;
 }
-pre.twilight ._embedded_source {
+pre.twilight .DiffChanged {
+   background-color: #4A410D;
+   color: #F8F8F8;
+}
+pre.twilight .EmbeddedSource {
    background-color: #202020;
 }
-pre.twilight .invalid_deprecated {
-   color: #D2A8A1;
-   font-style: italic;
+pre.twilight .Support {
+   color: #9B859D;
+}
+pre.twilight .MarkupList {
+   color: #F9EE98;
+}
+pre.twilight .CssConstructorArgument {
+   color: #8F9D6A;
+}
+pre.twilight .Storage {
+   color: #F9EE98;
 }
 pre.twilight .line-numbers {
    background-color: #3C3F42;
    color: #F8F8F8;
 }
-pre.twilight .markup_heading {
+pre.twilight .CssClass {
+   color: #9B703F;
+}
+pre.twilight .StringConstant {
+   color: #DDF2A4;
+}
+pre.twilight .CssAtRule {
+   color: #8693A5;
+}
+pre.twilight .MetaTagInline {
+   color: #E0C589;
+}
+pre.twilight .MarkupHeading {
    color: #CF6A4C;
 }
-pre.twilight ._diffinserted {
-   background-color: #253B22;
-   color: #F8F8F8;
+pre.twilight .CssTagName {
+   color: #CDA869;
 }
-pre.twilight ._diffdeleted {
+pre.twilight .SupportConstant {
+   color: #CF6A4C;
+}
+pre.twilight .DiffDeleted {
    background-color: #420E09;
    color: #F8F8F8;
 }
-pre.twilight ._diffheader {
-   background-color: #0E2231;
-   color: #F8F8F8;
-   font-style: italic;
-}
-pre.twilight ._string_variable {
-   color: #8A9A95;
-}
-pre.twilight ._stringregexpspecial {
-   color: #CF7D34;
-}
-pre.twilight .variable {
-   color: #7587A6;
-}
-pre.twilight ._css_propertyvalue {
-   color: #F9EE98;
-}
-pre.twilight .c_cc_preprocessor_line {
+pre.twilight .CCCPreprocessorLine {
    color: #8996A8;
 }
-pre.twilight ._supportfunction {
-   color: #DAD085;
+pre.twilight .StringRegexpSpecial {
+   color: #CF7D34;
 }
-pre.twilight ._css_additionalconstants {
-   color: #CA7840;
-}
-pre.twilight .support {
-   color: #9B859D;
-}
-pre.twilight ._css_propertyname {
-   color: #C5AF75;
-}
-pre.twilight ._doctypexml_processing {
-   color: #494949;
-}
-pre.twilight ._supportconstant {
-   color: #CF6A4C;
-}
-pre.twilight .storage {
-   color: #F9EE98;
-}
-pre.twilight .markup_list {
-   color: #F9EE98;
-}
-pre.twilight .constant {
-   color: #CF6A4C;
-}
-pre.twilight ._diffchanged {
-   background-color: #4A410D;
-   color: #F8F8F8;
-}
-pre.twilight ._csspseudoclass {
-   color: #8F9D6A;
-}
-pre.twilight ._embedded_source_bright {
+pre.twilight .EmbeddedSourceBright {
    background-color: #282829;
 }
-pre.twilight .c_cc_preprocessor_directive {
-   color: #AFC4DB;
+pre.twilight .InvalidIllegal {
+   background-color: #452645;
+   color: #F8F8F8;
 }
-pre.twilight ._entity_inheritedclass {
+pre.twilight .SupportFunction {
+   color: #DAD085;
+}
+pre.twilight .CssAdditionalConstants {
+   color: #CA7840;
+}
+pre.twilight .MetaTagAll {
+   color: #AC885B;
+}
+pre.twilight .StringRegexp {
+   color: #E9C062;
+}
+pre.twilight .StringEmbeddedSource {
+   color: #DAEFA3;
+}
+pre.twilight .EntityInheritedClass {
    color: #9B5C2E;
    font-style: italic;
 }
-pre.twilight .string {
+pre.twilight .CssId {
+   color: #8B98AB;
+}
+pre.twilight .CssPseudoClass {
    color: #8F9D6A;
 }
-pre.twilight .keyword {
+pre.twilight .StringVariable {
+   color: #8A9A95;
+}
+pre.twilight .String {
+   color: #8F9D6A;
+}
+pre.twilight .Keyword {
    color: #CDA869;
 }
 pre.twilight {
    background-color: #141414;
    color: #F8F8F8;
 }
-pre.twilight ._css_constructorargument {
-   color: #8F9D6A;
+pre.twilight .CssPropertyName {
+   color: #C5AF75;
 }
-pre.twilight ._css_atrule {
-   color: #8693A5;
+pre.twilight .DoctypeXmlProcessing {
+   color: #494949;
 }
-pre.twilight ._cssclass {
+pre.twilight .InvalidDeprecated {
+   color: #D2A8A1;
+   font-style: italic;
+}
+pre.twilight .Variable {
+   color: #7587A6;
+}
+pre.twilight .Entity {
    color: #9B703F;
 }
-pre.twilight .entity {
-   color: #9B703F;
-}
-pre.twilight .comment {
+pre.twilight .Comment {
    color: #5F5A60;
    font-style: italic;
 }

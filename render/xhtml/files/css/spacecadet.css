@@ -1,51 +1,51 @@
-pre.spacecadet .library_classtype {
+pre.spacecadet .Constant {
+   color: #BF9960;
 }
-pre.spacecadet .library_constant {
+pre.spacecadet .Support {
+   color: #8A4B66;
 }
-pre.spacecadet .exception {
-   color: #893062;
+pre.spacecadet .InheritedClass {
+   font-style: italic;
 }
-pre.spacecadet .invalid {
-   background-color: #5F0047;
+pre.spacecadet .LibraryVariable {
+}
+pre.spacecadet .Storage {
+   color: #9EBF60;
 }
 pre.spacecadet .line-numbers {
    background-color: #40002F;
    color: #DDE6CF;
 }
-pre.spacecadet .variable {
-   color: #596380;
-}
 pre.spacecadet {
    background-color: #0D0D0D;
    color: #DDE6CF;
 }
-pre.spacecadet .support {
-   color: #8A4B66;
+pre.spacecadet .TagName {
 }
-pre.spacecadet .inherited_class {
-   font-style: italic;
+pre.spacecadet .Exception {
+   color: #893062;
 }
-pre.spacecadet .storage {
-   color: #9EBF60;
+pre.spacecadet .LibraryConstant {
 }
-pre.spacecadet .library_variable {
+pre.spacecadet .Invalid {
+   background-color: #5F0047;
 }
-pre.spacecadet .constant {
-   color: #BF9960;
+pre.spacecadet .LibraryClassType {
 }
-pre.spacecadet .tag_name {
+pre.spacecadet .TagAttribute {
 }
-pre.spacecadet .tag_attribute {
-}
-pre.spacecadet .keyword {
+pre.spacecadet .Keyword {
    color: #728059;
 }
-pre.spacecadet .string {
+pre.spacecadet .String {
    color: #805978;
 }
-pre.spacecadet .entity {
+pre.spacecadet .Entity {
    color: #6078BF;
 }
-pre.spacecadet .comment {
+pre.spacecadet .Variable {
+   color: #596380;
+}
+pre.spacecadet .Comment {
    color: #473C45;
 }

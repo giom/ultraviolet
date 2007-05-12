@@ -1,70 +1,70 @@
 --- 
 name: iPlastic
 tags: 
-- begin: <span class="string">
+- begin: <span class="String">
   end: </span>
   selector: string
-- begin: <span class="number">
+- begin: <span class="Number">
   end: </span>
   selector: constant.numeric
-- begin: <span class="regular_expression">
+- begin: <span class="RegularExpression">
   end: </span>
   selector: string.regexp
-- begin: <span class="keyword">
+- begin: <span class="Keyword">
   end: </span>
   selector: keyword
-- begin: <span class="identifier">
+- begin: <span class="Identifier">
   end: </span>
   selector: constant.language
-- begin: <span class="exception">
+- begin: <span class="Exception">
   end: </span>
   selector: support.class.exception
-- begin: <span class="function_name">
+- begin: <span class="FunctionName">
   end: </span>
   selector: entity.name.function
-- begin: <span class="type_name">
+- begin: <span class="TypeName">
   end: </span>
   selector: entity.name.type
-- begin: <span class="arguments">
+- begin: <span class="Arguments">
   end: </span>
   selector: variable.parameter
-- begin: <span class="comment">
+- begin: <span class="Comment">
   end: </span>
   selector: comment
-- begin: <span class="invalid">
+- begin: <span class="Invalid">
   end: </span>
   selector: invalid
-- begin: <span class="trailing_whitespace">
+- begin: <span class="TrailingWhitespace">
   end: </span>
   selector: invalid.deprecated.trailing-whitespace
-- begin: <span class="embedded_source">
+- begin: <span class="EmbeddedSource">
   end: </span>
   selector: text source
-- begin: <span class="tag">
+- begin: <span class="Tag">
   end: </span>
   selector: meta.tag, declaration.tag
-- begin: <span class="constant">
+- begin: <span class="Constant">
   end: </span>
   selector: constant, support.constant
-- begin: <span class="support">
+- begin: <span class="Support">
   end: </span>
   selector: support
-- begin: <span class="storage">
+- begin: <span class="Storage">
   end: </span>
   selector: storage
-- begin: <span class="section_name">
+- begin: <span class="SectionName">
   end: </span>
   selector: entity.name.section
-- begin: <span class="frame_title">
+- begin: <span class="FrameTitle">
   end: </span>
   selector: entity.name.function.frame
-- begin: <span class="xml_declaration">
+- begin: <span class="XmlDeclaration">
   end: </span>
   selector: meta.tag.preprocessor.xml
-- begin: <span class="tag_attribute">
+- begin: <span class="TagAttribute">
   end: </span>
   selector: entity.other.attribute-name
-- begin: <span class="tag_name">
+- begin: <span class="TagName">
   end: </span>
   selector: entity.name.tag
 line-numbers: 

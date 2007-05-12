@@ -1,133 +1,133 @@
 --- 
 name: Cobalt
 tags: 
-- begin: <span class="punctuation">
+- begin: <span class="Punctuation">
   end: </span>
   selector: punctuation - (punctuation.definition.string || punctuation.definition.comment)
-- begin: <span class="constant">
+- begin: <span class="Constant">
   end: </span>
   selector: constant
-- begin: <span class="entity">
+- begin: <span class="Entity">
   end: </span>
   selector: entity
-- begin: <span class="keyword">
+- begin: <span class="Keyword">
   end: </span>
   selector: keyword
-- begin: <span class="storage">
+- begin: <span class="Storage">
   end: </span>
   selector: storage
-- begin: <span class="string">
+- begin: <span class="String">
   end: </span>
   selector: string -string.unquoted.old-plist -string.unquoted.heredoc, string.unquoted.heredoc string
-- begin: <span class="comment">
+- begin: <span class="Comment">
   end: </span>
   selector: comment
-- begin: <span class="support">
+- begin: <span class="Support">
   end: </span>
   selector: support
-- begin: <span class="variable">
+- begin: <span class="Variable">
   end: </span>
   selector: variable
-- begin: <span class="lang_variable">
+- begin: <span class="LangVariable">
   end: </span>
   selector: variable.language
-- begin: <span class="function_call">
+- begin: <span class="FunctionCall">
   end: </span>
   selector: meta.function-call
-- begin: <span class="invalid">
+- begin: <span class="Invalid">
   end: </span>
   selector: invalid
-- begin: <span class="embedded_source">
+- begin: <span class="EmbeddedSource">
   end: </span>
   selector: text source, string.unquoted.heredoc, source source
-- begin: <span class="entity_inheritedclass">
+- begin: <span class="EntityInheritedClass">
   end: </span>
   selector: entity.other.inherited-class
-- begin: <span class="string_embeddedsource">
+- begin: <span class="StringEmbeddedSource">
   end: </span>
   selector: string.quoted source
-- begin: <span class="string_constant">
+- begin: <span class="StringConstant">
   end: </span>
   selector: string constant
-- begin: <span class="stringregexp">
+- begin: <span class="StringRegexp">
   end: </span>
   selector: string.regexp
-- begin: <span class="string_variable">
+- begin: <span class="StringVariable">
   end: </span>
   selector: string variable
-- begin: <span class="supportfunction">
+- begin: <span class="SupportFunction">
   end: </span>
   selector: support.function
-- begin: <span class="supportconstant">
+- begin: <span class="SupportConstant">
   end: </span>
   selector: support.constant
-- begin: <span class="exception">
+- begin: <span class="Exception">
   end: </span>
   selector: support.class.exception
-- begin: <span class="cc_preprocessor_line">
+- begin: <span class="CCPreprocessorLine">
   end: </span>
   selector: meta.preprocessor.c
-- begin: <span class="cc_preprocessor_directive">
+- begin: <span class="CCPreprocessorDirective">
   end: </span>
   selector: meta.preprocessor.c keyword
-- begin: <span class="doctypexml_processing">
+- begin: <span class="DoctypeXmlProcessing">
   end: </span>
   selector: meta.sgml.html meta.doctype, meta.sgml.html meta.doctype entity, meta.sgml.html meta.doctype string, meta.xml-processing, meta.xml-processing entity, meta.xml-processing string
-- begin: <span class="metataga">
+- begin: <span class="MetaTagA">
   end: </span>
   selector: meta.tag, meta.tag entity
-- begin: <span class="css_tagname">
+- begin: <span class="CssTagName">
   end: </span>
   selector: meta.selector.css entity.name.tag
-- begin: <span class="cssid">
+- begin: <span class="CssId">
   end: </span>
   selector: meta.selector.css entity.other.attribute-name.id
-- begin: <span class="cssclass">
+- begin: <span class="CssClass">
   end: </span>
   selector: meta.selector.css entity.other.attribute-name.class
-- begin: <span class="css_propertyname">
+- begin: <span class="CssPropertyName">
   end: </span>
   selector: support.type.property-name.css
-- begin: <span class="css_propertyvalue">
+- begin: <span class="CssPropertyValue">
   end: </span>
   selector: meta.property-group support.constant.property-value.css, meta.property-value support.constant.property-value.css
-- begin: <span class="css_atrule">
+- begin: <span class="CssAtRule">
   end: </span>
   selector: meta.preprocessor.at-rule keyword.control.at-rule
-- begin: <span class="css_additionalconstants">
+- begin: <span class="CssAdditionalConstants">
   end: </span>
   selector: meta.property-value support.constant.named-color.css, meta.property-value constant
-- begin: <span class="css_constructorargument">
+- begin: <span class="CssConstructorArgument">
   end: </span>
   selector: meta.constructor.argument.css
-- begin: <span class="diffheader">
+- begin: <span class="DiffHeader">
   end: </span>
   selector: meta.diff, meta.diff.header
-- begin: <span class="diffdeleted">
+- begin: <span class="DiffDeleted">
   end: </span>
   selector: markup.deleted
-- begin: <span class="diffchanged">
+- begin: <span class="DiffChanged">
   end: </span>
   selector: markup.changed
-- begin: <span class="diffinserted">
+- begin: <span class="DiffInserted">
   end: </span>
   selector: markup.inserted
-- begin: <span class="raw_markup">
+- begin: <span class="RawMarkup">
   end: </span>
   selector: markup.raw
-- begin: <span class="block_quote">
+- begin: <span class="BlockQuote">
   end: </span>
   selector: markup.quote
-- begin: <span class="list">
+- begin: <span class="List">
   end: </span>
   selector: markup.list
-- begin: <span class="bold_markup">
+- begin: <span class="BoldMarkup">
   end: </span>
   selector: markup.bold
-- begin: <span class="italic_markup">
+- begin: <span class="ItalicMarkup">
   end: </span>
   selector: markup.italic
-- begin: <span class="heading_markup">
+- begin: <span class="HeadingMarkup">
   end: </span>
   selector: markup.heading
 line-numbers: 

@@ -1,67 +1,67 @@
 --- 
 name: All Hallow's Eve
 tags: 
-- begin: <span class="text_base">
+- begin: <span class="TextBase">
   end: </span>
   selector: text
-- begin: <span class="source_base">
+- begin: <span class="SourceBase">
   end: </span>
   selector: source
-- begin: <span class="comment">
+- begin: <span class="Comment">
   end: </span>
   selector: comment
-- begin: <span class="constant">
+- begin: <span class="Constant">
   end: </span>
   selector: constant
-- begin: <span class="keyword">
+- begin: <span class="Keyword">
   end: </span>
   selector: keyword
-- begin: <span class="preprocessor_line">
+- begin: <span class="PreProcessorLine">
   end: </span>
   selector: meta.preprocessor.c
-- begin: <span class="preprocessor_directive">
+- begin: <span class="PreProcessorDirective">
   end: </span>
   selector: keyword.control.import
-- begin: <span class="function_name">
+- begin: <span class="FunctionName">
   end: </span>
   selector: entity.name.function
-- begin: <span class="function_argument">
+- begin: <span class="FunctionArgument">
   end: </span>
   selector: variable.parameter
-- begin: <span class="block_comment">
+- begin: <span class="BlockComment">
   end: </span>
   selector: source comment.block
-- begin: <span class="string">
+- begin: <span class="String">
   end: </span>
   selector: string
-- begin: <span class="string_escapes">
+- begin: <span class="StringEscapes">
   end: </span>
   selector: string constant.character.escape
-- begin: <span class="string_executed">
+- begin: <span class="StringExecuted">
   end: </span>
   selector: string.interpolated
-- begin: <span class="regular_expression">
+- begin: <span class="RegularExpression">
   end: </span>
   selector: string.regexp
-- begin: <span class="string_literal">
+- begin: <span class="StringLiteral">
   end: </span>
   selector: string.literal
-- begin: <span class="string_escapes_executed">
+- begin: <span class="StringEscapesExecuted">
   end: </span>
   selector: string.interpolated constant.character.escape
-- begin: <span class="type_name">
+- begin: <span class="TypeName">
   end: </span>
   selector: entity.name.type
-- begin: <span class="class_inheritance">
+- begin: <span class="ClassInheritance">
   end: </span>
   selector: entity.other.inherited-class
-- begin: <span class="tag_name">
+- begin: <span class="TagName">
   end: </span>
   selector: entity.name.tag
-- begin: <span class="tag_attribute">
+- begin: <span class="TagAttribute">
   end: </span>
   selector: entity.other.attribute-name
-- begin: <span class="support_function">
+- begin: <span class="SupportFunction">
   end: </span>
   selector: support.function
 line-numbers: 

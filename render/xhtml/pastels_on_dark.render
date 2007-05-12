@@ -1,0 +1,177 @@
+--- 
+name: Pastels on Dark
+tags: 
+- begin: <span class="Comments">
+  end: </span>
+  selector: comment
+- begin: <span class="CommentsBlock">
+  end: </span>
+  selector: comment.block
+- begin: <span class="Strings">
+  end: </span>
+  selector: string
+- begin: <span class="Numbers">
+  end: </span>
+  selector: constant.numeric
+- begin: <span class="Keywords">
+  end: </span>
+  selector: keyword
+- begin: <span class="PreprocessorLine">
+  end: </span>
+  selector: meta.preprocessor
+- begin: <span class="PreprocessorDirective">
+  end: </span>
+  selector: keyword.control.import
+- begin: <span class="Functions">
+  end: </span>
+  selector: support.function
+- begin: <span class="FunctionResult">
+  end: </span>
+  selector: declaration.function function-result
+- begin: <span class="FunctionName">
+  end: </span>
+  selector: declaration.function function-name
+- begin: <span class="FunctionArgumentName">
+  end: </span>
+  selector: declaration.function argument-name
+- begin: <span class="FunctionArgumentType">
+  end: </span>
+  selector: declaration.function function-arg-type
+- begin: <span class="FunctionArgumentVariable">
+  end: </span>
+  selector: declaration.function function-argument
+- begin: <span class="ClassName">
+  end: </span>
+  selector: declaration.class class-name
+- begin: <span class="ClassInheritance">
+  end: </span>
+  selector: declaration.class class-inheritance
+- begin: <span class="Invalid">
+  end: </span>
+  selector: invalid
+- begin: <span class="InvalidTrailingWhitespace">
+  end: </span>
+  selector: invalid.deprecated.trailing-whitespace
+- begin: <span class="Section">
+  end: </span>
+  selector: declaration.section section-name
+- begin: <span class="Interpolation">
+  end: </span>
+  selector: string.interpolation
+- begin: <span class="RegularExpressions">
+  end: </span>
+  selector: string.regexp
+- begin: <span class="Variables">
+  end: </span>
+  selector: variable
+- begin: <span class="Constants">
+  end: </span>
+  selector: constant
+- begin: <span class="CharacterConstants">
+  end: </span>
+  selector: constant.character
+- begin: <span class="LanguageConstants">
+  end: </span>
+  selector: constant.language
+- begin: <span class="EmbeddedCode">
+  end: </span>
+  selector: embedded
+- begin: <span class="TagName">
+  end: </span>
+  selector: keyword.markup.element-name
+- begin: <span class="AttributeName">
+  end: </span>
+  selector: keyword.markup.attribute-name
+- begin: <span class="AttributeWithValue">
+  end: </span>
+  selector: meta.attribute-with-value
+- begin: <span class="Exceptions">
+  end: </span>
+  selector: keyword.exception
+- begin: <span class="Operators">
+  end: </span>
+  selector: keyword.operator
+- begin: <span class="ControlStructures">
+  end: </span>
+  selector: keyword.control
+- begin: <span class="HtmlDocinfoXml">
+  end: </span>
+  selector: meta.tag.preprocessor.xml
+- begin: <span class="HtmlDoctype">
+  end: </span>
+  selector: meta.tag.sgml.doctype
+- begin: <span class="HtmlDocinfoDtd">
+  end: </span>
+  selector: string.quoted.docinfo.doctype.DTD
+- begin: <span class="HtmlServersideIncludes">
+  end: </span>
+  selector: comment.other.server-side-include.xhtml, comment.other.server-side-include.html
+- begin: <span class="HtmlTag">
+  end: </span>
+  selector: text.html declaration.tag, text.html meta.tag, text.html entity.name.tag.xhtml
+- begin: <span class="HtmlAttribute">
+  end: </span>
+  selector: keyword.markup.attribute-name
+- begin: <span class="PhpPhpdocs">
+  end: </span>
+  selector: keyword.other.phpdoc.php
+- begin: <span class="PhpIncludeRequire">
+  end: </span>
+  selector: keyword.other.include.php
+- begin: <span class="PhpConstantsCorePredefined">
+  end: </span>
+  selector: support.constant.core.php
+- begin: <span class="PhpConstantsStandardPredefined">
+  end: </span>
+  selector: support.constant.std.php
+- begin: <span class="PhpVariablesGlobals">
+  end: </span>
+  selector: variable.other.global.php
+- begin: <span class="PhpVariablesSaferGlobals">
+  end: </span>
+  selector: variable.other.global.safer.php
+- begin: <span class="PhpStringsSingleQuoted">
+  end: </span>
+  selector: string.quoted.single.php
+- begin: <span class="PhpKeywordsStorage">
+  end: </span>
+  selector: keyword.storage.php
+- begin: <span class="PhpStringsDoubleQuoted">
+  end: </span>
+  selector: string.quoted.double.php
+- begin: <span class="CssSelectorsId">
+  end: </span>
+  selector: entity.other.attribute-name.id.css
+- begin: <span class="CssSelectorsElements">
+  end: </span>
+  selector: entity.name.tag.css
+- begin: <span class="CssSelectorsClassname">
+  end: </span>
+  selector: entity.other.attribute-name.class.css
+- begin: <span class="CssSelectorsPseudoclass">
+  end: </span>
+  selector: entity.other.attribute-name.pseudo-class.css
+- begin: <span class="CssInvalidComma">
+  end: </span>
+  selector: invalid.bad-comma.css
+- begin: <span class="CssPropertyValue">
+  end: </span>
+  selector: support.constant.property-value.css
+- begin: <span class="CssPropertyKeyword">
+  end: </span>
+  selector: support.type.property-name.css
+- begin: <span class="CssPropertyColours">
+  end: </span>
+  selector: constant.other.rgb-value.css
+- begin: <span class="CssFontNames">
+  end: </span>
+  selector: support.constant.font-name.css
+- begin: <span class="TmlangdefKeys">
+  end: </span>
+  selector: support.constant.tm-language-def, support.constant.name.tm-language-def
+- begin: <span class="CssUnits">
+  end: </span>
+  selector: keyword.other.unit.css
+line-numbers: 
+  begin: <span class="line-numbers">
+  end: </span>

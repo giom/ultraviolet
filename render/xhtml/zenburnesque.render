@@ -1,97 +1,97 @@
 --- 
 name: Zenburnesque
 tags: 
-- begin: <span class="comment">
+- begin: <span class="Comment">
   end: </span>
   selector: comment
-- begin: <span class="directive">
+- begin: <span class="Directive">
   end: </span>
   selector: keyword.other.directive
-- begin: <span class="linenumber_directives">
+- begin: <span class="LineNumberDirectives">
   end: </span>
   selector: keyword.other.directive.line-number
-- begin: <span class="characters">
+- begin: <span class="Characters">
   end: </span>
   selector: constant.character
-- begin: <span class="string">
+- begin: <span class="String">
   end: </span>
   selector: string
-- begin: <span class="number">
+- begin: <span class="Number">
   end: </span>
   selector: constant.numeric
-- begin: <span class="floatingpoint_numbers">
+- begin: <span class="FloatingPointNumbers">
   end: </span>
   selector: constant.numeric.floating-point
-- begin: <span class="builtin_constant">
+- begin: <span class="BuiltInConstant">
   end: </span>
   selector: constant.language
-- begin: <span class="userdefined_constant">
+- begin: <span class="UserDefinedConstant">
   end: </span>
   selector: constant.character, constant.other
-- begin: <span class="variable">
+- begin: <span class="Variable">
   end: </span>
   selector: variable.parameter, variable.other
-- begin: <span class="language_keyword">
+- begin: <span class="LanguageKeyword">
   end: </span>
   selector: keyword
-- begin: <span class="module_keyword">
+- begin: <span class="ModuleKeyword">
   end: </span>
   selector: entity.name.module,  support.other.module
-- begin: <span class="operators">
+- begin: <span class="Operators">
   end: </span>
   selector: keyword.operator
-- begin: <span class="floatingpoint_infix_operators">
+- begin: <span class="FloatingPointInfixOperators">
   end: </span>
   selector: source.ocaml keyword.operator.symbol.infix.floating-point
-- begin: <span class="floatingpoint_prefix_operators">
+- begin: <span class="FloatingPointPrefixOperators">
   end: </span>
   selector: source.ocaml keyword.operator.symbol.prefix.floating-point
-- begin: <span class="storage_types">
+- begin: <span class="StorageTypes">
   end: </span>
   selector: storage.type
-- begin: <span class="variant_types">
+- begin: <span class="VariantTypes">
   end: </span>
   selector: entity.name.class.variant
-- begin: <span class="storage">
+- begin: <span class="Storage">
   end: </span>
   selector: storage
-- begin: <span class="type_name">
+- begin: <span class="TypeName">
   end: </span>
   selector: entity.name.type
-- begin: <span class="inherited_class">
+- begin: <span class="InheritedClass">
   end: </span>
   selector: entity.other.inherited-class
-- begin: <span class="function_name">
+- begin: <span class="FunctionName">
   end: </span>
   selector: entity.name.function
-- begin: <span class="type_name">
+- begin: <span class="TypeName">
   end: </span>
   selector: storage.type.user-defined
-- begin: <span class="class_type_name">
+- begin: <span class="ClassTypeName">
   end: </span>
   selector: entity.name.type.class.type
-- begin: <span class="function_argument">
+- begin: <span class="FunctionArgument">
   end: </span>
   selector: variable.parameter
-- begin: <span class="tag_name">
+- begin: <span class="TagName">
   end: </span>
   selector: entity.name.tag
-- begin: <span class="tag_attribute">
+- begin: <span class="TagAttribute">
   end: </span>
   selector: entity.other.attribute-name
-- begin: <span class="library_function">
+- begin: <span class="LibraryFunction">
   end: </span>
   selector: support.function
-- begin: <span class="library_constant">
+- begin: <span class="LibraryConstant">
   end: </span>
   selector: support.constant
-- begin: <span class="library_classtype">
+- begin: <span class="LibraryClassType">
   end: </span>
   selector: support.type, support.class
-- begin: <span class="library_variable">
+- begin: <span class="LibraryVariable">
   end: </span>
   selector: support.variable
-- begin: <span class="invalid">
+- begin: <span class="Invalid">
   end: </span>
   selector: invalid
 line-numbers: 

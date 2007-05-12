@@ -11,30 +11,24 @@ end
 def settings
    unless @settings
       @settings = @theme["settings"].find { |s| ! s["name"] }["settings"]
-      puts "settings = #{@settings}"
    end
    @settings
 end
 
 def normalize_color color
    if color =~ /^#/ && color.size == 9
-      puts settings.class
-      puts settings["background"]
       div0 = (settings["background"] ? settings["background"][1..-1].hex : 0xFFFFFF )
       div1, alpha = color[1..-1].hex.divmod( 0x100 )
-      puts "alpha = ##{alpha.to_s(16).upcase}"
       result = ""
       3.times {
          div0, mod0 = div0.divmod( 0x100 )
          div1, mod1 = div1.divmod( 0x100 )
-         puts "chunk = ##{mod1.to_s(16).upcase}"
-         result = ((mod1 * alpha + mod0 * ( 0x100 - alpha ) ) / 0x100).to_s(16).upcase + result
+         result = ((mod1 * alpha + mod0 * ( 0x100 - alpha ) ) / 0x100).to_s(16).upcase.rjust(2, '0') + result
       }
       result = "#" + result
       #result = "##{ big, small = ; ((big  * (0xFF - small)) / 0xFF).to_s(16).upcase}"
       #result = "##{ big, small = "0xFFFFFF10".hex.divmod( "0x100".hex); ((big  * small) / 0xFF).to_s(16).upcase}"
       #result = color[0...-2]
-      puts "#{color} => #{result}"
       result
    else
       color
@@ -53,7 +47,10 @@ render["tags"] = []
    if t["scope"]
       tag = {}
       tag["selector"] = t["scope"]
-      class_name = t["name"].downcase.gsub(/\s+/, '_').gsub('.tmtheme', '').gsub(/\W/, '').gsub(/_+/, '_')
+      class_name = t["name"].downcase.gsub(/\W/, ' ').gsub('.tmtheme', '').split(' ').collect{|s| s.capitalize}.join
+      if class_name == ""
+         class_name = "x" * t["name"].size
+      end
       tag["begin"] = "<span class=\"#{class_name}\">"
       tag["end"] = "</span>"
       render["tags"] << tag
@@ -67,8 +64,6 @@ render["tags"] = []
             when /bold/ then style["font-weight"] = "bold"
             when /italic/ then style["font-style"] = "italic"
             when /underline/ then style["text-decoration"] = "underline"
-         else
-            puts s["fontStyle"]
          end
          css[".#{class_name}"] = style
       end
@@ -79,8 +74,6 @@ render["tags"] = []
          style["background-color"] = normalize_color(s["background"])
          css[code_name] = style
          @style = style
-         puts @style
-         
          style = {}
          style["color"] = normalize_color(s["foreground"])
          style["background-color"] = normalize_color(s["selection"])

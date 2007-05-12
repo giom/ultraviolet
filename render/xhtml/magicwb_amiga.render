@@ -1,88 +1,88 @@
 --- 
 name: MagicWB (Amiga)
 tags: 
-- begin: <span class="comment">
+- begin: <span class="Comment">
   end: </span>
   selector: comment
-- begin: <span class="string">
+- begin: <span class="String">
   end: </span>
   selector: string
-- begin: <span class="number">
+- begin: <span class="Number">
   end: </span>
   selector: constant.numeric
-- begin: <span class="constant_builtin">
+- begin: <span class="ConstantBuiltIn">
   end: </span>
   selector: constant.language
-- begin: <span class="constant_userdefined">
+- begin: <span class="ConstantUserDefined">
   end: </span>
   selector: constant.character, constant.other
-- begin: <span class="variable">
+- begin: <span class="Variable">
   end: </span>
   selector: variable.language, variable.other
-- begin: <span class="keyword">
+- begin: <span class="Keyword">
   end: </span>
   selector: keyword
-- begin: <span class="storage">
+- begin: <span class="Storage">
   end: </span>
   selector: storage
-- begin: <span class="type_name">
+- begin: <span class="TypeName">
   end: </span>
   selector: entity.name.type
-- begin: <span class="inherited_class">
+- begin: <span class="InheritedClass">
   end: </span>
   selector: entity.other.inherited-class
-- begin: <span class="function_name">
+- begin: <span class="FunctionName">
   end: </span>
   selector: entity.name.function
-- begin: <span class="function_argument">
+- begin: <span class="FunctionArgument">
   end: </span>
   selector: variable.parameter
-- begin: <span class="entity_name">
+- begin: <span class="EntityName">
   end: </span>
   selector: entity.name
-- begin: <span class="tag_attribute">
+- begin: <span class="TagAttribute">
   end: </span>
   selector: entity.other.attribute-name
-- begin: <span class="library_function">
+- begin: <span class="LibraryFunction">
   end: </span>
   selector: support.function
-- begin: <span class="objectivec_method_call">
+- begin: <span class="ObjectiveCMethodCall">
   end: </span>
   selector: support.function.any-method
-- begin: <span class="objectivec_method_call_">
+- begin: <span class="ObjectiveCMethodCall">
   end: </span>
   selector: support.function.any-method - punctuation
-- begin: <span class="library_constant">
+- begin: <span class="LibraryConstant">
   end: </span>
   selector: support.constant
-- begin: <span class="library_classtype">
+- begin: <span class="LibraryClassType">
   end: </span>
   selector: support.type, support.class
-- begin: <span class="library_variable">
+- begin: <span class="LibraryVariable">
   end: </span>
   selector: support.variable
-- begin: <span class="invalid">
+- begin: <span class="Invalid">
   end: </span>
   selector: invalid
-- begin: <span class="include_system">
+- begin: <span class="IncludeSystem">
   end: </span>
   selector: string.quoted.other.lt-gt.include
-- begin: <span class="include_user">
+- begin: <span class="IncludeUser">
   end: </span>
   selector: string.quoted.double.include
-- begin: <span class="markup_list_item">
+- begin: <span class="MarkupListItem">
   end: </span>
   selector: markup.list
-- begin: <span class="markup_raw">
+- begin: <span class="MarkupRaw">
   end: </span>
   selector: markup.raw
-- begin: <span class="markup_quote_email">
+- begin: <span class="MarkupQuoteEmail">
   end: </span>
   selector: markup.quote
-- begin: <span class="markup_quote_double_email">
+- begin: <span class="MarkupQuoteDoubleEmail">
   end: </span>
   selector: markup.quote markup.quote
-- begin: <span class="embedded_source">
+- begin: <span class="EmbeddedSource">
   end: </span>
   selector: text.html source
 line-numbers: 

@@ -13,6 +13,7 @@ render/xhtml/iplastic.render
 render/xhtml/lazy.render
 render/xhtml/mac_classic.render
 render/xhtml/magicwb_amiga.render
+render/xhtml/pastels_on_dark.render
 render/xhtml/slush_poppies.render
 render/xhtml/spacecadet.render
 render/xhtml/sunburst.render
@@ -37,6 +38,7 @@ render/xhtml/files/css/iplastic.css
 render/xhtml/files/css/lazy.css
 render/xhtml/files/css/mac_classic.css
 render/xhtml/files/css/magicwb_amiga.css
+render/xhtml/files/css/pastels_on_dark.css
 render/xhtml/files/css/slush_poppies.css
 render/xhtml/files/css/spacecadet.css
 render/xhtml/files/css/sunburst.css
@@ -207,7 +209,6 @@ syntax/languagedefinition.syntax
 syntax/regular_expressions_oniguruma.syntax
 syntax/subversion_commit_message.syntax
 bin/theme2render
-bin/yaml2render
 bin/uv
 History.txt
 Rakefile

@@ -1,124 +1,124 @@
 --- 
 name: Twilight
 tags: 
-- begin: <span class="comment">
+- begin: <span class="Comment">
   end: </span>
   selector: comment
-- begin: <span class="constant">
+- begin: <span class="Constant">
   end: </span>
   selector: constant
-- begin: <span class="entity">
+- begin: <span class="Entity">
   end: </span>
   selector: entity
-- begin: <span class="keyword">
+- begin: <span class="Keyword">
   end: </span>
   selector: keyword
-- begin: <span class="storage">
+- begin: <span class="Storage">
   end: </span>
   selector: storage
-- begin: <span class="string">
+- begin: <span class="String">
   end: </span>
   selector: string
-- begin: <span class="support">
+- begin: <span class="Support">
   end: </span>
   selector: support
-- begin: <span class="variable">
+- begin: <span class="Variable">
   end: </span>
   selector: variable
-- begin: <span class="invalid_deprecated">
+- begin: <span class="InvalidDeprecated">
   end: </span>
   selector: invalid.deprecated
-- begin: <span class="invalid_illegal">
+- begin: <span class="InvalidIllegal">
   end: </span>
   selector: invalid.illegal
-- begin: <span class="_embedded_source">
+- begin: <span class="EmbeddedSource">
   end: </span>
   selector: text source
-- begin: <span class="_embedded_source_bright">
+- begin: <span class="EmbeddedSourceBright">
   end: </span>
   selector: text.html.ruby source
-- begin: <span class="_entity_inheritedclass">
+- begin: <span class="EntityInheritedClass">
   end: </span>
   selector: entity.other.inherited-class
-- begin: <span class="_string_embeddedsource">
+- begin: <span class="StringEmbeddedSource">
   end: </span>
   selector: string source
-- begin: <span class="_string_constant">
+- begin: <span class="StringConstant">
   end: </span>
   selector: string constant
-- begin: <span class="_stringregexp">
+- begin: <span class="StringRegexp">
   end: </span>
   selector: string.regexp
-- begin: <span class="_stringregexpspecial">
+- begin: <span class="StringRegexpSpecial">
   end: </span>
   selector: string.regexp constant.character.escape, string.regexp source.ruby.embedded, string.regexp string.regexp.arbitrary-repitition
-- begin: <span class="_string_variable">
+- begin: <span class="StringVariable">
   end: </span>
   selector: string variable
-- begin: <span class="_supportfunction">
+- begin: <span class="SupportFunction">
   end: </span>
   selector: support.function
-- begin: <span class="_supportconstant">
+- begin: <span class="SupportConstant">
   end: </span>
   selector: support.constant
-- begin: <span class="c_cc_preprocessor_line">
+- begin: <span class="CCCPreprocessorLine">
   end: </span>
   selector: meta.preprocessor.c
-- begin: <span class="c_cc_preprocessor_directive">
+- begin: <span class="CCCPreprocessorDirective">
   end: </span>
   selector: meta.preprocessor.c keyword
-- begin: <span class="_doctypexml_processing">
+- begin: <span class="DoctypeXmlProcessing">
   end: </span>
   selector: meta.tag.sgml.doctype, meta.tag.sgml.doctype entity, meta.tag.sgml.doctype string, meta.tag.preprocessor.xml, meta.tag.preprocessor.xml entity, meta.tag.preprocessor.xml string
-- begin: <span class="_metatagall">
+- begin: <span class="MetaTagAll">
   end: </span>
   selector: declaration.tag, declaration.tag entity, meta.tag, meta.tag entity
-- begin: <span class="_metataginline">
+- begin: <span class="MetaTagInline">
   end: </span>
   selector: declaration.tag.inline, declaration.tag.inline entity, source entity.name.tag, source entity.other.attribute-name, meta.tag.inline, meta.tag.inline entity
-- begin: <span class="_css_tagname">
+- begin: <span class="CssTagName">
   end: </span>
   selector: meta.selector.css entity.name.tag
-- begin: <span class="_csspseudoclass">
+- begin: <span class="CssPseudoClass">
   end: </span>
   selector: meta.selector.css entity.other.attribute-name.tag.pseudo-class
-- begin: <span class="_cssid">
+- begin: <span class="CssId">
   end: </span>
   selector: meta.selector.css entity.other.attribute-name.id
-- begin: <span class="_cssclass">
+- begin: <span class="CssClass">
   end: </span>
   selector: meta.selector.css entity.other.attribute-name.class
-- begin: <span class="_css_propertyname">
+- begin: <span class="CssPropertyName">
   end: </span>
   selector: support.type.property-name.css
-- begin: <span class="_css_propertyvalue">
+- begin: <span class="CssPropertyValue">
   end: </span>
   selector: meta.property-group support.constant.property-value.css, meta.property-value support.constant.property-value.css
-- begin: <span class="_css_atrule">
+- begin: <span class="CssAtRule">
   end: </span>
   selector: meta.preprocessor.at-rule keyword.control.at-rule
-- begin: <span class="_css_additionalconstants">
+- begin: <span class="CssAdditionalConstants">
   end: </span>
   selector: meta.property-value support.constant.named-color.css, meta.property-value constant
-- begin: <span class="_css_constructorargument">
+- begin: <span class="CssConstructorArgument">
   end: </span>
   selector: meta.constructor.argument.css
-- begin: <span class="_diffheader">
+- begin: <span class="DiffHeader">
   end: </span>
   selector: meta.diff, meta.diff.header, meta.separator
-- begin: <span class="_diffdeleted">
+- begin: <span class="DiffDeleted">
   end: </span>
   selector: markup.deleted
-- begin: <span class="_diffchanged">
+- begin: <span class="DiffChanged">
   end: </span>
   selector: markup.changed
-- begin: <span class="_diffinserted">
+- begin: <span class="DiffInserted">
   end: </span>
   selector: markup.inserted
-- begin: <span class="markup_list">
+- begin: <span class="MarkupList">
   end: </span>
   selector: markup.list
-- begin: <span class="markup_heading">
+- begin: <span class="MarkupHeading">
   end: </span>
   selector: markup.heading
 line-numbers: 

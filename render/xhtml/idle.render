@@ -1,64 +1,64 @@
 --- 
 name: IDLE
 tags: 
-- begin: <span class="comment">
+- begin: <span class="Comment">
   end: </span>
   selector: comment
-- begin: <span class="string">
+- begin: <span class="String">
   end: </span>
   selector: string
-- begin: <span class="number">
+- begin: <span class="Number">
   end: </span>
   selector: constant.numeric
-- begin: <span class="builtin_constant">
+- begin: <span class="BuiltInConstant">
   end: </span>
   selector: constant.language
-- begin: <span class="userdefined_constant">
+- begin: <span class="UserDefinedConstant">
   end: </span>
   selector: constant.character, constant.other
-- begin: <span class="variable">
+- begin: <span class="Variable">
   end: </span>
   selector: variable.language, variable.other
-- begin: <span class="keyword">
+- begin: <span class="Keyword">
   end: </span>
   selector: keyword
-- begin: <span class="storage">
+- begin: <span class="Storage">
   end: </span>
   selector: storage
-- begin: <span class="type_name">
+- begin: <span class="TypeName">
   end: </span>
   selector: entity.name.type
-- begin: <span class="inherited_class">
+- begin: <span class="InheritedClass">
   end: </span>
   selector: entity.other.inherited-class
-- begin: <span class="function_name">
+- begin: <span class="FunctionName">
   end: </span>
   selector: entity.name.function
-- begin: <span class="function_argument">
+- begin: <span class="FunctionArgument">
   end: </span>
   selector: variable.parameter
-- begin: <span class="tag_name">
+- begin: <span class="TagName">
   end: </span>
   selector: entity.name.tag
-- begin: <span class="tag_attribute">
+- begin: <span class="TagAttribute">
   end: </span>
   selector: entity.other.attribute-name
-- begin: <span class="library_function">
+- begin: <span class="LibraryFunction">
   end: </span>
   selector: support.function
-- begin: <span class="library_constant">
+- begin: <span class="LibraryConstant">
   end: </span>
   selector: support.constant
-- begin: <span class="library_classtype">
+- begin: <span class="LibraryClassType">
   end: </span>
   selector: support.type, support.class
-- begin: <span class="library_variable">
+- begin: <span class="LibraryVariable">
   end: </span>
   selector: support.variable
-- begin: <span class="invalid">
+- begin: <span class="Invalid">
   end: </span>
   selector: invalid
-- begin: <span class="string_interpolation">
+- begin: <span class="StringInterpolation">
   end: </span>
   selector: constant.other.placeholder.py
 line-numbers: 

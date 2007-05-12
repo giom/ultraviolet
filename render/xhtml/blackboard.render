@@ -1,82 +1,82 @@
 --- 
 name: Blackboard
 tags: 
-- begin: <span class="comment">
+- begin: <span class="Comment">
   end: </span>
   selector: comment
-- begin: <span class="constant">
+- begin: <span class="Constant">
   end: </span>
   selector: constant
-- begin: <span class="entity">
+- begin: <span class="Entity">
   end: </span>
   selector: entity
-- begin: <span class="keyword">
+- begin: <span class="Keyword">
   end: </span>
   selector: keyword
-- begin: <span class="storage">
+- begin: <span class="Storage">
   end: </span>
   selector: storage
-- begin: <span class="string">
+- begin: <span class="String">
   end: </span>
   selector: string, meta.verbatim
-- begin: <span class="support">
+- begin: <span class="Support">
   end: </span>
   selector: support
-- begin: <span class="variable">
+- begin: <span class="Variable">
   end: </span>
   selector: variable
-- begin: <span class="invalid_deprecated">
+- begin: <span class="InvalidDeprecated">
   end: </span>
   selector: invalid.deprecated
-- begin: <span class="invalid_illegal">
+- begin: <span class="InvalidIllegal">
   end: </span>
   selector: invalid.illegal
-- begin: <span class="superclass">
+- begin: <span class="Superclass">
   end: </span>
   selector: entity.other.inherited-class
-- begin: <span class="string_interpolation">
+- begin: <span class="StringInterpolation">
   end: </span>
   selector: string constant.other.placeholder
-- begin: <span class="metafunctioncallpy">
+- begin: <span class="MetaFunctionCallPy">
   end: </span>
   selector: meta.function-call.py
-- begin: <span class="metatag">
+- begin: <span class="MetaTag">
   end: </span>
   selector: meta.tag, meta.tag entity
-- begin: <span class="entitynamesection">
+- begin: <span class="EntityNameSection">
   end: </span>
   selector: entity.name.section
-- begin: <span class="ocaml_variant">
+- begin: <span class="OcamlVariant">
   end: </span>
   selector: keyword.type.variant
-- begin: <span class="ocaml_operator">
+- begin: <span class="OcamlOperator">
   end: </span>
   selector: source.ocaml keyword.operator.symbol
-- begin: <span class="ocaml_infix_operator">
+- begin: <span class="OcamlInfixOperator">
   end: </span>
   selector: source.ocaml keyword.operator.symbol.infix
-- begin: <span class="ocaml_prefix_operator">
+- begin: <span class="OcamlPrefixOperator">
   end: </span>
   selector: source.ocaml keyword.operator.symbol.prefix
-- begin: <span class="ocaml_fp_infix_operator">
+- begin: <span class="OcamlFPInfixOperator">
   end: </span>
   selector: source.ocaml keyword.operator.symbol.infix.floating-point
-- begin: <span class="ocaml_fp_prefix_operator">
+- begin: <span class="OcamlFPPrefixOperator">
   end: </span>
   selector: source.ocaml keyword.operator.symbol.prefix.floating-point
-- begin: <span class="ocaml_fp_constant">
+- begin: <span class="OcamlFPConstant">
   end: </span>
   selector: source.ocaml constant.numeric.floating-point
-- begin: <span class="latex_environment">
+- begin: <span class="LatexEnvironment">
   end: </span>
   selector: text.tex.latex meta.function.environment
-- begin: <span class="latex_environment_nested">
+- begin: <span class="LatexEnvironmentNested">
   end: </span>
   selector: text.tex.latex meta.function.environment meta.function.environment
-- begin: <span class="latex_support">
+- begin: <span class="LatexSupport">
   end: </span>
   selector: text.tex.latex support.function
-- begin: <span class="plist_unquoted_string">
+- begin: <span class="PlistUnquotedString">
   end: </span>
   selector: source.plist string.unquoted, source.plist keyword.operator
 line-numbers: 

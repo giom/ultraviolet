@@ -1,640 +1,632 @@
-pre.brilliance_black .sourcerubyrailsembeddedreturnvalueoneline {
-   background-color: #1818ED;
-}
-pre.brilliance_black .l_markup {
-   color: #CDCDCD;
-}
-pre.brilliance_black .line-numbers {
-   background-color: #5ED0;
-   color: #CCCCCC;
-}
-pre.brilliance_black .m_quote_block {
-   background-color: #2525FA;
-}
-pre.brilliance_black ._blog_post_email_message {
-   background-color: #DCDCDC;
-   color: #333333;
-}
-pre.brilliance_black .l_metaenvironmentlist {
-   background-color: #667D;
-   color: #1414D2;
-}
-pre.brilliance_black ._function_declaration {
-   background-color: #14CCE;
-   color: #999999;
-}
-pre.brilliance_black ._tag_block_form {
-   background-color: #B12ED;
-}
-pre.brilliance_black ._keyword_operator_arithmetic {
-   color: #2136CE;
-}
-pre.brilliance_black ._tag_meta {
-   background-color: #16AE1;
-   color: #F800FF;
-}
-pre.brilliance_black ._html_comment {
-   font-style: italic;
-}
-pre.brilliance_black ._storage {
-   color: #7E0080;
-}
-pre.brilliance_black ._tag_form {
-   background-color: #A17E1;
-   color: #0086FF;
-}
-pre.brilliance_black ._metagroupbracesround_js {
-}
-pre.brilliance_black ._source_embeded_source {
-   background-color: #1010E5;
-}
-pre.brilliance_black .metaclassinstanceconstructor_keywordoperatornew {
-   color: #800043;
-}
-pre.brilliance_black .misc_punctuation {
-   font-weight: bold;
-   color: #666666;
-}
-pre.brilliance_black .commentline {
-   color: #4C4C4C;
-   font-style: italic;
-}
-pre.brilliance_black ._metabraceerb {
-   background-color: #000000;
-}
-pre.brilliance_black ._xml_tag {
-   color: #666666;
-}
-pre.brilliance_black .supportothermodule {
-   background-color: #24AC8;
+pre.brilliance_black .EntityNameTypeModule {
    color: #FF0000;
 }
-pre.brilliance_black ._post_header_values {
-   background-color: #2525E9;
-   color: #803D00;
-}
-pre.brilliance_black ._inherited_class {
-   background-color: #23AC8;
-   color: #FF0086;
-}
-pre.brilliance_black ._variable_punctuation {
-   color: #667D;
-}
-pre.brilliance_black ._function_call {
-   color: #782EC1;
-}
-pre.brilliance_black .sourcerubyrailsembeddedoneline {
-   background-color: #B25F9;
-}
-pre.brilliance_black ._userdefined_constant {
-   color: #00FF79;
-}
-pre.brilliance_black ._function_declaration_parameters {
-   color: #9799FF;
-}
-pre.brilliance_black ._regex_keyword {
-}
-pre.brilliance_black ._variablelanguagethisjsprototype {
-   color: #666666;
-}
-pre.brilliance_black ._text_string_source {
-   color: #999999;
-}
-pre.brilliance_black .l_metaenddocument {
-   background-color: #CCCCCC;
-   color: #000000;
-}
-pre.brilliance_black ._storage_modifier {
-   color: #803D00;
-}
-pre.brilliance_black ._library_variable {
-   background-color: #A23E0;
-   color: #00FFF8;
-}
-pre.brilliance_black ._library_constant {
-   color: #00FFF8;
-}
-pre.brilliance_black ._tag_attribute {
-   color: #3D3DFA;
-}
-pre.brilliance_black .latex {
-}
-pre.brilliance_black .group1 {
-   background-color: #0A0A0A;
-}
-pre.brilliance_black ._text_source {
-   background-color: #000000;
-   color: #CCCCCC;
-}
-pre.brilliance_black .l_keywordoperatordelimiter {
-   background-color: #667D;
-}
-pre.brilliance_black ._keyword_control {
-   color: #F800FF;
-}
-pre.brilliance_black .l_metalabelreference {
-   background-color: #1919FA;
-}
-pre.brilliance_black .group10 {
-   background-color: #1F1F1F;
-}
-pre.brilliance_black .group2 {
-   background-color: #0E0E0E;
-}
-pre.brilliance_black .bold_string_quotes {
-   font-weight: bold;
-   color: #803D00;
-}
-pre.brilliance_black ._text_string_source_string_source {
-}
-pre.brilliance_black .l_metagroupbraces {
-   color: #1414D2;
-}
-pre.brilliance_black .l_variableparameterlabel {
-   color: #8686FC;
-}
-pre.brilliance_black . {
-   background-color: #FFFFFF;
-   color: #E6E6E6;
-}
-pre.brilliance_black ._global_variable {
-   background-color: #A17E1;
-   color: #00807C;
-}
-pre.brilliance_black ._meta_group_assertion_regexp_ {
-   background-color: #A25FA;
-}
-pre.brilliance_black .group11 {
-   background-color: #151515;
-}
-pre.brilliance_black .group3 {
-   background-color: #111111;
-}
-pre.brilliance_black .curly_punctuation {
-   font-weight: bold;
-   color: #FFFFFF;
-}
-pre.brilliance_black ._string_regex {
-   background-color: #1723C8;
-   color: #FFF800;
-}
-pre.brilliance_black .l_metafootnote {
-   background-color: #AAE1;
-   color: #9BFB;
-}
-pre.brilliance_black ._function_call_without_arguments {
-   color: #A88FC0;
-}
-pre.brilliance_black .subtlegradientcom {
-   background-color: #FFFFFF;
-   text-decoration: underline;
-   color: #555555;
-}
-pre.brilliance_black ._even {
-   background-color: #667D;
-}
-pre.brilliance_black .group4 {
-   background-color: #151515;
-}
-pre.brilliance_black ._tag_block_head {
-   background-color: #121212;
-}
-pre.brilliance_black .l_constantlanguagegeneral {
-}
-pre.brilliance_black ._class_method {
-   color: #FF0086;
-}
-pre.brilliance_black ._keyword {
-}
-pre.brilliance_black .group5 {
-   background-color: #191919;
-}
-pre.brilliance_black .textsubversioncommit_metascopechangedfiles {
-   background-color: #000000;
-   color: #FFFFFF;
-}
-pre.brilliance_black .l_metaenvironmentlist_2 {
-   background-color: #667D;
-   color: #1414D2;
-}
-pre.brilliance_black .m_raw_block {
-   background-color: #000000;
-   color: #999999;
-}
-pre.brilliance_black ._tag_block {
-   background-color: #1919D7;
-   color: #4C4C4C;
-}
-pre.brilliance_black .group6 {
-   background-color: #1C1C1C;
-}
-pre.brilliance_black .d_diff_delete {
-   background-color: #400022;
-   color: #FF40A3;
-}
-pre.brilliance_black ._source_string_interpolated_source {
-   background-color: #5564;
-   color: #999999;
-}
-pre.brilliance_black .l_metaenvironmentlist_3 {
-   background-color: #000000;
-   color: #1414D2;
-}
-pre.brilliance_black ._string_punctuation {
-   color: #803D00;
-}
-pre.brilliance_black ._entity_name_preprocessor {
-   background-color: #2316C8;
-}
-pre.brilliance_black .group7 {
-   background-color: #1F1F1F;
-}
-pre.brilliance_black ._metasourceembedded {
-   background-color: #667D;
-   color: #666666;
-}
-pre.brilliance_black .object_punctuation {
-   font-weight: bold;
-   color: #0C823B;
-}
-pre.brilliance_black .comment {
-   background-color: #1414D2;
-   color: #4C4C4C;
-}
-pre.brilliance_black .l_entitynamesection {
-   background-color: #FFFFFF;
-   color: #000000;
-}
-pre.brilliance_black ._metablockcontentslate_ {
-   color: #CCCCCC;
-}
-pre.brilliance_black .group8 {
-   background-color: #212121;
-}
-pre.brilliance_black .entitynametypevariant {
-   color: #00FFF8;
-}
-pre.brilliance_black ._source {
-   background-color: #000000;
-}
-pre.brilliance_black .l_metaenvironmentlist_4 {
-   color: #1414D2;
-}
-pre.brilliance_black ._meta_assertion {
-   color: #0086FF;
-}
-pre.brilliance_black .m_markup {
-   background-color: #1414D2;
-   color: #FFF800;
-}
-pre.brilliance_black ._tag_name {
-   color: #5555FB;
-}
-pre.brilliance_black .group9 {
-   background-color: #242424;
-}
-pre.brilliance_black .l_metaenvironmentlist_5 {
-   color: #1414D2;
-}
-pre.brilliance_black ._tag_doctype {
-   background-color: #333333;
-   color: #CCCCCC;
-}
-pre.brilliance_black .l_keywordoperatorbraces {
-   color: #666666;
-}
-pre.brilliance_black .textsubversioncommit {
-   background-color: #FFFFFF;
-   color: #000000;
-}
-pre.brilliance_black .l_metaenvironmentlist_6 {
-   color: #1414D2;
-}
-pre.brilliance_black ._function_punctuation {
-   font-weight: bold;
-   color: #BC80FF;
-}
-pre.brilliance_black ._tag {
-   color: #FF0007;
-}
-pre.brilliance_black ._id {
-   color: #FF0086;
-}
-pre.brilliance_black ._pseudoclass {
-   color: #7900FF;
-}
-pre.brilliance_black .entitynametag_metarecorddefinition {
-   color: #00FF79;
-}
-pre.brilliance_black .l_variableparameterlabelreference {
-   background-color: #400002;
-   color: #FFBC80;
-}
-pre.brilliance_black ._string {
-   background-color: #2316C8;
-   color: #FFFC80;
-}
-pre.brilliance_black ._string_punctuation_ii {
-   color: #3D3BC8;
-}
-pre.brilliance_black .m_italic {
-   font-style: italic;
-}
-pre.brilliance_black ._keyword_other {
-   color: #7900FF;
-}
-pre.brilliance_black ._class_name {
-   color: #FF0000;
-}
-pre.brilliance_black .sourcejsembedded {
-   background-color: #0D0D0D;
-}
-pre.brilliance_black ._keyword_operator_logical {
-   background-color: #AAE6;
-   color: #3759FF;
-}
-pre.brilliance_black ._instance {
-   color: #FF3D44;
-}
-pre.brilliance_black ._library_classtype {
-   background-color: #25AC8;
-   color: #FF0000;
-}
-pre.brilliance_black .array_punctuation {
-   font-weight: bold;
-   background-color: #1811E0;
-   color: #7F5E40;
-}
-pre.brilliance_black .d_diff_changed {
-   background-color: #803D00;
-   color: #FFFF55;
-}
-pre.brilliance_black .comment_punctuation {
-}
-pre.brilliance_black ._class_variable {
-   background-color: #ACFA;
-   color: #0086FF;
-}
-pre.brilliance_black ._tag_value {
-   color: #6D6DFB;
-}
-pre.brilliance_black .metadelimiter {
-   font-weight: bold;
-   background-color: #FFFA;
-   color: #FFFFFF;
-}
-pre.brilliance_black .metabraceerbreturnvalue {
-   background-color: #A23D9;
-   color: #00FFAA;
-}
-pre.brilliance_black ._instanceconstructor {
-   background-color: #2410D8;
-}
-pre.brilliance_black ._normal_variables {
+pre.brilliance_black .StringEmbeddedSource {
    color: #406180;
 }
-pre.brilliance_black ._attributematch {
-   background-color: #AAE1;
-   color: #0008FF;
+pre.brilliance_black .line-numbers {
+   background-color: #050ED0;
+   color: #CCCCCC;
 }
-pre.brilliance_black ._variable {
-   color: #31A6FF;
+pre.brilliance_black .StorageModifier {
+   color: #803D00;
 }
-pre.brilliance_black .syntax {
-   color: #333333;
-}
-pre.brilliance_black ._library_function_call {
-   color: #9D3EFF;
-}
-pre.brilliance_black .l_supportfunction {
-   color: #BC80FF;
-}
-pre.brilliance_black .m_bold {
-   font-weight: bold;
-}
-pre.brilliance_black ._character_constant {
-   color: #86FF00;
-}
-pre.brilliance_black ._supporttypepropertyname {
-   background-color: #000000;
-   color: #FFFFFF;
-}
-pre.brilliance_black ._string_unquoted {
-   color: #FFBC80;
-}
-pre.brilliance_black .m_reference_name {
-   background-color: #A17E1;
-   color: #00FFF8;
-}
-pre.brilliance_black ._library_function_name {
-   background-color: #1D16E1;
-   color: #603F80;
-}
-pre.brilliance_black ._global_predefined_variable {
-   background-color: #A23E0;
-   color: #00FF79;
-}
-pre.brilliance_black .l_supportfunctionsection {
-   color: #C1C1FD;
-}
-pre.brilliance_black ._tag_wildcard {
+pre.brilliance_black .TagWildcard {
    font-weight: bold;
    color: #FF7900;
 }
-pre.brilliance_black .entitynametypemodule {
-   color: #FF0000;
+pre.brilliance_black .MUnderline {
+   text-decoration: underline;
 }
-pre.brilliance_black ._selector {
-   background-color: #667D;
-   color: #666666;
-}
-pre.brilliance_black ._class {
-   color: #F800FF;
-}
-pre.brilliance_black ._metablockslate_ {
-   color: #666666;
-}
-pre.brilliance_black .metadelimiterobjectjs {
-   background-color: #99BB;
-}
-pre.brilliance_black .string_embedded_source {
-   color: #406180;
-}
-pre.brilliance_black ._number {
-   color: #C6FF00;
-}
-pre.brilliance_black ._metapropertylist {
+pre.brilliance_black .MiscPunctuation {
    font-weight: bold;
-   color: #333333;
-}
-pre.brilliance_black .metabracecurly_metagroup {
-   background-color: #667D;
-   color: #CCCCCC;
-}
-pre.brilliance_black ._keyword_operator {
-   color: #0000CE;
-}
-pre.brilliance_black .l_keywordcontrolref {
-   background-color: #260001;
-   color: #FF0007;
-}
-pre.brilliance_black ._tag_structure {
-   background-color: #292965;
    color: #666666;
 }
-pre.brilliance_black .m_heading {
-   background-color: #202096;
-   color: #666666;
-}
-pre.brilliance_black ._keyword_operator_comparison {
-   color: #7C88FF;
-}
-pre.brilliance_black .m_hr {
+pre.brilliance_black .LEntityNameSection {
    background-color: #FFFFFF;
    color: #000000;
 }
-pre.brilliance_black ._instance_variable {
-   color: #406180;
+pre.brilliance_black .MItalic {
+   font-style: italic;
 }
-pre.brilliance_black ._builtin_constant {
-   background-color: #B23C8;
-   color: #07FF00;
+pre.brilliance_black .EntityNameTypeVariant {
+   color: #00FFF8;
 }
-pre.brilliance_black ._keyword_operator_assignment {
-   background-color: #AAE6;
-   color: #0000CE;
+pre.brilliance_black .DDiffDelete {
+   background-color: #400022;
+   color: #FF40A3;
 }
-pre.brilliance_black .l_variableparametercite {
+pre.brilliance_black .LMetaEnvironmentList {
+   background-color: #06067D;
+   color: #1414D2;
+}
+pre.brilliance_black .InheritedClass {
+   background-color: #230AC8;
+   color: #FF0086;
+}
+pre.brilliance_black .LKeywordOperatorBraces {
+   color: #666666;
+}
+pre.brilliance_black .ObjectPunctuation {
+   font-weight: bold;
+   color: #0C823B;
+}
+pre.brilliance_black .LMetaEndDocument {
+   background-color: #CCCCCC;
+   color: #000000;
+}
+pre.brilliance_black .LibraryConstant {
+   color: #00FFF8;
+}
+pre.brilliance_black .LibraryVariable {
+   background-color: #0A23E0;
+   color: #00FFF8;
+}
+pre.brilliance_black .MetaSourceEmbedded {
+   background-color: #06067D;
+   color: #666666;
+}
+pre.brilliance_black .MetaBracePipe {
+   background-color: #1414D2;
+   color: #4C4C4C;
+}
+pre.brilliance_black .LMarkup {
+   color: #CDCDCD;
+}
+pre.brilliance_black .KeywordOperatorArithmetic {
+   color: #2136CE;
+}
+pre.brilliance_black .LMetaLabelReference {
+   background-color: #1919FA;
+}
+pre.brilliance_black .LVariableParameterCite {
    background-color: #400022;
    color: #FFBFE1;
 }
-pre.brilliance_black ._constant_variable {
-   color: #00FFF8;
+pre.brilliance_black .TagBlockForm {
+   background-color: #0B12ED;
 }
-pre.brilliance_black .m_underline {
-   text-decoration: underline;
-}
-pre.brilliance_black .thomas_aylott_ {
-   font-weight: bold;
-   background-color: #FFFFFF;
-   color: #000000;
-}
-pre.brilliance_black ._function_declaration_parameters_punctuation {
-   color: #800004;
-}
-pre.brilliance_black ._metapropertyname {
+pre.brilliance_black .MRawBlock {
+   background-color: #000000;
    color: #999999;
 }
-pre.brilliance_black .function_punctuation {
-   color: #800043;
+pre.brilliance_black .KeywordControl {
+   color: #F800FF;
 }
-pre.brilliance_black .metabraceerb {
-   background-color: #B25F9;
-   color: #00FFF8;
-}
-pre.brilliance_black .l_markup_raw {
-   background-color: #000000;
-}
-pre.brilliance_black ._text {
+pre.brilliance_black .MetaDelimiter {
+   font-weight: bold;
+   background-color: #0F0FFA;
    color: #FFFFFF;
 }
-pre.brilliance_black ._metapropertyvalue {
-   background-color: #0D0D0D;
-   color: #999999;
+pre.brilliance_black .LMetaEnvironmentList2 {
+   background-color: #06067D;
+   color: #1414D2;
 }
-pre.brilliance_black ._function_call_arguments_punctuation {
-   color: #BC80FF;
+pre.brilliance_black .LMetaFootnote {
+   background-color: #0A0AE1;
+   color: #090BFB;
 }
-pre.brilliance_black ._string_literal {
+pre.brilliance_black .RegexKeyword {
+}
+pre.brilliance_black .StringRegexGroup1 {
    background-color: #1723C8;
-   color: #FFF800;
 }
-pre.brilliance_black .l_keywordcontrolcite {
-   background-color: #260014;
-   color: #FF0086;
+pre.brilliance_black .TagName {
+   color: #5555FB;
 }
-pre.brilliance_black ._string_regex_arbitraryrepitition {
-   background-color: #1723C8;
-   color: #00FFF8;
+pre.brilliance_black .VariableLanguageThisJsPrototype {
+   color: #666666;
 }
-pre.brilliance_black .l_keywordoperatorbrackets {
-   color: #999999;
-}
-pre.brilliance_black ._string_interpolated {
-   background-color: #1A1A1A;
-   color: #FFFC80;
-}
-pre.brilliance_black ._post_content {
+pre.brilliance_black .PostContent {
    background-color: #000000;
    color: #CCCCCC;
 }
-pre.brilliance_black ._string_regex_group_1 {
-   background-color: #1723C8;
+pre.brilliance_black .BoldStringQuotes {
+   font-weight: bold;
+   color: #803D00;
 }
-pre.brilliance_black .m_underline_link {
-   text-decoration: underline;
-   color: #00FFF8;
+pre.brilliance_black .MetaDelimiterObjectJs {
+   background-color: #0909BB;
 }
-pre.brilliance_black .invalid {
+pre.brilliance_black .MetaDelimiterStatementJs {
+   background-color: #03033F;
+}
+pre.brilliance_black .Invalid {
    font-weight: bold;
    background-color: #FF0007;
    color: #330004;
 }
-pre.brilliance_black ._css {
+pre.brilliance_black .LMetaEnvironmentList3 {
+   background-color: #000000;
+   color: #1414D2;
 }
-pre.brilliance_black ._string_regex_group_2 {
-   background-color: #1723C8;
-   color: #6D6DFB;
+pre.brilliance_black .MQuoteBlock {
+   background-color: #2525FA;
 }
-pre.brilliance_black ._tag_inline {
-   background-color: #2316C8;
-   color: #FF7900;
-}
-pre.brilliance_black ._tag_other {
-   background-color: #23AC8;
-   color: #FF0007;
-}
-pre.brilliance_black .metabracepipe {
-   background-color: #1414D2;
-   color: #4C4C4C;
-}
-pre.brilliance_black ._post_header_keys {
-   background-color: #B25F9;
-   color: #06403E;
-}
-pre.brilliance_black ._string_regex_group_3 {
-   background-color: #1723C8;
-   color: #6D6DFB;
-}
-pre.brilliance_black .metataginline_source {
-   background-color: #2316C8;
-}
-pre.brilliance_black {
-   background-color: #DD12;
-   color: #CCCCCC;
-}
-pre.brilliance_black ._function_declaration_name {
+pre.brilliance_black .ClassMethod {
    color: #FF0086;
 }
-pre.brilliance_black .metadelimiterstatementjs {
-   background-color: #333F;
+pre.brilliance_black .Keyword {
 }
-pre.brilliance_black .d_diff_add {
+pre.brilliance_black .AttributeMatch {
+   background-color: #0A0AE1;
+   color: #0008FF;
+}
+pre.brilliance_black .StringRegexGroup2 {
+   background-color: #1723C8;
+   color: #6D6DFB;
+}
+pre.brilliance_black .DDiffAdd {
    background-color: #00401E;
    color: #40FF9A;
 }
-pre.brilliance_black ._source_string_source {
-   background-color: #202096;
-   color: #FFFFFF;
+pre.brilliance_black .MetaBraceErbReturnValue {
+   background-color: #0A23D9;
+   color: #00FFAA;
 }
-pre.brilliance_black ._string_regex_characterclass {
-   background-color: #1723C8;
-   color: #86FF00;
+pre.brilliance_black .LMetaEnvironmentList4 {
+   color: #1414D2;
 }
-pre.brilliance_black ._string_regex_group_4 {
+pre.brilliance_black .FunctionDeclarationParametersPunctuation {
+   color: #800004;
+}
+pre.brilliance_black .TagAttribute {
+   color: #3D3DFA;
+}
+pre.brilliance_black .MReference {
+   color: #0086FF;
+}
+pre.brilliance_black .StringRegexGroup3 {
    background-color: #1723C8;
    color: #6D6DFB;
 }
-pre.brilliance_black .m_reference {
+pre.brilliance_black .GlobalVariable {
+   background-color: #0A17E1;
+   color: #00807C;
+}
+pre.brilliance_black .Group1 {
+   background-color: #0A0A0A;
+}
+pre.brilliance_black .LMetaEnvironmentList5 {
+   color: #1414D2;
+}
+pre.brilliance_black .EntityNamePreprocessor {
+   background-color: #2316C8;
+}
+pre.brilliance_black .FunctionDeclarationParameters {
+   color: #9799FF;
+}
+pre.brilliance_black .StringRegexGroup4 {
+   background-color: #1723C8;
+   color: #6D6DFB;
+}
+pre.brilliance_black .LSupportFunctionSection {
+   color: #C1C1FD;
+}
+pre.brilliance_black .Group2 {
+   background-color: #0E0E0E;
+}
+pre.brilliance_black .LMetaEnvironmentList6 {
+   color: #1414D2;
+}
+pre.brilliance_black .Id {
+   color: #FF0086;
+}
+pre.brilliance_black .Group3 {
+   background-color: #111111;
+}
+pre.brilliance_black .CurlyPunctuation {
+   font-weight: bold;
+   color: #FFFFFF;
+}
+pre.brilliance_black .MetaClassInstanceConstructorKeywordOperatorNew {
+   color: #800043;
+}
+pre.brilliance_black .SubtlegradientCom {
+   background-color: #FFFFFF;
+   text-decoration: underline;
+   color: #555555;
+}
+pre.brilliance_black .StringPunctuation {
+   color: #803D00;
+}
+pre.brilliance_black .LSupportFunction {
+   color: #BC80FF;
+}
+pre.brilliance_black .Group4 {
+   background-color: #151515;
+}
+pre.brilliance_black .TextSubversionCommit {
+   background-color: #FFFFFF;
+   color: #000000;
+}
+pre.brilliance_black .SourceEmbededSource {
+   background-color: #1010E5;
+}
+pre.brilliance_black .LVariableParameterLabel {
+   color: #8686FC;
+}
+pre.brilliance_black .TagOther {
+   background-color: #230AC8;
+   color: #FF0007;
+}
+pre.brilliance_black .ClassVariable {
+   background-color: #0A0CFA;
    color: #0086FF;
+}
+pre.brilliance_black .MetaGroupAssertionRegexp {
+   background-color: #0A25FA;
+}
+pre.brilliance_black .KeywordOperatorLogical {
+   background-color: #0A0AE6;
+   color: #3759FF;
+}
+pre.brilliance_black .Group5 {
+   background-color: #191919;
+}
+pre.brilliance_black .DDiffChanged {
+   background-color: #803D00;
+   color: #FFFF55;
+}
+pre.brilliance_black .HtmlComment {
+   font-style: italic;
+}
+pre.brilliance_black .StringInterpolated {
+   background-color: #1A1A1A;
+   color: #FFFC80;
+}
+pre.brilliance_black .InstanceConstructor {
+   background-color: #2410D8;
+}
+pre.brilliance_black .Instance {
+   color: #FF3D44;
+}
+pre.brilliance_black .MetaPropertyList {
+   font-weight: bold;
+   color: #333333;
+}
+pre.brilliance_black .Group6 {
+   background-color: #1C1C1C;
+}
+pre.brilliance_black .EntityNameTagMetaRecordDefinition {
+   color: #00FF79;
+}
+pre.brilliance_black .KeywordOther {
+   color: #7900FF;
+}
+pre.brilliance_black .FunctionDeclarationName {
+   color: #FF0086;
+}
+pre.brilliance_black .Latex {
+}
+pre.brilliance_black .LMarkupRaw {
+   background-color: #000000;
+}
+pre.brilliance_black .StringPunctuationIi {
+   color: #3D3BC8;
+}
+pre.brilliance_black .Group7 {
+   background-color: #1F1F1F;
+}
+pre.brilliance_black .Css {
+}
+pre.brilliance_black .ClassName {
+   color: #FF0000;
+}
+pre.brilliance_black .MetaPropertyName {
+   color: #999999;
+}
+pre.brilliance_black .LKeywordControlRef {
+   background-color: #260001;
+   color: #FF0007;
+}
+pre.brilliance_black .Group8 {
+   background-color: #212121;
+}
+pre.brilliance_black .PseudoClass {
+   color: #7900FF;
+}
+pre.brilliance_black .Group9 {
+   background-color: #242424;
+}
+pre.brilliance_black .TagBlockHead {
+   background-color: #121212;
+}
+pre.brilliance_black .StringRegexArbitraryRepitition {
+   background-color: #1723C8;
+   color: #00FFF8;
+}
+pre.brilliance_black .LKeywordOperatorDelimiter {
+   background-color: #06067D;
+}
+pre.brilliance_black .BlogPostEmailMessage {
+   background-color: #DCDCDC;
+   color: #333333;
+}
+pre.brilliance_black .MReferenceName {
+   background-color: #0A17E1;
+   color: #00FFF8;
+}
+pre.brilliance_black .TextSubversionCommitMetaScopeChangedFiles {
+   background-color: #000000;
+   color: #FFFFFF;
+}
+pre.brilliance_black .CommentLine {
+   color: #4C4C4C;
+   font-style: italic;
+}
+pre.brilliance_black .VariablePunctuation {
+   color: #06067D;
+}
+pre.brilliance_black .MUnderlineLink {
+   text-decoration: underline;
+   color: #00FFF8;
+}
+pre.brilliance_black .Selector {
+   background-color: #06067D;
+   color: #666666;
+}
+pre.brilliance_black .Even {
+   background-color: #06067D;
+}
+pre.brilliance_black .TagDoctype {
+   background-color: #333333;
+   color: #CCCCCC;
+}
+pre.brilliance_black .Class {
+   color: #F800FF;
+}
+pre.brilliance_black .BuiltInConstant {
+   background-color: #0B23C8;
+   color: #07FF00;
+}
+pre.brilliance_black .MBold {
+   font-weight: bold;
+}
+pre.brilliance_black .MHeading {
+   background-color: #202096;
+   color: #666666;
+}
+pre.brilliance_black .ConstantVariable {
+   color: #00FFF8;
+}
+pre.brilliance_black .Group10 {
+   background-color: #1F1F1F;
+}
+pre.brilliance_black .LKeywordControlCite {
+   background-color: #260014;
+   color: #FF0086;
+}
+pre.brilliance_black .XmlTag {
+   color: #666666;
+}
+pre.brilliance_black .MHr {
+   background-color: #FFFFFF;
+   color: #000000;
+}
+pre.brilliance_black .Group11 {
+   background-color: #151515;
+}
+pre.brilliance_black .FunctionPunctuation {
+   color: #800043;
+}
+pre.brilliance_black .Variable {
+   color: #31A6FF;
+}
+pre.brilliance_black .FunctionCallArgumentsPunctuation {
+   color: #BC80FF;
+}
+pre.brilliance_black .Syntax {
+   color: #333333;
+}
+pre.brilliance_black .MetaPropertyValue {
+   background-color: #0D0D0D;
+   color: #999999;
+}
+pre.brilliance_black .KeywordOperator {
+   color: #0000CE;
+}
+pre.brilliance_black .StringUnquoted {
+   color: #FFBC80;
+}
+pre.brilliance_black .LConstantLanguageGeneral {
+}
+pre.brilliance_black .TextStringSource {
+   color: #999999;
+}
+pre.brilliance_black .LVariableParameterLabelReference {
+   background-color: #400002;
+   color: #FFBC80;
+}
+pre.brilliance_black .Source {
+   background-color: #000000;
+}
+pre.brilliance_black .LibraryFunctionCall {
+   color: #9D3EFF;
+}
+pre.brilliance_black .StringRegexCharacterClass {
+   background-color: #1723C8;
+   color: #86FF00;
+}
+pre.brilliance_black .LibraryFunctionName {
+   background-color: #1D16E1;
+   color: #603F80;
+}
+pre.brilliance_black .MetaBlockContentSlate {
+   color: #CCCCCC;
+}
+pre.brilliance_black .TextStringSourceStringSource {
+}
+pre.brilliance_black .String {
+   background-color: #2316C8;
+   color: #FFFC80;
+}
+pre.brilliance_black .TagInline {
+   background-color: #2316C8;
+   color: #FF7900;
+}
+pre.brilliance_black .MetaBlockSlate {
+   color: #666666;
+}
+pre.brilliance_black .SourceRubyRailsEmbeddedOneLine {
+   background-color: #0B25F9;
+}
+pre.brilliance_black .SourceRubyRailsEmbeddedReturnValueOneLine {
+   background-color: #1818ED;
+}
+pre.brilliance_black .MMarkup {
+   background-color: #1414D2;
+   color: #FFF800;
+}
+pre.brilliance_black .TagBlock {
+   background-color: #1919D7;
+   color: #4C4C4C;
+}
+pre.brilliance_black .SourceStringInterpolatedSource {
+   background-color: #050564;
+   color: #999999;
+}
+pre.brilliance_black .SourceStringSource {
+   background-color: #202096;
+   color: #FFFFFF;
+}
+pre.brilliance_black .xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx {
+   background-color: #FFFFFF;
+   color: #E6E6E6;
+}
+pre.brilliance_black .LKeywordOperatorBrackets {
+   color: #999999;
+}
+pre.brilliance_black .TagMeta {
+   background-color: #160AE1;
+   color: #F800FF;
+}
+pre.brilliance_black .GlobalPreDefinedVariable {
+   background-color: #0A23E0;
+   color: #00FF79;
+}
+pre.brilliance_black .TagForm {
+   background-color: #0A17E1;
+   color: #0086FF;
+}
+pre.brilliance_black .Tag {
+   color: #FF0007;
+}
+pre.brilliance_black .UserDefinedConstant {
+   color: #00FF79;
+}
+pre.brilliance_black .NormalVariables {
+   color: #406180;
+}
+pre.brilliance_black .ThomasAylott {
+   font-weight: bold;
+   background-color: #FFFFFF;
+   color: #000000;
+}
+pre.brilliance_black .TextSource {
+   background-color: #000000;
+   color: #CCCCCC;
+}
+pre.brilliance_black .MetaBraceErb {
+   background-color: #000000;
+}
+pre.brilliance_black .SupportTypePropertyName {
+   background-color: #000000;
+   color: #FFFFFF;
+}
+pre.brilliance_black .StringLiteral {
+   background-color: #1723C8;
+   color: #FFF800;
+}
+pre.brilliance_black .KeywordOperatorAssignment {
+   background-color: #0A0AE6;
+   color: #0000CE;
+}
+pre.brilliance_black .KeywordOperatorComparison {
+   color: #7C88FF;
+}
+pre.brilliance_black .MetaGroupBracesRoundJs {
+}
+pre.brilliance_black .PostHeaderValues {
+   background-color: #2525E9;
+   color: #803D00;
+}
+pre.brilliance_black .Comment {
+   background-color: #1414D2;
+   color: #4C4C4C;
+}
+pre.brilliance_black .Text {
+   color: #FFFFFF;
+}
+pre.brilliance_black .SourceJsEmbedded {
+   background-color: #0D0D0D;
+}
+pre.brilliance_black .FunctionCallWithoutArguments {
+   color: #A88FC0;
+}
+pre.brilliance_black .StringRegex {
+   background-color: #1723C8;
+   color: #FFF800;
+}
+pre.brilliance_black .FunctionCall {
+   color: #782EC1;
+}
+pre.brilliance_black .CommentPunctuation {
+}
+pre.brilliance_black .LMetaGroupBraces {
+   color: #1414D2;
+}
+pre.brilliance_black .MetaTagInlineSource {
+   background-color: #2316C8;
+}
+pre.brilliance_black .TagStructure {
+   background-color: #292965;
+   color: #666666;
+}
+pre.brilliance_black .Storage {
+   color: #7E0080;
+}
+pre.brilliance_black .MetaAssertion {
+   color: #0086FF;
+}
+pre.brilliance_black .MetaBraceCurlyMetaGroup {
+   background-color: #06067D;
+   color: #CCCCCC;
+}
+pre.brilliance_black .ArrayPunctuation {
+   font-weight: bold;
+   background-color: #1811E0;
+   color: #7F5E40;
+}
+pre.brilliance_black .PostHeaderKeys {
+   background-color: #0B25F9;
+   color: #06403E;
+}
+pre.brilliance_black .InstanceVariable {
+   color: #406180;
+}
+pre.brilliance_black .CharacterConstant {
+   color: #86FF00;
+}
+pre.brilliance_black {
+   background-color: #0D0D12;
+   color: #CCCCCC;
+}
+pre.brilliance_black .LibraryClassType {
+   background-color: #250AC8;
+   color: #FF0000;
+}
+pre.brilliance_black .Number {
+   color: #C6FF00;
+}
+pre.brilliance_black .SupportOtherModule {
+   background-color: #240AC8;
+   color: #FF0000;
+}
+pre.brilliance_black .TagValue {
+   color: #6D6DFB;
+}
+pre.brilliance_black .FunctionDeclaration {
+   background-color: #140CCE;
+   color: #999999;
 }

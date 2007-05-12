@@ -1,94 +1,94 @@
 --- 
 name: Espresso Libre
 tags: 
-- begin: <span class="comment">
+- begin: <span class="Comment">
   end: </span>
   selector: comment
-- begin: <span class="keyword">
+- begin: <span class="Keyword">
   end: </span>
   selector: keyword, storage
-- begin: <span class="number">
+- begin: <span class="Number">
   end: </span>
   selector: constant.numeric
-- begin: <span class="userdefined_constant">
+- begin: <span class="UserDefinedConstant">
   end: </span>
   selector: constant
-- begin: <span class="builtin_constant">
+- begin: <span class="BuiltInConstant">
   end: </span>
   selector: constant.language
-- begin: <span class="variable">
+- begin: <span class="Variable">
   end: </span>
   selector: variable.language, variable.other
-- begin: <span class="string">
+- begin: <span class="String">
   end: </span>
   selector: string
-- begin: <span class="string_interpolation">
+- begin: <span class="StringInterpolation">
   end: </span>
   selector: constant.character.escape, string source
-- begin: <span class="preprocessor_line">
+- begin: <span class="PreprocessorLine">
   end: </span>
   selector: meta.preprocessor
-- begin: <span class="preprocessor_directive">
+- begin: <span class="PreprocessorDirective">
   end: </span>
   selector: keyword.control.import
-- begin: <span class="function_name">
+- begin: <span class="FunctionName">
   end: </span>
   selector: entity.name.function, keyword.other.name-of-parameter.objc
-- begin: <span class="type_name">
+- begin: <span class="TypeName">
   end: </span>
   selector: entity.name.type
-- begin: <span class="inherited_class_name">
+- begin: <span class="InheritedClassName">
   end: </span>
   selector: entity.other.inherited-class
-- begin: <span class="function_parameter">
+- begin: <span class="FunctionParameter">
   end: </span>
   selector: variable.parameter
-- begin: <span class="function_argument_and_result_types">
+- begin: <span class="FunctionArgumentAndResultTypes">
   end: </span>
   selector: storage.type.method
-- begin: <span class="section">
+- begin: <span class="Section">
   end: </span>
   selector: meta.section entity.name.section, declaration.section entity.name.section
-- begin: <span class="library_function">
+- begin: <span class="LibraryFunction">
   end: </span>
   selector: support.function
-- begin: <span class="library_object">
+- begin: <span class="LibraryObject">
   end: </span>
   selector: support.class, support.type
-- begin: <span class="library_constant">
+- begin: <span class="LibraryConstant">
   end: </span>
   selector: support.constant
-- begin: <span class="library_variable">
+- begin: <span class="LibraryVariable">
   end: </span>
   selector: support.variable
-- begin: <span class="js_operator">
+- begin: <span class="JsOperator">
   end: </span>
   selector: keyword.operator.js
-- begin: <span class="invalid">
+- begin: <span class="Invalid">
   end: </span>
   selector: invalid
-- begin: <span class="invalid_trailing_whitespace">
+- begin: <span class="InvalidTrailingWhitespace">
   end: </span>
   selector: invalid.deprecated.trailing-whitespace
-- begin: <span class="embedded_source">
+- begin: <span class="EmbeddedSource">
   end: </span>
   selector: text source, string.unquoted
-- begin: <span class="markup_xml_declaration">
+- begin: <span class="MarkupXmlDeclaration">
   end: </span>
   selector: meta.tag.preprocessor.xml
-- begin: <span class="markup_doctype">
+- begin: <span class="MarkupDoctype">
   end: </span>
   selector: meta.tag.sgml.doctype
-- begin: <span class="markup_dtd">
+- begin: <span class="MarkupDtd">
   end: </span>
   selector: string.quoted.docinfo.doctype.DTD
-- begin: <span class="markup_tag">
+- begin: <span class="MarkupTag">
   end: </span>
   selector: meta.tag, declaration.tag
-- begin: <span class="markup_name_of_tag">
+- begin: <span class="MarkupNameOfTag">
   end: </span>
   selector: entity.name.tag
-- begin: <span class="markup_tag_attribute">
+- begin: <span class="MarkupTagAttribute">
   end: </span>
   selector: entity.other.attribute-name
 line-numbers: 

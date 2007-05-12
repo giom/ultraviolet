@@ -1,97 +1,97 @@
 --- 
 name: Dawn
 tags: 
-- begin: <span class="comment">
+- begin: <span class="Comment">
   end: </span>
   selector: comment
-- begin: <span class="constant">
+- begin: <span class="Constant">
   end: </span>
   selector: constant
-- begin: <span class="entity">
+- begin: <span class="Entity">
   end: </span>
   selector: entity
-- begin: <span class="keyword">
+- begin: <span class="Keyword">
   end: </span>
   selector: keyword
-- begin: <span class="storage">
+- begin: <span class="Storage">
   end: </span>
   selector: storage
-- begin: <span class="string">
+- begin: <span class="String">
   end: </span>
   selector: string | punctuation.definition.string
-- begin: <span class="support">
+- begin: <span class="Support">
   end: </span>
   selector: support
-- begin: <span class="variable">
+- begin: <span class="Variable">
   end: </span>
   selector: variable
-- begin: <span class="punctuationseparator">
+- begin: <span class="PunctuationSeparator">
   end: </span>
   selector: punctuation.separator
-- begin: <span class="invalid_deprecated">
+- begin: <span class="InvalidDeprecated">
   end: </span>
   selector: invalid.deprecated
-- begin: <span class="invalid_illegal">
+- begin: <span class="InvalidIllegal">
   end: </span>
   selector: invalid.illegal
-- begin: <span class="string_embeddedsource">
+- begin: <span class="StringEmbeddedSource">
   end: </span>
   selector: string source
-- begin: <span class="string_constant">
+- begin: <span class="StringConstant">
   end: </span>
   selector: string constant
-- begin: <span class="string_variable">
+- begin: <span class="StringVariable">
   end: </span>
   selector: string variable
-- begin: <span class="stringregexp">
+- begin: <span class="StringRegexp">
   end: </span>
   selector: string.regexp
-- begin: <span class="stringregexpspecial">
+- begin: <span class="StringRegexpSpecial">
   end: </span>
   selector: string.regexp.character-class, string.regexp constant.character.escaped, string.regexp source.ruby.embedded, string.regexp string.regexp.arbitrary-repitition
-- begin: <span class="stringregexp_constantcharacterescape">
+- begin: <span class="StringRegexpConstantCharacterEscape">
   end: </span>
   selector: string.regexp constant.character.escape
-- begin: <span class="embedded_source">
+- begin: <span class="EmbeddedSource">
   end: </span>
   selector: text source
-- begin: <span class="supportfunction">
+- begin: <span class="SupportFunction">
   end: </span>
   selector: support.function
-- begin: <span class="supportconstant">
+- begin: <span class="SupportConstant">
   end: </span>
   selector: support.constant
-- begin: <span class="supportvariable">
+- begin: <span class="SupportVariable">
   end: </span>
   selector: support.variable
-- begin: <span class="markuplist">
+- begin: <span class="MarkupList">
   end: </span>
   selector: markup.list
-- begin: <span class="markupheading">
+- begin: <span class="MarkupHeading">
   end: </span>
   selector: markup.heading | markup.heading entity.name
-- begin: <span class="markupquote">
+- begin: <span class="MarkupQuote">
   end: </span>
   selector: markup.quote
-- begin: <span class="markupitalic">
+- begin: <span class="MarkupItalic">
   end: </span>
   selector: markup.italic
-- begin: <span class="markupbold">
+- begin: <span class="MarkupBold">
   end: </span>
   selector: markup.bold
-- begin: <span class="markupunderline">
+- begin: <span class="MarkupUnderline">
   end: </span>
   selector: markup.underline
-- begin: <span class="markuplink">
+- begin: <span class="MarkupLink">
   end: </span>
   selector: markup.link
-- begin: <span class="markupraw">
+- begin: <span class="MarkupRaw">
   end: </span>
   selector: markup.raw
-- begin: <span class="markupdeleted">
+- begin: <span class="MarkupDeleted">
   end: </span>
   selector: markup.deleted
-- begin: <span class="metaseparator">
+- begin: <span class="MetaSeparator">
   end: </span>
   selector: meta.separator
 line-numbers: 

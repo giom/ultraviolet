@@ -1,29 +1,31 @@
-pre.iplastic .trailing_whitespace {
-   background-color: #EEEEEB;
+pre.iplastic .Constant {
+   color: #6782D3;
 }
-pre.iplastic .exception {
-   color: #990000;
-}
-pre.iplastic .number {
-   color: #0066FF;
-}
-pre.iplastic .frame_title {
+pre.iplastic .Support {
    font-weight: bold;
-   color: #000000;
+   color: #3333FF;
 }
-pre.iplastic .embedded_source {
+pre.iplastic .EmbeddedSource {
    background-color: #F9F9F9;
    color: #000000;
 }
-pre.iplastic .invalid {
-   background-color: #EBAEA9;
-   color: #FF0000;
+pre.iplastic .Arguments {
+   font-style: italic;
 }
-pre.iplastic .type_name {
+pre.iplastic .TypeName {
    font-weight: bold;
 }
-pre.iplastic .regular_expression {
-   color: #FF0080;
+pre.iplastic .Identifier {
+   color: #9700CC;
+}
+pre.iplastic .Number {
+   color: #0066FF;
+}
+pre.iplastic .SectionName {
+   font-weight: bold;
+}
+pre.iplastic .Storage {
+   font-weight: bold;
 }
 pre.iplastic .line-numbers {
    background-color: #BAD6FD;
@@ -33,48 +35,46 @@ pre.iplastic {
    background-color: #EEEEED;
    color: #000000;
 }
-pre.iplastic .function_name {
-   color: #FF8000;
-}
-pre.iplastic .support {
+pre.iplastic .FrameTitle {
    font-weight: bold;
-   color: #3333FF;
+   color: #000000;
 }
-pre.iplastic .tag {
+pre.iplastic .TagName {
+   font-weight: bold;
+}
+pre.iplastic .Tag {
    color: #0033CC;
 }
-pre.iplastic .identifier {
-   color: #9700CC;
+pre.iplastic .Exception {
+   color: #990000;
 }
-pre.iplastic .storage {
-   font-weight: bold;
-}
-pre.iplastic .constant {
-   color: #6782D3;
-}
-pre.iplastic .tag_name {
-   font-weight: bold;
-}
-pre.iplastic .xml_declaration {
+pre.iplastic .XmlDeclaration {
    color: #333333;
 }
-pre.iplastic .section_name {
-   font-weight: bold;
+pre.iplastic .TrailingWhitespace {
+   background-color: #EEEEEB;
 }
-pre.iplastic .arguments {
-   font-style: italic;
-}
-pre.iplastic .tag_attribute {
+pre.iplastic .TagAttribute {
    color: #3366CC;
    font-style: italic;
 }
-pre.iplastic .keyword {
+pre.iplastic .Invalid {
+   background-color: #EBAEA9;
+   color: #FF0000;
+}
+pre.iplastic .Keyword {
    color: #0000FF;
 }
-pre.iplastic .string {
+pre.iplastic .String {
    color: #009933;
 }
-pre.iplastic .comment {
+pre.iplastic .Comment {
    color: #0066FF;
    font-style: italic;
+}
+pre.iplastic .FunctionName {
+   color: #FF8000;
+}
+pre.iplastic .RegularExpression {
+   color: #FF0080;
 }

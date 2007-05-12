@@ -1,149 +1,149 @@
-pre.cobalt .diffinserted {
+pre.cobalt .BlockQuote {
+   background-color: #004480;
+}
+pre.cobalt .DiffInserted {
    background-color: #154F00;
    color: #F8F8F8;
 }
-pre.cobalt .diffheader {
+pre.cobalt .DiffHeader {
    background-color: #000E1A;
    color: #F8F8F8;
 }
-pre.cobalt .list {
+pre.cobalt .CssPropertyValue {
+   color: #F6F080;
+}
+pre.cobalt .CCPreprocessorDirective {
+   color: #AFC4DB;
+}
+pre.cobalt .Constant {
+   color: #FF628C;
+}
+pre.cobalt .List {
    background-color: #130D26;
 }
-pre.cobalt .diffchanged {
+pre.cobalt .DiffChanged {
    background-color: #806F00;
    color: #F8F8F8;
 }
-pre.cobalt .cc_preprocessor_line {
-   color: #8996A8;
-}
-pre.cobalt .exception {
-   color: #FF1E00;
-}
-pre.cobalt .stringregexp {
-   color: #80FFC2;
-}
-pre.cobalt .function_call {
-   color: #FFEE80;
-}
-pre.cobalt .punctuation {
-   color: #E1EFFF;
-}
-pre.cobalt .bold_markup {
-   font-weight: bold;
-   color: #C1AFFF;
-}
-pre.cobalt .css_constructorargument {
-   color: #EB939A;
-}
-pre.cobalt .doctypexml_processing {
-   color: #73817D;
-}
-pre.cobalt .embedded_source {
+pre.cobalt .EmbeddedSource {
    background-color: #223545;
    color: #FFFFFF;
 }
-pre.cobalt .invalid {
-   background-color: #800F00;
-   color: #F8F8F8;
+pre.cobalt .Support {
+   color: #80FFBB;
+}
+pre.cobalt .Punctuation {
+   color: #E1EFFF;
+}
+pre.cobalt .RawMarkup {
+   background-color: #1A4562;
+}
+pre.cobalt .CssConstructorArgument {
+   color: #EB939A;
+}
+pre.cobalt .LangVariable {
+   color: #FF80E1;
+}
+pre.cobalt .Storage {
+   color: #FFEE80;
 }
 pre.cobalt .line-numbers {
    background-color: #85533A;
    color: #FFFFFF;
 }
-pre.cobalt .cssclass {
+pre.cobalt .CssClass {
    color: #5FE461;
 }
-pre.cobalt .supportfunction {
-   color: #FFB054;
-}
-pre.cobalt .variable {
-   color: #CCCCCC;
-}
-pre.cobalt .string_constant {
+pre.cobalt .StringConstant {
    color: #80FF82;
 }
-pre.cobalt .cssid {
-   color: #FFB454;
+pre.cobalt .CssAtRule {
+   color: #F6AA11;
 }
-pre.cobalt .cc_preprocessor_directive {
-   color: #AFC4DB;
+pre.cobalt .BoldMarkup {
+   font-weight: bold;
+   color: #C1AFFF;
 }
-pre.cobalt .entity_inheritedclass {
+pre.cobalt .CssTagName {
+   color: #9EFFFF;
+}
+pre.cobalt .Exception {
+   color: #FF1E00;
+}
+pre.cobalt .SupportConstant {
+   color: #EB939A;
+}
+pre.cobalt .ItalicMarkup {
+   color: #B8FFD9;
+   font-style: italic;
+}
+pre.cobalt .DiffDeleted {
+   background-color: #4C0900;
+   color: #F8F8F8;
+}
+pre.cobalt .CCPreprocessorLine {
+   color: #8996A8;
+}
+pre.cobalt .SupportFunction {
+   color: #FFB054;
+}
+pre.cobalt .CssAdditionalConstants {
+   color: #EDF080;
+}
+pre.cobalt .MetaTagA {
+   color: #9EFFFF;
+}
+pre.cobalt .StringRegexp {
+   color: #80FFC2;
+}
+pre.cobalt .StringEmbeddedSource {
+   color: #9EFF80;
+}
+pre.cobalt .EntityInheritedClass {
    color: #80FCFF;
    font-style: italic;
 }
-pre.cobalt .support {
-   color: #80FFBB;
-}
-pre.cobalt .block_quote {
-   background-color: #004480;
-}
-pre.cobalt .raw_markup {
-   background-color: #1A4562;
-}
-pre.cobalt .storage {
+pre.cobalt .FunctionCall {
    color: #FFEE80;
-}
-pre.cobalt .css_atrule {
-   color: #F6AA11;
-}
-pre.cobalt .css_propertyvalue {
-   color: #F6F080;
-}
-pre.cobalt .constant {
-   color: #FF628C;
-}
-pre.cobalt .heading_markup {
-   font-weight: bold;
-   background-color: #001221;
-   color: #C8E4FD;
-}
-pre.cobalt .css_additionalconstants {
-   color: #EDF080;
-}
-pre.cobalt .metataga {
-   color: #9EFFFF;
 }
 pre.cobalt {
    background-color: #002240;
    color: #FFFFFF;
 }
-pre.cobalt .italic_markup {
-   color: #B8FFD9;
-   font-style: italic;
+pre.cobalt .CssId {
+   color: #FFB454;
 }
-pre.cobalt .css_tagname {
-   color: #9EFFFF;
-}
-pre.cobalt .supportconstant {
-   color: #EB939A;
-}
-pre.cobalt .string_embeddedsource {
-   color: #9EFF80;
-}
-pre.cobalt .lang_variable {
-   color: #FF80E1;
-}
-pre.cobalt .string {
-   color: #3AD900;
-}
-pre.cobalt .keyword {
-   color: #FF9D00;
-}
-pre.cobalt .diffdeleted {
-   background-color: #4C0900;
-   color: #F8F8F8;
-}
-pre.cobalt .css_propertyname {
-   color: #9DF39F;
-}
-pre.cobalt .string_variable {
+pre.cobalt .StringVariable {
    color: #EDEF7D;
 }
-pre.cobalt .comment {
+pre.cobalt .Invalid {
+   background-color: #800F00;
+   color: #F8F8F8;
+}
+pre.cobalt .String {
+   color: #3AD900;
+}
+pre.cobalt .Keyword {
+   color: #FF9D00;
+}
+pre.cobalt .HeadingMarkup {
+   font-weight: bold;
+   background-color: #001221;
+   color: #C8E4FD;
+}
+pre.cobalt .CssPropertyName {
+   color: #9DF39F;
+}
+pre.cobalt .DoctypeXmlProcessing {
+   color: #73817D;
+}
+pre.cobalt .Variable {
+   color: #CCCCCC;
+}
+pre.cobalt .Comment {
    color: #0088FF;
    font-style: italic;
 }
-pre.cobalt .entity {
+pre.cobalt .Entity {
    color: #FFDD00;
 }
