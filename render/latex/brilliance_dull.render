@@ -1,566 +1,559 @@
 --- 
 name: Brilliance Dull
+line: 
+  begin: ""
+  end: "}}\\\\"
 tags: 
-- begin: <span class="ThomasAylott">
-  end: </span>
+- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{000000}\textbf{
+  end: "}}"
   selector: meta.thomas_aylott
-- begin: <span class="SubtlegradientCom">
-  end: </span>
+- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{555555}\underline{
+  end: "}}"
   selector: meta.subtlegradient
-- begin: <span class="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx">
-  end: </span>
+- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{E6E6E6}
+  end: "}"
   selector: meta.subtlegradient
-- begin: <span class="String">
-  end: </span>
+- begin: "{\\color[HTML]{D2D191}"
+  end: "}"
   selector: string -meta.tag -meta.doctype -string.regexp -string.literal -string.interpolated -string.quoted.literal -string.unquoted, variable.parameter.misc.css, text string source string, string.unquoted string, string.regexp string
-- begin: <span class="StringPunctuation">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: punctuation.definition.string -meta.tag
-- begin: <span class="StringPunctuationIi">
-  end: </span>
+- begin: "{\\color[HTML]{2020D9}"
+  end: "}"
   selector: string.regexp punctuation.definition.string, string.quoted.literal punctuation.definition.string, string.quoted.double.ruby.mod punctuation.definition.string
-- begin: <span class="StringLiteral">
-  end: </span>
+- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{A5A358}
+  end: "}"
   selector: string.quoted.literal, string.quoted.double.ruby.mod
-- begin: <span class="StringUnquoted">
-  end: </span>
+- begin: "{\\color[HTML]{D1BDAB}"
+  end: "}"
   selector: string.unquoted -string.unquoted.embedded, string.quoted.double.multiline, meta.scope.heredoc
-- begin: <span class="StringInterpolated">
-  end: </span>
+- begin: \colorbox[HTML]{1A1A1A}{\color[HTML]{D1D1AB}
+  end: "}"
   selector: string.interpolated
-- begin: <span class="StringRegex">
-  end: </span>
+- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{A5A358}
+  end: "}"
   selector: string.regexp
-- begin: <span class="StringRegexGroup1">
-  end: </span>
+- begin: \colorbox[HTML]{0C10D0}{
+  end: "}"
   selector: string.regexp.group
-- begin: <span class="StringRegexGroup2">
-  end: </span>
+- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{6565FB}
+  end: "}"
   selector: "string.regexp.group string.regexp.group "
-- begin: <span class="StringRegexGroup3">
-  end: </span>
+- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{6565FB}
+  end: "}"
   selector: "string.regexp.group string.regexp.group string.regexp.group "
-- begin: <span class="StringRegexGroup4">
-  end: </span>
+- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{6565FB}
+  end: "}"
   selector: "string.regexp.group string.regexp.group string.regexp.group string.regexp.group "
-- begin: <span class="StringRegexCharacterClass">
-  end: </span>
+- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{80A557}
+  end: "}"
   selector: string.regexp.character-class
-- begin: <span class="StringRegexArbitraryRepitition">
-  end: </span>
+- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{57A5A3}
+  end: "}"
   selector: string.regexp.arbitrary-repitition
-- begin: <span class="MetaGroupAssertionRegexp">
-  end: </span>
+- begin: \colorbox[HTML]{1119E9}{
+  end: "}"
   selector: "meta.group.assertion.regexp "
-- begin: <span class="MetaAssertion">
-  end: </span>
+- begin: "{\\color[HTML]{5780A5}"
+  end: "}"
   selector: meta.assertion, meta.group.assertion keyword.control.group.regexp, meta.group.assertion punctuation.definition.group
-- begin: <span class="Number">
-  end: </span>
+- begin: "{\\color[HTML]{94A558}"
+  end: "}"
   selector: constant.numeric
-- begin: <span class="CharacterConstant">
-  end: </span>
+- begin: "{\\color[HTML]{80A557}"
+  end: "}"
   selector: constant.character
-- begin: <span class="BuiltInConstant">
-  end: </span>
+- begin: "{\\color[HTML]{5AA557}"
+  end: "}"
   selector: constant.language, keyword.other.unit, constant.other.java, constant.other.unit
-- begin: <span class="BuiltInConstant">
-  end: </span>
+- begin: \colorbox[HTML]{0810D0}{\color[HTML]{5AA557}
+  end: "}"
   selector: constant.language.pseudo-variable
-- begin: <span class="UserDefinedConstant">
-  end: </span>
+- begin: "{\\color[HTML]{58A57C}"
+  end: "}"
   selector: constant.other, constant.block
-- begin: <span class="LibraryConstant">
-  end: </span>
+- begin: "{\\color[HTML]{57A5A3}"
+  end: "}"
   selector: support.constant, constant.name
-- begin: <span class="GlobalPreDefinedVariable">
-  end: </span>
+- begin: \colorbox[HTML]{0810D8}{\color[HTML]{58A57C}
+  end: "}"
   selector: variable.other.readwrite.global.pre-defined
-- begin: <span class="ConstantVariable">
-  end: </span>
+- begin: "{\\color[HTML]{57A5A3}"
+  end: "}"
   selector: variable.other.constant
-- begin: <span class="LibraryVariable">
-  end: </span>
+- begin: \colorbox[HTML]{0810D8}{\color[HTML]{57A5A3}
+  end: "}"
   selector: support.variable
-- begin: <span class="GlobalVariable">
-  end: </span>
+- begin: \colorbox[HTML]{080CD8}{\color[HTML]{2C5251}
+  end: "}"
   selector: variable.other.readwrite.global
-- begin: <span class="Variable">
-  end: </span>
+- begin: "{\\color[HTML]{789BB6}"
+  end: "}"
   selector: variable.language, variable.other, variable.js, punctuation.separator.variable
-- begin: <span class="ClassVariable">
-  end: </span>
+- begin: \colorbox[HTML]{1111E9}{\color[HTML]{5780A5}
+  end: "}"
   selector: variable.other.readwrite.class
-- begin: <span class="InstanceVariable">
-  end: </span>
+- begin: "{\\color[HTML]{555F68}"
+  end: "}"
   selector: variable.other.readwrite.instance
-- begin: <span class="NormalVariables">
-  end: </span>
+- begin: "{\\color[HTML]{555F68}"
+  end: "}"
   selector: variable.other.php, variable.other.normal
-- begin: <span class="VariablePunctuation">
-  end: </span>
+- begin: "{\\color[HTML]{00007D}"
+  end: "}"
   selector: punctuation.definition, punctuation.separator.variable
-- begin: <span class="Storage">
-  end: </span>
+- begin: "{\\color[HTML]{A57C57}"
+  end: "}"
   selector: storage -storage.modifier
-- begin: <span class="EntityNamePreprocessor">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: other.preprocessor, entity.name.preprocessor
-- begin: <span class="VariableLanguageThisJsPrototype">
-  end: </span>
+- begin: "{\\color[HTML]{666666}"
+  end: "}"
   selector: variable.language.this.js
-- begin: <span class="StorageModifier">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: storage.modifier
-- begin: <span class="ClassName">
-  end: </span>
+- begin: "{\\color[HTML]{A5585A}"
+  end: "}"
   selector: entity.name.class, entity.name.type.class
-- begin: <span class="Class">
-  end: </span>
+- begin: \colorbox[HTML]{2011DA}{\color[HTML]{512C2C}
+  end: "}"
   selector: meta.class -meta.class.instance, declaration.class, meta.definition.class, declaration.module
-- begin: <span class="LibraryClassType">
-  end: </span>
+- begin: \colorbox[HTML]{1008D0}{\color[HTML]{A5585A}
+  end: "}"
   selector: support.type, support.class
-- begin: <span class="Instance">
-  end: </span>
+- begin: "{\\color[HTML]{A5585A}"
+  end: "}"
   selector: entity.name.instance
-- begin: <span class="InstanceConstructor">
-  end: </span>
+- begin: \colorbox[HTML]{1008D4}{
+  end: "}"
   selector: meta.class.instance.constructor
-- begin: <span class="InheritedClass">
-  end: </span>
+- begin: \colorbox[HTML]{1008D0}{\color[HTML]{A45880}
+  end: "}"
   selector: entity.other.inherited-class, entity.name.module
-- begin: <span class="ClassMethod">
-  end: </span>
+- begin: "{\\color[HTML]{A45880}"
+  end: "}"
   selector: object.property.function, meta.definition.method
-- begin: <span class="FunctionDeclaration">
-  end: </span>
+- begin: "{\\color[HTML]{A45880}"
+  end: "}"
   selector: meta.function, meta.property.function, declaration.function
-- begin: <span class="FunctionDeclarationName">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: entity.name.function, entity.name.preprocessor
-- begin: <span class="FunctionDeclarationParameters">
-  end: </span>
+- begin: "{\\color[HTML]{BABBD9}"
+  end: "}"
   selector: variable.parameter.function
-- begin: <span class="FunctionDeclarationParameters">
-  end: </span>
+- begin: "{\\color[HTML]{BABBD9}"
+  end: "}"
   selector: variable.parameter -variable.parameter.misc.css, meta.definition.method  meta.definition.param-list, meta.function.method.with-arguments variable.parameter.function
-- begin: <span class="FunctionDeclarationParametersPunctuation">
-  end: </span>
+- begin: "{\\color[HTML]{512C2C}"
+  end: "}"
   selector: punctuation.definition.parameters, variable.parameter.function punctuation.separator.object
-- begin: <span class="FunctionCall">
-  end: </span>
+- begin: "{\\color[HTML]{765F8C}"
+  end: "}"
   selector: keyword.other.special-method, meta.function-call entity.name.function, support.function - variable
-- begin: <span class="LibraryFunctionCall">
-  end: </span>
+- begin: "{\\color[HTML]{9D80BA}"
+  end: "}"
   selector: meta.function-call support.function - variable
-- begin: <span class="LibraryFunctionName">
-  end: </span>
+- begin: \colorbox[HTML]{1210DC}{\color[HTML]{5E5368}
+  end: "}"
   selector: support.function
-- begin: <span class="FunctionCallArgumentsPunctuation">
-  end: </span>
+- begin: "{\\color[HTML]{A358A5}"
+  end: "}"
   selector: punctuation.section.function, meta.brace.curly.function, meta.function-call punctuation.section.scope.ruby, meta.function-call punctuation.separator.object
-- begin: <span class="FunctionPunctuation">
-  end: </span>
+- begin: "{\\color[HTML]{A358A5}\\textbf{"
+  end: "}}"
   selector: meta.group.braces.round punctuation.section.scope, meta.group.braces.round meta.delimiter.object.comma, meta.brace.round
-- begin: <span class="FunctionCallWithoutArguments">
-  end: </span>
+- begin: "{\\color[HTML]{A79EAE}"
+  end: "}"
   selector: meta.function-call.method.without-arguments, meta.function-call.method.without-arguments entity.name.function
-- begin: <span class="KeywordControl">
-  end: </span>
+- begin: "{\\color[HTML]{A358A5}"
+  end: "}"
   selector: keyword.control
-- begin: <span class="Keyword">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: keyword
-- begin: <span class="RegexKeyword">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: source.regexp keyword.operator
-- begin: <span class="KeywordOperator">
-  end: </span>
+- begin: "{\\color[HTML]{5B6190}"
+  end: "}"
   selector: keyword.operator, declaration.function.operator, meta.preprocessor.c.include
-- begin: <span class="KeywordOperatorAssignment">
-  end: </span>
+- begin: \colorbox[HTML]{0A0ADB}{\color[HTML]{464684}
+  end: "}"
   selector: keyword.operator.assignment
-- begin: <span class="KeywordOperatorArithmetic">
-  end: </span>
+- begin: "{\\color[HTML]{5B6190}"
+  end: "}"
   selector: keyword.operator.arithmetic
-- begin: <span class="KeywordOperatorLogical">
-  end: </span>
+- begin: \colorbox[HTML]{0A0ADB}{\color[HTML]{7C85B8}
+  end: "}"
   selector: keyword.operator.logical
-- begin: <span class="KeywordOperatorComparison">
-  end: </span>
+- begin: "{\\color[HTML]{A9ACD0}"
+  end: "}"
   selector: keyword.operator.comparison
-- begin: <span class="TagDoctype">
-  end: </span>
+- begin: \colorbox[HTML]{333333}{\color[HTML]{CCCCCC}
+  end: "}"
   selector: meta.doctype, meta.tag.sgml-declaration.doctype, meta.tag.sgml.doctype
-- begin: <span class="Tag">
-  end: </span>
+- begin: "{\\color[HTML]{333333}"
+  end: "}"
   selector: meta.tag
-- begin: <span class="TagStructure">
-  end: </span>
+- begin: \colorbox[HTML]{262665}{\color[HTML]{666666}
+  end: "}"
   selector: meta.tag.structure, meta.tag.segment
-- begin: <span class="TagBlock">
-  end: </span>
+- begin: \colorbox[HTML]{0F0FD7}{\color[HTML]{4C4C4C}
+  end: "}"
   selector: meta.tag.block, meta.tag.xml, meta.tag.key
-- begin: <span class="TagInline">
-  end: </span>
+- begin: "{\\color[HTML]{A57C57}"
+  end: "}"
   selector: meta.tag.inline
-- begin: <span class="MetaTagInlineSource">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: meta.tag.inline source
-- begin: <span class="TagOther">
-  end: </span>
+- begin: \colorbox[HTML]{1008D0}{\color[HTML]{A5585A}
+  end: "}"
   selector: meta.tag.other, entity.name.tag.style, source entity.other.attribute-name -text.html.basic.embedded , entity.name.tag.script, meta.tag.block.script
-- begin: <span class="TagForm">
-  end: </span>
+- begin: \colorbox[HTML]{080CD8}{\color[HTML]{5780A5}
+  end: "}"
   selector: meta.tag.form, meta.tag.block.form
-- begin: <span class="TagMeta">
-  end: </span>
+- begin: \colorbox[HTML]{0C08D8}{\color[HTML]{A358A5}
+  end: "}"
   selector: meta.tag.meta
-- begin: <span class="TagBlockHead">
-  end: </span>
+- begin: \colorbox[HTML]{121212}{
+  end: "}"
   selector: meta.section.html.head
-- begin: <span class="TagBlockForm">
-  end: </span>
+- begin: \colorbox[HTML]{0406E8}{
+  end: "}"
   selector: meta.section.html.form
-- begin: <span class="XmlTag">
-  end: </span>
+- begin: "{\\color[HTML]{666666}"
+  end: "}"
   selector: meta.tag.xml
-- begin: <span class="TagName">
-  end: </span>
+- begin: "{\\color[HTML]{4C4CFB}"
+  end: "}"
   selector: entity.name.tag
-- begin: <span class="TagAttribute">
-  end: </span>
+- begin: "{\\color[HTML]{3232FA}"
+  end: "}"
   selector: entity.other.attribute-name, meta.tag punctuation.definition.string
-- begin: <span class="TagValue">
-  end: </span>
+- begin: "{\\color[HTML]{6565FB}"
+  end: "}"
   selector: meta.tag string -source -punctuation, text source text meta.tag string -punctuation
-- begin: <span class="MMarkup">
-  end: </span>
+- begin: \colorbox[HTML]{0A0AD2}{\color[HTML]{A5A358}
+  end: "}"
   selector: markup markup -(markup meta.paragraph.list)
-- begin: <span class="MHr">
-  end: </span>
+- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{000000}
+  end: "}"
   selector: markup.hr
-- begin: <span class="MHeading">
-  end: </span>
+- begin: \colorbox[HTML]{191996}{\color[HTML]{666666}
+  end: "}"
   selector: markup.heading
-- begin: <span class="MBold">
-  end: </span>
+- begin: "{\\textbf{"
+  end: "}}"
   selector: markup.bold
-- begin: <span class="MItalic">
-  end: </span>
+- begin: "{\\textit{"
+  end: "}}"
   selector: markup.italic
-- begin: <span class="MUnderline">
-  end: </span>
+- begin: "{\\underline{"
+  end: "}}"
   selector: markup.underline
-- begin: <span class="MReference">
-  end: </span>
+- begin: "{\\color[HTML]{5780A5}"
+  end: "}"
   selector: meta.reference, markup.underline.link
-- begin: <span class="MReferenceName">
-  end: </span>
+- begin: \colorbox[HTML]{080CD8}{\color[HTML]{57A5A3}
+  end: "}"
   selector: entity.name.reference
-- begin: <span class="MUnderlineLink">
-  end: </span>
+- begin: "{\\color[HTML]{57A5A3}\\underline{"
+  end: "}}"
   selector: meta.reference.list markup.underline.link, text.html.textile markup.underline.link
-- begin: <span class="MRawBlock">
-  end: </span>
+- begin: \colorbox[HTML]{000000}{\color[HTML]{999999}
+  end: "}"
   selector: markup.raw.block
-- begin: <span class="MQuoteBlock">
-  end: </span>
+- begin: \colorbox[HTML]{1919FA}{
+  end: "}"
   selector: markup.quote
-- begin: <span class="Css">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: source.css
-- begin: <span class="Selector">
-  end: </span>
+- begin: \colorbox[HTML]{00007D}{\color[HTML]{666666}
+  end: "}"
   selector: meta.selector
-- begin: <span class="AttributeMatch">
-  end: </span>
+- begin: \colorbox[HTML]{0808D8}{\color[HTML]{5859A5}
+  end: "}"
   selector: meta.attribute-match.css
-- begin: <span class="PseudoClass">
-  end: </span>
+- begin: "{\\color[HTML]{7D58A4}"
+  end: "}"
   selector: entity.other.attribute-name.pseudo-class, entity.other.attribute-name.tag.pseudo-class
-- begin: <span class="Class">
-  end: </span>
+- begin: "{\\color[HTML]{A358A5}"
+  end: "}"
   selector: meta.selector entity.other.attribute-name.class
-- begin: <span class="Id">
-  end: </span>
+- begin: "{\\color[HTML]{A45880}"
+  end: "}"
   selector: meta.selector entity.other.attribute-name.id
-- begin: <span class="Tag">
-  end: </span>
+- begin: "{\\color[HTML]{A5585A}"
+  end: "}"
   selector: meta.selector entity.name.tag
-- begin: <span class="TagWildcard">
-  end: </span>
+- begin: "{\\color[HTML]{A57C57}\\textbf{"
+  end: "}}"
   selector: entity.name.tag.wildcard, entity.other.attribute-name.universal
-- begin: <span class="MetaPropertyList">
-  end: </span>
+- begin: "{\\color[HTML]{333333}\\textbf{"
+  end: "}}"
   selector: meta.property-list
-- begin: <span class="MetaPropertyName">
-  end: </span>
+- begin: "{\\color[HTML]{999999}"
+  end: "}"
   selector: meta.property-name
-- begin: <span class="SupportTypePropertyName">
-  end: </span>
+- begin: \colorbox[HTML]{000000}{\color[HTML]{FFFFFF}
+  end: "}"
   selector: support.type.property-name
-- begin: <span class="MetaPropertyValue">
-  end: </span>
+- begin: \colorbox[HTML]{0D0D0D}{\color[HTML]{999999}
+  end: "}"
   selector: meta.property-value
-- begin: <span class="Latex">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: text.latex
-- begin: <span class="LMarkupRaw">
-  end: </span>
+- begin: \colorbox[HTML]{000000}{
+  end: "}"
   selector: text.latex markup.raw
-- begin: <span class="LSupportFunction">
-  end: </span>
+- begin: "{\\color[HTML]{A358A5}"
+  end: "}"
   selector: text.latex support.function -support.function.textit -support.function.emph
-- begin: <span class="LSupportFunctionSection">
-  end: </span>
+- begin: "{\\color[HTML]{BEBEFD}"
+  end: "}"
   selector: text.latex support.function.section
-- begin: <span class="LEntityNameSection">
-  end: </span>
+- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{000000}
+  end: "}"
   selector: text.latex entity.name.section -meta.group -keyword.operator.braces
-- begin: <span class="LConstantLanguageGeneral">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: text.latex constant.language.general
-- begin: <span class="LKeywordOperatorDelimiter">
-  end: </span>
+- begin: \colorbox[HTML]{00007D}{
+  end: "}"
   selector: text.latex keyword.operator.delimiter
-- begin: <span class="LKeywordOperatorBrackets">
-  end: </span>
+- begin: "{\\color[HTML]{999999}"
+  end: "}"
   selector: text.latex keyword.operator.brackets
-- begin: <span class="LKeywordOperatorBraces">
-  end: </span>
+- begin: "{\\color[HTML]{666666}"
+  end: "}"
   selector: text.latex keyword.operator.braces
-- begin: <span class="LMetaFootnote">
-  end: </span>
+- begin: \colorbox[HTML]{0808D8}{\color[HTML]{1A1AE0}
+  end: "}"
   selector: meta.footnote
-- begin: <span class="LMetaLabelReference">
-  end: </span>
+- begin: \colorbox[HTML]{0C0CFA}{
+  end: "}"
   selector: text.latex meta.label.reference
-- begin: <span class="LKeywordControlRef">
-  end: </span>
+- begin: \colorbox[HTML]{170C0C}{\color[HTML]{A5585A}
+  end: "}"
   selector: text.latex keyword.control.ref
-- begin: <span class="LVariableParameterLabelReference">
-  end: </span>
+- begin: \colorbox[HTML]{281516}{\color[HTML]{D1BDAB}
+  end: "}"
   selector: text.latex variable.parameter.label.reference
-- begin: <span class="LKeywordControlCite">
-  end: </span>
+- begin: \colorbox[HTML]{170C12}{\color[HTML]{A45880}
+  end: "}"
   selector: text.latex keyword.control.cite
-- begin: <span class="LVariableParameterCite">
-  end: </span>
+- begin: \colorbox[HTML]{28151F}{\color[HTML]{E7D4DF}
+  end: "}"
   selector: variable.parameter.cite
-- begin: <span class="LVariableParameterLabel">
-  end: </span>
+- begin: "{\\color[HTML]{7F7FFC}"
+  end: "}"
   selector: text.latex variable.parameter.label
-- begin: <span class="LMetaGroupBraces">
-  end: </span>
+- begin: "{\\color[HTML]{0A0AD2}"
+  end: "}"
   selector: text.latex meta.group.braces
-- begin: <span class="LMetaEnvironmentList">
-  end: </span>
+- begin: \colorbox[HTML]{00007D}{\color[HTML]{0A0AD2}
+  end: "}"
   selector: text.latex meta.environment.list
-- begin: <span class="LMetaEnvironmentList2">
-  end: </span>
+- begin: \colorbox[HTML]{00007D}{\color[HTML]{0A0AD2}
+  end: "}"
   selector: "text.latex meta.environment.list meta.environment.list "
-- begin: <span class="LMetaEnvironmentList3">
-  end: </span>
+- begin: \colorbox[HTML]{000000}{\color[HTML]{0A0AD2}
+  end: "}"
   selector: "text.latex meta.environment.list meta.environment.list meta.environment.list "
-- begin: <span class="LMetaEnvironmentList4">
-  end: </span>
+- begin: "{\\color[HTML]{0A0AD2}"
+  end: "}"
   selector: "text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list "
-- begin: <span class="LMetaEnvironmentList5">
-  end: </span>
+- begin: "{\\color[HTML]{0A0AD2}"
+  end: "}"
   selector: "text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list "
-- begin: <span class="LMetaEnvironmentList6">
-  end: </span>
+- begin: "{\\color[HTML]{0A0AD2}"
+  end: "}"
   selector: "text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list "
-- begin: <span class="LMetaEndDocument">
-  end: </span>
+- begin: \colorbox[HTML]{CCCCCC}{\color[HTML]{000000}
+  end: "}"
   selector: text.latex meta.end-document, text.latex meta.begin-document, meta.end-document.latex support.function, meta.end-document.latex variable.parameter, meta.begin-document.latex support.function, meta.begin-document.latex variable.parameter
-- begin: <span class="MetaBraceErbReturnValue">
-  end: </span>
+- begin: \colorbox[HTML]{0810D5}{\color[HTML]{58A58A}
+  end: "}"
   selector: meta.brace.erb.return-value
-- begin: <span class="SourceRubyRailsEmbeddedReturnValueOneLine">
-  end: </span>
+- begin: \colorbox[HTML]{1919E1}{
+  end: "}"
   selector: source.ruby.rails.embedded.return-value.one-line
-- begin: <span class="MetaBraceErb">
-  end: </span>
+- begin: \colorbox[HTML]{0810F1}{\color[HTML]{57A5A3}
+  end: "}"
   selector: punctuation.section.embedded -(source string source punctuation.section.embedded), meta.brace.erb.html
-- begin: <span class="SourceRubyRailsEmbeddedOneLine">
-  end: </span>
+- begin: \colorbox[HTML]{0810F1}{
+  end: "}"
   selector: source.ruby.rails.embedded.one-line
-- begin: <span class="StringEmbeddedSource">
-  end: </span>
+- begin: "{\\color[HTML]{555F68}"
+  end: "}"
   selector: source string source punctuation.section.embedded
-- begin: <span class="Source">
-  end: </span>
+- begin: \colorbox[HTML]{000000}{
+  end: "}"
   selector: source
-- begin: <span class="MetaBraceErb">
-  end: </span>
+- begin: \colorbox[HTML]{000000}{
+  end: "}"
   selector: meta.brace.erb
-- begin: <span class="SourceStringSource">
-  end: </span>
+- begin: \colorbox[HTML]{191996}{\color[HTML]{FFFFFF}
+  end: "}"
   selector: source string source
-- begin: <span class="SourceStringInterpolatedSource">
-  end: </span>
+- begin: \colorbox[HTML]{000064}{\color[HTML]{999999}
+  end: "}"
   selector: source string.interpolated source
-- begin: <span class="SourceEmbededSource">
-  end: </span>
+- begin: \colorbox[HTML]{0505E5}{
+  end: "}"
   selector: source.java.embedded
-- begin: <span class="Text">
-  end: </span>
+- begin: "{\\color[HTML]{FFFFFF}"
+  end: "}"
   selector: text -text.xml.strict
-- begin: <span class="TextSource">
-  end: </span>
+- begin: \colorbox[HTML]{000000}{\color[HTML]{CCCCCC}
+  end: "}"
   selector: text source, meta.scope.django.template
-- begin: <span class="TextStringSource">
-  end: </span>
+- begin: "{\\color[HTML]{999999}"
+  end: "}"
   selector: text string source
-- begin: <span class="TextStringSourceStringSource">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: text string source string source
-- begin: <span class="Syntax">
-  end: </span>
+- begin: "{\\color[HTML]{333333}"
+  end: "}"
   selector: meta.syntax
-- begin: <span class="Invalid">
-  end: </span>
+- begin: \colorbox[HTML]{A5585A}{\color[HTML]{201111}\textbf{
+  end: "}}"
   selector: invalid
-- begin: <span class="Comment">
-  end: </span>
+- begin: \colorbox[HTML]{0A0AD2}{\color[HTML]{28285B}
+  end: "}"
   selector: comment
-- begin: <span class="CommentPunctuation">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: comment punctuation
-- begin: <span class="HtmlComment">
-  end: </span>
+- begin: "{\\textit{"
+  end: "}}"
   selector: text comment.block -source
-- begin: <span class="DDiffAdd">
-  end: </span>
+- begin: \colorbox[HTML]{14281D}{\color[HTML]{82BB9C}
+  end: "}"
   selector: markup.inserted
-- begin: <span class="DDiffDelete">
-  end: </span>
+- begin: \colorbox[HTML]{28151F}{\color[HTML]{BB82A0}
+  end: "}"
   selector: markup.deleted
-- begin: <span class="DDiffChanged">
-  end: </span>
+- begin: "{\\color[HTML]{C2C28F}"
+  end: "}"
   selector: markup.changed
-- begin: <span class="TextSubversionCommitMetaScopeChangedFiles">
-  end: </span>
+- begin: \colorbox[HTML]{000000}{\color[HTML]{FFFFFF}
+  end: "}"
   selector: text.subversion-commit meta.scope.changed-files, text.subversion-commit meta.scope.changed-files.svn meta.diff.separator
-- begin: <span class="TextSubversionCommit">
-  end: </span>
+- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{000000}
+  end: "}"
   selector: text.subversion-commit
-- begin: <span class="MetaDelimiter">
-  end: </span>
+- begin: \colorbox[HTML]{0202FA}{\color[HTML]{FFFFFF}\textbf{
+  end: "}}"
   selector: punctuation.terminator, meta.delimiter, punctuation.separator.method
-- begin: <span class="MetaDelimiterStatementJs">
-  end: </span>
+- begin: \colorbox[HTML]{00003F}{
+  end: "}"
   selector: punctuation.terminator.statement, meta.delimiter.statement.js
-- begin: <span class="MetaDelimiterObjectJs">
-  end: </span>
+- begin: \colorbox[HTML]{0000BB}{
+  end: "}"
   selector: meta.delimiter.object.js
-- begin: <span class="BoldStringQuotes">
-  end: </span>
+- begin: "{\\textbf{"
+  end: "}}"
   selector: string.quoted.single.brace, string.quoted.double.brace
-- begin: <span class="MetaHeadersBlog">
-  end: </span>
+- begin: \colorbox[HTML]{FFFFFF}{
+  end: "}"
   selector: text.blog -(text.blog text)
-- begin: <span class="MetaHeadersBlog">
-  end: </span>
+- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{666666}
+  end: "}"
   selector: meta.headers.blog
-- begin: <span class="MetaHeadersBlogKeywordOtherBlog">
-  end: </span>
+- begin: \colorbox[HTML]{0810F1}{\color[HTML]{182A29}
+  end: "}"
   selector: meta.headers.blog keyword.other.blog
-- begin: <span class="MetaHeadersBlogStringUnquotedBlog">
-  end: </span>
+- begin: \colorbox[HTML]{1313EF}{
+  end: "}"
   selector: meta.headers.blog string.unquoted.blog
-- begin: <span class="MetaBracePipe">
-  end: </span>
+- begin: \colorbox[HTML]{0A0AD2}{\color[HTML]{4C4C4C}
+  end: "}"
   selector: meta.brace.pipe
-- begin: <span class="MiscPunctuation">
-  end: </span>
+- begin: "{\\color[HTML]{666666}\\textbf{"
+  end: "}}"
   selector: meta.brace.erb, source.ruby.embedded.source.brace, punctuation.section.dictionary, punctuation.terminator.dictionary, punctuation.separator.object, punctuation.separator.statement, punctuation.separator.key-value.css
-- begin: <span class="CurlyPunctuation">
-  end: </span>
+- begin: "{\\color[HTML]{FFFFFF}\\textbf{"
+  end: "}}"
   selector: meta.group.braces.curly punctuation.section.scope, meta.brace.curly
-- begin: <span class="ObjectPunctuation">
-  end: </span>
+- begin: "{\\color[HTML]{345741}\\textbf{"
+  end: "}}"
   selector: punctuation.separator.objects, meta.group.braces.curly meta.delimiter.object.comma, punctuation.separator.key-value -meta.tag
-- begin: <span class="ArrayPunctuation">
-  end: </span>
+- begin: "{\\color[HTML]{675D54}\\textbf{"
+  end: "}}"
   selector: meta.group.braces.square punctuation.section.scope, meta.group.braces.square meta.delimiter.object.comma, meta.brace.square, punctuation.separator.array, punctuation.section.array
-- begin: <span class="MetaBraceCurlyMetaGroup">
-  end: </span>
+- begin: \colorbox[HTML]{00007D}{\color[HTML]{CCCCCC}
+  end: "}"
   selector: meta.brace.curly meta.group
-- begin: <span class="MetaSourceEmbedded">
-  end: </span>
+- begin: \colorbox[HTML]{00007D}{\color[HTML]{666666}
+  end: "}"
   selector: meta.source.embedded, entity.other.django.tagbraces
-- begin: <span class="MetaGroupBracesRoundJs">
-  end: </span>
+- begin: "{"
+  end: "}"
   selector: source.js meta.group.braces.round, meta.scope.heredoc
-- begin: <span class="MetaGroupBraces1">
-  end: </span>
+- begin: \colorbox[HTML]{0A0A0A}{
+  end: "}"
   selector: meta.odd-tab.group1, meta.group.braces, meta.block.slate, text.xml.strict meta.tag
-- begin: <span class="MetaGroupBraces2">
-  end: </span>
+- begin: \colorbox[HTML]{0E0E0E}{
+  end: "}"
   selector: meta.even-tab.group2, meta.group.braces meta.group.braces, meta.block.slate meta.block.slate, text.xml.strict meta.tag meta.tag, meta.group.braces meta.group.braces
-- begin: <span class="MetaGroupBraces3">
-  end: </span>
+- begin: \colorbox[HTML]{111111}{
+  end: "}"
   selector: meta.odd-tab.group3, meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces
-- begin: <span class="MetaGroupBraces4">
-  end: </span>
+- begin: \colorbox[HTML]{151515}{
+  end: "}"
   selector: meta.even-tab.group4, meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces
-- begin: <span class="MetaGroupBraces5">
-  end: </span>
+- begin: \colorbox[HTML]{191919}{
+  end: "}"
   selector: meta.odd-tab.group5, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
-- begin: <span class="MetaGroupBraces6">
-  end: </span>
+- begin: \colorbox[HTML]{1C1C1C}{
+  end: "}"
   selector: meta.even-tab.group6, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
-- begin: <span class="MetaGroupBraces7">
-  end: </span>
+- begin: \colorbox[HTML]{1F1F1F}{
+  end: "}"
   selector: meta.odd-tab.group7, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
-- begin: <span class="MetaGroupBraces8">
-  end: </span>
+- begin: \colorbox[HTML]{212121}{
+  end: "}"
   selector: meta.even-tab.group8, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
-- begin: <span class="MetaGroupBraces9">
-  end: </span>
+- begin: \colorbox[HTML]{242424}{
+  end: "}"
   selector: meta.odd-tab.group11, meta.odd-tab.group10, meta.odd-tab.group9, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
-- begin: <span class="MetaBlockSlate">
-  end: </span>
+- begin: "{\\color[HTML]{666666}"
+  end: "}"
   selector: meta.block.slate
-- begin: <span class="MetaBlockContentSlate">
-  end: </span>
+- begin: "{\\color[HTML]{CCCCCC}"
+  end: "}"
   selector: "meta.block.content.slate "
 listing: 
-  begin: <pre class="brilliance_dull">
-  end: </pre>
+  begin: |
+    \newcolumntype{C}{>{\color[HTML]{CCCCCC}\columncolor[HTML]{000005}}l}
+    \newcolumntype{N}{>{\color[HTML]{CCCCCC}\columncolor[HTML]{1517A6}}l}
+    \begin{longtable}{NC}
+
+  end: |
+    \end{longtable}
+
 document: 
   begin: |
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-    
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-      <meta http-equiv="cache-control" content="no-cache" />
-      <meta http-equiv="expires" content="3600" />
-      <meta name="revisit-after" content="2 days" />
-      <meta name="robots" content="index,follow" />
-      <meta name="publisher" content="Dichodaemon" />
-      <meta name="copyright" content="Dichodaemon" />
-    
-      <meta name="author" content="Dichodaemon" />
-      <meta name="distribution" content="global" />
-      <meta name="description" content="Ocatarinetabellachithchix" />
-      <meta name="keywords" content="arzaversperia flexilimosos toves" />
-      <link rel="stylesheet" type="text/css" media="screen,projection,print" href="css/brilliance_dull.css" />
-      <title>brilliance_dull</title>
-    
-    </head>
-    
-    <body>
+    \documentclass[a4paper]{article}
+    \usepackage{xcolor}
+    \usepackage{colortbl}
+    \usepackage{longtable}
+    \usepackage[left=2cm,top=1cm,right=3cm,nohead,nofoot]{geometry}
+    \begin{document}
 
-  end: "  <p>\n    <a href=\"http://validator.w3.org/check?uri=referer\">\n      <img style=\"border:0\"\n           src=\"http://www.w3.org/Icons/valid-xhtml10\"\n           alt=\"Valid XHTML 1.0 Strict\" height=\"31\" width=\"88\" />\n    </a>\n    <a href=\"http://jigsaw.w3.org/css-validator/check?uri=referer\">\n      <img style=\"border:0;width:88px;height:31px\"\n           src=\"http://jigsaw.w3.org/css-validator/images/vcss\" \n           alt=\"Valid CSS!\" />\n    </a>\n  </p>\n\
-    </body>\n\
-    </html>\n"
-filter: "@string.gsub(/_/, '\\_')"
+  end: |
+    \end{document}
+
+filter: "@escaped.gsub(/(_|\\{|\\}|~|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
 line-numbers: 
-  begin: <span class="line-numbers">
-  end: </span>
+  begin: \texttt{
+  end: "}&\\mbox{\\texttt{"

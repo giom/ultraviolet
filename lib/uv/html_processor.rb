@@ -9,10 +9,11 @@ module Uv
       attr_reader :string
       attr_accessor :escapeHTML
       
-      def initialize render_options, line_numbers = false, score_manager = nil
+      def initialize render_options, line_numbers = false, headers = true, score_manager = nil
          @score_manager = score_manager || @@score_manager
          @render_options = render_options
          @options = {}
+         @headers = headers
          @line_numbers = line_numbers
          @escapeHTML = true
       end
@@ -22,6 +23,8 @@ module Uv
          @string = ""
          @line = nil
          @line_number = 0
+         print @render_options["document"]["begin"] if @headers
+         print @render_options["listing"]["begin"]
       end
       
       def print string
@@ -29,8 +32,10 @@ module Uv
       end
       
       def escape string
-         if @escapeHTML
-            CGI.escapeHTML( string )
+         if @render_options["filter"]
+            @escaped = string
+            @escaped = self.instance_eval( @render_options["filter"] )
+            @escaped
          else
             string
          end
@@ -53,10 +58,13 @@ module Uv
       end
       
       def new_line line
-         print escape(@line[@position..-1]) if @line 
+         print escape(@line[@position..-1]).gsub(/\n|\r/, '') if @line 
+         print @render_options["line"]["end"] if @line_number > 0
+         print "\n" if @line
          @position = 0
          @line_number += 1
          @line = line
+         print @render_options["line"]["begin"]
          if @line_numbers
             print @render_options["line-numbers"]["begin"] 
             print @line_number.to_s.rjust(4).ljust(5)
@@ -66,12 +74,16 @@ module Uv
       end
       
       def end_parsing
-         print escape(@line[@position..-1].gsub("\n", '')) if @line 
+         print escape(@line[@position..-1].gsub(/\n|\r/, '')) if @line 
+         print @render_options["line"]["end"] if @line_number > 0
+         print "\n" if @line
          while ! @stack.empty?
             opt = options
             print opt["end"] if opt
             @stack.pop
          end
+         print @render_options["listing"]["end"]
+         print @render_options["document"]["end"] if @headers
       end
       
       def options

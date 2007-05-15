@@ -1,3 +1,4 @@
+require 'fileutils'
 require 'textpow'
 require 'uv/html_processor.rb'
 
@@ -7,6 +8,13 @@ module Uv
    def Uv.path
       result = []
       result << File.join(File.dirname(__FILE__), ".." )   
+   end
+   
+   def Uv.copy_files output, output_dir
+      Uv.path.each do |dir|
+         dir_name = File.join( dir, "render", output, "files" )
+         FileUtils.cp_r( Dir.glob(File.join( dir_name, "." )), output_dir ) if File.exists?( dir_name )
+      end
    end
 
    def Uv.init_syntaxes
@@ -55,18 +63,15 @@ module Uv
       result
    end
    
-   def Uv.parse text, output = "xhtml", syntax_name = nil, line_numbers = false, render_style = "classic"
+   def Uv.parse text, output = "xhtml", syntax_name = nil, line_numbers = false, render_style = "classic", headers = true
       init_syntaxes unless @syntaxes
       renderer = File.join( File.dirname(__FILE__), '..',"render", output,"#{render_style}.render")
+      raise( ArgumentError, "Output for #{output} is not yet implemented" ) unless File.exists?(renderer)
       css_class = render_style
       render_options = YAML.load( File.open(  renderer ) )
-      if output == "xhtml"
-         render_processor = HtmlProcessor.new( render_options, line_numbers )
-         @syntaxes[syntax_name].parse( text,  render_processor )
-         "<pre class =\"#{css_class}\">#{render_processor.string}</pre>"
-      else
-         raise( ArgumentError, "Output for #{output} is not yet implemented" )
-      end
+      render_processor = HtmlProcessor.new( render_options, line_numbers, headers )
+      @syntaxes[syntax_name].parse( text,  render_processor )
+      render_processor.string
    end
 
    def Uv.debug text, syntax_name

@@ -1,0 +1,97 @@
+--- 
+name: iPlastic
+line: 
+  begin: ""
+  end: "}}\\\\"
+tags: 
+- begin: "{\\color[HTML]{009933}"
+  end: "}"
+  selector: string
+- begin: "{\\color[HTML]{0066FF}"
+  end: "}"
+  selector: constant.numeric
+- begin: "{\\color[HTML]{FF0080}"
+  end: "}"
+  selector: string.regexp
+- begin: "{\\color[HTML]{0000FF}"
+  end: "}"
+  selector: keyword
+- begin: "{\\color[HTML]{9700CC}"
+  end: "}"
+  selector: constant.language
+- begin: "{\\color[HTML]{990000}"
+  end: "}"
+  selector: support.class.exception
+- begin: "{\\color[HTML]{FF8000}"
+  end: "}"
+  selector: entity.name.function
+- begin: "{\\textbf{"
+  end: "}}"
+  selector: entity.name.type
+- begin: "{\\textit{"
+  end: "}}"
+  selector: variable.parameter
+- begin: "{\\color[HTML]{0066FF}\\textit{"
+  end: "}}"
+  selector: comment
+- begin: \colorbox[HTML]{EBAEA9}{\color[HTML]{FF0000}
+  end: "}"
+  selector: invalid
+- begin: \colorbox[HTML]{EEEEEB}{
+  end: "}"
+  selector: invalid.deprecated.trailing-whitespace
+- begin: \colorbox[HTML]{F9F9F9}{\color[HTML]{000000}
+  end: "}"
+  selector: text source
+- begin: "{\\color[HTML]{0033CC}"
+  end: "}"
+  selector: meta.tag, declaration.tag
+- begin: "{\\color[HTML]{6782D3}"
+  end: "}"
+  selector: constant, support.constant
+- begin: "{\\color[HTML]{3333FF}\\textbf{"
+  end: "}}"
+  selector: support
+- begin: "{\\textbf{"
+  end: "}}"
+  selector: storage
+- begin: "{\\textbf{"
+  end: "}}"
+  selector: entity.name.section
+- begin: "{\\color[HTML]{000000}\\textbf{"
+  end: "}}"
+  selector: entity.name.function.frame
+- begin: "{\\color[HTML]{333333}"
+  end: "}"
+  selector: meta.tag.preprocessor.xml
+- begin: "{\\color[HTML]{3366CC}\\textit{"
+  end: "}}"
+  selector: entity.other.attribute-name
+- begin: "{\\textbf{"
+  end: "}}"
+  selector: entity.name.tag
+listing: 
+  begin: |
+    \newcolumntype{C}{>{\color[HTML]{000000}\columncolor[HTML]{EEEEED}}l}
+    \newcolumntype{N}{>{\color[HTML]{000000}\columncolor[HTML]{BAD6FD}}l}
+    \begin{longtable}{NC}
+
+  end: |
+    \end{longtable}
+
+document: 
+  begin: |
+    \documentclass[a4paper]{article}
+    \usepackage{xcolor}
+    \usepackage{colortbl}
+    \usepackage{longtable}
+    \usepackage[left=2cm,top=1cm,right=3cm,nohead,nofoot]{geometry}
+    \begin{document}
+
+  end: |
+    \end{document}
+
+filter: "@escaped.gsub(/(_|\\{|\\}|~|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+line-numbers: 
+  begin: \texttt{
+  end: "}&\\mbox{\\texttt{"
