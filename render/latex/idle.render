@@ -75,17 +75,19 @@ listing:
 
 document: 
   begin: |
-    \documentclass[a4paper]{article}
+    \documentclass[a4paper,landscape]{article}
     \usepackage{xcolor}
     \usepackage{colortbl}
     \usepackage{longtable}
     \usepackage[left=2cm,top=1cm,right=3cm,nohead,nofoot]{geometry}
+    \usepackage[T1]{fontenc}
+    \usepackage[scaled]{beramono}
     \begin{document}
 
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|~|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

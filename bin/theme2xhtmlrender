@@ -86,7 +86,13 @@ render["tags"] = []
    end
 end
 
-render["filter"] = "@string.gsub(/_/, '\\_')"
+render["filter"] = "CGI.escapeHTML( @escaped )"
+
+tag = {}
+tag["begin"] = ""
+tag["end"]   = ""
+render["line"] = tag
+
 
 tag = {}
 tag["begin"] = "<pre class=\"#{standard_name}\">"

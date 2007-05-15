@@ -103,7 +103,7 @@ render["tags"] = []
    end
 end
 
-render["filter"] = '@escaped.gsub(/(_|\{|\}|~|&|\#|\\\\)/, \'\\\\\\\\\1\').gsub(/ /,\'\\\\hspace{1ex}\').gsub(/\t/,\'\\\\hspace{3ex}\')'
+render["filter"] = '@escaped.gsub(/(_|\{|\}|&|\#|\\\\)/, \'\\\\\\\\\1\').gsub(/~/, \'\\\\textasciitilde\').gsub(/ /,\'\\\\hspace{1ex}\').gsub(/\t/,\'\\\\hspace{3ex}\')'
 
 tag = {}
 tag["begin"] = ""
@@ -124,11 +124,13 @@ render["listing"] = tag
 
 tag = {}
 tag["begin"] = <<END
-\\documentclass[a4paper]{article}
+\\documentclass[a4paper,landscape]{article}
 \\usepackage{xcolor}
 \\usepackage{colortbl}
 \\usepackage{longtable}
 \\usepackage[left=2cm,top=1cm,right=3cm,nohead,nofoot]{geometry}
+\\usepackage[T1]{fontenc}
+\\usepackage[scaled]{beramono}
 \\begin{document}
 END
 

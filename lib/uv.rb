@@ -23,7 +23,7 @@ module Uv
          @syntaxes[File.basename(f, '.syntax')] = Textpow::SyntaxNode.load( f )
       end
    end
-   
+
    def Uv.syntaxes
       Dir.glob( File.join(File.dirname(__FILE__), '..', 'syntax', '*.syntax') ).collect do |f| 
          File.basename(f, '.syntax')
@@ -63,7 +63,7 @@ module Uv
       result
    end
    
-   def Uv.parse text, output = "xhtml", syntax_name = nil, line_numbers = false, render_style = "classic", headers = true
+   def Uv.parse text, output = "xhtml", syntax_name = nil, line_numbers = false, render_style = "classic", headers = false
       init_syntaxes unless @syntaxes
       renderer = File.join( File.dirname(__FILE__), '..',"render", output,"#{render_style}.render")
       raise( ArgumentError, "Output for #{output} is not yet implemented" ) unless File.exists?(renderer)

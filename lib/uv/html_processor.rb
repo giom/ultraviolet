@@ -43,14 +43,14 @@ module Uv
       
       def open_tag name, position
          @stack << name
-         print escape(@line[@position...position]) if position > @position
+         print escape(@line[@position...position].gsub(/\n|\r/, '')) if position > @position
          @position = position
          opt = options
          print opt["begin"] if opt
       end
       
       def close_tag name, position
-         print escape(@line[@position...position]) if position > @position
+         print escape(@line[@position...position].gsub(/\n|\r/, '')) if position > @position
          @position = position
          opt = options
          print opt["end"] if opt
@@ -58,9 +58,11 @@ module Uv
       end
       
       def new_line line
-         print escape(@line[@position..-1]).gsub(/\n|\r/, '') if @line 
-         print @render_options["line"]["end"] if @line_number > 0
-         print "\n" if @line
+         if @line
+            print escape(@line[@position..-1].gsub(/\n|\r/, ''))
+            print @render_options["line"]["end"]
+            print "\n" 
+         end
          @position = 0
          @line_number += 1
          @line = line
@@ -74,9 +76,11 @@ module Uv
       end
       
       def end_parsing
-         print escape(@line[@position..-1].gsub(/\n|\r/, '')) if @line 
-         print @render_options["line"]["end"] if @line_number > 0
-         print "\n" if @line
+         if @line
+            print escape(@line[@position..-1].gsub(/\n|\r/, '')) 
+            print @render_options["line"]["end"]
+            print "\n"
+         end
          while ! @stack.empty?
             opt = options
             print opt["end"] if opt

@@ -116,7 +116,7 @@ if o.filename && ! o.syntax
       candidates.sort.each { |name, syntax| STDERR.puts "\t - " + name}
       exit -1
    end
-   o.syntax = candidates.first.first
+   o.syntax = candidates.first.first unless candidates.size == 0
 end
 
 unless o.syntax

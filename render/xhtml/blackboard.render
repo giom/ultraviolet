@@ -1,5 +1,8 @@
 --- 
 name: Blackboard
+line: 
+  begin: ""
+  end: ""
 tags: 
 - begin: <span class="Comment">
   end: </span>
@@ -110,7 +113,7 @@ document:
   end: "  <p>\n    <a href=\"http://validator.w3.org/check?uri=referer\">\n      <img style=\"border:0\"\n           src=\"http://www.w3.org/Icons/valid-xhtml10\"\n           alt=\"Valid XHTML 1.0 Strict\" height=\"31\" width=\"88\" />\n    </a>\n    <a href=\"http://jigsaw.w3.org/css-validator/check?uri=referer\">\n      <img style=\"border:0;width:88px;height:31px\"\n           src=\"http://jigsaw.w3.org/css-validator/images/vcss\" \n           alt=\"Valid CSS!\" />\n    </a>\n  </p>\n\
     </body>\n\
     </html>\n"
-filter: "@string.gsub(/_/, '\\_')"
+filter: CGI.escapeHTML( @escaped )
 line-numbers: 
   begin: <span class="line-numbers">
   end: </span>
