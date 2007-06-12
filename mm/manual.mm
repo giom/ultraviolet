@@ -792,3 +792,4 @@ end
 = Projects using Ultraviolet =
 
 * [Macaronic markup engine http://mama.rubyforge.org/].
+* [Radiograph rails plugin http://agilewebdevelopment.com/plugins/radiograph].
