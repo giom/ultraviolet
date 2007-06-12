@@ -41,8 +41,6 @@ Further work will be done to produce latex output.
 ||  Priority  |  Description                                                             |
 | high        | Complete *rdoc* api documentation                                        |
 | medium      | Produce latex output                                                     |
-| high        | Correct *brilliance_black* and *brilliance_dull* stylesheets             |
-| medium      | Include a command line option to initialize (copy css files) a directory |
 
 # Usage #
 
@@ -75,6 +73,11 @@ Some examples of command line usage.
     uv -s yaml -t espresso_libre syntax/ini.syntax
     --------------------------------------------
     
+*   Output results to `index.html` and copy required files (/eg/ css):
+    --------hl shell-unix-generic,,false--------
+    uv -c . syntax/ini.syntax > index.html
+    --------------------------------------------
+    
 = Using ultraviolet as a library =
 
 The interface is very similar to the one of the command line.
@@ -93,6 +96,11 @@ The interface is very similar to the one of the command line.
     using *amy* theme:
     --------hl ruby,,false--------
     result = Uv.parse( text, "xhtml", "css", true, "amy")
+    ------------------------------
+
+*   Output copy required files for `xhtml` format to directory `site`:
+    --------hl ruby,,false--------
+    Uv.copy_files "xhtml", "site"
     ------------------------------
 
 #Examples#
