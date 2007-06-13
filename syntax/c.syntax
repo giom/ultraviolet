@@ -63,7 +63,7 @@ repository:
         name: meta.preprocessor.c
       "2": 
         name: keyword.control.import.c
-    begin: ^\s*(#\s*(if(n?def)?)\b.*(?:(?=(?://|/\*))|$))
+    begin: ^\s*(#\s*(if(n?def)?)\b.*?(?:(?=(?://|/\*))|$))
     end: ^\s*(#\s*(endif)\b).*$
     patterns: 
     - include: $base
@@ -277,7 +277,7 @@ patterns:
     \t\t\t\t     )\n\
     \t\t\t\t)\n\
     \t\t\t\t(\n\
-    \t\t\t\t\t[A-Za-z_][A-Za-z0-9_:]*               # actual name\n\
+    \t\t\t\t\t([A-Za-z_][A-Za-z0-9_]|::)*               # actual name\n\
     \t\t\t\t\t(?: (?<=operator) (?: [-*&<>=+!]+ | \\(\\) | \\[\\] ) )?  # if it is a C++ operator\n\
     \t\t\t\t)\n\
     \t\t\t\t \\s*(\\() (?=                           # match \"(\"\n\

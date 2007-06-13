@@ -1,5 +1,5 @@
 pre.mac_classic .EmbeddedSource {
-   background-color: #F2F2F2;
+   background-color: #0C0C0C;
 }
 pre.mac_classic .LibraryObject {
    font-weight: bold;
@@ -32,7 +32,7 @@ pre.mac_classic .LibraryVariable {
    color: #21439C;
 }
 pre.mac_classic .line-numbers {
-   background-color: #C4DCFF;
+   background-color: #4D97FF;
    color: #000000;
 }
 pre.mac_classic .FunctionParameter {
@@ -72,7 +72,7 @@ pre.mac_classic .MarkupXmlDeclaration {
    color: #68685B;
 }
 pre.mac_classic .EmbeddedEmbeddedSource {
-   background-color: #F0F0F0;
+   background-color: #0E0E0E;
 }
 pre.mac_classic .PreprocessorDirective {
    font-weight: bold;

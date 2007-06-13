@@ -54,7 +54,7 @@ pre.blackboard .MetaTag {
    color: #7F90AA;
 }
 pre.blackboard .LatexEnvironment {
-   background-color: #131727;
+   background-color: #F7F7F8;
 }
 pre.blackboard .OcamlFPPrefixOperator {
    text-decoration: underline;
@@ -72,7 +72,7 @@ pre.blackboard .Keyword {
    color: #FBDE2D;
 }
 pre.blackboard .LatexEnvironmentNested {
-   background-color: #0F1427;
+   background-color: #7691F3;
 }
 pre.blackboard .InvalidDeprecated {
    color: #AB2A1D;

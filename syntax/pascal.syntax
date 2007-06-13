@@ -14,7 +14,7 @@ patterns:
     "1": 
       name: storage.type.prototype.pascal
     "2": 
-      name: entity.name.prototype.pascal
+      name: entity.name.function.prototype.pascal
   match: \b(?i:(function|procedure))\b\s+(\w+(\.\w+)?)(\(.*?\))?;\s*(?=(?i:attribute|forward|external))
 - name: meta.function.pascal
   captures: 

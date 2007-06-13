@@ -1,5 +1,5 @@
 --- 
-name: Brilliance Black
+name: "Brilliance Black \xE3\x8A\xB7"
 line: 
   begin: ""
   end: ""
@@ -15,7 +15,7 @@ tags:
   selector: meta.subtlegradient
 - begin: <span class="String">
   end: </span>
-  selector: string -meta.tag -meta.doctype -string.regexp -string.literal -string.interpolated -string.quoted.literal -string.unquoted, variable.parameter.misc.css, text string source string, string.unquoted string, string.regexp string, string.interpolated string
+  selector: string -meta.tag -meta.doctype -string.regexp -string.literal -string.interpolated -string.quoted.literal -string.unquoted, variable.parameter.misc.css, text string source string, string.unquoted string, string.regexp string
 - begin: <span class="StringPunctuation">
   end: </span>
   selector: punctuation.definition.string -meta.tag
@@ -57,7 +57,7 @@ tags:
   selector: "meta.group.assertion.regexp "
 - begin: <span class="MetaAssertion">
   end: </span>
-  selector: meta.assertion, meta.group.assertion keyword.control.group.regexp, meta.group.assertion punctuation.definition.group
+  selector: meta.assertion, meta.group.assertion keyword.control.group.regexp
 - begin: <span class="Number">
   end: </span>
   selector: constant.numeric
@@ -90,7 +90,7 @@ tags:
   selector: variable.other.readwrite.global
 - begin: <span class="Variable">
   end: </span>
-  selector: variable.language, variable.other, variable.js, punctuation.separator.variable
+  selector: variable.language, variable.other, variable.js
 - begin: <span class="ClassVariable">
   end: </span>
   selector: variable.other.readwrite.class
@@ -102,7 +102,7 @@ tags:
   selector: variable.other.php, variable.other.normal
 - begin: <span class="VariablePunctuation">
   end: </span>
-  selector: punctuation.definition, punctuation.separator.variable
+  selector: punctuation.definition
 - begin: <span class="Storage">
   end: </span>
   selector: storage -storage.modifier
@@ -126,7 +126,7 @@ tags:
   selector: support.type, support.class
 - begin: <span class="Instance">
   end: </span>
-  selector: entity.name.instance, entity.name.type.instance
+  selector: entity.name.instance
 - begin: <span class="InstanceConstructor">
   end: </span>
   selector: meta.class.instance.constructor
@@ -135,70 +135,43 @@ tags:
   selector: entity.other.inherited-class, entity.name.module
 - begin: <span class="ClassMethod">
   end: </span>
-  selector: meta.definition.method
-- begin: <span class="FunctionDeclaration">
+  selector: object.property.function, meta.definition.method
+- begin: <span class="Function">
   end: </span>
   selector: meta.function, meta.property.function, declaration.function
-- begin: <span class="FunctionDeclarationName">
+- begin: <span class="FunctionName">
   end: </span>
   selector: entity.name.function, entity.name.preprocessor
-- begin: <span class="FunctionDeclarationParameters">
-  end: </span>
-  selector: variable.parameter.function
-- begin: <span class="FunctionDeclarationParameters">
-  end: </span>
-  selector: variable.parameter -variable.parameter.misc.css, meta.definition.method  meta.definition.param-list, meta.function.method.with-arguments variable.parameter.function
-- begin: <span class="FunctionDeclarationParametersPunctuation">
-  end: </span>
-  selector: punctuation.definition.parameters, variable.parameter.function punctuation.separator.object
-- begin: <span class="FunctionCall">
-  end: </span>
-  selector: keyword.other.special-method, meta.function-call entity.name.function, support.function - variable
-- begin: <span class="LibraryFunctionCall">
-  end: </span>
-  selector: meta.function-call support.function - variable
-- begin: <span class="LibraryFunctionName">
-  end: </span>
-  selector: support.function
-- begin: <span class="FunctionCallArgumentsPunctuation">
-  end: </span>
-  selector: punctuation.section.function, meta.brace.curly.function, meta.function-call punctuation.section.scope.ruby, meta.function-call punctuation.separator.object
-- begin: <span class="FunctionPunctuation">
-  end: </span>
-  selector: meta.group.braces.round punctuation.section.scope, meta.group.braces.round meta.delimiter.object.comma, meta.brace.round
-- begin: <span class="FunctionCallWithoutArguments">
-  end: </span>
-  selector: meta.function-call.method.without-arguments, meta.function-call.method.without-arguments entity.name.function
-- begin: <span class="KeywordControl">
-  end: </span>
-  selector: keyword.control
 - begin: <span class="Keyword">
   end: </span>
   selector: keyword
-- begin: <span class="KeywordOther">
+- begin: <span class="KeywordControl">
   end: </span>
-  selector: keyword.other
-- begin: <span class="RegexKeyword">
+  selector: keyword.control
+- begin: <span class="HackKeywordControlRubyStartBlock">
   end: </span>
-  selector: source.regexp keyword.operator
+  selector: keyword.control.ruby.start-block
+- begin: <span class="LibraryFunction">
+  end: </span>
+  selector: support.function - variable
 - begin: <span class="KeywordOperator">
   end: </span>
   selector: keyword.operator, declaration.function.operator, meta.preprocessor.c.include
-- begin: <span class="KeywordOperatorAssignment">
+- begin: <span class="SpecialFunction">
   end: </span>
-  selector: keyword.operator.assignment
-- begin: <span class="KeywordOperatorArithmetic">
+  selector: keyword.other.special-method, meta.function-call entity.name.function
+- begin: <span class="KeywordOperatorGetter">
   end: </span>
-  selector: keyword.operator.arithmetic
-- begin: <span class="KeywordOperatorLogical">
+  selector: keyword.operator.getter
+- begin: <span class="KeywordOperatorSetter">
   end: </span>
-  selector: keyword.operator.logical
-- begin: <span class="KeywordOperatorComparison">
+  selector: keyword.operator.setter
+- begin: <span class="FunctionArgument">
   end: </span>
-  selector: keyword.operator.comparison
-- begin: <span class="MetaClassInstanceConstructorKeywordOperatorNew">
+  selector: variable.parameter -variable.parameter.misc.css, meta.definition.method  meta.definition.param-list, meta.function.method.with-arguments variable.parameter.function
+- begin: <span class="SourceRegexpKeyword">
   end: </span>
-  selector: meta.class.instance.constructor keyword.operator.new
+  selector: source.regexp keyword.operator
 - begin: <span class="TagDoctype">
   end: </span>
   selector: meta.doctype, meta.tag.sgml-declaration.doctype, meta.tag.sgml.doctype
@@ -219,7 +192,7 @@ tags:
   selector: meta.tag.inline source
 - begin: <span class="TagOther">
   end: </span>
-  selector: meta.tag.other, entity.name.tag.style, entity.name.tag.script, meta.tag.block.script, source.js.embedded punctuation.definition.tag.html, source.css.embedded punctuation.definition.tag.html
+  selector: meta.tag.other, entity.name.tag.style, source entity.other.attribute-name -text.html.basic.embedded , entity.name.tag.script, meta.tag.block.script
 - begin: <span class="TagForm">
   end: </span>
   selector: meta.tag.form, meta.tag.block.form
@@ -361,9 +334,6 @@ tags:
 - begin: <span class="LVariableParameterLabel">
   end: </span>
   selector: text.latex variable.parameter.label
-- begin: <span class="LMarkup">
-  end: </span>
-  selector: meta.function markup
 - begin: <span class="LMetaGroupBraces">
   end: </span>
   selector: text.latex meta.group.braces
@@ -403,9 +373,6 @@ tags:
 - begin: <span class="StringEmbeddedSource">
   end: </span>
   selector: source string source punctuation.section.embedded
-- begin: <span class="SourceJsEmbedded">
-  end: </span>
-  selector: source.js.embedded
 - begin: <span class="Source">
   end: </span>
   selector: source
@@ -433,18 +400,21 @@ tags:
 - begin: <span class="TextStringSourceStringSource">
   end: </span>
   selector: text string source string source
-- begin: <span class="Invalid">
-  end: </span>
-  selector: invalid
 - begin: <span class="Syntax">
   end: </span>
   selector: meta.syntax
+- begin: <span class="Invalid">
+  end: </span>
+  selector: invalid
 - begin: <span class="Comment">
   end: </span>
-  selector: comment -comment.line
-- begin: <span class="CommentLine">
+  selector: 0comment
+- begin: <span class="CommentPunctuation">
   end: </span>
-  selector: comment.line
+  selector: comment punctuation
+- begin: <span class="Comment">
+  end: </span>
+  selector: comment
 - begin: <span class="CommentPunctuation">
   end: </span>
   selector: comment punctuation
@@ -478,95 +448,75 @@ tags:
 - begin: <span class="BoldStringQuotes">
   end: </span>
   selector: string.quoted.single.brace, string.quoted.double.brace
-- begin: <span class="BlogPostEmailMessage">
+- begin: <span class="MetaHeadersBlog">
   end: </span>
-  selector: text.blog, text.mail
-- begin: <span class="PostContent">
+  selector: text.blog -(text.blog text)
+- begin: <span class="MetaHeadersBlog">
   end: </span>
-  selector: text.blog text, text.mail text
-- begin: <span class="PostHeaderKeys">
+  selector: meta.headers.blog
+- begin: <span class="MetaHeadersBlogKeywordOtherBlog">
   end: </span>
-  selector: meta.header.blog keyword.other, meta.header.mail keyword.other
-- begin: <span class="PostHeaderValues">
+  selector: meta.headers.blog keyword.other.blog
+- begin: <span class="MetaHeadersBlogStringUnquotedBlog">
   end: </span>
-  selector: meta.header.blog string.unquoted.blog, meta.header.mail string.unquoted
-- begin: <span class="EntityNameTypeModule">
-  end: </span>
-  selector: source.ocaml entity.name.type.module
-- begin: <span class="SupportOtherModule">
-  end: </span>
-  selector: source.ocaml support.other.module
-- begin: <span class="EntityNameTypeVariant">
-  end: </span>
-  selector: entity.name.type.variant
-- begin: <span class="EntityNameTagMetaRecordDefinition">
-  end: </span>
-  selector: source.ocaml entity.name.tag, source.ocaml meta.record.definition
+  selector: meta.headers.blog string.unquoted.blog
 - begin: <span class="MetaBracePipe">
   end: </span>
   selector: meta.brace.pipe
 - begin: <span class="MiscPunctuation">
   end: </span>
-  selector: meta.brace.erb, source.ruby.embedded.source.brace, punctuation.section.dictionary, punctuation.terminator.dictionary, punctuation.separator.object, punctuation.separator.statement, punctuation.separator.key-value.css
+  selector: meta.brace.erb, source.ruby.embedded.source.brace, punctuation.section.dictionary, punctuation.terminator.dictionary, punctuation.separator.object
 - begin: <span class="CurlyPunctuation">
   end: </span>
   selector: meta.group.braces.curly punctuation.section.scope, meta.brace.curly
 - begin: <span class="ObjectPunctuation">
   end: </span>
-  selector: punctuation.separator.objects, meta.group.braces.curly meta.delimiter.object.comma, punctuation.separator.key-value -meta.tag, source.ocaml punctuation.separator.match-definition
-- begin: <span class="FunctionPunctuation">
-  end: </span>
-  selector: punctuation.definition.function, punctuation.separator.function-return, punctuation.separator.function-definition
+  selector: punctuation.separator.objects, meta.group.braces.curly meta.delimiter.object.comma, punctuation.separator.key-value -meta.tag
 - begin: <span class="ArrayPunctuation">
   end: </span>
   selector: meta.group.braces.square punctuation.section.scope, meta.group.braces.square meta.delimiter.object.comma, meta.brace.square, punctuation.separator.array, punctuation.section.array
 - begin: <span class="MetaBraceCurlyMetaGroup">
   end: </span>
   selector: meta.brace.curly meta.group
+- begin: <span class="FunctionPunctuation">
+  end: </span>
+  selector: meta.group.braces.round punctuation.section.scope, meta.group.braces.round meta.delimiter.object.comma, meta.brace.round
+- begin: <span class="MetaBraceCurlyFunction">
+  end: </span>
+  selector: punctuation.section.function, meta.brace.curly.function, meta.function-call punctuation.section.scope.ruby
 - begin: <span class="MetaSourceEmbedded">
   end: </span>
   selector: meta.source.embedded, entity.other.django.tagbraces
 - begin: <span class="MetaGroupBracesRoundJs">
   end: </span>
   selector: source.js meta.group.braces.round, meta.scope.heredoc
-- begin: <span class="Group1">
+- begin: <span class="MetaGroupBraces1">
   end: </span>
-  selector: meta.odd-tab.group1, meta.group.braces, meta.block.slate, text.xml.strict meta.tag, meta.paren-group, meta.section
-- begin: <span class="Group2">
+  selector: meta.odd-tab.group1, meta.group.braces, meta.block.slate, text.xml.strict meta.tag
+- begin: <span class="MetaGroupBraces2">
   end: </span>
-  selector: meta.even-tab.group2, meta.group.braces meta.group.braces, meta.block.slate meta.block.slate, text.xml.strict meta.tag meta.tag, meta.group.braces meta.group.braces, meta.paren-group meta.paren-group, meta.section meta.section
-- begin: <span class="Group3">
+  selector: meta.even-tab.group2, meta.group.braces meta.group.braces, meta.block.slate meta.block.slate, text.xml.strict meta.tag meta.tag, meta.group.braces meta.group.braces
+- begin: <span class="MetaGroupBraces3">
   end: </span>
-  selector: meta.odd-tab.group3, meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces, meta.paren-group meta.paren-group meta.paren-group, meta.section meta.section meta.section
-- begin: <span class="Group4">
+  selector: meta.odd-tab.group3, meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces
+- begin: <span class="MetaGroupBraces4">
   end: </span>
-  selector: meta.even-tab.group4, meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces, meta.paren-group meta.paren-group meta.paren-group meta.paren-group, meta.section meta.section meta.section meta.section
-- begin: <span class="Group5">
+  selector: meta.even-tab.group4, meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces
+- begin: <span class="MetaGroupBraces5">
   end: </span>
-  selector: meta.odd-tab.group5, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces, meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group, meta.section meta.section meta.section meta.section meta.section
-- begin: <span class="Group6">
+  selector: meta.odd-tab.group5, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
+- begin: <span class="MetaGroupBraces6">
   end: </span>
-  selector: meta.even-tab.group6, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces, meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group, meta.section meta.section meta.section meta.section meta.section meta.section
-- begin: <span class="Group7">
+  selector: meta.even-tab.group6, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
+- begin: <span class="MetaGroupBraces7">
   end: </span>
-  selector: meta.odd-tab.group7, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces, meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group, meta.section meta.section meta.section meta.section meta.section meta.section meta.section
-- begin: <span class="Group8">
+  selector: meta.odd-tab.group7, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
+- begin: <span class="MetaGroupBraces8">
   end: </span>
-  selector: meta.even-tab.group8, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces, meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group, meta.section meta.section meta.section meta.section meta.section meta.section meta.section meta.section
-- begin: <span class="Group9">
+  selector: meta.even-tab.group8, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
+- begin: <span class="MetaGroupBraces9">
   end: </span>
-  selector: meta.odd-tab.group9, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces, meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group meta.paren-group, meta.section meta.section meta.section meta.section meta.section meta.section meta.section meta.section meta.section
-- begin: <span class="Group10">
-  end: </span>
-  selector: meta.even-tab.group10
-- begin: <span class="Group11">
-  end: </span>
-  selector: meta.odd-tab.group11
-- begin: <span class="Even">
-  end: </span>
-  selector: |
-    source.ruby meta.even-tab, source.ruby meta.even-tab.group2, source.ruby meta.even-tab.group4, source.ruby meta.even-tab.group6, source.ruby meta.even-tab.group8, source.ruby meta.even-tab.group10, source.ruby meta.even-tab.group12
-
+  selector: meta.odd-tab.group11, meta.odd-tab.group10, meta.odd-tab.group9, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
 - begin: <span class="MetaBlockSlate">
   end: </span>
   selector: meta.block.slate

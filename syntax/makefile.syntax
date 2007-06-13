@@ -4,6 +4,7 @@ fileTypes:
 - GNUmakefile
 - makefile
 - Makefile
+- OCamlMakefile
 scopeName: source.makefile
 uuid: FF1825E8-6B1C-11D9-B883-000D93589AF6
 patterns: 

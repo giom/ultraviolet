@@ -32,7 +32,8 @@ repository:
   openstep: 
     patterns: 
     - include: "#openstep_comment"
-    - include: "#openstep_plist"
+    - include: "#openstep_dictionary"
+    - include: "#openstep_array"
     - include: "#openstep_stray-char"
   xml_tags: 
     patterns: 
@@ -514,20 +515,9 @@ repository:
       patterns: 
       - include: "#openstep_string-contents"
     - name: constant.numeric.plist
-      match: "[-+]?\\d+(\\.\\d*)?(E[-+]\\d+)?"
+      match: "[-+]?\\d+(\\.\\d*)?(E[-+]\\d+)?(?!\\w)"
     - name: string.unquoted.plist
       match: "[-a-zA-Z0-9_.]+"
-  openstep_plist: 
-    name: meta.rule.plist.plist
-    captures: 
-      "0": 
-        name: punctuation.section.plist.plist
-    begin: \{
-    end: \}
-    patterns: 
-    - include: "#openstep_comment"
-    - include: "#openstep_name"
-    - include: "#openstep_stray-char"
   openstep_name: 
     patterns: 
     - name: meta.rule.named.plist
@@ -631,7 +621,7 @@ patterns:
   patterns: 
   - include: "#xml"
 - name: source.plist
-  begin: (?=\s*({|//|/\*))
+  begin: (?=\s*({|\(|//|/\*))
   end: \Z(?!\n)
   patterns: 
   - include: "#openstep"

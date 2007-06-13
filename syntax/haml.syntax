@@ -34,11 +34,11 @@ patterns:
     "1": 
       name: punctuation.definition.prolog.haml
   match: ^(!!!)($|\s.*)
-- name: comment.line.haml
+- name: comment.line.slash.haml
   captures: 
     "1": 
       name: punctuation.section.comment.haml
-  match: ^ *(/)\s*\S.*
+  match: ^ *(/)\s*\S.*$\n?
 - name: comment.block.haml
   begin: ^( *)(/)\s*$
   beginCaptures: 

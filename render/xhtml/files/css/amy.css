@@ -29,7 +29,7 @@ pre.amy .CharacterConstant {
    color: #666666;
 }
 pre.amy .line-numbers {
-   background-color: #500010;
+   background-color: #800000;
    color: #D0D0FF;
 }
 pre.amy .ClassName {
@@ -123,7 +123,7 @@ pre.amy .String {
    color: #999999;
 }
 pre.amy .Camlp4Code {
-   background-color: #2A003F;
+   background-color: #350060;
 }
 pre.amy .NonTerminalDefinitionOcamlyacc {
    color: #90E0E0;

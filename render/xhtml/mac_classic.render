@@ -36,7 +36,7 @@ tags:
   selector: keyword.control.import
 - begin: <span class="FunctionName">
   end: </span>
-  selector: entity.name.function, keyword.other.name-of-parameter.objc
+  selector: entity.name.function, support.function.any-method
 - begin: <span class="TypeName">
   end: </span>
   selector: entity.name.type

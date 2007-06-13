@@ -3,6 +3,7 @@ name: JavaScript
 fileTypes: 
 - js
 - htc
+- jsx
 scopeName: source.js
 uuid: 93E017CC-6F27-11D9-90EB-000D93589AF6
 foldingStartMarker: ^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$
@@ -230,7 +231,7 @@ patterns:
   endCaptures: 
     "1": 
       name: punctuation.definition.string.end.js
-  begin: (?<=[=(:]|^)\s*(/)(?![/*+{}?])
+  begin: (?<=[=(:]|^|return)\s*(/)(?![/*+{}?])
   beginCaptures: 
     "1": 
       name: punctuation.definition.string.begin.js

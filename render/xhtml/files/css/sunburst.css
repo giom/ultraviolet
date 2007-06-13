@@ -33,7 +33,7 @@ pre.sunburst .Storage {
    color: #99CF50;
 }
 pre.sunburst .line-numbers {
-   background-color: #2C2F32;
+   background-color: #DDF0FF;
    color: #F8F8F8;
 }
 pre.sunburst .CssClass {
@@ -73,7 +73,7 @@ pre.sunburst .SupportConstant {
    color: #CF6A4C;
 }
 pre.sunburst .MarkupQuote {
-   background-color: #110F0A;
+   background-color: #ECD091;
    color: #E1D4B9;
    font-style: italic;
 }
@@ -88,14 +88,14 @@ pre.sunburst .StringRegexpSpecial {
    color: #CF7D34;
 }
 pre.sunburst .EmbeddedSourceBright {
-   background-color: #050505;
+   background-color: #ABADB4;
 }
 pre.sunburst .InvalidIllegal {
-   background-color: #402140;
+   background-color: #150B15;
    color: #FD5FF1;
 }
 pre.sunburst .MarkupRaw {
-   background-color: #050505;
+   background-color: #ABADB4;
    color: #578BB3;
 }
 pre.sunburst .SupportFunction {
@@ -149,7 +149,7 @@ pre.sunburst {
    color: #F8F8F8;
 }
 pre.sunburst .LogEntry {
-   background-color: #262626;
+   background-color: #C7C7C7;
 }
 pre.sunburst .MarkupItalic {
    color: #E9C062;

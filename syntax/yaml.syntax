@@ -26,7 +26,7 @@ uuid: B0C44228-4F1F-11DA-AFF2-000A95AF0064
 foldingStartMarker: ^[^#]\s*.*:(\s*\[?| &.+)?$
 patterns: 
 - include: "#erb"
-- name: string.unquoted.block
+- name: string.unquoted.block.yaml
   begin: ^(\s*)(?:(-)|(?:(-\s*)?(\w+\s*(:))))\s*(\||>)
   beginCaptures: 
     "2": 
@@ -37,7 +37,7 @@ patterns:
       name: entity.name.tag.yaml
     "5": 
       name: punctuation.separator.key-value.yaml
-  end: ^(?!^\1)|^(?=\1(-|\w+\s*:))
+  end: ^(?!^\1)|^(?=\1(-|\w+\s*:)|#)
   patterns: 
   - include: "#erb"
 - name: constant.numeric.yaml

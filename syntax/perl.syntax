@@ -667,6 +667,20 @@ patterns:
       name: string.unquoted.heredoc.doublequote.perl
     "2": 
       name: punctuation.definition.heredoc.perl
+  begin: ((<<) *"POSTSCRIPT").*\n?
+  contentName: text.postscript.embedded.perl
+  end: (^POSTSCRIPT$)
+  patterns: 
+  - include: "#escaped_char"
+  - include: "#variable"
+  - include: source.postscript
+- captures: 
+    "0": 
+      name: punctuation.definition.string.perl
+    "1": 
+      name: string.unquoted.heredoc.doublequote.perl
+    "2": 
+      name: punctuation.definition.heredoc.perl
   begin: ((<<) *"([^"]*)").*\n?
   contentName: string.unquoted.heredoc.doublequote.perl
   end: (^\3$)
@@ -740,6 +754,18 @@ patterns:
       name: string.unquoted.heredoc.quote.perl
     "2": 
       name: punctuation.definition.heredoc.perl
+  begin: ((<<) *'POSTSCRIPT').*\n?
+  contentName: source.postscript.embedded.perl
+  end: (^POSTSCRIPT)
+  patterns: 
+  - include: source.postscript
+- captures: 
+    "0": 
+      name: punctuation.definition.string.perl
+    "1": 
+      name: string.unquoted.heredoc.quote.perl
+    "2": 
+      name: punctuation.definition.heredoc.perl
   begin: ((<<) *'([^']*)').*\n?
   contentName: string.unquoted.heredoc.quote.perl
   end: (^\3$)
@@ -798,6 +824,20 @@ patterns:
   - include: "#escaped_char"
   - include: "#variable"
   - include: source.sql
+- captures: 
+    "0": 
+      name: punctuation.definition.string.perl
+    "1": 
+      name: string.unquoted.heredoc.perl
+    "2": 
+      name: punctuation.definition.heredoc.perl
+  begin: ((<<) *POSTSCRIPT\b).*\n?
+  contentName: source.postscript.embedded.perl
+  end: (^POSTSCRIPT)
+  patterns: 
+  - include: "#escaped_char"
+  - include: "#variable"
+  - include: source.postscript
 - captures: 
     "0": 
       name: punctuation.definition.string.perl

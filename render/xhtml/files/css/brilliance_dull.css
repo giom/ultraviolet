@@ -5,7 +5,7 @@ pre.brilliance_dull .StringEmbeddedSource {
    color: #555F68;
 }
 pre.brilliance_dull .line-numbers {
-   background-color: #1517A6;
+   background-color: #2B2F53;
    color: #CCCCCC;
 }
 pre.brilliance_dull .StorageModifier {
@@ -39,11 +39,11 @@ pre.brilliance_dull .DDiffDelete {
    color: #BB82A0;
 }
 pre.brilliance_dull .LMetaEnvironmentList {
-   background-color: #00007D;
-   color: #0A0AD2;
+   background-color: #000000;
+   color: #515151;
 }
 pre.brilliance_dull .InheritedClass {
-   background-color: #1008D0;
+   background-color: #2C1818;
    color: #A45880;
 }
 pre.brilliance_dull .LKeywordOperatorBraces {
@@ -64,31 +64,31 @@ pre.brilliance_dull .LibraryConstant {
    color: #57A5A3;
 }
 pre.brilliance_dull .LibraryVariable {
-   background-color: #0810D8;
+   background-color: #182D2C;
    color: #57A5A3;
 }
 pre.brilliance_dull .MetaGroupBraces6 {
    background-color: #1C1C1C;
 }
 pre.brilliance_dull .MetaSourceEmbedded {
-   background-color: #00007D;
+   background-color: #000000;
    color: #666666;
 }
 pre.brilliance_dull .MetaBracePipe {
-   background-color: #0A0AD2;
+   background-color: #1C1C1C;
    color: #4C4C4C;
 }
 pre.brilliance_dull .KeywordOperatorArithmetic {
    color: #5B6190;
 }
 pre.brilliance_dull .LMetaLabelReference {
-   background-color: #0C0CFA;
+   background-color: #3C3C3C;
 }
 pre.brilliance_dull .MetaGroupBraces7 {
    background-color: #1F1F1F;
 }
 pre.brilliance_dull .TagBlockForm {
-   background-color: #0406E8;
+   background-color: #10181F;
 }
 pre.brilliance_dull .MRawBlock {
    background-color: #000000;
@@ -106,24 +106,24 @@ pre.brilliance_dull .MetaGroupBraces8 {
 }
 pre.brilliance_dull .MetaDelimiter {
    font-weight: bold;
-   background-color: #0202FA;
+   background-color: #111111;
    color: #FFFFFF;
 }
 pre.brilliance_dull .LMetaEnvironmentList2 {
-   background-color: #00007D;
-   color: #0A0AD2;
+   background-color: #000000;
+   color: #515151;
 }
 pre.brilliance_dull .LMetaFootnote {
-   background-color: #0808D8;
-   color: #1A1AE0;
+   background-color: #18172D;
+   color: #7A7BB0;
 }
 pre.brilliance_dull .RegexKeyword {
 }
 pre.brilliance_dull .StringRegexGroup1 {
-   background-color: #0C10D0;
+   background-color: #232D18;
 }
 pre.brilliance_dull .TagName {
-   color: #4C4CFB;
+   color: #EFEFEF;
 }
 pre.brilliance_dull .VariableLanguageThisJsPrototype {
    color: #666666;
@@ -135,10 +135,10 @@ pre.brilliance_dull .BoldStringQuotes {
    font-weight: bold;
 }
 pre.brilliance_dull .MetaDelimiterObjectJs {
-   background-color: #0000BB;
+   background-color: #000000;
 }
 pre.brilliance_dull .MetaDelimiterStatementJs {
-   background-color: #00003F;
+   background-color: #000000;
 }
 pre.brilliance_dull .Invalid {
    font-weight: bold;
@@ -147,10 +147,10 @@ pre.brilliance_dull .Invalid {
 }
 pre.brilliance_dull .LMetaEnvironmentList3 {
    background-color: #000000;
-   color: #0A0AD2;
+   color: #515151;
 }
 pre.brilliance_dull .MQuoteBlock {
-   background-color: #1919FA;
+   background-color: #616161;
 }
 pre.brilliance_dull .ClassMethod {
    color: #A45880;
@@ -158,43 +158,43 @@ pre.brilliance_dull .ClassMethod {
 pre.brilliance_dull .Keyword {
 }
 pre.brilliance_dull .AttributeMatch {
-   background-color: #0808D8;
+   background-color: #18172D;
    color: #5859A5;
 }
 pre.brilliance_dull .StringRegexGroup2 {
-   background-color: #0C10D0;
-   color: #6565FB;
+   background-color: #232D18;
+   color: #EAEAEA;
 }
 pre.brilliance_dull .DDiffAdd {
    background-color: #14281D;
    color: #82BB9C;
 }
 pre.brilliance_dull .MetaBraceErbReturnValue {
-   background-color: #0810D5;
+   background-color: #182D25;
    color: #58A58A;
 }
 pre.brilliance_dull .LMetaEnvironmentList4 {
-   color: #0A0AD2;
+   color: #515151;
 }
 pre.brilliance_dull .FunctionDeclarationParametersPunctuation {
    color: #512C2C;
 }
 pre.brilliance_dull .TagAttribute {
-   color: #3232FA;
+   color: #F4F4F4;
 }
 pre.brilliance_dull .MReference {
    color: #5780A5;
 }
 pre.brilliance_dull .StringRegexGroup3 {
-   background-color: #0C10D0;
-   color: #6565FB;
+   background-color: #232D18;
+   color: #EAEAEA;
 }
 pre.brilliance_dull .GlobalVariable {
-   background-color: #080CD8;
+   background-color: #18232D;
    color: #2C5251;
 }
 pre.brilliance_dull .LMetaEnvironmentList5 {
-   color: #0A0AD2;
+   color: #515151;
 }
 pre.brilliance_dull .EntityNamePreprocessor {
 }
@@ -202,14 +202,14 @@ pre.brilliance_dull .FunctionDeclarationParameters {
    color: #BABBD9;
 }
 pre.brilliance_dull .StringRegexGroup4 {
-   background-color: #0C10D0;
-   color: #6565FB;
+   background-color: #232D18;
+   color: #EAEAEA;
 }
 pre.brilliance_dull .LSupportFunctionSection {
-   color: #BEBEFD;
+   color: #D8D8D8;
 }
 pre.brilliance_dull .LMetaEnvironmentList6 {
-   color: #0A0AD2;
+   color: #515151;
 }
 pre.brilliance_dull .Id {
    color: #A45880;
@@ -233,24 +233,24 @@ pre.brilliance_dull .TextSubversionCommit {
    color: #000000;
 }
 pre.brilliance_dull .SourceEmbededSource {
-   background-color: #0505E5;
+   background-color: #131313;
 }
 pre.brilliance_dull .LVariableParameterLabel {
-   color: #7F7FFC;
+   color: #E5E5E5;
 }
 pre.brilliance_dull .TagOther {
-   background-color: #1008D0;
+   background-color: #2C1818;
    color: #A5585A;
 }
 pre.brilliance_dull .ClassVariable {
-   background-color: #1111E9;
+   background-color: #30305A;
    color: #5780A5;
 }
 pre.brilliance_dull .MetaGroupAssertionRegexp {
-   background-color: #1119E9;
+   background-color: #2F465A;
 }
 pre.brilliance_dull .KeywordOperatorLogical {
-   background-color: #0A0ADB;
+   background-color: #1C1C36;
    color: #7C85B8;
 }
 pre.brilliance_dull .DDiffChanged {
@@ -264,7 +264,7 @@ pre.brilliance_dull .StringInterpolated {
    color: #D1D1AB;
 }
 pre.brilliance_dull .InstanceConstructor {
-   background-color: #1008D4;
+   background-color: #2D1823;
 }
 pre.brilliance_dull .Instance {
    color: #A5585A;
@@ -281,7 +281,7 @@ pre.brilliance_dull .LMarkupRaw {
    background-color: #000000;
 }
 pre.brilliance_dull .StringPunctuationIi {
-   color: #2020D9;
+   color: #ACAB6F;
 }
 pre.brilliance_dull .Css {
 }
@@ -296,28 +296,28 @@ pre.brilliance_dull .LKeywordControlRef {
    color: #A5585A;
 }
 pre.brilliance_dull .MetaHeadersBlogKeywordOtherBlog {
-   background-color: #0810F1;
+   background-color: #213F3E;
    color: #182A29;
 }
 pre.brilliance_dull .PseudoClass {
    color: #7D58A4;
 }
 pre.brilliance_dull {
-   background-color: #000005;
+   background-color: #000000;
    color: #CCCCCC;
 }
 pre.brilliance_dull .TagBlockHead {
    background-color: #121212;
 }
 pre.brilliance_dull .StringRegexArbitraryRepitition {
-   background-color: #0C10D0;
+   background-color: #232D18;
    color: #57A5A3;
 }
 pre.brilliance_dull .LKeywordOperatorDelimiter {
-   background-color: #00007D;
+   background-color: #000000;
 }
 pre.brilliance_dull .MReferenceName {
-   background-color: #080CD8;
+   background-color: #18232D;
    color: #57A5A3;
 }
 pre.brilliance_dull .TextSubversionCommitMetaScopeChangedFiles {
@@ -325,14 +325,14 @@ pre.brilliance_dull .TextSubversionCommitMetaScopeChangedFiles {
    color: #FFFFFF;
 }
 pre.brilliance_dull .VariablePunctuation {
-   color: #00007D;
+   color: #666666;
 }
 pre.brilliance_dull .MUnderlineLink {
    text-decoration: underline;
    color: #57A5A3;
 }
 pre.brilliance_dull .Selector {
-   background-color: #00007D;
+   background-color: #000000;
    color: #666666;
 }
 pre.brilliance_dull .TagDoctype {
@@ -343,14 +343,14 @@ pre.brilliance_dull .Class {
    color: #A358A5;
 }
 pre.brilliance_dull .BuiltInConstant {
-   background-color: #0810D0;
+   background-color: #182D18;
    color: #5AA557;
 }
 pre.brilliance_dull .MBold {
    font-weight: bold;
 }
 pre.brilliance_dull .MHeading {
-   background-color: #191996;
+   background-color: #262626;
    color: #666666;
 }
 pre.brilliance_dull .ConstantVariable {
@@ -406,14 +406,14 @@ pre.brilliance_dull .LibraryFunctionCall {
    color: #9D80BA;
 }
 pre.brilliance_dull .MetaHeadersBlogStringUnquotedBlog {
-   background-color: #1313EF;
+   background-color: #4A4A36;
 }
 pre.brilliance_dull .StringRegexCharacterClass {
-   background-color: #0C10D0;
+   background-color: #232D18;
    color: #80A557;
 }
 pre.brilliance_dull .LibraryFunctionName {
-   background-color: #1210DC;
+   background-color: #332D39;
    color: #5E5368;
 }
 pre.brilliance_dull .MetaBlockContentSlate {
@@ -431,25 +431,25 @@ pre.brilliance_dull .MetaBlockSlate {
    color: #666666;
 }
 pre.brilliance_dull .SourceRubyRailsEmbeddedOneLine {
-   background-color: #0810F1;
+   background-color: #213F3E;
 }
 pre.brilliance_dull .SourceRubyRailsEmbeddedReturnValueOneLine {
-   background-color: #1919E1;
+   background-color: #464646;
 }
 pre.brilliance_dull .MMarkup {
-   background-color: #0A0AD2;
+   background-color: #1C1C1C;
    color: #A5A358;
 }
 pre.brilliance_dull .TagBlock {
-   background-color: #0F0FD7;
+   background-color: #292929;
    color: #4C4C4C;
 }
 pre.brilliance_dull .SourceStringInterpolatedSource {
-   background-color: #000064;
+   background-color: #000000;
    color: #999999;
 }
 pre.brilliance_dull .SourceStringSource {
-   background-color: #191996;
+   background-color: #262626;
    color: #FFFFFF;
 }
 pre.brilliance_dull .xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx {
@@ -460,15 +460,15 @@ pre.brilliance_dull .LKeywordOperatorBrackets {
    color: #999999;
 }
 pre.brilliance_dull .TagMeta {
-   background-color: #0C08D8;
+   background-color: #22182D;
    color: #A358A5;
 }
 pre.brilliance_dull .GlobalPreDefinedVariable {
-   background-color: #0810D8;
+   background-color: #182D2C;
    color: #58A57C;
 }
 pre.brilliance_dull .TagForm {
-   background-color: #080CD8;
+   background-color: #18232D;
    color: #5780A5;
 }
 pre.brilliance_dull .Tag {
@@ -497,11 +497,11 @@ pre.brilliance_dull .SupportTypePropertyName {
    color: #FFFFFF;
 }
 pre.brilliance_dull .StringLiteral {
-   background-color: #0C10D0;
+   background-color: #232D18;
    color: #A5A358;
 }
 pre.brilliance_dull .KeywordOperatorAssignment {
-   background-color: #0A0ADB;
+   background-color: #1C1C36;
    color: #464684;
 }
 pre.brilliance_dull .KeywordOperatorComparison {
@@ -514,8 +514,8 @@ pre.brilliance_dull .MetaHeadersBlog {
    color: #666666;
 }
 pre.brilliance_dull .Comment {
-   background-color: #0A0AD2;
-   color: #28285B;
+   background-color: #1C1C1C;
+   color: #ACACAC;
 }
 pre.brilliance_dull .Text {
    color: #FFFFFF;
@@ -524,7 +524,7 @@ pre.brilliance_dull .FunctionCallWithoutArguments {
    color: #A79EAE;
 }
 pre.brilliance_dull .StringRegex {
-   background-color: #0C10D0;
+   background-color: #232D18;
    color: #A5A358;
 }
 pre.brilliance_dull .FunctionCall {
@@ -533,12 +533,12 @@ pre.brilliance_dull .FunctionCall {
 pre.brilliance_dull .CommentPunctuation {
 }
 pre.brilliance_dull .LMetaGroupBraces {
-   color: #0A0AD2;
+   color: #515151;
 }
 pre.brilliance_dull .MetaTagInlineSource {
 }
 pre.brilliance_dull .TagStructure {
-   background-color: #262665;
+   background-color: #292929;
    color: #666666;
 }
 pre.brilliance_dull .Storage {
@@ -548,7 +548,7 @@ pre.brilliance_dull .MetaAssertion {
    color: #5780A5;
 }
 pre.brilliance_dull .MetaBraceCurlyMetaGroup {
-   background-color: #00007D;
+   background-color: #000000;
    color: #CCCCCC;
 }
 pre.brilliance_dull .ArrayPunctuation {
@@ -562,7 +562,7 @@ pre.brilliance_dull .CharacterConstant {
    color: #80A557;
 }
 pre.brilliance_dull .LibraryClassType {
-   background-color: #1008D0;
+   background-color: #2C1818;
    color: #A5585A;
 }
 pre.brilliance_dull .Number {
@@ -572,7 +572,7 @@ pre.brilliance_dull .MetaGroupBraces1 {
    background-color: #0A0A0A;
 }
 pre.brilliance_dull .TagValue {
-   color: #6565FB;
+   color: #EAEAEA;
 }
 pre.brilliance_dull .FunctionDeclaration {
    color: #A45880;

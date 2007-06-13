@@ -27,6 +27,21 @@ patterns:
     "1": 
       name: punctuation.definition.comment.apache-config
   match: (#).*$\n?
+- name: meta.tag.any.html
+  captures: 
+    "6": 
+      name: punctuation.definition.tag.apache-config
+    "1": 
+      name: punctuation.definition.tag.apache-config
+    "2": 
+      name: entity.name.tag.apache-config
+    "3": 
+      name: punctuation.definition.tag.apache-config
+    "4": 
+      name: meta.scope.between-tag-pair.apache-config
+    "5": 
+      name: entity.name.tag.apache-config
+  match: ^[ ]*(<)([a-zA-Z0-9:]+)[^>]*(>(<)/)(\2)(>)
 - name: meta.vhost.apache-config
   endCaptures: 
     "1": 
@@ -71,7 +86,7 @@ patterns:
     "3": 
       name: entity.name.tag.apache-config
     "4": 
-      name: meta.toc-list.virtual-host.apache-config
+      name: meta.toc-list.directory.apache-config
     "5": 
       name: punctuation.definition.tag.apache-config
   end: ^[ ]*((</)(Directory(?:Match)?)[^>]*(>))
@@ -96,7 +111,7 @@ patterns:
     "3": 
       name: entity.name.tag.apache-config
     "4": 
-      name: meta.toc-list.virtual-host.apache-config
+      name: meta.toc-list.location.apache-config
     "5": 
       name: punctuation.definition.tag.apache-config
   end: ^[ ]*((</)(Location(?:Match)?)[^>]*(>))

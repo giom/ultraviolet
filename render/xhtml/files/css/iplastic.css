@@ -32,7 +32,7 @@ pre.iplastic .line-numbers {
    color: #000000;
 }
 pre.iplastic {
-   background-color: #EEEEED;
+   background-color: #727272;
    color: #000000;
 }
 pre.iplastic .FrameTitle {
@@ -52,14 +52,14 @@ pre.iplastic .XmlDeclaration {
    color: #333333;
 }
 pre.iplastic .TrailingWhitespace {
-   background-color: #EEEEEB;
+   background-color: #EEEEEE;
 }
 pre.iplastic .TagAttribute {
    color: #3366CC;
    font-style: italic;
 }
 pre.iplastic .Invalid {
-   background-color: #EBAEA9;
+   background-color: #E7342D;
    color: #FF0000;
 }
 pre.iplastic .Keyword {

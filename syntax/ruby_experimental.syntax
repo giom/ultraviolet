@@ -104,14 +104,14 @@ foldingStartMarker: "(?x)^\n\
   \t"
 patterns: 
 - name: meta.function-call.method.without-arguments.ruby
-  begin: (?<=[^\.]\.|::)(?=[a-zA-Z][a-zA-Z0-9_!?=]*[^a-zA-Z0-9_!?=])
-  end: (?<=[a-zA-Z0-9_!?=])(?=[^a-zA-Z0-9_!?=])
+  begin: (?<=[^\.]\.|::)(?=[a-zA-Z][a-zA-Z0-9_!?]*[^a-zA-Z0-9_!?])
+  end: (?<=[a-zA-Z0-9_!?])(?=[^a-zA-Z0-9_!?])
   patterns: 
   - include: "#known_function_names"
   - name: entity.name.function.ruby
-    match: ([a-zA-Z][a-zA-Z0-9_!?=]*)(?=[^a-zA-Z0-9_!?=])
+    match: ([a-zA-Z][a-zA-Z0-9_!?]*)(?=[^a-zA-Z0-9_!?])
 - name: meta.function-call.method.with-arguments.ruby
-  begin: (?<=[^\.])(?=(\.|::)[a-zA-Z][a-zA-Z0-9_!?=]*\()(\.|::)
+  begin: (?<=[^\.])(?=(\.|::)[a-zA-Z][a-zA-Z0-9_!?]*\()(\.|::)
   beginCaptures: 
     "1": 
       name: punctuation.separator.method.ruby
@@ -120,21 +120,21 @@ patterns:
   - include: "#nest_function_parens"
   - include: "#known_function_names"
   - name: entity.name.function.ruby
-    match: ([a-zA-Z][a-zA-Z0-9_!?=]*)(?=\()
+    match: ([a-zA-Z][a-zA-Z0-9_!?]*)(?=\()
   - include: $self
 - name: meta.function-call.ruby
-  begin: (?=[a-zA-Z0-9_!?=]+\()
+  begin: (?=[a-zA-Z0-9_!?]+\()
   end: (?<=\))
   patterns: 
   - include: "#nest_function_parens"
   - include: "#known_function_names"
   - name: entity.name.function.ruby
-    match: ([a-zA-Z0-9_!?=]+)(?=\()
+    match: ([a-zA-Z0-9_!?]+)(?=\()
   - include: $self
 - include: "#leading-space"
 - include: source.ruby
 - name: variable.other.ruby
-  match: ((?<=\W)\b|^)\w+\b(?=\s*([\]\)\}\=\+\-\*\/\^\$\:\,]|<\s|<<\s))
+  match: ((?<=\W)\b|^)\w+\b(?=\s*([\]\)\}\=\+\-\*\/\^\$\,]|<\s|<<\s))
   comment: This is kindof experimental. There really is no way to perfectly match all regular variables, but you can pretty well assume that any normal word in certain curcumstances that havnt already been scoped as something else are probably variables, and the advantages beat the potential errors
 foldingStopMarker: "(?x)\n\
   \t\t(   (^|;) \\s*+ end   \\s*+ ([#].*)? $\n\

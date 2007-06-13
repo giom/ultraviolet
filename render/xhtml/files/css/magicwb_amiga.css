@@ -32,7 +32,7 @@ pre.magicwb_amiga .ObjectiveCMethodCall {
    font-style: italic;
 }
 pre.magicwb_amiga .ConstantUserDefined {
-   background-color: #7878AA;
+   background-color: #1D1DEA;
    color: #FFA995;
 }
 pre.magicwb_amiga .LibraryConstant {
@@ -82,7 +82,7 @@ pre.magicwb_amiga .Keyword {
    font-weight: bold;
 }
 pre.magicwb_amiga .String {
-   background-color: #AA7878;
+   background-color: #EA1D1D;
    color: #FFFFFF;
 }
 pre.magicwb_amiga {

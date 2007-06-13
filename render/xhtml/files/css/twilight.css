@@ -21,7 +21,7 @@ pre.twilight .DiffChanged {
    color: #F8F8F8;
 }
 pre.twilight .EmbeddedSource {
-   background-color: #202020;
+   background-color: #A3A6AD;
 }
 pre.twilight .Support {
    color: #9B859D;
@@ -36,7 +36,7 @@ pre.twilight .Storage {
    color: #F9EE98;
 }
 pre.twilight .line-numbers {
-   background-color: #3C3F42;
+   background-color: #DDF0FF;
    color: #F8F8F8;
 }
 pre.twilight .CssClass {
@@ -71,10 +71,10 @@ pre.twilight .StringRegexpSpecial {
    color: #CF7D34;
 }
 pre.twilight .EmbeddedSourceBright {
-   background-color: #282829;
+   background-color: #9C9EA4;
 }
 pre.twilight .InvalidIllegal {
-   background-color: #452645;
+   background-color: #241A24;
    color: #F8F8F8;
 }
 pre.twilight .SupportFunction {

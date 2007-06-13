@@ -41,7 +41,7 @@ uuid: 69AA0917-B7BB-11D9-A7E2-000D93C8BE28
 foldingStartMarker: /\*\*(?!\*)|\{\s*($|/\*(?!.*?\*/.*\S))
 patterns: 
 - name: meta.selector.css
-  begin: ^(?=\s*[.*#a-zA-Z])
+  begin: ^(?=\s*[:.*#a-zA-Z])
   end: (?=\{)
   patterns: 
   - include: "#comment-block"
@@ -56,14 +56,19 @@ patterns:
     captures: 
       "1": 
         name: punctuation.definition.entity.css
-    match: (#)[a-zA-Z][a-zA-Z0-9_.:-]*
+    match: (#)[a-zA-Z][a-zA-Z0-9_-]*
   - name: entity.name.tag.wildcard.css
     match: \*
+  - name: entity.other.attribute-name.pseudo-element.css
+    captures: 
+      "1": 
+        name: punctuation.definition.entity.css
+    match: (:+)\b(after|before|first-child|first-letter|first-line|selection)\b
   - name: entity.other.attribute-name.pseudo-class.css
     captures: 
       "1": 
         name: punctuation.definition.entity.css
-    match: (:)\b(active|after|before|first-child|first-letter|first-line|hover|link|visited)\b
+    match: (:)\b(active|hover|link|visited|focus)\b
   - name: meta.attribute-selector.css
     captures: 
       "6": 

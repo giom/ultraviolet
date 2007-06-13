@@ -39,7 +39,7 @@ repository:
           name: punctuation.definition.italic.twiki
         "2": 
           name: punctuation.definition.italic.twiki
-      match: (_)[\s\w :.\?']*(_)
+      match: \b(_)[\s\w :.\?']*(_)\b
     - captures: 
         "6": 
           name: punctuation.definition.raw.fixed.twiki
@@ -234,7 +234,7 @@ patterns:
   - include: "#numlist-paragraph"
 - name: meta.paragraph.twiki
   begin: ^(?=\S)
-  end: ^(?:\s*$|(?=\s*>|[=-]{3,}$))
+  end: ^\s*$
   patterns: 
   - include: "#inline"
   - include: text.html.basic

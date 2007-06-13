@@ -8,6 +8,7 @@ fileTypes:
 - cpt
 - dtml
 - rss
+- opml
 scopeName: text.xml
 repository: 
   tagStuff: 

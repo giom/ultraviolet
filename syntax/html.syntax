@@ -183,6 +183,7 @@ foldingStartMarker: |-
   		(<(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)\b.*?>
   		|<!--(?!.*--\s*>)
   		|^<!--\ \#tminclude\ (?>.*?-->)$
+  		|<\?(?:php)?.*\b(if|for(each)?|while)\b.+:
   		|\{\{?(if|foreach|capture|literal|foreach|php|section|strip)
   		|\{\s*($|\?>\s*$|//|/\*(.*\*/\s*$|(?!.*?\*/)))
   		)
@@ -227,6 +228,7 @@ patterns:
   patterns: 
   - name: invalid.illegal.bad-comments-or-CDATA.html
     match: --
+  - include: "#embedded-code"
 - name: meta.tag.sgml.html
   captures: 
     "0": 
@@ -248,10 +250,7 @@ patterns:
     end: "]](?=>)"
   - name: invalid.illegal.bad-comments-or-CDATA.html
     match: (\s*)(?!--|>)\S(\s*)
-- include: "#python"
-- include: "#ruby"
-- include: "#php"
-- include: "#smarty"
+- include: "#embedded-code"
 - name: source.css.embedded.html
   captures: 
     "1": 
@@ -356,6 +355,7 @@ foldingStopMarker: |-
   		(</(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)>
   		|^(?!.*?<!--).*?--\s*>
   		|^<!--\ end\ tminclude\ -->$
+  		|<\?(?:php)?.*\bend(if|for(each)?|while)\b
   		|\{\{?/(if|foreach|capture|literal|foreach|php|section|strip)
   		|^[^{]*\}
   		)

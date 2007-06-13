@@ -4,6 +4,7 @@ fileTypes:
 - cfm
 - cfml
 - cfc
+bundleUUID: 1A09BE0B-E81A-4CB7-AF69-AFC845162D1F
 scopeName: text.html.cfm
 repository: 
   tag-stuff: 
@@ -82,8 +83,8 @@ patterns:
   end: </((?i:cfoutput))>(?:\s*\n)?
   patterns: 
   - include: "#tag-stuff"
-  - begin: ">"
-    contentName: meta.scope.output.cfml
+  - name: meta.scope.output.cfml
+    begin: (?<=>)
     end: (?=</(?i:cfoutput))
     patterns: 
     - include: $self
@@ -115,4 +116,4 @@ foldingStopMarker: |-
   		(</(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl|cfloop|cfif|cfswitch|cfcomponent)>
   		|^(?!.*?<!---).*?---\s*>
   		)
-keyEquivalent: ^~C
+keyEquivalent: ^~@c

@@ -31,8 +31,10 @@ repository:
         "2": 
           name: constant.other.scope.tm-grammar
         "3": 
-          name: invalid.deprecated.scope_not_allowed.tm-grammar
+          name: constant.other.scope.tm-grammar
         "4": 
+          name: invalid.deprecated.scope_not_allowed.tm-grammar
+        "5": 
           name: punctuation.definition.string.end.tm-grammar
       match: "(?x)\n\
         \t\t\t\t\t\t(')\t\t\t\t\t\t\t\t# Open String\n\
@@ -42,64 +44,52 @@ repository:
         \t\t\t\t\t\t\t\t\t\t\t\t\t\t# anything else is invalid\n\
         \t\t\t\t\t\t\t\tcomment(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:line|block)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | constant(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:numeric|character|language|other)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | entity(?:\n\
         \t\t\t\t\t\t\t\t\t\\.name(?:\n\
         \t\t\t\t\t\t\t\t\t\t\\.(?:function|type|tag|section)\n\
-        \t\t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t\t  | \\.other(?:\n\
         \t\t\t\t\t\t\t\t\t\t\\.(?:inherited-class|attribute-name)\n\
-        \t\t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | invalid(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:illegal|deprecated)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | keyword(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:control|operator|other)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | markup(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:underline|bold|heading|italic|list|quote|raw|other)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
-        \t\t\t\t\t\t\t  | meta(?:\\.[^']*)?\n\
+        \t\t\t\t\t\t\t  | meta\n\
         \t\t\t\t\t\t\t  | punctuation(?:\n\
-        \t\t\t\t\t\t\t\t\t\\.(?:definition|section|separator|terminator)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
+        \t\t\t\t\t\t\t\t\t\\.(?:definition|section|separator|terminator|whitespace)\n\
         \t\t\t\t\t\t\t\t)?\n\
-        \t\t\t\t\t\t\t  | source(?:\\.[^']*)?\n\
+        \t\t\t\t\t\t\t  | source\n\
         \t\t\t\t\t\t\t  | storage(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:type|modifier)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | string(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:\n\
         \t\t\t\t\t\t\t\t\t\tquoted(?:\n\
         \t\t\t\t\t\t\t\t\t\t\t\\.(?:single|double|triple|other)\n\
-        \t\t\t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t\t\t  | (?:unquoted|interpolated|regexp|other)\n\
-        \t\t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t\t)\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | support(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:function|class|type|constant|variable|other)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
-        \t\t\t\t\t\t\t  | text(?:\\.[^']*)?\n\
+        \t\t\t\t\t\t\t  | text\n\
         \t\t\t\t\t\t\t  | variable(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:parameter|language|other)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^']*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
-        \t\t\t\t\t\t\t)?(?:\\b|(?<='))\n\
+        \t\t\t\t\t\t\t)?\n\
+        \t\t\t\t\t\t\t((?<!')[^\\s,()&|\\[\\]:\"'{}<>*?=^;]*(?<!\\.))?\n\
         \t\t\t\t\t\t\t([^']*)?\n\
         \t\t\t\t\t\t(')\t\t\t\t\t\t\t\t# Close String\n\
         \t\t\t\t\t"
@@ -110,8 +100,10 @@ repository:
         "2": 
           name: constant.other.scope.tm-grammar
         "3": 
-          name: invalid.deprecated.scope_not_allowed.tm-grammar
+          name: constant.other.scope.tm-grammar
         "4": 
+          name: invalid.deprecated.scope_not_allowed.tm-grammar
+        "5": 
           name: punctuation.definition.string.end.tm-grammar
       match: "(?x)\n\
         \t\t\t\t\t\t(\")\t\t\t\t\t\t\t\t# Open String\n\
@@ -121,64 +113,52 @@ repository:
         \t\t\t\t\t\t\t\t\t\t\t\t\t\t# anything else is invalid\n\
         \t\t\t\t\t\t\t\tcomment(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:line|block)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | constant(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:numeric|character|language|other)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | entity(?:\n\
         \t\t\t\t\t\t\t\t\t\\.name(?:\n\
         \t\t\t\t\t\t\t\t\t\t\\.(?:function|type|tag|section)\n\
-        \t\t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t\t  | \\.other(?:\n\
         \t\t\t\t\t\t\t\t\t\t\\.(?:inherited-class|attribute-name)\n\
-        \t\t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | invalid(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:illegal|deprecated)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | keyword(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:control|operator|other)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | markup(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:underline|bold|heading|italic|list|quote|raw|other)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
-        \t\t\t\t\t\t\t  | meta(?:\\.[^\"]*)?\n\
+        \t\t\t\t\t\t\t  | meta\n\
         \t\t\t\t\t\t\t  | punctuation(?:\n\
-        \t\t\t\t\t\t\t\t\t\\.(?:definition|section|separator|terminator)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
+        \t\t\t\t\t\t\t\t\t\\.(?:definition|section|separator|terminator|whitespace)\n\
         \t\t\t\t\t\t\t\t)?\n\
-        \t\t\t\t\t\t\t  | source(?:\\.[^\"]*)?\n\
+        \t\t\t\t\t\t\t  | source\n\
         \t\t\t\t\t\t\t  | storage(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:type|modifier)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | string(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:\n\
         \t\t\t\t\t\t\t\t\t\tquoted(?:\n\
         \t\t\t\t\t\t\t\t\t\t\t\\.(?:single|double|triple|other)\n\
-        \t\t\t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t\t\t  | (?:unquoted|interpolated|regexp|other)\n\
-        \t\t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t\t)\n\
         \t\t\t\t\t\t\t\t)?\n\
         \t\t\t\t\t\t\t  | support(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:function|class|type|constant|variable|other)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
-        \t\t\t\t\t\t\t  | text(?:\\.[^\"]*)?\n\
+        \t\t\t\t\t\t\t  | text\n\
         \t\t\t\t\t\t\t  | variable(?:\n\
         \t\t\t\t\t\t\t\t\t\\.(?:parameter|language|other)\n\
-        \t\t\t\t\t\t\t\t\t(?:\\.[^\"]*)?\n\
         \t\t\t\t\t\t\t\t)?\n\
-        \t\t\t\t\t\t\t)?(?:\\b|(?<=\"))\n\
+        \t\t\t\t\t\t\t)?\n\
+        \t\t\t\t\t\t\t((?<!\")[^\\s,()&|\\[\\]:\"'{}<>*?=^;]*(?<!\\.))?\n\
         \t\t\t\t\t\t\t([^\"]*)?\n\
         \t\t\t\t\t\t(\")\t\t\t\t\t\t\t\t# Close String\n\
         \t\t\t\t\t"
@@ -449,7 +429,37 @@ repository:
       end: (;)
       patterns: 
       - include: "#comment"
-      - include: "#string"
+      - name: string.quoted.single.include.tm-grammar
+        captures: 
+          "6": 
+            name: punctuation.definition.string.end.tm-grammar
+          "1": 
+            name: punctuation.definition.string.begin.tm-grammar
+          "2": 
+            name: constant.other.reference.repository-item.tm-grammar
+          "3": 
+            name: punctuation.definition.constant.tm-grammar
+          "4": 
+            name: constant.other.reference.grammar.tm-grammar
+          "5": 
+            name: punctuation.definition.constant.tm-grammar
+        match: (')(?:((#)[-a-zA-Z0-9._]+)|((\$)(?:base|self)))?(')
+      - name: string.quoted.double.include.tm-grammar
+        captures: 
+          "6": 
+            name: punctuation.definition.string.end.tm-grammar
+          "1": 
+            name: punctuation.definition.string.begin.tm-grammar
+          "2": 
+            name: constant.other.reference.repository-item.tm-grammar
+          "3": 
+            name: punctuation.definition..tm-grammar
+          "4": 
+            name: constant.other.reference.grammar.tm-grammar
+          "5": 
+            name: punctuation.definition..tm-grammar
+        match: (')(?:((#)[-a-zA-Z0-9._]+)|((\$)(?:base|self)))?(')
+      - include: "#scope-root"
       - include: "#catch-all"
       comment: include
     - name: meta.dictionary.captures.tm-grammar
@@ -489,6 +499,7 @@ repository:
             end: (\})
             patterns: 
             - include: "#comment"
+            - include: "#comment-keyword"
             - name: meta.value-pair.tm-grammar
               endCaptures: 
                 "1": 
