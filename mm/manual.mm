@@ -793,3 +793,7 @@ end
 
 * [Macaronic markup engine http://mama.rubyforge.org/].
 * [Radiograph rails plugin http://agilewebdevelopment.com/plugins/radiograph].
+
+= Other =
+
+* [Uv tutorial in french http://blog.irrealia.org/articles/2007/06/13/apr-egrave-s-coderay-ultraviolet-utilisation-dans-rails-en-ligne-de-commande-ou-comme-une-librairie]
