@@ -112,11 +112,11 @@ render["tags"] = []
       if s = t["settings"]
          style = {}
          style["color"] = normalize_color(s["foreground"], true)
-         style["background-color"] = alpha_blend("#000000FF", s["background"])
+         style["background-color"] = alpha_blend(s["background"], s["background"])
          css[code_name] = style
          @style = style
          style = {}
-         style["color"] = alpha_blend(s["selection"], s["foreground"])
+         style["color"] = alpha_blend( s["background"], s["background"] )
          style["background-color"] = alpha_blend(s["selection"], s["selection"])
          css[".line-numbers"] = style
          

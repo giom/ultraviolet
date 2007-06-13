@@ -34,7 +34,7 @@ pre.sunburst .Storage {
 }
 pre.sunburst .line-numbers {
    background-color: #DDF0FF;
-   color: #F8F8F8;
+   color: #000000;
 }
 pre.sunburst .CssClass {
    color: #9B703F;
