@@ -33,7 +33,7 @@ pre.mac_classic .LibraryVariable {
 }
 pre.mac_classic .line-numbers {
    background-color: #4D97FF;
-   color: #FFFFFF;
+   color: #000000;
 }
 pre.mac_classic .FunctionParameter {
    font-style: italic;

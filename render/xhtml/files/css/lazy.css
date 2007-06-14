@@ -28,7 +28,7 @@ pre.lazy .OcamlOperator {
 }
 pre.lazy .line-numbers {
    background-color: #E3FC8D;
-   color: #FFFFFF;
+   color: #000000;
 }
 pre.lazy .StringInterpolation {
    color: #671EBB;

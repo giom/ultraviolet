@@ -114,6 +114,7 @@ syntax/html.syntax
 syntax/c.syntax
 syntax/pmwiki.syntax
 syntax/ruby.syntax
+syntax/truby.syntax
 syntax/csv.syntax
 syntax/ruby_on_rails.syntax
 syntax/xsl.syntax

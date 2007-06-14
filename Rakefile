@@ -25,7 +25,7 @@ begin
       p.url = 'http://ultraviolet.rubyforge.org'
       p.rdoc_pattern = /^(lib|bin|ext)|txt$/
       p.changes = p.paragraphs_of('History.txt', 0).join("\n\n")
-      p.extra_deps << ['textpow', '>= 0.9.0']
+      p.extra_deps << ['textpow', '>= 0.10.0']
       p.clean_globs = ["manual/*"]
    end
    

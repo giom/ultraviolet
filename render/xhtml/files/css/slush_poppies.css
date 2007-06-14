@@ -19,7 +19,7 @@ pre.slush_poppies .Storage {
 }
 pre.slush_poppies .line-numbers {
    background-color: #B0B0FF;
-   color: #F1F1F1;
+   color: #000000;
 }
 pre.slush_poppies .OcamlPrefixFPOperators {
    text-decoration: underline;

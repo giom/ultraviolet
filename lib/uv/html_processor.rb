@@ -18,13 +18,15 @@ module Uv
          @escapeHTML = true
       end
       
-      def start_parsing
-         @stack = []
+      def start_parsing name
+         @stack = [name]
          @string = ""
          @line = nil
          @line_number = 0
          print @render_options["document"]["begin"] if @headers
          print @render_options["listing"]["begin"]
+         opt = options
+         print opt["begin"] if opt
       end
       
       def print string
@@ -75,7 +77,7 @@ module Uv
          end
       end
       
-      def end_parsing
+      def end_parsing name
          if @line
             print escape(@line[@position..-1].gsub(/\n|\r/, '')) 
             print @render_options["line"]["end"]

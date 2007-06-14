@@ -6,7 +6,7 @@ pre.brilliance_black .StringEmbeddedSource {
 }
 pre.brilliance_black .line-numbers {
    background-color: #2E2EE6;
-   color: #050505;
+   color: #000000;
 }
 pre.brilliance_black .StorageModifier {
    color: #803D00;

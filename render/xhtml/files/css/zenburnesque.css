@@ -18,7 +18,7 @@ pre.zenburnesque .Storage {
 }
 pre.zenburnesque .line-numbers {
    background-color: #A0A0C0;
-   color: #404040;
+   color: #000000;
 }
 pre.zenburnesque .LineNumberDirectives {
    text-decoration: underline;

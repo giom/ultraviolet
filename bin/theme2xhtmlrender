@@ -16,6 +16,14 @@ def settings
    @settings
 end
 
+def foreground bg
+   fg = "#FFFFFF"
+   3.times do |i|
+      fg = "#000000" if bg[i+1, 2].hex > 0xFF / 2 
+   end
+   fg
+end
+
 def alpha_blend bg, fg
    unless bg =~ /^#((\d|[ABCDEF]){3}|(\d|[ABCDEF]){6}|(\d|[ABCDEF]){8})$/i
       raise(ArgumentError, "Malformed background color '#{bg}'" )
@@ -116,8 +124,8 @@ render["tags"] = []
          css[code_name] = style
          @style = style
          style = {}
-         style["color"] = alpha_blend( s["background"], s["background"] )
          style["background-color"] = alpha_blend(s["selection"], s["selection"])
+         style["color"] = foreground( style["background-color"] )
          css[".line-numbers"] = style
          
          tag = {}

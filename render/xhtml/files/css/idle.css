@@ -13,7 +13,7 @@ pre.idle .Storage {
 }
 pre.idle .line-numbers {
    background-color: #BAD6FD;
-   color: #FFFFFF;
+   color: #000000;
 }
 pre.idle {
    background-color: #FFFFFF;
