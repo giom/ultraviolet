@@ -1,6 +1,6 @@
 require 'fileutils'
 require 'textpow'
-require 'uv/html_processor.rb'
+require 'uv/render_processor.rb'
 
 
 module Uv
@@ -69,7 +69,7 @@ module Uv
       raise( ArgumentError, "Output for #{output} is not yet implemented" ) unless File.exists?(renderer)
       css_class = render_style
       render_options = YAML.load( File.open(  renderer ) )
-      render_processor = HtmlProcessor.new( render_options, line_numbers, headers )
+      render_processor = RenderProcessor.new( render_options, line_numbers, headers )
       @syntaxes[syntax_name].parse( text,  render_processor )
       render_processor.string
    end

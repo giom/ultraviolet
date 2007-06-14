@@ -3,7 +3,7 @@ require 'cgi'
 module Uv   
    
 
-   class HtmlProcessor
+   class RenderProcessor
       @@score_manager = Textpow::ScoreManager.new
       
       attr_reader :string

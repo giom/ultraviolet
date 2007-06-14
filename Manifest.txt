@@ -1,5 +1,5 @@
 test/test_uv.rb
-lib/uv/html_processor.rb
+lib/uv/render_processor.rb
 lib/uv.rb
 bin/theme2xhtmlrender
 bin/theme2latexrender
