@@ -40,7 +40,7 @@ Further work will be done to produce latex output.
 
 ||  Priority  |  Description                                                             |
 | high        | Complete *rdoc* api documentation                                        |
-| medium      | Produce latex output                                                     |
+| alpha       | Produce latex output                                                     |
 
 # Usage #
 
@@ -76,6 +76,12 @@ Some examples of command line usage.
 *   Output results to `index.html` and copy required files (/eg/ css):
     --------hl shell-unix-generic,,false--------
     uv -c . syntax/ini.syntax > index.html
+    --------------------------------------------
+    
+*   Producing output in latex and converting to pdf:
+    --------hl shell-unix-generic,,false--------
+    uv -h -o latex lib/uv.rb > uv.tex
+    pdflatex uv.tex
     --------------------------------------------
     
 = Using ultraviolet as a library =
