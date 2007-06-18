@@ -25,8 +25,8 @@ module Uv
          @line_number = 0
          print @render_options["document"]["begin"] if @headers
          print @render_options["listing"]["begin"]
-         opt = options
-         print opt["begin"] if opt
+#         opt = options @stack
+#         print opt["begin"] if opt
       end
       
       def print string
@@ -47,21 +47,41 @@ module Uv
          @stack << name
          print escape(@line[@position...position].gsub(/\n|\r/, '')) if position > @position
          @position = position
-         opt = options
+         opt = options @stack
          print opt["begin"] if opt
       end
       
       def close_tag name, position
          print escape(@line[@position...position].gsub(/\n|\r/, '')) if position > @position
          @position = position
-         opt = options
+         opt = options @stack
          print opt["end"] if opt
          @stack.pop
+      end
+      
+      def close_line
+         stack = @stack[0..-1]
+         while stack.size > 1
+            opt = options stack
+            print opt["end"] if opt
+            stack.pop
+         end
+      end
+      
+      def open_line
+         stack = [@stack.first]
+         clone = @stack[1..-1]
+         while stack.size < @stack.size
+            stack << clone.shift
+            opt = options stack
+            print opt["begin"] if opt
+         end
       end
       
       def new_line line
          if @line
             print escape(@line[@position..-1].gsub(/\n|\r/, ''))
+            close_line
             print @render_options["line"]["end"]
             print "\n" 
          end
@@ -75,25 +95,29 @@ module Uv
             print @render_options["line-numbers"]["end"] 
             print " "
          end
+         open_line
       end
       
       def end_parsing name
          if @line
             print escape(@line[@position..-1].gsub(/\n|\r/, '')) 
+            while @stack.size > 1
+               opt = options @stack
+               print opt["end"] if opt
+               @stack.pop
+            end
             print @render_options["line"]["end"]
             print "\n"
          end
-         while ! @stack.empty?
-            opt = options
-            print opt["end"] if opt
-            @stack.pop
-         end
+#         opt = options @stack
+#         print opt["end"] if opt
+         @stack.pop
          print @render_options["listing"]["end"]
          print @render_options["document"]["end"] if @headers
       end
       
-      def options
-         ref = @stack.join ' '
+      def options stack
+         ref = stack.join ' '
          return @options[ref] if @options.has_key? ref
          
          result = @render_options['tags'].max do |a, b| 

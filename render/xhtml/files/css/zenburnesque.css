@@ -1,7 +1,7 @@
 pre.zenburnesque .InheritedClass {
 }
 pre.zenburnesque .TypeName {
-   color: #FFE000;
+   color: #F09040;
 }
 pre.zenburnesque .FloatingPointPrefixOperators {
    text-decoration: underline;
@@ -55,6 +55,9 @@ pre.zenburnesque .FloatingPointNumbers {
 }
 pre.zenburnesque .ClassTypeName {
    color: #F4A020;
+}
+pre.zenburnesque .TypeName1 {
+   color: #FFE000;
 }
 pre.zenburnesque .ModuleKeyword {
    font-weight: bold;

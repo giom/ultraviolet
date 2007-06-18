@@ -793,6 +793,7 @@ end
 
 * [Macaronic markup engine http://mama.rubyforge.org/].
 * [Radiograph rails plugin http://agilewebdevelopment.com/plugins/radiograph].
+* [SimpleHighlight plugin for SimpleLog http://www.daikini.com/past/2007/6/14/simplehighlight_syntax_highlighting_for_simplelog/]
 
 = Other =
 

@@ -34,13 +34,13 @@ tags:
 - begin: "{\\color[HTML]{0066FF}\\textit{"
   end: "}}"
   selector: comment
-- begin: \colorbox[HTML]{EBAEA9}{\color[HTML]{FF0000}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{E7342D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FF0000}
   end: "}"
   selector: invalid
-- begin: \colorbox[HTML]{EEEEEB}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{EEEEEE}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: invalid.deprecated.trailing-whitespace
-- begin: \colorbox[HTML]{F9F9F9}{\color[HTML]{000000}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{F9F9F9}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{000000}
   end: "}"
   selector: text source
 - begin: "{\\color[HTML]{0033CC}"
@@ -72,7 +72,7 @@ tags:
   selector: entity.name.tag
 listing: 
   begin: |
-    \newcolumntype{C}{>{\color[HTML]{000000}\columncolor[HTML]{EEEEED}}l}
+    \newcolumntype{C}{>{\color[HTML]{000000}\columncolor[HTML]{EEEEEE}}l}
     \newcolumntype{N}{>{\color[HTML]{000000}\columncolor[HTML]{BAD6FD}}l}
     \begin{longtable}{NC}
 
@@ -93,7 +93,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

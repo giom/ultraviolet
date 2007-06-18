@@ -6,7 +6,7 @@ pre.brilliance_dull .StringEmbeddedSource {
 }
 pre.brilliance_dull .line-numbers {
    background-color: #2B2F53;
-   color: #000000;
+   color: #FFFFFF;
 }
 pre.brilliance_dull .StorageModifier {
 }
@@ -87,6 +87,10 @@ pre.brilliance_dull .LMetaLabelReference {
 pre.brilliance_dull .MetaGroupBraces7 {
    background-color: #1F1F1F;
 }
+pre.brilliance_dull .LVariableParameterCite {
+   background-color: #28151F;
+   color: #E7D4DF;
+}
 pre.brilliance_dull .TagBlockForm {
    background-color: #10181F;
 }
@@ -96,10 +100,6 @@ pre.brilliance_dull .MRawBlock {
 }
 pre.brilliance_dull .KeywordControl {
    color: #A358A5;
-}
-pre.brilliance_dull .LVariableParameterCite {
-   background-color: #28151F;
-   color: #E7D4DF;
 }
 pre.brilliance_dull .MetaGroupBraces8 {
    background-color: #212121;
@@ -263,6 +263,10 @@ pre.brilliance_dull .StringInterpolated {
    background-color: #1A1A1A;
    color: #D1D1AB;
 }
+pre.brilliance_dull .BuiltInConstant1 {
+   background-color: #182D18;
+   color: #5AA557;
+}
 pre.brilliance_dull .InstanceConstructor {
    background-color: #2D1823;
 }
@@ -283,6 +287,10 @@ pre.brilliance_dull .LMarkupRaw {
 pre.brilliance_dull .StringPunctuationIi {
    color: #ACAB6F;
 }
+pre.brilliance_dull .LKeywordControlRef {
+   background-color: #170C0C;
+   color: #A5585A;
+}
 pre.brilliance_dull .Css {
 }
 pre.brilliance_dull .ClassName {
@@ -290,10 +298,6 @@ pre.brilliance_dull .ClassName {
 }
 pre.brilliance_dull .MetaPropertyName {
    color: #999999;
-}
-pre.brilliance_dull .LKeywordControlRef {
-   background-color: #170C0C;
-   color: #A5585A;
 }
 pre.brilliance_dull .MetaHeadersBlogKeywordOtherBlog {
    background-color: #213F3E;
@@ -340,10 +344,10 @@ pre.brilliance_dull .TagDoctype {
    color: #CCCCCC;
 }
 pre.brilliance_dull .Class {
-   color: #A358A5;
+   background-color: #5A3031;
+   color: #512C2C;
 }
 pre.brilliance_dull .BuiltInConstant {
-   background-color: #182D18;
    color: #5AA557;
 }
 pre.brilliance_dull .MBold {
@@ -356,16 +360,16 @@ pre.brilliance_dull .MHeading {
 pre.brilliance_dull .ConstantVariable {
    color: #57A5A3;
 }
+pre.brilliance_dull .LKeywordControlCite {
+   background-color: #170C12;
+   color: #A45880;
+}
 pre.brilliance_dull .XmlTag {
    color: #666666;
 }
 pre.brilliance_dull .MHr {
    background-color: #FFFFFF;
    color: #000000;
-}
-pre.brilliance_dull .LKeywordControlCite {
-   background-color: #170C12;
-   color: #A45880;
 }
 pre.brilliance_dull .FunctionPunctuation {
    font-weight: bold;
@@ -399,6 +403,9 @@ pre.brilliance_dull .LVariableParameterLabelReference {
    background-color: #281516;
    color: #D1BDAB;
 }
+pre.brilliance_dull .FunctionDeclarationParameters1 {
+   color: #BABBD9;
+}
 pre.brilliance_dull .Source {
    background-color: #000000;
 }
@@ -421,6 +428,9 @@ pre.brilliance_dull .MetaBlockContentSlate {
 }
 pre.brilliance_dull .TextStringSourceStringSource {
 }
+pre.brilliance_dull .MetaBraceErb1 {
+   background-color: #000000;
+}
 pre.brilliance_dull .String {
    color: #D2D191;
 }
@@ -428,6 +438,10 @@ pre.brilliance_dull .TagInline {
    color: #A57C57;
 }
 pre.brilliance_dull .MetaBlockSlate {
+   color: #666666;
+}
+pre.brilliance_dull .MetaHeadersBlog1 {
+   background-color: #FFFFFF;
    color: #666666;
 }
 pre.brilliance_dull .SourceRubyRailsEmbeddedOneLine {
@@ -472,7 +486,7 @@ pre.brilliance_dull .TagForm {
    color: #5780A5;
 }
 pre.brilliance_dull .Tag {
-   color: #A5585A;
+   color: #333333;
 }
 pre.brilliance_dull .UserDefinedConstant {
    color: #58A57C;
@@ -490,7 +504,8 @@ pre.brilliance_dull .TextSource {
    color: #CCCCCC;
 }
 pre.brilliance_dull .MetaBraceErb {
-   background-color: #000000;
+   background-color: #213F3E;
+   color: #57A5A3;
 }
 pre.brilliance_dull .SupportTypePropertyName {
    background-color: #000000;
@@ -511,11 +526,13 @@ pre.brilliance_dull .MetaGroupBracesRoundJs {
 }
 pre.brilliance_dull .MetaHeadersBlog {
    background-color: #FFFFFF;
-   color: #666666;
 }
 pre.brilliance_dull .Comment {
    background-color: #1C1C1C;
    color: #ACACAC;
+}
+pre.brilliance_dull .Class1 {
+   color: #A358A5;
 }
 pre.brilliance_dull .Text {
    color: #FFFFFF;
@@ -540,6 +557,9 @@ pre.brilliance_dull .MetaTagInlineSource {
 pre.brilliance_dull .TagStructure {
    background-color: #292929;
    color: #666666;
+}
+pre.brilliance_dull .Tag1 {
+   color: #A5585A;
 }
 pre.brilliance_dull .Storage {
    color: #A57C57;

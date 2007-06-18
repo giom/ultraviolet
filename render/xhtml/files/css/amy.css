@@ -92,6 +92,8 @@ pre.amy .CompilerDirectives {
 pre.amy .FloatingPointInfixOperator {
    text-decoration: underline;
 }
+pre.amy .BuiltInConstant1 {
+}
 pre.amy {
    background-color: #200020;
    color: #D0D0FF;
@@ -106,6 +108,7 @@ pre.amy .NativeintConstant {
    font-weight: bold;
 }
 pre.amy .BuiltInConstant {
+   color: #707090;
 }
 pre.amy .BooleanConstant {
    color: #8080A0;

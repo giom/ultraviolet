@@ -67,13 +67,13 @@ tags:
 - begin: "{\\color[HTML]{687687}"
   end: "}"
   selector: keyword.operator.js
-- begin: \colorbox[HTML]{990000}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{990000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: invalid
-- begin: \colorbox[HTML]{FFD0D0}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FFD0D0}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: invalid.deprecated.trailing-whitespace
-- begin: \colorbox[HTML]{503A2D}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{CE9065}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text source, string.unquoted
 - begin: "{\\color[HTML]{8F7E65}"
@@ -97,7 +97,7 @@ tags:
 listing: 
   begin: |
     \newcolumntype{C}{>{\color[HTML]{BDAE9D}\columncolor[HTML]{2A211C}}l}
-    \newcolumntype{N}{>{\color[HTML]{BDAE9D}\columncolor[HTML]{C3DCFF}}l}
+    \newcolumntype{N}{>{\color[HTML]{000000}\columncolor[HTML]{C3DCFF}}l}
     \begin{longtable}{NC}
 
   end: |
@@ -117,7 +117,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

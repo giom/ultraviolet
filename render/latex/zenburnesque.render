@@ -100,7 +100,7 @@ tags:
 listing: 
   begin: |
     \newcolumntype{C}{>{\color[HTML]{DEDEDE}\columncolor[HTML]{404040}}l}
-    \newcolumntype{N}{>{\color[HTML]{DEDEDE}\columncolor[HTML]{A0A0C0}}l}
+    \newcolumntype{N}{>{\color[HTML]{000000}\columncolor[HTML]{A0A0C0}}l}
     \begin{longtable}{NC}
 
   end: |
@@ -120,7 +120,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

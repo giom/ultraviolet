@@ -31,13 +31,13 @@ tags:
 - begin: "{\\color[HTML]{D2A8A1}\\textit{"
   end: "}}"
   selector: invalid.deprecated
-- begin: \colorbox[HTML]{452645}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{241A24}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: invalid.illegal
-- begin: \colorbox[HTML]{202020}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{A3A6AD}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text source
-- begin: \colorbox[HTML]{282829}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{9C9EA4}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text.html.ruby source
 - begin: "{\\color[HTML]{9B5C2E}\\textit{"
@@ -106,16 +106,16 @@ tags:
 - begin: "{\\color[HTML]{8F9D6A}"
   end: "}"
   selector: meta.constructor.argument.css
-- begin: \colorbox[HTML]{0E2231}{\color[HTML]{F8F8F8}\textit{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{0E2231}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}\textit{
   end: "}}"
   selector: meta.diff, meta.diff.header, meta.separator
-- begin: \colorbox[HTML]{420E09}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{420E09}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: markup.deleted
-- begin: \colorbox[HTML]{4A410D}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{4A410D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: markup.changed
-- begin: \colorbox[HTML]{253B22}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{253B22}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: markup.inserted
 - begin: "{\\color[HTML]{F9EE98}"
@@ -127,7 +127,7 @@ tags:
 listing: 
   begin: |
     \newcolumntype{C}{>{\color[HTML]{F8F8F8}\columncolor[HTML]{141414}}l}
-    \newcolumntype{N}{>{\color[HTML]{F8F8F8}\columncolor[HTML]{3C3F42}}l}
+    \newcolumntype{N}{>{\color[HTML]{000000}\columncolor[HTML]{DDF0FF}}l}
     \begin{longtable}{NC}
 
   end: |
@@ -147,7 +147,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

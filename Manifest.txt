@@ -1,5 +1,6 @@
 test/test_uv.rb
 lib/uv/render_processor.rb
+lib/uv/utility.rb
 lib/uv.rb
 bin/theme2xhtmlrender
 bin/theme2latexrender
@@ -114,7 +115,6 @@ syntax/html.syntax
 syntax/c.syntax
 syntax/pmwiki.syntax
 syntax/ruby.syntax
-syntax/truby.syntax
 syntax/csv.syntax
 syntax/ruby_on_rails.syntax
 syntax/xsl.syntax

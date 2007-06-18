@@ -67,7 +67,7 @@ tags:
 - begin: <span class="BuiltInConstant">
   end: </span>
   selector: constant.language, keyword.other.unit, constant.other.java, constant.other.unit
-- begin: <span class="BuiltInConstant">
+- begin: <span class="BuiltInConstant1">
   end: </span>
   selector: constant.language.pseudo-variable
 - begin: <span class="UserDefinedConstant">
@@ -262,13 +262,13 @@ tags:
 - begin: <span class="PseudoClass">
   end: </span>
   selector: entity.other.attribute-name.pseudo-class, entity.other.attribute-name.tag.pseudo-class
-- begin: <span class="Class">
+- begin: <span class="Class1">
   end: </span>
   selector: meta.selector entity.other.attribute-name.class
 - begin: <span class="Id">
   end: </span>
   selector: meta.selector entity.other.attribute-name.id
-- begin: <span class="Tag">
+- begin: <span class="Tag1">
   end: </span>
   selector: meta.selector entity.name.tag
 - begin: <span class="TagWildcard">
@@ -376,7 +376,7 @@ tags:
 - begin: <span class="Source">
   end: </span>
   selector: source
-- begin: <span class="MetaBraceErb">
+- begin: <span class="MetaBraceErb1">
   end: </span>
   selector: meta.brace.erb
 - begin: <span class="SourceStringSource">
@@ -412,10 +412,10 @@ tags:
 - begin: <span class="CommentPunctuation">
   end: </span>
   selector: comment punctuation
-- begin: <span class="Comment">
+- begin: <span class="Comment1">
   end: </span>
   selector: comment
-- begin: <span class="CommentPunctuation">
+- begin: <span class="CommentPunctuation1">
   end: </span>
   selector: comment punctuation
 - begin: <span class="HtmlComment">
@@ -451,7 +451,7 @@ tags:
 - begin: <span class="MetaHeadersBlog">
   end: </span>
   selector: text.blog -(text.blog text)
-- begin: <span class="MetaHeadersBlog">
+- begin: <span class="MetaHeadersBlog1">
   end: </span>
   selector: meta.headers.blog
 - begin: <span class="MetaHeadersBlogKeywordOtherBlog">

@@ -67,7 +67,7 @@ tags:
 - begin: <span class="FunctionName">
   end: </span>
   selector: entity.name.function
-- begin: <span class="TypeName">
+- begin: <span class="TypeName1">
   end: </span>
   selector: storage.type.user-defined
 - begin: <span class="ClassTypeName">

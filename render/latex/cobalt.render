@@ -37,10 +37,10 @@ tags:
 - begin: "{\\color[HTML]{FFEE80}"
   end: "}"
   selector: meta.function-call
-- begin: \colorbox[HTML]{800F00}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{800F00}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: invalid
-- begin: \colorbox[HTML]{223545}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{223545}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: text source, string.unquoted.heredoc, source source
 - begin: "{\\color[HTML]{80FCFF}\\textit{"
@@ -103,25 +103,25 @@ tags:
 - begin: "{\\color[HTML]{EB939A}"
   end: "}"
   selector: meta.constructor.argument.css
-- begin: \colorbox[HTML]{000E1A}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000E1A}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: meta.diff, meta.diff.header
-- begin: \colorbox[HTML]{4C0900}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{4C0900}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: markup.deleted
-- begin: \colorbox[HTML]{806F00}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{806F00}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: markup.changed
-- begin: \colorbox[HTML]{154F00}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{154F00}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: markup.inserted
-- begin: \colorbox[HTML]{1A4562}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{74B9D3}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: markup.raw
-- begin: \colorbox[HTML]{004480}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{004480}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: markup.quote
-- begin: \colorbox[HTML]{130D26}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{130D26}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: markup.list
 - begin: "{\\color[HTML]{C1AFFF}\\textbf{"
@@ -130,13 +130,13 @@ tags:
 - begin: "{\\color[HTML]{B8FFD9}\\textit{"
   end: "}}"
   selector: markup.italic
-- begin: \colorbox[HTML]{001221}{\color[HTML]{C8E4FD}\textbf{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{001221}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{C8E4FD}\textbf{
   end: "}}"
   selector: markup.heading
 listing: 
   begin: |
     \newcolumntype{C}{>{\color[HTML]{FFFFFF}\columncolor[HTML]{002240}}l}
-    \newcolumntype{N}{>{\color[HTML]{FFFFFF}\columncolor[HTML]{85533A}}l}
+    \newcolumntype{N}{>{\color[HTML]{000000}\columncolor[HTML]{B36539}}l}
     \begin{longtable}{NC}
 
   end: |
@@ -156,7 +156,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

@@ -29,7 +29,7 @@ pre.magicwb_amiga .IncludeUser {
    color: #FFA995;
 }
 pre.magicwb_amiga .ObjectiveCMethodCall {
-   font-style: italic;
+   color: #000000;
 }
 pre.magicwb_amiga .ConstantUserDefined {
    background-color: #1D1DEA;
@@ -54,6 +54,9 @@ pre.magicwb_amiga .MarkupListItem {
    color: #4D4E60;
 }
 pre.magicwb_amiga .FunctionArgument {
+   font-style: italic;
+}
+pre.magicwb_amiga .ObjectiveCMethodCall1 {
    font-style: italic;
 }
 pre.magicwb_amiga .MarkupQuoteDoubleEmail {

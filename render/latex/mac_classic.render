@@ -36,7 +36,7 @@ tags:
   selector: keyword.control.import
 - begin: "{\\color[HTML]{0000A2}\\textbf{"
   end: "}}"
-  selector: entity.name.function, keyword.other.name-of-parameter.objc
+  selector: entity.name.function, support.function.any-method
 - begin: "{\\underline{"
   end: "}}"
   selector: entity.name.type
@@ -67,16 +67,16 @@ tags:
 - begin: "{\\color[HTML]{687687}"
   end: "}"
   selector: keyword.operator.js
-- begin: \colorbox[HTML]{990000}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{990000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: invalid
-- begin: \colorbox[HTML]{FFD0D0}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FFD0D0}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: invalid.deprecated.trailing-whitespace
-- begin: \colorbox[HTML]{F2F2F2}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{0C0C0C}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text source, string.unquoted
-- begin: \colorbox[HTML]{F0F0F0}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{0E0E0E}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text source string.unquoted, text source text source
 - begin: "{\\color[HTML]{68685B}"
@@ -109,7 +109,7 @@ tags:
 listing: 
   begin: |
     \newcolumntype{C}{>{\color[HTML]{000000}\columncolor[HTML]{FFFFFF}}l}
-    \newcolumntype{N}{>{\color[HTML]{000000}\columncolor[HTML]{C4DCFF}}l}
+    \newcolumntype{N}{>{\color[HTML]{000000}\columncolor[HTML]{4D97FF}}l}
     \begin{longtable}{NC}
 
   end: |
@@ -129,7 +129,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

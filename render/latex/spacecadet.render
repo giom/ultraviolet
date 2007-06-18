@@ -49,13 +49,13 @@ tags:
 - begin: "{"
   end: "}"
   selector: support.other.variable
-- begin: \colorbox[HTML]{5F0047}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{5F0047}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: invalid
 listing: 
   begin: |
     \newcolumntype{C}{>{\color[HTML]{DDE6CF}\columncolor[HTML]{0D0D0D}}l}
-    \newcolumntype{N}{>{\color[HTML]{DDE6CF}\columncolor[HTML]{40002F}}l}
+    \newcolumntype{N}{>{\color[HTML]{FFFFFF}\columncolor[HTML]{40002F}}l}
     \begin{longtable}{NC}
 
   end: |
@@ -75,7 +75,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

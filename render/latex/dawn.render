@@ -34,10 +34,10 @@ tags:
 - begin: "{\\color[HTML]{B52A1D}\\textbf{"
   end: "}}"
   selector: invalid.deprecated
-- begin: \colorbox[HTML]{B52A1D}{\color[HTML]{F8F8F8}\textit{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{B52A1D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}\textit{
   end: "}}"
   selector: invalid.illegal
-- begin: \colorbox[HTML]{E1E5EC}{\color[HTML]{080808}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{829AC2}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{080808}
   end: "}"
   selector: string source
 - begin: "{\\color[HTML]{696969}\\textbf{"
@@ -55,7 +55,7 @@ tags:
 - begin: "{\\color[HTML]{811F24}\\textbf{"
   end: "}}"
   selector: string.regexp constant.character.escape
-- begin: \colorbox[HTML]{E1E5EC}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{829AC2}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text source
 - begin: "{\\color[HTML]{693A17}"
@@ -73,7 +73,7 @@ tags:
 - begin: "{\\color[HTML]{19356D}\\textbf{"
   end: "}}"
   selector: markup.heading | markup.heading entity.name
-- begin: \colorbox[HTML]{EAEAEA}{\color[HTML]{0B6125}\textit{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{C5C5C5}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{0B6125}\textit{
   end: "}}"
   selector: markup.quote
 - begin: "{\\color[HTML]{080808}\\textit{"
@@ -88,19 +88,19 @@ tags:
 - begin: "{\\color[HTML]{234A97}\\textit{"
   end: "}}"
   selector: markup.link
-- begin: \colorbox[HTML]{EAEAEA}{\color[HTML]{234A97}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{C5C5C5}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{234A97}
   end: "}"
   selector: markup.raw
 - begin: "{\\color[HTML]{B52A1D}"
   end: "}"
   selector: markup.deleted
-- begin: \colorbox[HTML]{DCDCDC}{\color[HTML]{19356D}\textbf{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{DCDCDC}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{19356D}\textbf{
   end: "}}"
   selector: meta.separator
 listing: 
   begin: |
     \newcolumntype{C}{>{\color[HTML]{080808}\columncolor[HTML]{F5F5F5}}l}
-    \newcolumntype{N}{>{\color[HTML]{080808}\columncolor[HTML]{CED8E9}}l}
+    \newcolumntype{N}{>{\color[HTML]{000000}\columncolor[HTML]{7496CF}}l}
     \begin{longtable}{NC}
 
   end: |
@@ -120,7 +120,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

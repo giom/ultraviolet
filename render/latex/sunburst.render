@@ -31,10 +31,10 @@ tags:
 - begin: "{\\color[HTML]{FD5FF1}\\textit{"
   end: "}}"
   selector: invalid.deprecated
-- begin: \colorbox[HTML]{402140}{\color[HTML]{FD5FF1}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{150B15}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FD5FF1}
   end: "}"
   selector: invalid.illegal
-- begin: \colorbox[HTML]{050505}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{ABADB4}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text source
 - begin: "{\\color[HTML]{9B5C2E}\\textit{"
@@ -112,16 +112,16 @@ tags:
 - begin: "{\\color[HTML]{8F9D6A}"
   end: "}"
   selector: meta.constructor.argument.css
-- begin: \colorbox[HTML]{0E2231}{\color[HTML]{F8F8F8}\textit{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{0E2231}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}\textit{
   end: "}}"
   selector: meta.diff, meta.diff.header
-- begin: \colorbox[HTML]{420E09}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{420E09}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: markup.deleted
-- begin: \colorbox[HTML]{4A410D}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{4A410D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: markup.changed
-- begin: \colorbox[HTML]{253B22}{\color[HTML]{F8F8F8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{253B22}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{F8F8F8}
   end: "}"
   selector: markup.inserted
 - begin: "{\\color[HTML]{E9C062}\\textit{"
@@ -133,34 +133,34 @@ tags:
 - begin: "{\\color[HTML]{E18964}\\underline{"
   end: "}}"
   selector: markup.underline
-- begin: \colorbox[HTML]{110F0A}{\color[HTML]{E1D4B9}\textit{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{ECD091}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{E1D4B9}\textit{
   end: "}}"
   selector: markup.quote
-- begin: \colorbox[HTML]{632D04}{\color[HTML]{FEDCC5}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{632D04}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FEDCC5}
   end: "}"
   selector: markup.heading, markup.heading entity
 - begin: "{\\color[HTML]{E1D4B9}"
   end: "}"
   selector: markup.list
-- begin: \colorbox[HTML]{050505}{\color[HTML]{578BB3}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{ABADB4}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{578BB3}
   end: "}"
   selector: markup.raw
 - begin: "{\\color[HTML]{F67B37}\\textit{"
   end: "}}"
   selector: markup comment
-- begin: \colorbox[HTML]{242424}{\color[HTML]{60A633}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{242424}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{60A633}
   end: "}"
   selector: meta.separator
-- begin: \colorbox[HTML]{262626}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{C7C7C7}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.line.entry.logfile, meta.line.exit.logfile
-- begin: \colorbox[HTML]{751012}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{751012}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.line.error.logfile
 listing: 
   begin: |
     \newcolumntype{C}{>{\color[HTML]{F8F8F8}\columncolor[HTML]{000000}}l}
-    \newcolumntype{N}{>{\color[HTML]{F8F8F8}\columncolor[HTML]{2C2F32}}l}
+    \newcolumntype{N}{>{\color[HTML]{000000}\columncolor[HTML]{DDF0FF}}l}
     \begin{longtable}{NC}
 
   end: |
@@ -180,7 +180,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

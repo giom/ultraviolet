@@ -4,13 +4,13 @@ line:
   begin: ""
   end: "}}\\\\"
 tags: 
-- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{000000}\textbf{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FFFFFF}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{000000}\textbf{
   end: "}}"
   selector: meta.thomas_aylott
-- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{555555}\underline{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FFFFFF}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{555555}\underline{
   end: "}}"
   selector: meta.subtlegradient
-- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{E6E6E6}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FFFFFF}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{E6E6E6}
   end: "}"
   selector: meta.subtlegradient
 - begin: "{\\color[HTML]{D2D191}"
@@ -19,40 +19,40 @@ tags:
 - begin: "{"
   end: "}"
   selector: punctuation.definition.string -meta.tag
-- begin: "{\\color[HTML]{2020D9}"
+- begin: "{\\color[HTML]{ACAB6F}"
   end: "}"
   selector: string.regexp punctuation.definition.string, string.quoted.literal punctuation.definition.string, string.quoted.double.ruby.mod punctuation.definition.string
-- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{A5A358}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{232D18}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{A5A358}
   end: "}"
   selector: string.quoted.literal, string.quoted.double.ruby.mod
 - begin: "{\\color[HTML]{D1BDAB}"
   end: "}"
   selector: string.unquoted -string.unquoted.embedded, string.quoted.double.multiline, meta.scope.heredoc
-- begin: \colorbox[HTML]{1A1A1A}{\color[HTML]{D1D1AB}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{1A1A1A}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{D1D1AB}
   end: "}"
   selector: string.interpolated
-- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{A5A358}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{232D18}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{A5A358}
   end: "}"
   selector: string.regexp
-- begin: \colorbox[HTML]{0C10D0}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{232D18}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: string.regexp.group
-- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{6565FB}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{232D18}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{EAEAEA}
   end: "}"
   selector: "string.regexp.group string.regexp.group "
-- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{6565FB}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{232D18}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{EAEAEA}
   end: "}"
   selector: "string.regexp.group string.regexp.group string.regexp.group "
-- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{6565FB}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{232D18}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{EAEAEA}
   end: "}"
   selector: "string.regexp.group string.regexp.group string.regexp.group string.regexp.group "
-- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{80A557}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{232D18}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{80A557}
   end: "}"
   selector: string.regexp.character-class
-- begin: \colorbox[HTML]{0C10D0}{\color[HTML]{57A5A3}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{232D18}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{57A5A3}
   end: "}"
   selector: string.regexp.arbitrary-repitition
-- begin: \colorbox[HTML]{1119E9}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{2F465A}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: "meta.group.assertion.regexp "
 - begin: "{\\color[HTML]{5780A5}"
@@ -67,7 +67,7 @@ tags:
 - begin: "{\\color[HTML]{5AA557}"
   end: "}"
   selector: constant.language, keyword.other.unit, constant.other.java, constant.other.unit
-- begin: \colorbox[HTML]{0810D0}{\color[HTML]{5AA557}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{182D18}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{5AA557}
   end: "}"
   selector: constant.language.pseudo-variable
 - begin: "{\\color[HTML]{58A57C}"
@@ -76,22 +76,22 @@ tags:
 - begin: "{\\color[HTML]{57A5A3}"
   end: "}"
   selector: support.constant, constant.name
-- begin: \colorbox[HTML]{0810D8}{\color[HTML]{58A57C}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{182D2C}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{58A57C}
   end: "}"
   selector: variable.other.readwrite.global.pre-defined
 - begin: "{\\color[HTML]{57A5A3}"
   end: "}"
   selector: variable.other.constant
-- begin: \colorbox[HTML]{0810D8}{\color[HTML]{57A5A3}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{182D2C}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{57A5A3}
   end: "}"
   selector: support.variable
-- begin: \colorbox[HTML]{080CD8}{\color[HTML]{2C5251}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{18232D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{2C5251}
   end: "}"
   selector: variable.other.readwrite.global
 - begin: "{\\color[HTML]{789BB6}"
   end: "}"
   selector: variable.language, variable.other, variable.js, punctuation.separator.variable
-- begin: \colorbox[HTML]{1111E9}{\color[HTML]{5780A5}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{30305A}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{5780A5}
   end: "}"
   selector: variable.other.readwrite.class
 - begin: "{\\color[HTML]{555F68}"
@@ -100,7 +100,7 @@ tags:
 - begin: "{\\color[HTML]{555F68}"
   end: "}"
   selector: variable.other.php, variable.other.normal
-- begin: "{\\color[HTML]{00007D}"
+- begin: "{\\color[HTML]{666666}"
   end: "}"
   selector: punctuation.definition, punctuation.separator.variable
 - begin: "{\\color[HTML]{A57C57}"
@@ -118,19 +118,19 @@ tags:
 - begin: "{\\color[HTML]{A5585A}"
   end: "}"
   selector: entity.name.class, entity.name.type.class
-- begin: \colorbox[HTML]{2011DA}{\color[HTML]{512C2C}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{5A3031}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{512C2C}
   end: "}"
   selector: meta.class -meta.class.instance, declaration.class, meta.definition.class, declaration.module
-- begin: \colorbox[HTML]{1008D0}{\color[HTML]{A5585A}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{2C1818}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{A5585A}
   end: "}"
   selector: support.type, support.class
 - begin: "{\\color[HTML]{A5585A}"
   end: "}"
   selector: entity.name.instance
-- begin: \colorbox[HTML]{1008D4}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{2D1823}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.class.instance.constructor
-- begin: \colorbox[HTML]{1008D0}{\color[HTML]{A45880}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{2C1818}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{A45880}
   end: "}"
   selector: entity.other.inherited-class, entity.name.module
 - begin: "{\\color[HTML]{A45880}"
@@ -157,7 +157,7 @@ tags:
 - begin: "{\\color[HTML]{9D80BA}"
   end: "}"
   selector: meta.function-call support.function - variable
-- begin: \colorbox[HTML]{1210DC}{\color[HTML]{5E5368}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{332D39}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{5E5368}
   end: "}"
   selector: support.function
 - begin: "{\\color[HTML]{A358A5}"
@@ -181,28 +181,28 @@ tags:
 - begin: "{\\color[HTML]{5B6190}"
   end: "}"
   selector: keyword.operator, declaration.function.operator, meta.preprocessor.c.include
-- begin: \colorbox[HTML]{0A0ADB}{\color[HTML]{464684}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{1C1C36}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{464684}
   end: "}"
   selector: keyword.operator.assignment
 - begin: "{\\color[HTML]{5B6190}"
   end: "}"
   selector: keyword.operator.arithmetic
-- begin: \colorbox[HTML]{0A0ADB}{\color[HTML]{7C85B8}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{1C1C36}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{7C85B8}
   end: "}"
   selector: keyword.operator.logical
 - begin: "{\\color[HTML]{A9ACD0}"
   end: "}"
   selector: keyword.operator.comparison
-- begin: \colorbox[HTML]{333333}{\color[HTML]{CCCCCC}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{333333}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{CCCCCC}
   end: "}"
   selector: meta.doctype, meta.tag.sgml-declaration.doctype, meta.tag.sgml.doctype
 - begin: "{\\color[HTML]{333333}"
   end: "}"
   selector: meta.tag
-- begin: \colorbox[HTML]{262665}{\color[HTML]{666666}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{292929}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{666666}
   end: "}"
   selector: meta.tag.structure, meta.tag.segment
-- begin: \colorbox[HTML]{0F0FD7}{\color[HTML]{4C4C4C}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{292929}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{4C4C4C}
   end: "}"
   selector: meta.tag.block, meta.tag.xml, meta.tag.key
 - begin: "{\\color[HTML]{A57C57}"
@@ -211,40 +211,40 @@ tags:
 - begin: "{"
   end: "}"
   selector: meta.tag.inline source
-- begin: \colorbox[HTML]{1008D0}{\color[HTML]{A5585A}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{2C1818}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{A5585A}
   end: "}"
   selector: meta.tag.other, entity.name.tag.style, source entity.other.attribute-name -text.html.basic.embedded , entity.name.tag.script, meta.tag.block.script
-- begin: \colorbox[HTML]{080CD8}{\color[HTML]{5780A5}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{18232D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{5780A5}
   end: "}"
   selector: meta.tag.form, meta.tag.block.form
-- begin: \colorbox[HTML]{0C08D8}{\color[HTML]{A358A5}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{22182D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{A358A5}
   end: "}"
   selector: meta.tag.meta
-- begin: \colorbox[HTML]{121212}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{121212}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.section.html.head
-- begin: \colorbox[HTML]{0406E8}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{10181F}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.section.html.form
 - begin: "{\\color[HTML]{666666}"
   end: "}"
   selector: meta.tag.xml
-- begin: "{\\color[HTML]{4C4CFB}"
+- begin: "{\\color[HTML]{EFEFEF}"
   end: "}"
   selector: entity.name.tag
-- begin: "{\\color[HTML]{3232FA}"
+- begin: "{\\color[HTML]{F4F4F4}"
   end: "}"
   selector: entity.other.attribute-name, meta.tag punctuation.definition.string
-- begin: "{\\color[HTML]{6565FB}"
+- begin: "{\\color[HTML]{EAEAEA}"
   end: "}"
   selector: meta.tag string -source -punctuation, text source text meta.tag string -punctuation
-- begin: \colorbox[HTML]{0A0AD2}{\color[HTML]{A5A358}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{1C1C1C}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{A5A358}
   end: "}"
   selector: markup markup -(markup meta.paragraph.list)
-- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{000000}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FFFFFF}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{000000}
   end: "}"
   selector: markup.hr
-- begin: \colorbox[HTML]{191996}{\color[HTML]{666666}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{262626}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{666666}
   end: "}"
   selector: markup.heading
 - begin: "{\\textbf{"
@@ -259,25 +259,25 @@ tags:
 - begin: "{\\color[HTML]{5780A5}"
   end: "}"
   selector: meta.reference, markup.underline.link
-- begin: \colorbox[HTML]{080CD8}{\color[HTML]{57A5A3}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{18232D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{57A5A3}
   end: "}"
   selector: entity.name.reference
 - begin: "{\\color[HTML]{57A5A3}\\underline{"
   end: "}}"
   selector: meta.reference.list markup.underline.link, text.html.textile markup.underline.link
-- begin: \colorbox[HTML]{000000}{\color[HTML]{999999}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{999999}
   end: "}"
   selector: markup.raw.block
-- begin: \colorbox[HTML]{1919FA}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{616161}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: markup.quote
 - begin: "{"
   end: "}"
   selector: source.css
-- begin: \colorbox[HTML]{00007D}{\color[HTML]{666666}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{666666}
   end: "}"
   selector: meta.selector
-- begin: \colorbox[HTML]{0808D8}{\color[HTML]{5859A5}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{18172D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{5859A5}
   end: "}"
   selector: meta.attribute-match.css
 - begin: "{\\color[HTML]{7D58A4}"
@@ -301,31 +301,31 @@ tags:
 - begin: "{\\color[HTML]{999999}"
   end: "}"
   selector: meta.property-name
-- begin: \colorbox[HTML]{000000}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: support.type.property-name
-- begin: \colorbox[HTML]{0D0D0D}{\color[HTML]{999999}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{0D0D0D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{999999}
   end: "}"
   selector: meta.property-value
 - begin: "{"
   end: "}"
   selector: text.latex
-- begin: \colorbox[HTML]{000000}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text.latex markup.raw
 - begin: "{\\color[HTML]{A358A5}"
   end: "}"
   selector: text.latex support.function -support.function.textit -support.function.emph
-- begin: "{\\color[HTML]{BEBEFD}"
+- begin: "{\\color[HTML]{D8D8D8}"
   end: "}"
   selector: text.latex support.function.section
-- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{000000}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FFFFFF}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{000000}
   end: "}"
   selector: text.latex entity.name.section -meta.group -keyword.operator.braces
 - begin: "{"
   end: "}"
   selector: text.latex constant.language.general
-- begin: \colorbox[HTML]{00007D}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text.latex keyword.operator.delimiter
 - begin: "{\\color[HTML]{999999}"
@@ -334,85 +334,85 @@ tags:
 - begin: "{\\color[HTML]{666666}"
   end: "}"
   selector: text.latex keyword.operator.braces
-- begin: \colorbox[HTML]{0808D8}{\color[HTML]{1A1AE0}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{18172D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{7A7BB0}
   end: "}"
   selector: meta.footnote
-- begin: \colorbox[HTML]{0C0CFA}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{3C3C3C}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text.latex meta.label.reference
-- begin: \colorbox[HTML]{170C0C}{\color[HTML]{A5585A}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{170C0C}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{A5585A}
   end: "}"
   selector: text.latex keyword.control.ref
-- begin: \colorbox[HTML]{281516}{\color[HTML]{D1BDAB}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{281516}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{D1BDAB}
   end: "}"
   selector: text.latex variable.parameter.label.reference
-- begin: \colorbox[HTML]{170C12}{\color[HTML]{A45880}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{170C12}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{A45880}
   end: "}"
   selector: text.latex keyword.control.cite
-- begin: \colorbox[HTML]{28151F}{\color[HTML]{E7D4DF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{28151F}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{E7D4DF}
   end: "}"
   selector: variable.parameter.cite
-- begin: "{\\color[HTML]{7F7FFC}"
+- begin: "{\\color[HTML]{E5E5E5}"
   end: "}"
   selector: text.latex variable.parameter.label
-- begin: "{\\color[HTML]{0A0AD2}"
+- begin: "{\\color[HTML]{515151}"
   end: "}"
   selector: text.latex meta.group.braces
-- begin: \colorbox[HTML]{00007D}{\color[HTML]{0A0AD2}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{515151}
   end: "}"
   selector: text.latex meta.environment.list
-- begin: \colorbox[HTML]{00007D}{\color[HTML]{0A0AD2}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{515151}
   end: "}"
   selector: "text.latex meta.environment.list meta.environment.list "
-- begin: \colorbox[HTML]{000000}{\color[HTML]{0A0AD2}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{515151}
   end: "}"
   selector: "text.latex meta.environment.list meta.environment.list meta.environment.list "
-- begin: "{\\color[HTML]{0A0AD2}"
+- begin: "{\\color[HTML]{515151}"
   end: "}"
   selector: "text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list "
-- begin: "{\\color[HTML]{0A0AD2}"
+- begin: "{\\color[HTML]{515151}"
   end: "}"
   selector: "text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list "
-- begin: "{\\color[HTML]{0A0AD2}"
+- begin: "{\\color[HTML]{515151}"
   end: "}"
   selector: "text.latex meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list meta.environment.list "
-- begin: \colorbox[HTML]{CCCCCC}{\color[HTML]{000000}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{CCCCCC}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{000000}
   end: "}"
   selector: text.latex meta.end-document, text.latex meta.begin-document, meta.end-document.latex support.function, meta.end-document.latex variable.parameter, meta.begin-document.latex support.function, meta.begin-document.latex variable.parameter
-- begin: \colorbox[HTML]{0810D5}{\color[HTML]{58A58A}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{182D25}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{58A58A}
   end: "}"
   selector: meta.brace.erb.return-value
-- begin: \colorbox[HTML]{1919E1}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{464646}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: source.ruby.rails.embedded.return-value.one-line
-- begin: \colorbox[HTML]{0810F1}{\color[HTML]{57A5A3}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{213F3E}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{57A5A3}
   end: "}"
   selector: punctuation.section.embedded -(source string source punctuation.section.embedded), meta.brace.erb.html
-- begin: \colorbox[HTML]{0810F1}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{213F3E}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: source.ruby.rails.embedded.one-line
 - begin: "{\\color[HTML]{555F68}"
   end: "}"
   selector: source string source punctuation.section.embedded
-- begin: \colorbox[HTML]{000000}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: source
-- begin: \colorbox[HTML]{000000}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.brace.erb
-- begin: \colorbox[HTML]{191996}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{262626}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: source string source
-- begin: \colorbox[HTML]{000064}{\color[HTML]{999999}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{999999}
   end: "}"
   selector: source string.interpolated source
-- begin: \colorbox[HTML]{0505E5}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{131313}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: source.java.embedded
 - begin: "{\\color[HTML]{FFFFFF}"
   end: "}"
   selector: text -text.xml.strict
-- begin: \colorbox[HTML]{000000}{\color[HTML]{CCCCCC}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{CCCCCC}
   end: "}"
   selector: text source, meta.scope.django.template
 - begin: "{\\color[HTML]{999999}"
@@ -424,10 +424,10 @@ tags:
 - begin: "{\\color[HTML]{333333}"
   end: "}"
   selector: meta.syntax
-- begin: \colorbox[HTML]{A5585A}{\color[HTML]{201111}\textbf{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{A5585A}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{201111}\textbf{
   end: "}}"
   selector: invalid
-- begin: \colorbox[HTML]{0A0AD2}{\color[HTML]{28285B}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{1C1C1C}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{ACACAC}
   end: "}"
   selector: comment
 - begin: "{"
@@ -436,46 +436,46 @@ tags:
 - begin: "{\\textit{"
   end: "}}"
   selector: text comment.block -source
-- begin: \colorbox[HTML]{14281D}{\color[HTML]{82BB9C}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{14281D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{82BB9C}
   end: "}"
   selector: markup.inserted
-- begin: \colorbox[HTML]{28151F}{\color[HTML]{BB82A0}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{28151F}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{BB82A0}
   end: "}"
   selector: markup.deleted
 - begin: "{\\color[HTML]{C2C28F}"
   end: "}"
   selector: markup.changed
-- begin: \colorbox[HTML]{000000}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: text.subversion-commit meta.scope.changed-files, text.subversion-commit meta.scope.changed-files.svn meta.diff.separator
-- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{000000}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FFFFFF}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{000000}
   end: "}"
   selector: text.subversion-commit
-- begin: \colorbox[HTML]{0202FA}{\color[HTML]{FFFFFF}\textbf{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{111111}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}\textbf{
   end: "}}"
   selector: punctuation.terminator, meta.delimiter, punctuation.separator.method
-- begin: \colorbox[HTML]{00003F}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: punctuation.terminator.statement, meta.delimiter.statement.js
-- begin: \colorbox[HTML]{0000BB}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.delimiter.object.js
 - begin: "{\\textbf{"
   end: "}}"
   selector: string.quoted.single.brace, string.quoted.double.brace
-- begin: \colorbox[HTML]{FFFFFF}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FFFFFF}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text.blog -(text.blog text)
-- begin: \colorbox[HTML]{FFFFFF}{\color[HTML]{666666}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FFFFFF}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{666666}
   end: "}"
   selector: meta.headers.blog
-- begin: \colorbox[HTML]{0810F1}{\color[HTML]{182A29}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{213F3E}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{182A29}
   end: "}"
   selector: meta.headers.blog keyword.other.blog
-- begin: \colorbox[HTML]{1313EF}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{4A4A36}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.headers.blog string.unquoted.blog
-- begin: \colorbox[HTML]{0A0AD2}{\color[HTML]{4C4C4C}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{1C1C1C}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{4C4C4C}
   end: "}"
   selector: meta.brace.pipe
 - begin: "{\\color[HTML]{666666}\\textbf{"
@@ -490,40 +490,40 @@ tags:
 - begin: "{\\color[HTML]{675D54}\\textbf{"
   end: "}}"
   selector: meta.group.braces.square punctuation.section.scope, meta.group.braces.square meta.delimiter.object.comma, meta.brace.square, punctuation.separator.array, punctuation.section.array
-- begin: \colorbox[HTML]{00007D}{\color[HTML]{CCCCCC}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{CCCCCC}
   end: "}"
   selector: meta.brace.curly meta.group
-- begin: \colorbox[HTML]{00007D}{\color[HTML]{666666}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{000000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{666666}
   end: "}"
   selector: meta.source.embedded, entity.other.django.tagbraces
 - begin: "{"
   end: "}"
   selector: source.js meta.group.braces.round, meta.scope.heredoc
-- begin: \colorbox[HTML]{0A0A0A}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{0A0A0A}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.odd-tab.group1, meta.group.braces, meta.block.slate, text.xml.strict meta.tag
-- begin: \colorbox[HTML]{0E0E0E}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{0E0E0E}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.even-tab.group2, meta.group.braces meta.group.braces, meta.block.slate meta.block.slate, text.xml.strict meta.tag meta.tag, meta.group.braces meta.group.braces
-- begin: \colorbox[HTML]{111111}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{111111}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.odd-tab.group3, meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces
-- begin: \colorbox[HTML]{151515}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{151515}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.even-tab.group4, meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces
-- begin: \colorbox[HTML]{191919}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{191919}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.odd-tab.group5, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
-- begin: \colorbox[HTML]{1C1C1C}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{1C1C1C}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.even-tab.group6, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
-- begin: \colorbox[HTML]{1F1F1F}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{1F1F1F}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.odd-tab.group7, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
-- begin: \colorbox[HTML]{212121}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{212121}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.even-tab.group8, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
-- begin: \colorbox[HTML]{242424}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{242424}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: meta.odd-tab.group11, meta.odd-tab.group10, meta.odd-tab.group9, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces , meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate meta.block.slate , text.xml.strict meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag meta.tag, meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces meta.group.braces
 - begin: "{\\color[HTML]{666666}"
@@ -534,8 +534,8 @@ tags:
   selector: "meta.block.content.slate "
 listing: 
   begin: |
-    \newcolumntype{C}{>{\color[HTML]{CCCCCC}\columncolor[HTML]{000005}}l}
-    \newcolumntype{N}{>{\color[HTML]{CCCCCC}\columncolor[HTML]{1517A6}}l}
+    \newcolumntype{C}{>{\color[HTML]{CCCCCC}\columncolor[HTML]{000000}}l}
+    \newcolumntype{N}{>{\color[HTML]{FFFFFF}\columncolor[HTML]{2B2F53}}l}
     \begin{longtable}{NC}
 
   end: |
@@ -555,7 +555,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

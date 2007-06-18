@@ -4,7 +4,7 @@ line:
   begin: ""
   end: "}}\\\\"
 tags: 
-- begin: \colorbox[HTML]{200020}{\color[HTML]{404080}\textit{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{200020}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{404080}\textit{
   end: "}}"
   selector: comment.block
 - begin: "{\\color[HTML]{999999}"
@@ -118,7 +118,7 @@ tags:
 - begin: "{"
   end: "}"
   selector: entity.other.attribute-name
-- begin: \colorbox[HTML]{200020}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{200020}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: support.constant
 - begin: "{"
@@ -127,13 +127,13 @@ tags:
 - begin: "{"
   end: "}"
   selector: support.other.variable
-- begin: \colorbox[HTML]{FFFF00}{\color[HTML]{400080}\textbf{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FFFF00}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{400080}\textbf{
   end: "}}"
   selector: invalid.illegal
-- begin: \colorbox[HTML]{CC66FF}{\color[HTML]{200020}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{CC66FF}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{200020}
   end: "}"
   selector: invalid.deprecated
-- begin: \colorbox[HTML]{2A003F}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{350060}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: source.camlp4.embedded
 - begin: "{"
@@ -145,7 +145,7 @@ tags:
 listing: 
   begin: |
     \newcolumntype{C}{>{\color[HTML]{D0D0FF}\columncolor[HTML]{200020}}l}
-    \newcolumntype{N}{>{\color[HTML]{D0D0FF}\columncolor[HTML]{500010}}l}
+    \newcolumntype{N}{>{\color[HTML]{000000}\columncolor[HTML]{800000}}l}
     \begin{longtable}{NC}
 
   end: |
@@ -165,7 +165,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

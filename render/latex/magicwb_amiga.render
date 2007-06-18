@@ -7,7 +7,7 @@ tags:
 - begin: "{\\color[HTML]{8D2E75}\\textit{"
   end: "}}"
   selector: comment
-- begin: \colorbox[HTML]{AA7878}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{EA1D1D}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: string
 - begin: "{\\color[HTML]{FFFFFF}"
@@ -16,7 +16,7 @@ tags:
 - begin: "{\\color[HTML]{FFA995}\\textbf{"
   end: "}}"
   selector: constant.language
-- begin: \colorbox[HTML]{7878AA}{\color[HTML]{FFA995}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{1D1DEA}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFA995}
   end: "}"
   selector: constant.character, constant.other
 - begin: "{\\color[HTML]{FFA995}"
@@ -64,19 +64,19 @@ tags:
 - begin: "{\\color[HTML]{3A68A3}"
   end: "}"
   selector: support.variable
-- begin: \colorbox[HTML]{797979}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{797979}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: invalid
-- begin: \colorbox[HTML]{969696}{\color[HTML]{FFA995}\textit{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{969696}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFA995}\textit{
   end: "}}"
   selector: string.quoted.other.lt-gt.include
-- begin: \colorbox[HTML]{969696}{\color[HTML]{FFA995}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{969696}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFA995}
   end: "}"
   selector: string.quoted.double.include
 - begin: "{\\color[HTML]{4D4E60}"
   end: "}"
   selector: markup.list
-- begin: \colorbox[HTML]{0000FF}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{0000FF}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: markup.raw
 - begin: "{\\color[HTML]{00F0C9}"
@@ -85,7 +85,7 @@ tags:
 - begin: "{\\color[HTML]{4C457E}"
   end: "}"
   selector: markup.quote markup.quote
-- begin: \colorbox[HTML]{8A9ECB}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{8A9ECB}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text.html source
 listing: 
@@ -111,7 +111,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

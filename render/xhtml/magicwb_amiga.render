@@ -52,7 +52,7 @@ tags:
 - begin: <span class="ObjectiveCMethodCall">
   end: </span>
   selector: support.function.any-method
-- begin: <span class="ObjectiveCMethodCall">
+- begin: <span class="ObjectiveCMethodCall1">
   end: </span>
   selector: support.function.any-method - punctuation
 - begin: <span class="LibraryConstant">

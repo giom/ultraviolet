@@ -4,7 +4,7 @@ line:
   begin: ""
   end: "}}\\\\"
 tags: 
-- begin: \colorbox[HTML]{F4F6FF}{
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{ECF1FF}{\rule[-0.5ex]{0pt}{2.0ex}
   end: "}"
   selector: text.html source.active4d
 - begin: "{\\color[HTML]{000000}"
@@ -85,19 +85,19 @@ tags:
 - begin: "{\\color[HTML]{A535AE}"
   end: "}"
   selector: support.variable
-- begin: \colorbox[HTML]{990000}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{990000}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: invalid
-- begin: \colorbox[HTML]{656565}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{656565}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: meta.diff
-- begin: \colorbox[HTML]{1B63FF}{\color[HTML]{FFFFFF}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{1B63FF}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{FFFFFF}
   end: "}"
   selector: meta.diff.range
-- begin: \colorbox[HTML]{FF7880}{\color[HTML]{000000}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{FF7880}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{000000}
   end: "}"
   selector: markup.deleted.diff
-- begin: \colorbox[HTML]{98FF9A}{\color[HTML]{000000}
+- begin: \setlength{\fboxsep}{0ex}\colorbox[HTML]{98FF9A}{\rule[-0.5ex]{0pt}{2.0ex}\color[HTML]{000000}
   end: "}"
   selector: markup.inserted.diff
 - begin: "{\\color[HTML]{5E5E5E}"
@@ -126,7 +126,7 @@ document:
   end: |
     \end{document}
 
-filter: "@escaped.gsub(/(_|\\{|\\}|&|\\#|\\\\)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t/,'\\\\hspace{3ex}')"
+filter: "@escaped.gsub(/(\\$)/, '\\\\\\\\\\1').gsub(/\\\\(?!\\$)/, '$\\\\\\\\backslash$').gsub(/(_|\\{|\\}|&|\\#|%)/, '\\\\\\\\\\1').gsub(/~/, '\\\\textasciitilde ').gsub(/ /,'\\\\hspace{1ex}').gsub(/\\t| /,'\\\\hspace{3ex}').gsub(/\\\"/, \"''\").gsub(/(\\^)/,'\\\\\\\\\\1{}')"
 line-numbers: 
   begin: \texttt{
   end: "}&\\mbox{\\texttt{"

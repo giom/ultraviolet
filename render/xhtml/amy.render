@@ -34,7 +34,7 @@ tags:
 - begin: <span class="BooleanConstant">
   end: </span>
   selector: constant.language.boolean
-- begin: <span class="BuiltInConstant">
+- begin: <span class="BuiltInConstant1">
   end: </span>
   selector: constant.language
 - begin: <span class="UserDefinedConstant">
