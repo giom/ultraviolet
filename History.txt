@@ -1,3 +1,6 @@
+== 0.10.2
+* Fixed --no-lines command line option.
+
 == 0.10.1 / 2007-06-15
 * Corrected line-number schemes in theme2xhtmlrender
 * Corrected alpha blending code in theme2xhtmlrender, Now the brilliance themes seem to work!

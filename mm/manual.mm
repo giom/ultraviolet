@@ -38,9 +38,11 @@ Further work will be done to produce latex output.
 
 = To Do =
 
-||  Priority  |  Description                                                             |
-| high        | Complete *rdoc* api documentation                                        |
-| alpha       | Produce latex output                                                     |
+||  Priority  |  Description                                                              |
+| high        | Complete *rdoc* api documentation                                         |
+| alpha       | Produce latex output                                                      |
+| high        | Implement lazy loading for syntaxes (significant speed increase expected) |
+| medium      | Support for user defined syntaxes and themes in user's HOME directory     |
 
 # Usage #
 

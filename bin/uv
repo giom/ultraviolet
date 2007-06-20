@@ -16,6 +16,7 @@ o.copy_files = false
 o.output = "xhtml"
 o.headers = false
 o.theme = "espresso_libre"
+o.lines = true
 
 options = OptionParser.new
 
@@ -57,7 +58,7 @@ options.on( "-t THEME", "--theme THEME", <<DESCRIPTION, Uv.themes) {|val| o.them
 The theme to be used (e.g. amy, espresso_libre, etc.)
 DESCRIPTION
 
-options.on( "-n", "--no-lines", <<DESCRIPTION ) {|val| o.no_lines = !val}
+options.on( "-n", "--no-lines", <<DESCRIPTION ) {|val| o.lines = false}
 Produces output without line numbers
 DESCRIPTION
 
@@ -135,5 +136,5 @@ if o.debug
    exit
 end
 
-puts Uv.parse( o.text, o.output,  o.syntax, ! o.lines, o.theme, o.headers )
+puts Uv.parse( o.text, o.output,  o.syntax, o.lines, o.theme, o.headers )
 
