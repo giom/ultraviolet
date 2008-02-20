@@ -1,5 +1,6 @@
 == 0.10.2
 * Fixed --no-lines command line option.
+* Updated PHP syntax, no longer stalling.
 
 == 0.10.1 / 2007-06-15
 * Corrected line-number schemes in theme2xhtmlrender
