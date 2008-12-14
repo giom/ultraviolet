@@ -5,13 +5,12 @@ require 'uv/render_processor.rb'
 
 module Uv
 
-   def Uv.path
-      result = []
-      result << File.join(File.dirname(__FILE__), ".." )   
+   def Uv.paths
+      @paths ||= [File.join(File.dirname(__FILE__), ".." ) ]
    end
    
    def Uv.copy_files output, output_dir
-      Uv.path.each do |dir|
+      Uv.paths.each do |dir|
          dir_name = File.join( dir, "render", output, "files" )
          FileUtils.cp_r( Dir.glob(File.join( dir_name, "." )), output_dir ) if File.exists?( dir_name )
       end
@@ -19,21 +18,27 @@ module Uv
 
    def Uv.init_syntaxes
       @syntaxes = {}
-      Dir.glob( File.join(File.dirname(__FILE__), '..', 'syntax', '*.syntax') ).each do |f| 
-         @syntaxes[File.basename(f, '.syntax')] = Textpow::SyntaxNode.load( f )
+      Uv.paths.each do |dir|
+        Dir.glob( File.join(dir, 'syntax', '*.syntax') ).each do |f| 
+          @syntaxes[File.basename(f, '.syntax')] = Textpow::SyntaxNode.load( f )
+        end
       end
    end
 
    def Uv.syntaxes
-      Dir.glob( File.join(File.dirname(__FILE__), '..', 'syntax', '*.syntax') ).collect do |f| 
-         File.basename(f, '.syntax')
-      end
+      Uv.paths.collect do |dir|
+         Dir.glob( File.join(dir, 'syntax', '*.syntax') ).collect do |f| 
+            File.basename(f, '.syntax')
+         end
+      end.flatten
    end
    
    def Uv.themes
-      Dir.glob( File.join(File.dirname(__FILE__), '..', 'render', 'xhtml', 'files', 'css', '*.css') ).collect do |f| 
-         File.basename(f, '.css')
-      end
+      Uv.paths.collect do |dir|
+         Dir.glob( File.join(dir, 'render', 'xhtml', 'files', 'css', '*.css') ).collect do |f| 
+            File.basename(f, '.css')
+         end
+      end.flatten
    end
 
    def Uv.syntax_for_file file_name
@@ -85,5 +90,4 @@ module Uv
 
       @syntaxes[syntax_name].parse( text, processor )
    end
-
 end
