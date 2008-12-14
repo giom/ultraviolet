@@ -40,6 +40,14 @@ module Uv
          end
       end.flatten
    end
+   
+   def Uv.renderer(output, render_style)
+     Uv.paths.each do |dir|
+       render_path = File.join(dir, 'render', output , "#{render_style}.render")
+       return render_path if File.exist?(render_path)
+     end
+     raise( ArgumentError, "Style #{render_style} could not be found for #{output}" )
+   end
 
    def Uv.syntax_for_file file_name
       init_syntaxes unless @syntaxes
@@ -68,10 +76,9 @@ module Uv
       result
    end
    
-   def Uv.parse text, output = "xhtml", syntax_name = nil, line_numbers = false, render_style = "classic", headers = false
+   def Uv.parse text, output = "xhtml", syntax_name = nil, line_numbers = false, render_style = "mac_classic", headers = false
       init_syntaxes unless @syntaxes
-      renderer = File.join( File.dirname(__FILE__), '..',"render", output,"#{render_style}.render")
-      raise( ArgumentError, "Output for #{output} is not yet implemented" ) unless File.exists?(renderer)
+      renderer = self.renderer(output, render_style)
       css_class = render_style
       render_options = YAML.load( File.open(  renderer ) )
       render_processor = RenderProcessor.new( render_options, line_numbers, headers )
